@@ -1,0 +1,34 @@
+on:
+  push:
+    branches: [dev]
+name: 🚀 Deploy dev branch on push
+jobs:
+  my-first-job:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: "16.13.2"
+
+      - name: 🔨 Build Project
+        run: |
+          npm install
+          npm run dist-clean
+          npm run dist
+          npm run dist-build
+          ls
+
+      - name: 📂 Sync files
+        uses: Creepios/sftp-action@v1.0.3
+        with:
+          username: "${{ secrets.SFTP_USER_DEV }}"
+          port: 2222
+          password: "${{ secrets.SFTP_PASSWORD_DEV }}"
+          host: "${{ secrets.SFTP_HOST_DEV }}"
+          localPath: "./dist/"
+          remotePath: "/wp-content/themes/wpstarter"
