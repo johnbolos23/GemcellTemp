@@ -1,0 +1,59 @@
+.section-banner{
+    .banner-content-wrapper{
+        height: 100%;
+        padding-top: 148px;
+        padding-left: calc( calc(100vw - 1680px ) / 2);
+        padding-right: 124px;
+
+        span.icon-top {
+            position: absolute;
+            top: 0;
+            right: 11px;
+            transform: translateX(50%);
+            z-index: 2;
+        }
+        
+        span.icon-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .heading {
+            margin-bottom: 47px;
+            font-family: 'CenturyGothic';
+            font-weight: 600;
+        }
+        
+        .banner-link-list {
+            border-top: 1px solid #8FA1AA;
+            margin-top: 46px;
+
+            .banner-link-list-item {
+                border-bottom: 1px solid #8FA1AA;
+
+                a {
+                    display: block;
+                    padding: 15px 25px;
+                    position: relative;
+                    text-decoration: none;
+                    font-size: 18px;
+                    line-height: 170%;
+                    color: white;
+                    font-weight: 600;
+
+                    img {
+                        margin-right: 25px;
+                    }
+
+                    svg {
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        transform: translateY(-30%);
+                    }
+                }
+            }
+        }
+    }
+}

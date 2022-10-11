@@ -1,0 +1,25 @@
+.image-floating-box{
+    .floating-box {
+        position: absolute;
+        right: 50px;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 700px;
+    
+        .floating-box-wrapper {
+            clip-path: polygon(100% 0,100% calc(100% - 80px),calc(100% - 80px) 100%,0 100%,0 0);
+            padding: 70px 60px 100px;
+        
+            svg {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        
+            .heading {
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+

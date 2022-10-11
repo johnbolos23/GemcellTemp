@@ -1,0 +1,58 @@
+#gemcell-customization{
+    .gform_heading{
+        display: none;
+    }
+
+    .main-footer-newsletter-wrapper{
+        form {
+            display: flex;
+            margin-top: 53px;
+            margin-bottom: 72px;
+
+            .gform_footer {
+                padding: 0 !important;
+                margin: 0 !important;
+                padding-left: 20px !important;
+
+                input {
+                    height: 100%;
+                    margin: 0 !important;
+                    background: #263238;
+                    color: white;
+                    min-width: 192px;
+                    text-align: center;
+                    font-size: 18px;
+                    line-height: 170%;
+                    line-height: 68px;
+                    border: none;
+                }
+            }
+
+            .gform_body{
+                flex: 1;
+
+                .gform_fields {
+                    height: 100% !important;
+                    display: block !important;
+
+                    .gfield{
+                        height: 100% !important;
+
+                        .ginput_container{
+                            height: 100% !important;
+
+                            input{
+                                height: 100% !important;
+                                padding: 20px 25px;
+                                font-size: 18px;
+                                line-height: 170%;
+                                color: #263238;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

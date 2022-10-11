@@ -5,6 +5,8 @@
 @import "theme/blocks";           // <-------- This adds Bootstrap styles to blocks.
 @import "theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support
 @import "theme/woocommerce"; // <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
+@import "theme/gravity-form";
+
 
 // Optional files - If you dont use the corresponding scripts/fonts comment em out
 @import "assets/fontawesome/font-awesome";    // <-------- Font Awesome Icon font
@@ -12,3 +14,32 @@
 // Any additional imported files //
 @import "theme/theme";            // <-------- That's where you can add your own design. Thats your part!
 
+
+
+// Flexible Block - Banner
+@import "theme/blocks/banner";
+
+// Flexible Block - Counter
+@import "theme/blocks/counter";
+
+// Flexible Block - Image with Floating Box
+@import "theme/blocks/image-floating-box";
+
+// Flexible Block - Posts List
+@import "theme/blocks/posts-list";
+
+// Flexible Block - Client Logos
+@import "theme/blocks/client-logo";
+
+// Flexible Block - Testimonial
+@import "theme/blocks/testimonial";
+
+// Flexible Block - Big CTA
+@import "theme/blocks/big-cta";
+
+
+// Flexible Block - Page Title
+@import "theme/blocks/page-title";
+
+// Flexible Block - Simple Text
+@import "theme/blocks/simple-text";
