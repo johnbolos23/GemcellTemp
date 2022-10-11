@@ -1,33 +1,5 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
-@font-face {
-    font-family: 'CenturyGothic';
-    src: url('../fonts/Century-Gothic/CenturyGothic.ttf');
-    src: url('../fonts/Century-Gothic/CenturyGothic.ttf') format('truetype'),
-         url('../fonts/Century-Gothic/CenturyGothic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'CenturyGothicBold';
-    src: url('../fonts/Century-Gothic/CenturyGothicBold.ttf');
-    src: url('../fonts/Century-Gothic/CenturyGothicBold.ttf') format('truetype'),
-         url('../fonts/Century-Gothic/CenturyGothicBold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'CenturyGothicItalic';
-    src: url('../fonts/Century-Gothic/CenturyGothicItalic.ttf');
-    src: url('../fonts/Century-Gothic/CenturyGothicItalic.ttf') format('truetype'),
-         url('../fonts/Century-Gothic/CenturyGothicItalic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 @media(min-width: $bigScreen){
     .container{
         max-width: 1680px;
