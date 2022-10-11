@@ -27,7 +27,8 @@ $understrap_includes = array(
 	'/editor.php',                          // Load Editor functions.
 	'/block-editor.php',                    // Load Block Editor functions.
 	'/deprecated.php',                      // Load deprecated functions.
-	'/acf-fields.php'
+	'/acf-fields.php',
+	'/post-types.php'
 );
 
 // Load WooCommerce functions if WooCommerce is activated.
