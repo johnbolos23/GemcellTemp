@@ -1,6 +1,6 @@
 <?php 
 
-function breadcrumbs($isLocal = false, $separator = ' &raquo; ', $home = 'Home')
+function breadcrumbs($separator = ' &raquo; ', $home = 'Home')
 {
     // This gets the REQUEST_URI (/path/to/file.php), splits the string (using '/') into an array, and then filters out any empty values
     $path = array_filter(explode('/', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
@@ -9,7 +9,7 @@ function breadcrumbs($isLocal = false, $separator = ' &raquo; ', $home = 'Home')
     $base = ( ( isset( $_SERVER["HTTPS"] ) && strtolower( $_SERVER["HTTPS"] ) == "on" ) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
 
     // Initialize a temporary array with our breadcrumbs. (starting with our home page, which I'm assuming will be the base URL)
-    $breadcrumbs = $isLocal ? array() : array("<a href=\"$base\">$home</a>");
+    $breadcrumbs = $_SERVER['HTTP_HOST'] == 'localhost' ? array() : array("<a href=\"$base\">$home</a>");
 
     // Initialize crumbs to track path for proper link
     $crumbs = '';
@@ -77,7 +77,7 @@ ob_end_clean();
     </div>
     <div class="breadcrumbs">
         <div class="container">
-            <?php echo breadcrumbs(true, $breadArrow ); ?>
+            <?php echo breadcrumbs( $breadArrow ); ?>
         </div>
     </div>
 </section>

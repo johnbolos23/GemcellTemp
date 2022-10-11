@@ -16335,7 +16335,7 @@ section.posts-list .posts-list-items h3.heading, section.posts-list .posts-list-
   font-size: 28px;
   line-height: 130%;
 }
-section.posts-list .posts-list-items .post-list-slider .slick-track {
+section.posts-list .posts-list-items .post-list-slider {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
 }
@@ -16343,7 +16343,7 @@ section.posts-list .posts-list-items .post-list-slider .slick-track .slick-slide
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
 }
-section.posts-list .posts-list-items .post-list-slider:not(.has-overlap) .slick-track {
+section.posts-list .posts-list-items .post-list-slider:not(.has-overlap) .slick-list {
   margin: 0 calc(var(--bs-gutter-x) * -0.5);
 }
 section.posts-list .posts-list-items .post-list-slider.has-overlap {

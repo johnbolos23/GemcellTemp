@@ -44,10 +44,10 @@ section.posts-list {
         }
 
         .post-list-slider{
-            .slick-track{
-                --bs-gutter-x: 1.5rem;
-                --bs-gutter-y: 0;
+            --bs-gutter-x: 1.5rem;
+            --bs-gutter-y: 0;
 
+            .slick-track{
                 .slick-slide{
                     padding-right: calc(var(--bs-gutter-x) * .5);
                     padding-left: calc(var(--bs-gutter-x) * .5);
@@ -55,7 +55,7 @@ section.posts-list {
             }
             
             &:not(.has-overlap){
-                .slick-track{
+                .slick-list{
                     margin: 0 calc(var(--bs-gutter-x) * -.5);
                 }
             }
