@@ -1,0 +1,29 @@
+section.big-cta{
+    padding: 50px 0;
+
+    .subheading{
+        margin-bottom: 18px;
+    }
+
+    .big-cta-wrapper{
+        padding-top: 100px;
+        max-height: 740px;
+        height: 100vh;
+
+        .big-cta-buttons {
+            margin-top: 38px;
+
+            .main-button {
+                min-width: 285px;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                margin: 0 12px;
+
+                svg {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+section.page-title{
+    h1.heading{
+        font-size: 56px;
+    }
+
+    .page-title-wrapper {
+        padding-left: calc((100vw - 1680px)/ 2);
+        height: 100%;
+        padding-bottom: 70px;
+        display: flex;
+        align-items: flex-end;
+
+        span.icon-top {
+            position: absolute;
+            top: -25px;
+            right: 11px;
+            transform: translateX(50%);
+            z-index: 2;
+        }
+    }
+    
+    .breadcrumbs {
+        padding: 15px 0;
+        background-color: #F8F8F8;
+
+        a {
+            font-size: 18px;
+            line-height: 170%;
+            text-decoration: none;
+            color: #58595B;
+        }
+        
+        svg {
+            margin: 0 20px;
+        }
+        
+        span {
+            font-size: 18px;
+            line-height: 170%;
+            color: #58595B;
+            font-family: 'CenturyGothicBold';
+            text-transform: capitalize;
+        }
+    }
+}

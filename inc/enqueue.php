@@ -40,6 +40,21 @@ if (!function_exists('understrap_scripts')) {
 		if (is_singular() && comments_open() && get_option('thread_comments')) {
 			wp_enqueue_script('comment-reply');
 		}
+
+		// Visible JS
+		wp_enqueue_script( 'visible-script', '//cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js', array('jquery'), true, true); 
+
+
+		// Slick CSS
+		wp_enqueue_style( 'slick-style', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css' );
+		wp_enqueue_style( 'slick-style-theme', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css' );
+		
+		
+		// Slick JS
+		wp_enqueue_script( 'slick-script', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), true, true);
+
+		
+		wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/src/js/custom-js.js', array('jquery'), true, true);  
 	}
 } // End of if function_exists( 'understrap_scripts' ).
 

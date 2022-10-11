@@ -1,1 +1,305 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+@font-face {
+    font-family: 'CenturyGothic';
+    src: url('../fonts/Century-Gothic/CenturyGothic.ttf');
+    src: url('../fonts/Century-Gothic/CenturyGothic.ttf') format('truetype'),
+         url('../fonts/Century-Gothic/CenturyGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CenturyGothicBold';
+    src: url('../fonts/Century-Gothic/CenturyGothicBold.ttf');
+    src: url('../fonts/Century-Gothic/CenturyGothicBold.ttf') format('truetype'),
+         url('../fonts/Century-Gothic/CenturyGothicBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CenturyGothicItalic';
+    src: url('../fonts/Century-Gothic/CenturyGothicItalic.ttf');
+    src: url('../fonts/Century-Gothic/CenturyGothicItalic.ttf') format('truetype'),
+         url('../fonts/Century-Gothic/CenturyGothicItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@media(min-width: $bigScreen){
+    .container{
+        max-width: 1680px;
+    }
+}
+
+
+body{
+    color: $textColor;
+}
+
+body *{
+    font-family: 'CenturyGothic';
+}
+
+.pos-relative{
+    position: relative;
+}
+
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+
+.main-button {
+    background-color: #B9D22E;
+    display: inline-block;
+    line-height: 56px;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 196px;
+    color: white;
+    font-weight: 600;
+    clip-path: polygon(100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 0);
+    border: 2px solid #B9D22E;
+    padding-left: 31px;
+    padding-right: 32px;
+
+    &.main-button-blue{
+        background-color: #0796BF;
+        border-color: #0796BF;
+    }
+
+    svg{
+        margin-left: 18px;
+
+        path{
+            stroke: white;
+        }
+    }
+
+    &.main-button-bordered{
+        background-color: transparent;
+        border-color: $textColor;
+        color: $textColor;
+        position: relative;
+        padding-left: 37px;
+        padding-right: 40px;
+        text-align: left;
+
+        &:before{
+            content: '';
+            position: absolute;
+            height: 24px;
+            width: 2px;
+            background-color: $textColor;
+            bottom: -4px;
+            right: 4px;
+            transform: rotate(45deg);
+        }
+
+        svg{
+            path{
+                stroke: $textColor;
+            }
+        }
+    }
+}
+
+
+.heading{
+    font-family: 'CenturyGothicBold';
+    font-size: 48px;
+    line-height: 110%;
+    margin-bottom: 0;
+    letter-spacing: -0.02em;
+
+    span{
+        letter-spacing: -0.02em;
+        font-family: 'CenturyGothicBold';
+    }
+}
+.subheading{
+    font-family: 'CenturyGothicBold';
+    font-size: 16px; 
+    line-height: 170%;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    span{
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-family: 'CenturyGothicBold';
+    }
+}
+
+.heading, .subheading{
+    span{
+        background: linear-gradient(87.46deg, #8DC63F -0.37%, #86C344 6.32%, #75BD53 14.92%, #59B26C 24.47%, #31A48F 35.94%, #0493B8 46.45%, #4370B7 93.28%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+}
+
+
+.wysiwyg-content, 
+.wysiwyg-content *{
+    font-size: 18px;
+    line-height: 170%;
+    margin: 0;
+    font-family: 'CenturyGothic';
+
+    p:not(:last-child){
+        margin-bottom: 30px;
+    }
+}
+
+
+/************ HEADER ************/
+.main-header{
+    background-color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    .main-header-menu ul.menu {
+        padding: 0;
+        margin: 0 -25px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+
+        > li {
+            padding: 0 25px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #58595B;
+            font-family: 'CenturyGothicBold';
+            font-size: 20px;
+            line-height: 170%;
+        }
+    }
+    .main-header-search-cta a:first-child {
+        margin-right: 35px;
+    }
+}
+
+
+
+/*************** FOOTER ****************/
+footer.main-footer {
+    padding-top: 90px;
+    background: #F8F8F8;
+
+    p{
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        color: #000000;
+        margin-bottom: 0;
+    }
+
+    > .container{
+        padding-bottom: 132px;
+
+        .main-footer-col-wrapper{
+            h4 {
+                font-size: 20px;
+                line-height: 150%;
+                letter-spacing: -0.02em;
+                color: #000000;
+                margin-bottom: 24px;
+            }
+
+            .main-footer-copyright-text {
+                margin-top: 45px;
+            }
+
+            .main-footer-member-logos {
+                margin-bottom: 40px;
+            }
+
+            .social-links-wrapper{
+                a{
+                    &:not(:last-child) {
+                        margin-right: 20px;
+                    }
+                }
+            }
+
+            .main-footer-menus-wrapper{
+                margin: 0 -50px;
+
+                .main-footer-menu-item {
+                    padding: 0 50px;
+
+                    ul.menu {
+                        list-style: none;
+                        padding: 0;
+    
+                        li{
+                            &:not(:last-child) {
+                                margin-bottom: 20px;
+                            }
+    
+                            a {
+                                text-decoration: none;
+                                font-size: 18px;
+                                line-height: 150%;
+                                letter-spacing: -0.02em;
+                                color: #000000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main-footer-bottom{
+        background: white;
+
+        .container{
+            padding-top: 25px;
+            padding-bottom: 25px;
+
+            .back-to-top {
+                font-size: 20px;
+                line-height: 150%;
+                letter-spacing: -0.02em;
+                color: #000000;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+
+                svg {
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+}
+
+body.home {
+    footer.main-footer{
+        padding-top: 417px;
+        margin-top: -390px;
+        position: relative;
+        z-index: 0;
+    }
+
+    section.big-cta{
+        position: relative;
+        z-index: 1;
+    }
+}

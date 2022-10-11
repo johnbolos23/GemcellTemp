@@ -13,9 +13,12 @@ defined('ABSPATH') || exit;
 
 $bootstrap_version = get_theme_mod('understrap_bootstrap_version', 'bootstrap5');
 $navbar_type       = get_theme_mod('understrap_navbar_type', 'collapse');
+
+$headerClass = 'main-header';
+
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> id="gemcell-customization">
 
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
@@ -29,10 +32,29 @@ $navbar_type       = get_theme_mod('understrap_navbar_type', 'collapse');
 	<div class="site" id="page">
 
 		<!-- ******************* The Navbar Area ******************* -->
-		<header id="wrapper-navbar">
-
-			<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e('Skip to content', 'understrap'); ?></a>
-
-			<?php get_template_part('global-templates/navbar', $navbar_type . '-' . $bootstrap_version); ?>
-
-		</header><!-- #wrapper-navbar end -->
+		<header id="<?php echo $headerClass; ?>" class="<?php echo $headerClass; ?>">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-6 col-lg-3">
+						<div class="<?php echo $headerClass; ?>-logo">
+							<a href="<?php echo site_url(); ?>">
+								<img src="<?php echo get_field('logo','option'); ?>" />
+							</a>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="<?php echo $headerClass; ?>-menu">
+							<?php wp_nav_menu( array( 'menu' => get_field('menu','option') ) ); ?>
+						</div>
+					</div>
+					<div class="col-6 col-lg-3">
+						<div class="<?php echo $headerClass; ?>-search-cta d-flex align-items-center justify-content-end">
+							<a><?php get_template_part('icons/search-icon'); ?></a>
+							<a href="<?php echo get_field('cta_button','option')['url']; ?>" class="main-button">
+								<span><?php echo get_field('cta_button','option')['title']; ?></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
