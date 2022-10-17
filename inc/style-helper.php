@@ -1,5 +1,5 @@
 <style>
-    <?php if( $args['additional']['default_bg'] ) : ?>
+    <?php if( !isset($args['additional']) || $args['additional']['default_bg'] ) : ?>
     <?php echo $args['target']; ?>{
         background-color: <?php echo get_sub_field('color'); ?>;
         background-image: url(<?php echo get_sub_field('image'); ?>);
@@ -19,7 +19,7 @@
         color: <?php echo get_sub_field('content_color'); ?>;
     }
 
-    <?php if( $args['additional']['parameters'] ) : ?>
+    <?php if( isset($args['additional']) && $args['additional']['parameters'] ) : ?>
         <?php foreach( $args['additional']['parameters'] as $class => $values ){
             echo $args['target'] . ' .' . $class . '{';
                 foreach( $values as $parameter => $value ){

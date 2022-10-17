@@ -84,6 +84,14 @@
                 arrows: false,
             });
         }
+
+        if( $('.text-gallery-images-slider').length !== 0 ){
+            $('.text-gallery-images-slider').slick({
+                slidesToShow: 3,
+                dots: false,
+                arrows: false,
+            });
+        }
         // $('.post-list-item-wrapper').mouseenter( function(){
         //     $('> div:last-child', this).slideDown();
         // }).mouseleave(function(){
