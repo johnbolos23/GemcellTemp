@@ -1,9 +1,8 @@
-<?php
-get_template_part('inc/style-helper', null, array('target' => '#text-gallery-'. get_row_index() ) ); 
-
-?>
-
 <section class="page-section text-gallery" id="text-gallery-<?php echo get_row_index(); ?>">
+    <?php
+    get_template_part('inc/style-helper', null, array('target' => '#text-gallery-'. get_row_index() ) ); 
+
+    ?>
     <div class="text-gallery-content">
         <div class="container">
             <div class="row">

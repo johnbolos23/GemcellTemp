@@ -98,6 +98,14 @@
         //     $('> div:last-child', this).slideUp();
         // });
 
+        if( $('.testimonials-slider').length !== 0 ){
+            $('.testimonials-slider').slick({
+                slidesToShow: 3,
+                dots: false,
+                arrows: true,
+            });
+        }
+
 
         $('.back-to-top').on('click', function(e){
             e.preventDefault();

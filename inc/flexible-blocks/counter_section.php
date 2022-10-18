@@ -1,10 +1,9 @@
-<?php 
-
-get_template_part('inc/style-helper', null, array('target' => '#counter-section-'. get_row_index() )); 
-
-?>
-
 <section class="page-section counter-section" id="counter-section-<?php echo get_row_index(); ?>">
+    <?php 
+
+    get_template_part('inc/style-helper', null, array('target' => '#counter-section-'. get_row_index() )); 
+
+    ?>
     <div class="container">
         <div class="row">
         <?php foreach( get_sub_field('counter') as $item ) : ?>

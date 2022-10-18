@@ -1,0 +1,70 @@
+section.testimonials-v2 {
+    padding-top: 50px;
+    padding-bottom: 150px;
+
+    .testimonials-content {
+        margin-top: 75px;
+    
+        .testimonials-slider{
+            .slick-list {
+                margin: 0 -16px;
+    
+                .testimonial-item {
+                    padding: 0 16px;
+
+                    .testimonial-item-wrapper {
+                        background-color: #F8F8F8;
+                        padding: 41px 45px;
+                
+                        .testimonial-item-image-name {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 25px;
+                
+                            img {
+                                width: 60px;
+                                height: 60px;
+                                object-fit: cover;
+                                border-radius: 50%;
+                            }
+                
+                            .testimonial-item-name {
+                                padding-left: 20px;
+                            }
+                            
+                            h4.testimony-name {
+                                font-weight: 600;
+                                font-size: 24px;
+                                line-height: 170%;
+                                margin-bottom: 0;
+                            }
+                            
+                            p.testimony-position {
+                                font-size: 16px;
+                                margin-bottom: 0;
+                            }
+                        }
+                        
+                        .testimony-logo {
+                            margin-top: 30px;
+                
+                            img {
+                                height: 40px;
+                                object-fit: contain;
+                                max-width: 150px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+
+
+
+
+
+
+

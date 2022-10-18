@@ -1,25 +1,24 @@
-<?php 
-
-$additionalStyles = array(
-    'default_bg' => false,
-    'parameters' => array(
-        'big-cta-wrapper' => array(
-            'background-image' => 'url('.get_sub_field('image').')',
-            'background-size' => 'cover',
-            'background-repeat' => 'no-repeat',
-            'background-position' => 'center'
-        ),
-        'position' => array(
-            'color' => get_sub_field('heading_color'),
-        )
-    )
-); 
-
-get_template_part('inc/style-helper', null, array('target' => '#big-cta-'. get_row_index(), 'additional' => $additionalStyles  ) ); 
-
-?>
-
 <section class="page-section big-cta" id="big-cta-<?php echo get_row_index(); ?>">
+    <?php 
+
+    $additionalStyles = array(
+        'default_bg' => false,
+        'parameters' => array(
+            'big-cta-wrapper' => array(
+                'background-image' => 'url('.get_sub_field('image').')',
+                'background-size' => 'cover',
+                'background-repeat' => 'no-repeat',
+                'background-position' => 'center'
+            ),
+            'position' => array(
+                'color' => get_sub_field('heading_color'),
+            )
+        )
+    ); 
+
+    get_template_part('inc/style-helper', null, array('target' => '#big-cta-'. get_row_index(), 'additional' => $additionalStyles  ) ); 
+
+    ?>
     <div class="container">
         <div class="big-cta-wrapper text-center">
             <?php if( get_sub_field('subheading') ) : ?>

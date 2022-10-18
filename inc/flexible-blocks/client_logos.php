@@ -1,19 +1,18 @@
-<?php 
-
-$additionalStyles = array(
-    'default_bg' => false,
-    'parameters' => array(
-        'client-logo-content' => array(
-            'background-color' => get_sub_field('color')
-        )
-    )
-); 
-
-get_template_part('inc/style-helper', null, array('target' => '#client-logos-'. get_row_index(), 'additional' => $additionalStyles )); 
-
-?>
-
 <section class="page-section client-logos" id="client-logos-<?php echo get_row_index(); ?>">
+    <?php 
+
+    $additionalStyles = array(
+        'default_bg' => false,
+        'parameters' => array(
+            'client-logo-content' => array(
+                'background-color' => get_sub_field('color')
+            )
+        )
+    ); 
+
+    get_template_part('inc/style-helper', null, array('target' => '#client-logos-'. get_row_index(), 'additional' => $additionalStyles )); 
+
+    ?>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-lg-4">

@@ -34,20 +34,20 @@ $headerClass = 'main-header';
 		<!-- ******************* The Navbar Area ******************* -->
 		<header id="<?php echo $headerClass; ?>" class="<?php echo $headerClass; ?>">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-6 col-lg-3">
+				<div class="row align-items-center m-0">
+					<div class="col-6 col-lg-2 p-0">
 						<div class="<?php echo $headerClass; ?>-logo">
 							<a href="<?php echo site_url(); ?>">
 								<img src="<?php echo get_field('logo','option'); ?>" />
 							</a>
 						</div>
 					</div>
-					<div class="col-6">
+					<div class="col-8 p-0">
 						<div class="<?php echo $headerClass; ?>-menu">
 							<?php wp_nav_menu( array( 'menu' => get_field('menu','option') ) ); ?>
 						</div>
 					</div>
-					<div class="col-6 col-lg-3">
+					<div class="col-6 col-lg-2 p-0">
 						<div class="<?php echo $headerClass; ?>-search-cta d-flex align-items-center justify-content-end">
 							<a><?php get_template_part('icons/search-icon'); ?></a>
 							<a href="<?php echo get_field('cta_button','option')['url']; ?>" class="main-button">

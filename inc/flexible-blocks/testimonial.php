@@ -1,22 +1,21 @@
-<?php 
-
-$additionalStyles = array(
-    'default_bg' => true,
-    'parameters' => array(
-        'name' => array(
-            'color' => get_sub_field('heading_color'),
-        ),
-        'position' => array(
-            'color' => get_sub_field('heading_color'),
-        )
-    )
-); 
-
-get_template_part('inc/style-helper', null, array('target' => '#testimonial-'. get_row_index(), 'additional' => $additionalStyles  ) ); 
-
-?>
-
 <section class="page-section testimonial-section" id="testimonial-<?php echo get_row_index(); ?>">
+    <?php 
+
+    $additionalStyles = array(
+        'default_bg' => true,
+        'parameters' => array(
+            'name' => array(
+                'color' => get_sub_field('heading_color'),
+            ),
+            'position' => array(
+                'color' => get_sub_field('heading_color'),
+            )
+        )
+    ); 
+
+    get_template_part('inc/style-helper', null, array('target' => '#testimonial-'. get_row_index(), 'additional' => $additionalStyles  ) ); 
+
+    ?>
     <div class="container">
         <div class="testimonials-wrapper">
             <div class="testimonial-slider">

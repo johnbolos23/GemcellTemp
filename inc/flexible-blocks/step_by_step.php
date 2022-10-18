@@ -1,16 +1,4 @@
 <?php
-
-$additionalStyles = array(
-    'default_bg' => true,
-    'parameters' => array(
-        'step-title' => array(
-            'color' => get_sub_field('heading_color'),
-        )
-    )
-); 
-
-get_template_part('inc/style-helper', null, array('target' => '#step-by-step-'. get_row_index(), 'additional' => $additionalStyles ) ); 
-
 $hasParentSteps = false;
 
 foreach( get_sub_field('steps') as $key => $step ){
@@ -21,6 +9,19 @@ foreach( get_sub_field('steps') as $key => $step ){
 ?>
 
 <section class="page-section step-by-step" id="step-by-step-<?php echo get_row_index(); ?>">
+    <?php 
+    $additionalStyles = array(
+        'default_bg' => true,
+        'parameters' => array(
+            'step-title' => array(
+                'color' => get_sub_field('heading_color'),
+            )
+        )
+    ); 
+
+    get_template_part('inc/style-helper', null, array('target' => '#step-by-step-'. get_row_index(), 'additional' => $additionalStyles ) ); 
+
+    ?>
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-7">
