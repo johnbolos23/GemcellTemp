@@ -1,20 +1,18 @@
-<?php
-
-$additionalStyles = array(
-    'default_bg' => get_sub_field('overlap_to_top_section') ? false : true,
-    'parameters' => array(
-        'our-suppliers-content' => array(
-            'background-color' => get_sub_field('color'),
-        )
-    )
-); 
-
-get_template_part('inc/style-helper', null, array('target' => '#our-suppliers-section-'. get_row_index(), 'additional' => $additionalStyles ) ); 
-
-?>
-
-
 <section class="page-section our-suppliers-section <?php echo get_sub_field('overlap_to_top_section') ? 'has-overlay-top': ''; ?>" id="our-suppliers-section-<?php echo get_row_index(); ?>">
+    <?php
+
+    $additionalStyles = array(
+        'default_bg' => get_sub_field('overlap_to_top_section') ? false : true,
+        'parameters' => array(
+            'our-suppliers-content' => array(
+                'background-color' => get_sub_field('color'),
+            )
+        )
+    ); 
+
+    get_template_part('inc/style-helper', null, array('target' => '#our-suppliers-section-'. get_row_index(), 'additional' => $additionalStyles ) ); 
+
+    ?>
     <div class="container">
         <div class="our-suppliers-content <?php echo get_sub_field('overlap_to_top_section') ? 'overlap-top': ''; ?>">
             <div class="our-suppliers-content-wrapper">

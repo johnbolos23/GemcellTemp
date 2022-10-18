@@ -1,19 +1,18 @@
-<?php 
-
-$additionalStyles = array(
-    'default_bg' => false,
-    'parameters' => array(
-        'floating-box-wrapper' => array(
-            'background-color' => get_sub_field('color')
-        )
-    )
-); 
-
-get_template_part('inc/style-helper', null, array('target' => '#image-floating-box-'. get_row_index(), 'additional' => $additionalStyles )); 
-
-?>
-
 <section class="page-section image-floating-box" id="image-floating-box-<?php echo get_row_index(); ?>">
+    <?php 
+
+    $additionalStyles = array(
+        'default_bg' => false,
+        'parameters' => array(
+            'floating-box-wrapper' => array(
+                'background-color' => get_sub_field('color')
+            )
+        )
+    ); 
+
+    get_template_part('inc/style-helper', null, array('target' => '#image-floating-box-'. get_row_index(), 'additional' => $additionalStyles )); 
+
+    ?>
     <div class="container">
         <div class="row m-0 pos-relative">
             <div class="col-12 col-lg-9 p-0">

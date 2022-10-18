@@ -1,0 +1,126 @@
+section#single-suppliers{  
+    padding-top: 90px;
+    padding-bottom: 210px;
+
+    .container{
+        max-width: 1533px;
+    }
+    
+    .single-supplier-image {
+        padding: 15px;
+        padding-bottom: 90px;
+        background: #F8F8F8;
+
+        .single-supplier-image-wrapper {
+            background: white;
+            padding: 50px 80px;
+            text-align: center;
+        }
+
+        .supplier-website {
+            margin-top: 27px;
+            padding-left: 15px;
+
+            h4 {
+                font-size: 18px;
+                line-height: 170%;
+                font-weight: 600;
+            }
+
+            p, a {
+                font-size: 18px;
+                line-height: 170%;
+                color: #263238;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .single-supplier-details{
+        padding-left: 40px;
+
+        .heading{
+            margin-bottom: 30px;
+        }
+    }
+
+    .supplier-info-blocks {
+        margin-top: 125px;
+        margin-left: -18px;
+        margin-right: -18px;
+
+        > div[class^="col-"] {
+            padding: 18px;
+        }
+
+        .supplier-block-border img {
+            display: block;
+        }
+        .supplier-block-item {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.5s ease;
+
+            .supplier-block-item-wrapper {
+                background: #F8F8F8;
+                padding: 65px 45px 75px;
+                flex: 1;
+                transition: all 0.5s ease;
+    
+                .block-title {
+                    margin-top: 32px;
+                    margin-bottom: 23px;
+                    font-weight: 600;
+                    font-size: 36px;
+                    line-height: 110%;
+                    font-family: 'CenturyGothicBold';
+                    letter-spacing: -0.02em;
+                }
+                
+                .block-title, .wysiwyg-content, .wysiwyg-content *, svg path{
+                    transition: all 0.5s ease;
+                }
+
+
+                a{
+                    margin-top: 23px;
+                    display: inline-block;
+                    color: #263238;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 170%;
+                    font-family: 'CenturyGothicBold';
+                    text-decoration: none;
+                    transition: all 0.5s ease;
+    
+                    svg{
+                        margin-left: 18px;
+    
+                        path{
+                            stroke: #263238;
+                        }
+                    }
+                }
+            }
+
+            &:hover{
+                transform: translateY(-40px);
+
+                .supplier-block-item-wrapper {
+                    background: #263238;
+
+                    .block-title, .wysiwyg-content, .wysiwyg-content *, a{
+                        color: white;
+                    }
+
+                    a svg{
+                        path{
+                            stroke: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,22 +1,21 @@
-<?php
-
-$additionalStyles = array(
-    'default_bg' => true,
-    'parameters' => array(
-        'team-name' => array(
-            'color' => get_sub_field('heading_color'),
-        ),
-        'description' => array(
-            'color' => get_sub_field('content_color'),
-        )
-    )
-); 
-
-get_template_part('inc/style-helper', null, array('target' => '#team-members-'. get_row_index() ) ); 
-
-?>
-
 <section class="page-section team-members" id="team-members-<?php echo get_row_index(); ?>">
+    <?php
+
+    $additionalStyles = array(
+        'default_bg' => true,
+        'parameters' => array(
+            'team-name' => array(
+                'color' => get_sub_field('heading_color'),
+            ),
+            'description' => array(
+                'color' => get_sub_field('content_color'),
+            )
+        )
+    ); 
+
+    get_template_part('inc/style-helper', null, array('target' => '#team-members-'. get_row_index() ) ); 
+
+    ?>
     <div class="container">
         <div class="text-center">
             <h2 class="heading"><?php echo get_sub_field('heading'); ?></h2>

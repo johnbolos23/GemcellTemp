@@ -1,0 +1,43 @@
+section.general-cta {
+    margin-top: -150px;
+    z-index: 3;
+
+    > svg {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(47.6%);
+        z-index: 2;
+    }
+
+    .general-cta-wrapper {
+        margin-right: 120px;
+        padding: 100px 0 100px 300px;
+        clip-path: polygon(100% 0,100% calc(100% - 100px),calc(100% - 100px) 100%,0 100%,0 0);
+
+        .general-cta-buttons-wrapper{
+            padding-left: 50px;
+
+            .main-button {
+                display: block;
+                max-width: 285px;
+                text-align: left;
+                position: relative;
+
+                svg {
+                    position: absolute;
+                    top: 50%;
+                    right: 30px;
+                    transform: translateY(-50%);
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 13px;
+                }
+            }
+        }
+    }
+
+    .heading {
+        line-height: 130%;
+    }
+}

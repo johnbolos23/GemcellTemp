@@ -1,14 +1,13 @@
-<?php 
-
-$additionalStyles = array(
-    'default_bg' => false
-); 
-
-get_template_part('inc/style-helper', null, array('target' => '#posts-list-'. get_row_index(), 'additional' => $additionalStyles )); 
-
-?>
-
 <section class="page-section posts-list" id="posts-list-<?php echo get_row_index(); ?>">
+    <?php 
+
+    $additionalStyles = array(
+        'default_bg' => false
+    ); 
+
+    get_template_part('inc/style-helper', null, array('target' => '#posts-list-'. get_row_index(), 'additional' => $additionalStyles )); 
+
+    ?>
     <div class="container">
         <div class="posts-list-top">
             <div class="row align-items-end">

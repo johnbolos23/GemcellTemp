@@ -1,23 +1,21 @@
-<?php
-
-$additionalStyles = array(
-    'default_bg' => false,
-    'parameters' => array(
-        ' ' => array(
-            'background-color' => get_sub_field('color'),
-        ),
-        'icon-title' => array(
-            'color' => get_sub_field('heading_color'),
-        )
-    )
-); 
-
-get_template_part('inc/style-helper', null, array('target' => '#image-with-icons-'. get_row_index(), 'additional' => $additionalStyles ) ); 
-
-?>
-
-
 <section class="page-section image-with-icons" id="image-with-icons-<?php echo get_row_index(); ?>">
+    <?php
+
+    $additionalStyles = array(
+        'default_bg' => false,
+        'parameters' => array(
+            ' ' => array(
+                'background-color' => get_sub_field('color'),
+            ),
+            'icon-title' => array(
+                'color' => get_sub_field('heading_color'),
+            )
+        )
+    ); 
+
+    get_template_part('inc/style-helper', null, array('target' => '#image-with-icons-'. get_row_index(), 'additional' => $additionalStyles ) ); 
+
+    ?>
     <div class="container">
         <div class="row align-items-center <?php echo get_sub_field('image_position') == 'right' ? 'flex-row-reverse': ''; ?>">
             <div class="col-12 col-lg-4 image-with-icons-image">
