@@ -47,7 +47,7 @@ get_template_part('inc/flexible-blocks/breadcrumbs'); ?>
                 </div>
             </div>
         </div>
-
+<!-- 
         <?php if( get_field('info_blocks') ) : ?>
         <div class="row supplier-info-blocks">
             <?php $counter = 1; foreach( get_field('info_blocks') as $block ) : ?>
@@ -68,8 +68,31 @@ get_template_part('inc/flexible-blocks/breadcrumbs'); ?>
             </div>
             <?php $counter++; if( $counter > 3 ) { $counter = 1; } endforeach; ?>
         </div>
-        <?php endif; ?>
+        <?php endif; ?> -->
 
+        <?php if( get_field('info_blocks', 'option') ) : ?>
+        <div class="row supplier-info-blocks">
+            <?php $counter = 1; foreach( get_field('info_blocks', 'option') as $block ) : ?>
+            <div class="col-12 col-lg-4">
+                <div class="supplier-block-item">
+                    <div class="supplier-block-item-wrapper">
+                        <img src="<?php echo $block['icon']; ?>" />
+                        <h3 class="block-title"><?php echo $block['title']; ?></h3>
+                        <div class="wysiwyg-content"><?php echo $block['detail']; ?></div>
+                        <?php if( $block['link'] ) : ?>
+                        <a href="<?php echo $block['link']['url']; ?>"><?php echo $block['link']['title']; get_template_part('icons/arrow-up'); ?></a>
+                        <?php endif; ?>
+                    </div>
+                    <div class="supplier-block-border">
+                        <img src="<?php echo get_stylesheet_directory_uri() . '/icons/supplier-image/' . $counter .'.jpg'; ?>" />
+                    </div>
+                </div>
+            </div>
+            <?php $counter++; if( $counter > 3 ) { $counter = 1; } endforeach; ?>
+        </div>
+        <?php endif; ?>                   
+
+ 
     </div>
 </section>
 

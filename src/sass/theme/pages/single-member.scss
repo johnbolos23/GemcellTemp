@@ -1,0 +1,411 @@
+.page-title-main{
+
+    .col-12.col-lg-5.p-0 {
+        background: #263238;
+    }
+
+    img {
+        width: 100%;
+        height: 355px;
+        object-fit: cover;
+    }
+
+
+    .page-title-wrapper.pos-relative {
+        padding-left: calc((100vw - 1680px)/ 2);
+        height: 100%;
+        padding-bottom: 70px;
+        display: flex;
+        align-items: flex-end;
+
+        span.icon-top {
+            position: absolute;
+            top: -25px;
+            right: 11px;
+            transform: translateX(50%);
+            z-index: 2;
+        }
+
+        h1.heading {
+            color: white;
+        }
+    }
+} 
+
+
+section#single-members{  
+    padding-top: 90px;
+    padding-bottom: 210px;
+
+    .container{
+        max-width: 1533px;
+    }
+    .member-list-col{
+
+        .member-list-slider {
+            margin-bottom: 2em;
+
+            .members-item{
+                .name {
+                    font-family: 'Century Gothic';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 170%;
+                    text-align: center;
+                    color: #263238;
+                }
+                
+                .name {
+                    font-family: 'Century Gothic';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 24px;
+                    text-align: center;
+                    color: #263238;
+                    margin-bottom: 0;
+                    margin-top: 1em;
+                }
+                
+                p.position {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 170%;
+                    text-align: center;
+                    color: #263238;
+                }
+                
+            }
+
+            .owl-dots .owl-dot span {
+                border-radius: 0;
+                -ms-transform: rotate(20deg); /* IE 9 */
+                transform: rotate(44deg);
+                border: 3px solid #B1B1B1;
+                background: none;
+                width: 12px;
+                height: 12px;
+            }
+
+            .owl-dots .owl-dot.active span {
+                background: #0C96B2;
+                border-color: #0C96B2;
+            }
+            
+            
+        }
+    }
+    
+    .single-members-image {
+        padding: 15px;
+        padding-bottom: 50px;
+        background: #F8F8F8;
+
+        .single-members-image-wrapper {
+            background: white;
+            padding: 50px 80px;
+            text-align: center;
+        }
+
+        .members-website {
+            margin-top: 27px;
+            padding-left: 15px;
+
+            h4 {
+                font-size: 18px;
+                line-height: 170%;
+                font-weight: 600;
+            }
+
+            p, a {
+                font-size: 18px;
+                line-height: 170%;
+                color: #263238;
+                text-decoration: none;
+            }
+        }
+
+        
+        h4 b {
+            font-family: 'Century Gothic';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 170%;
+        /* identical to box height, or 31px */
+            color: #263238;
+        }
+        
+        p.m-0 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 170%;
+        /* or 31px */
+            color: #263238;
+            width: 70%;
+        }
+        
+        .member-website, .member-phone, .member-email {
+            display: flex;
+            padding: 0px 20px;
+        }
+        
+        h4{
+            width: 30%;
+        }
+        
+        .member-website {
+            margin-top: 2em;
+        }
+    }
+
+    .single-members-details{
+        padding-left: 40px;
+
+        .heading{
+            margin-bottom: 30px;
+        }
+    }
+
+    .member-map-col {
+        padding-left: 40px;
+        margin-top: 2em;
+        margin-bottom: 3em;
+
+        h3.members-col-title {
+            font-family: "Century Gothic";
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 120%;
+            letter-spacing: -.02em;
+            color: #263238;
+        }
+    }
+    
+
+
+    .member-branches-col{
+        padding-left: 40px;
+        margin-top: 2em;
+        height: 20em;
+
+        h3.members-col-title {
+            font-family: 'Century Gothic';
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 120%;
+        /* or 43px */
+            letter-spacing: -0.02em;
+            color: #263238;
+        }
+
+        ul.tab-nav {
+            display: flex;
+            position: relative;
+            padding-left: 0;
+            list-style-type: none;
+            border-bottom: 1px solid #A8ADAF;
+
+            .tab {
+                font-family: 'Century Gothic';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 170%;
+                color: #26323863;
+                margin-right: 1em;
+
+                span {
+                    font-family: 'Century Gothic';
+                    position: relative;
+                    cursor: pointer;
+
+                    // :after {
+                    //     content: "";
+                    //     position: absolute;
+                    //     left: 0;
+                    //     bottom: -8.5px;
+                    //     display: block;
+                    //     width: 100%;
+                    //     height: 3px;
+                    //     background: #0796BF;
+                    // }
+                }
+
+                .content-holder{
+                    position:absolute;
+                    left:0;
+                    right:0;
+                    padding:10px;
+                    display:none;
+                    color:#666;
+
+                    ul.member-branch-inner {
+                        padding-left: 20px;
+                        list-style-type: disc;
+                        column-count: 2;
+                        margin-top: 1em;
+                    
+
+                        li.branch-item {
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 150%;
+                            letter-spacing: -0.02em;
+                            color: #000000;
+
+                            p.item {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                    
+                    
+                }
+                
+            }
+            
+            .tab.active {
+                color: black;
+
+                span:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -8.5px;
+                    display: block;
+                    width: 100%;
+                    height: 3px;
+                    background: #0796BF;
+                }
+                
+            }
+
+            li.active .content-holder{
+                display:block;
+            }
+
+            
+        }
+           
+    }
+
+    .member-other-images-col {
+        padding-left: 40px;
+
+        h3.members-col-title {
+            font-family: "Century Gothic";
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 120%;
+            letter-spacing: -.02em;
+            color: #263238;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style-type: none;
+            margin-top: 2em;
+
+            
+            
+            li {
+                margin-bottom: 30px;
+
+                img {
+                    width: 100%;
+                    height: 445px;
+                    object-fit: cover;
+                }
+            }
+            
+            
+        }
+        
+        
+    }
+    
+
+
+    .members-info-blocks {
+        margin-top: 125px;
+        margin-left: -18px;
+        margin-right: -18px;
+
+        > div[class^="col-"] {
+            padding: 18px;
+        }
+
+        .members-block-border img {
+            display: block;
+        }
+        .members-block-item {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.5s ease;
+
+            .members-block-item-wrapper {
+                background: #F8F8F8;
+                padding: 65px 45px 75px;
+                flex: 1;
+                transition: all 0.5s ease;
+    
+                .block-title {
+                    margin-top: 32px;
+                    margin-bottom: 23px;
+                    font-weight: 600;
+                    font-size: 36px;
+                    line-height: 110%;
+                    font-family: 'CenturyGothicBold';
+                    letter-spacing: -0.02em;
+                }
+                
+                .block-title, .wysiwyg-content, .wysiwyg-content *, svg path{
+                    transition: all 0.5s ease;
+                }
+
+
+                a{
+                    margin-top: 23px;
+                    display: inline-block;
+                    color: #263238;
+                    font-weight: 600;
+                    font-size: 18px;
+                    line-height: 170%;
+                    font-family: 'CenturyGothicBold';
+                    text-decoration: none;
+                    transition: all 0.5s ease;
+    
+                    svg{
+                        margin-left: 18px;
+    
+                        path{
+                            stroke: #263238;
+                        }
+                    }
+                }
+            }
+
+            &:hover{
+                transform: translateY(-40px);
+
+                .members-block-item-wrapper {
+                    background: #263238;
+
+                    .block-title, .wysiwyg-content, .wysiwyg-content *, a{
+                        color: white;
+                    }
+
+                    a svg{
+                        path{
+                            stroke: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

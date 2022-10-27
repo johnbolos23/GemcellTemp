@@ -1,0 +1,102 @@
+.banner-cta-inner {
+    margin: 50px 0px;
+
+    .inner-row {
+        position: relative;
+        padding: 0;
+
+        .vector {
+            background: linear-gradient(90deg, #005112 -49.1%, rgba(0, 89, 30, 0) 78.59%);
+
+            svg {
+                width: 100%;
+            }
+        }
+
+        .banner-content-col {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+            color: white;
+
+            .ginput_container{
+                height: 100% !important;
+            }
+            
+            .ginput_container input{
+                height: 100% !important;
+                padding: 24px 25px !important;
+                font-size: 18px !important;
+                line-height: 170%;
+                color: #263238;
+                border: none;
+            }
+
+            .newsletter-wrapper form {
+                display: flex;
+                margin-top: 53px;
+                margin-bottom: 72px;
+                justify-content: center;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .newsletter-wrapper .gform_footer.top_label {
+                padding:0 !important;
+                margin:0 !important;
+                margin-left: 1em !important;
+            }
+            
+            .newsletter-wrapper  .gform_footer.top_label input {
+                height: 100%;
+                margin: 0!important;
+                background: #263238;
+                color: #fff;
+                min-width: 192px;
+                text-align: center;
+                font-size: 18px;
+                line-height: 170%;
+                line-height: 68px;
+                border: none;
+            }
+            
+            .newsletter-wrapper form .gform_body.gform-body {
+                width: 80%;
+            }
+            
+
+            
+            .wysiwyg-content {
+                margin: 30px 0px;
+                max-width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            a.main-button.dark-gray {
+                background: #263238;
+                border-color: #263238;
+            }
+        }
+        
+
+
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+                        
+
