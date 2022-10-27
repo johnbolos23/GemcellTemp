@@ -1,0 +1,29 @@
+.image-with-text-inner {
+
+    .row {
+        align-items: center;
+        padding: 70px;
+
+        .col-6.col-a img {
+            width: 100%;
+            padding-right: 30px;
+        }
+
+        .col-6.col-b {
+            padding-left: 30px;
+
+            .heading {
+                width: 100%;
+                max-width: 14em;
+                margin-bottom: 25px;
+            }
+            
+            .wysiwyg-content {
+                width: 100%;
+                max-width: 38em;
+            }
+        }
+    }
+    
+}
+

@@ -1,0 +1,64 @@
+.pattern-banner .row-inner {
+    display: flex;
+    flex-wrap: wrap;
+    height: 31em;
+    align-items: stretch;
+
+    .col-a {
+        width: 57%;
+        margin-right: -11%;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 80px;
+
+        .contant-col {
+            width: 90%;
+            max-width: 36em;
+
+            .wysiwyg-content {
+                font-size: 24px;
+                color: white;
+            }
+            
+        }
+        
+        .heading {
+            font-size: 72px;
+            color: white;
+            margin-bottom: 15px;
+        }
+    }
+    
+    .col-b {
+        width: 52%;
+
+        img.logo-img {
+            width: 55% !important;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+
+
+.pattern-banner-slider .owl-dots .owl-dot span {
+    border-radius: 0;
+    -ms-transform: rotate(20deg); /* IE 9 */
+    transform: rotate(44deg);
+    border: 3px solid #B1B1B1;
+    background: none ;
+    width: 12px;
+    height: 12px;
+}
+
+.pattern-banner-slider .owl-dots .owl-dot.active span {
+    background: #0C96B2;
+    border-color: #0C96B2;
+}
+

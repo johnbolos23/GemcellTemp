@@ -55,7 +55,7 @@ if (!function_exists('understrap_scripts')) {
 
 		
 		wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/js/custom-js.js', array('jquery'), true, true);  
-
+		wp_enqueue_script( 'custom-script', get_stylesheet_directory_uri() . '/js/custom-script.js', array('jquery'), true, true);  
 
 		wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/style.css');  
 	}
