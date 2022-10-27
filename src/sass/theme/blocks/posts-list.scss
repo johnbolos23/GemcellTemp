@@ -1,5 +1,3 @@
-
-
 section.posts-list {
     padding: 150px 0 50px;
 
@@ -163,6 +161,17 @@ section.posts-list {
                     }
                 }
             }
+        }
+    }
+}
+
+
+body.page-id-25 {
+    section.posts-list{
+        padding-top: 0;
+        
+        .container{
+            max-width: 1537px;
         }
     }
 }

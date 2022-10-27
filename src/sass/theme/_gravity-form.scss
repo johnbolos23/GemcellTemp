@@ -55,4 +55,28 @@
             }
         }
     }
+
+    #post-single-newsletter{
+        padding: 100px 0;
+        margin-bottom: 185px;
+        margin-top: 80px;
+        max-width: 1538px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .container{
+            max-width: 787px;
+            margin: auto;
+
+            .heading{
+                line-height: 130%;
+                margin-bottom: 20px;
+            }
+        }
+        .main-footer-newsletter-wrapper{
+            form{
+                margin-bottom: 0;
+            }
+        }
+    }
 }
