@@ -63,34 +63,38 @@ ob_end_clean();
     </div>
 </section>
 
-<section class="single-suppliers" id="single-suppliers">
+<section class="single-competition" id="single-competition">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-4">
-                <div class="single-supplier-image">
-                    <div class="single-supplier-image-wrapper">
+                <div class="single-competition-image">
+                    <div class="post-list-item-image-title">
+                            
+                        <div class="post-list-item-title-wrapper style-<?php echo get_field('shade_style'); ?>">
+                            <div class="post-list-item-title-inner-wrapper">
+                                <?php echo get_the_title(); ?>
+                            </div>
+                        </div>
+                    
+                        <div class="post-list-item-image">
                         <?php echo get_the_post_thumbnail(); ?>
+                        </div>
                     </div>
-                    <?php if( get_field('website') ) : ?>
-                    <div class="supplier-website">
-                        <h4 class="m-0"><b>Website:</b></h4>
-                        <p class="m-0"><a href="<?php echo get_field('website'); ?>" target="_blank"><?php echo get_field('website'); ?></a></p>
-                    </div>
-                    <?php endif; ?>
+                        
                 </div>
             </div>
             <div class="col-12 col-lg-8">
-                <div class="single-supplier-details">
-                    <div class="single-supplier-details-wrapper">
+                <div class="single-competition-details">
+                    <div class="single-competition-details-wrapper">
                         <?php 
-                        $categories = get_the_terms( get_the_ID(), 'suppliers_cat' );
+                        $categories = get_the_terms( get_the_ID(), 'competition_tax' );
                         $output = '';
 
                         if( $categories ){
-                            echo '<div class="single-supplier-categories">';
-                                echo '<h4 class="subheading"><span>';
+                            echo '<div class="single-competition-categories">';
+                                echo '<h4 class="subheading-competition"><span>';
                             foreach( $categories as $category ) {
-                                $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a>' . ', ';
+                                $output .= '<a>' . esc_html( $category->name ) . '</a>' . ', ';
                             }
                             echo trim( $output, ', ' );
                                 echo '</span></h4>';
@@ -99,8 +103,22 @@ ob_end_clean();
                         ?>
 
                         <h2 class="heading"><?php the_title(); ?></h2>
-                        
+                        <h5 class="subcontent"><?php the_content(); ?></h5>
                         <div class="wysiwyg-content"><?php echo get_field('description'); ?></div>
+                        <div class="competition-col-wrapper">
+                            <?php if( get_field('competition_form', 'option')['show_form'] ) : $competitionGroup = get_field('competition_form', 'option'); ?>
+                            <div class="competition-wrapper">
+                                <?php if( $competitionGroup['form_heading'] ) : ?>
+                                    <h3><?php echo $competitionGroup['form_heading']; ?></h3>
+                                <?php endif; ?>
+                                <?php 
+                                    if( $competitionGroup['form'] ){
+                                        gravity_form( $competitionGroup['form'] );
+                                    }
+                                ?>
+                            </div>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -129,11 +147,11 @@ ob_end_clean();
         <?php endif; ?> -->
 
         <?php if( get_field('info_blocks', 'option') ) : ?>
-        <div class="row supplier-info-blocks">
+        <div class="row competition-info-blocks">
             <?php $counter = 1; foreach( get_field('info_blocks', 'option') as $block ) : ?>
             <div class="col-12 col-lg-4">
-                <div class="supplier-block-item">
-                    <div class="supplier-block-item-wrapper">
+                <div class="competition-block-item">
+                    <div class="competition-block-item-wrapper">
                         <img src="<?php echo $block['icon']; ?>" />
                         <h3 class="block-title"><?php echo $block['title']; ?></h3>
                         <div class="wysiwyg-content"><?php echo $block['detail']; ?></div>
@@ -141,7 +159,7 @@ ob_end_clean();
                         <a href="<?php echo $block['link']['url']; ?>"><?php echo $block['link']['title']; get_template_part('icons/arrow-up'); ?></a>
                         <?php endif; ?>
                     </div>
-                    <div class="supplier-block-border">
+                    <div class="competition-block-border">
                         <img src="<?php echo get_stylesheet_directory_uri() . '/icons/supplier-image/' . $counter .'.jpg'; ?>" />
                     </div>
                 </div>
