@@ -56,6 +56,12 @@ if (!function_exists('understrap_scripts')) {
 		
 		wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/js/custom-js.js', array('jquery'), true, true);  
 
+		wp_enqueue_script( 'googlemapapi', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyApyclQTE-uyeCjNphglXkawNegc2QPiiw', array('jquery'), true, true);  
+
+		wp_enqueue_script( 'map-helper', get_stylesheet_directory_uri() . '/js/map-helper.js', array('jquery'), true, true);  
+
+
+		
 
 		wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/style.css');  
 	}
