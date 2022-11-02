@@ -5,6 +5,18 @@ section.step-by-step {
     .heading{
         padding-right: 120px;
         font-size: 56px;
+        @media (max-width: $bigScreen){
+            &{
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: $mobile){
+            &{
+                font-size: 36px;
+                padding: 0;
+            }
+        }
     }
     .wysiwyg-content{
         margin-top: 15px;
@@ -31,6 +43,19 @@ section.step-by-step {
                     left: 100%;
                     transform: translateY(-100%) translateX(-50%);
                     top: 50%;
+
+                    @media (max-width: 1550px){
+                        &{
+                            width: 8em;
+                        }
+                    }
+
+                    @media (max-width: $tablet){
+                        &{
+                            width: 4em;
+                            top: 36%;
+                        }
+                    }
                 }
 
                 &.step-is-parent {
@@ -54,6 +79,53 @@ section.step-by-step {
                 &.step-2.step-is-parent {
                     left: 11.5%;
                     bottom: calc(100% + 40px);
+
+                    @media (max-width: $bigScreen){
+                        &{
+                            left: 7.5%;
+                        }
+                    }
+
+                    @media (max-width: $smallLaptop){
+                        &{
+                            left: 10%;
+                        }
+                    }
+
+                    @media (max-width: $tablet){
+                        &{
+                            left: 3%;
+                        }
+                    }
+
+                    @media (max-width: $mobile){
+                        &{
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            -ms-transform: translate(-50%, -50%);
+                            bottom: 93%;
+                        }
+                    }
+
+                    svg{
+                        @media (max-width: $smallLaptop){
+                            &{
+                                width: 6em;
+                            }
+                        }
+
+                        @media (max-width: $tablet){
+                            &{
+                                width: 4em;
+                            }
+                        }
+
+                        @media (max-width: $tablet){
+                            &{
+                                width: 3.5em;
+                            }
+                        }
+                    }
                 }
 
                 .step-item-image {
@@ -67,8 +139,35 @@ section.step-by-step {
                     cursor: pointer;
                     transition: all 0.5s ease;
 
+                    @media (max-width: $smallLaptop){
+                        &{
+                            width: 110px;
+                            height: 110px;
+                            line-height: 110px;
+                        }
+                    }
+
+                    @media (max-width: 420px){
+                        &{
+                            width: 80px;
+                            height: 80px;
+                            line-height: 80px;
+                        }
+                    }
+
+
                     img {
                         transition: all 0.5s ease;
+                        @media (max-width: $smallLaptop){
+                            &{
+                                width: 45%;
+                            }
+                        }
+                        @media (max-width: 420px){
+                            &{
+                                width: 35%;
+                            }
+                        }
                     }
 
                     &:hover {
@@ -79,6 +178,113 @@ section.step-by-step {
                         }
                     }
                 }
+            }
+
+            .step-item.step-1 {
+                @media (max-width: $mobile){
+                    &{
+                        width: 50%;
+                        flex: 0 0 50% !important;
+                    }
+                }
+
+                svg{
+
+                    @media (max-width: $mobile){
+                        &{
+                            width: 9em !important;
+                        }
+                    }
+
+                    @media (max-width: 550px){
+                        &{
+                            width: 7em !important;
+                        }
+                    }
+
+                    @media (max-width: 485px){
+                        &{
+                            width: 5em !important;
+                        }
+                    }
+
+                    @media (max-width: 420px){
+                        &{
+                            width: 3.8em!important;
+                        }
+                    }
+
+                }
+                
+            }
+            
+            .step-item.step-3 {
+                @media (max-width: $mobile){
+                    &{
+                        flex: 0 0 50% !important;
+                    }
+                }
+
+                svg{
+
+                    @media (max-width: $mobile){
+                        &{
+                            width: 7em!important;
+                            top: 9em!important;
+                            left: -3.3em;
+                            transform: rotate(90deg)!important;
+                        }
+                    }
+
+                    @media (max-width: 485px){
+                        &{
+                            width: 5em!important;
+                            left: -2.5em;
+                        }
+                    }
+
+                }
+                
+            }
+            
+            .step-item.step-4 {
+                @media (max-width: $mobile){
+                    &{
+                        flex: 0 0 100% !important;
+                        margin-top: 4em;
+                    }
+                }
+
+                svg{
+
+                    @media (max-width: $mobile){
+                        &{
+                            width: 7em !important;
+                            top: 14em !important;
+                            left: 50% !important;
+                            transform: translate(-50%, -50%) rotate(90deg) !important;
+                        }
+                    }
+
+                    @media (max-width: 485px){
+                        &{
+                            width: 5em!important;
+                        }
+                    }
+
+
+                }
+                
+            }
+            
+            .step-item.step-5 {
+                @media (max-width: $mobile){
+                    &{
+                        flex: 0 0 100% !important;
+                margin-top: 9em;
+                    }
+                }
+                
             }
 
             .step-title{

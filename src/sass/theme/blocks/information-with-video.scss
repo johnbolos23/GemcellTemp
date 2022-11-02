@@ -2,6 +2,36 @@ section.information-with-video {
     padding-top: 150px;
     padding-bottom: 100px;
 
+    .col-12:nth-child(1), .col-12:nth-child(2){
+        
+
+        @media (max-width: $tablet){
+            &{
+                width:50%;
+            }
+        }
+
+        @media (max-width: $mobile){
+            &{
+                width:100%;
+                text-align: center;
+            }
+        }
+
+    }
+
+    .col-12:nth-child(2){
+        @media (max-width: $mobile){
+            &{
+                margin-top: 15px;
+            }
+        }
+    }
+
+    .container{
+        padding: 20px 40px;
+    }
+
     .information-with-video-wrapper {
         max-width: 1253px;
         margin: auto;
@@ -9,9 +39,21 @@ section.information-with-video {
         .information-with-video-video {
             margin-top: 75px;
 
+            @media (max-width: $mobile){
+                &{
+                    height: 100%;
+                }
+            }
+
             img {
                 width: 100%;
                 object-fit: cover;
+                
+                @media (max-width: $mobile){
+                    &{
+                        height: 100%;
+                    }
+                }
             }
 
             .video-popup-trigger {
