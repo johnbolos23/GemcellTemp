@@ -15,6 +15,18 @@
             position: relative;
             transition: .3s;
             bottom: 0;
+
+            @media (max-width: $tablet){
+                &{
+                    width: 33.33%;
+                }
+            }
+
+            @media (max-width: $mobile){
+                &{
+                    width: 50%;
+                }
+            }
     
         
             .members-item-inner {
@@ -41,6 +53,18 @@
                     z-index: 1;
                     width: 100%;
                     padding: 25px 18px;
+
+                    @media (max-width: $bigScreen){
+                        &{
+                            font-size: 20px;
+                        }
+                    }
+
+                    @media (max-width: $mobile){
+                        &{
+                            font-size: 18px;
+                        }
+                    }
                 }
         
                 .members-poster img {
@@ -51,6 +75,13 @@
                     padding: 30px;
                     height: 270px;
                     object-fit: contain;
+
+                    @media (max-width: $bigScreen){
+                        &{
+                            height: 155px;
+                            padding: 15px;
+                        }
+                    }
                 }
                 
                 .members-poster {

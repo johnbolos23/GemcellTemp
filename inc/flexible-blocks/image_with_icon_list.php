@@ -1,4 +1,4 @@
-<section class="page-title image-with-icon-list" id="image-with-icon-list-<?php echo get_row_index(); ?>">
+<section class="page-section image-with-icon-list" id="image-with-icon-list-<?php echo get_row_index(); ?>">
     
     <div class="image-with-icon-list-inner">
         <div class="container">

@@ -8,11 +8,23 @@
         padding-left: 0;
         list-style-type: none;
         display: flex;
+        flex-wrap: wrap;
 
         li {
             width: 33.33%;
             text-align: center;
             padding: 10px;
+
+            @media (max-width: $tablet){
+                &{
+                    width: 50%;
+                }
+            }
+            @media (max-width: $mobile){
+                &{
+                    width: 100%;
+                }
+            }
 
             .list-inner:before {
                 content: "";
@@ -54,6 +66,18 @@
                     letter-spacing: -0.02em;
                     color: #FFFFFF;
                     text-decoration:none;
+
+                    @media (max-width: $bigScreen){
+                        &{
+                            font-size: 28px;
+                        }
+                    }
+
+                    @media (max-width: $mobile){
+                        &{
+                            font-size: 24px;
+                        }
+                    }
                 }
             }
             

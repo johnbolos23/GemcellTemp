@@ -7,6 +7,12 @@
             width: 100%;
             height: 752px;
             object-fit: cover;
+
+            @media (max-width: $tablet){
+                &{
+                    height: 550px;
+                }
+            }
         }
     
     }
@@ -28,6 +34,38 @@
         max-width: 35em;
         margin-left: auto;
         margin-right: auto;
+
+        @media (max-width: $tablet){
+            &{
+                padding: 70px 30px;
+            }
+        }
+
+
+        .subheading{
+            @media (max-width: $bigScreen){
+                    &{
+                       font-size: 14px;
+                    }
+                }
+        }
+    
+        .heading{
+                @media (max-width: $bigScreen){
+                    &{
+                       font-size: 36px;
+                    }
+                }
+        }
+    
+        .paragraph{
+                @media (max-width: $bigScreen){
+                    &{
+                       font-size: 18px;
+                    }
+                }
+        }
+        
         
     }
 
@@ -44,4 +82,9 @@
         /* transform: translateX(50%); */
         z-index: 2;
     }
+    .banner-image-wrapper {
+        position: relative;
+    }
+
+
 }

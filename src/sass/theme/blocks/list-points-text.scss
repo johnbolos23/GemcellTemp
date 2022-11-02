@@ -1,3 +1,54 @@
 .list-points-text-inner {
     padding: 75px 10px;
+
+    .col-6.col-a {
+        @media (max-width: $bigScreen){
+            &{
+                width: 40%;
+            }
+        }
+        @media (max-width: $tablet){
+            &{
+                width: 100%;
+            }
+        }
+        
+    }
+    
+    .col-6.col-b {
+        @media (max-width: $bigScreen){
+            &{
+                width: 60%;
+            }
+        }
+        @media (max-width: $tablet){
+            &{
+                width: 100%;
+            }
+        }
+        
+    }
+
+    .heading{
+        @media (max-width: $tablet){
+            &{
+                margin-bottom:12px;
+            }
+        }
+    }
+
+    .wysiwyg-content li{
+        @media (max-width: $bigScreen){
+            &{
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: $mobile){
+            &{
+                font-size: 14px;
+            }
+        }
+
+    }
 }

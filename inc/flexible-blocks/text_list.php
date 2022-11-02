@@ -1,4 +1,4 @@
-<section class="page-title text-list" id="text-list-<?php echo get_row_index(); ?>">
+<section class="page-section text-list" id="text-list-<?php echo get_row_index(); ?>">
     
     <div class="text-list-inner">
         <div class="container">

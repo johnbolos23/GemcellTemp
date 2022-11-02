@@ -24,6 +24,9 @@
                     <?php echo get_sub_field('heading'); ?>
                     <!-- Terms and Conditions -->
                 </h2>
+                <div class="wysiwyg-content" style="color:white; display:none;">
+                        <?php echo get_sub_field('paragraph'); ?>
+                    </div>
                 <a class="main-button main-button-blue" href="<?php echo get_sub_field('button')['url']; ?>">
                         <?php echo get_sub_field('button')['title']; get_template_part('icons/arrow-up'); ?>
                 </a>

@@ -1,4 +1,4 @@
-<section class="page-title group-box" id="group-box-<?php echo get_row_index(); ?>">
+<section class="page-section group-box" id="group-box-<?php echo get_row_index(); ?>">
     
     <div class="group-box-inner">
         <div class="container">
