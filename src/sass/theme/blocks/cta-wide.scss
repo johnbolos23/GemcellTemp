@@ -1,0 +1,21 @@
+section.cta-wide {
+    padding: 116px 0;
+
+    .container {
+        max-width: 1537px;
+    }
+
+    .heading {
+        font-size: 56px;
+    }
+
+    .main-button {
+        border-color: white;
+        color: white;
+        margin-top: 42px;
+
+        &:before {
+            background: white;
+        }
+    }
+}

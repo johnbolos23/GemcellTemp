@@ -49,31 +49,8 @@ foreach ( $understrap_includes as $file ) {
 add_filter('get_the_archive_title_prefix','__return_false');
 
 
-function theme_enqueue_styles() {
-
-    wp_enqueue_script( 'googlemapapi', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyApyclQTE-uyeCjNphglXkawNegc2QPiiw', array('jquery'), true, true);
-    wp_enqueue_script( 'map-helper', get_stylesheet_directory_uri() . '/js/map-helper.js', array('jquery'), true, true);
-	
-	  wp_localize_script( 'custom-script', 'myAjax', array( 
-        'ajaxurl' => admin_url( 'admin-ajax.php' ),
-//        'noposts' => __('No older posts found', 'twentyfifteen'),
-//        'grid_url' => $pulse->pulse_url."/".$station_slug."/schedule",
-//        'first_page' => get_pagenum_link(1) // here it is
-    )); 
-    wp_enqueue_script( 'custom-script' );
-
-}
-add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles', 999 );
-
-
-
-
-
 add_action("wp_ajax_fetch_blog_list", "fetch_blog_list");
 add_action("wp_ajax_nopriv_fetch_blog_list", "fetch_blog_list");
-
-
-
 
 function fetch_blog_list() {
 	$paged = $_POST['page_num'];
@@ -226,3 +203,21 @@ function get_client_ip()
 
     return $ipaddress;
 }
+
+function getDistanceBetweenCoordinates($lat1, $lon1, $lat2, $lon2, $unit) {
+
+    $theta = $lon1 - $lon2;
+    $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+    $dist = acos($dist);
+    $dist = rad2deg($dist);
+    $miles = $dist * 60 * 1.1515;
+    $unit = strtoupper($unit);
+  
+    if ($unit == "K") {
+        return ($miles * 1.609344);
+    } else if ($unit == "N") {
+        return ($miles * 0.8684);
+    } else {
+        return $miles;
+    }
+  }

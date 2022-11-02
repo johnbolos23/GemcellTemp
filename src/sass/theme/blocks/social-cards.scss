@@ -1,0 +1,49 @@
+section.social-cards{
+    padding: 40px 0;
+    
+    .container{
+        max-width: 1537px;
+
+        .social-card-items{
+            margin: 0 -25px;
+    
+            > div[class^="col-"]{
+                padding: 0 25px;
+            }
+        }
+    }
+    
+    .social-card-wrapper {
+        padding: 50px;
+    
+        img{
+            transform: translateY(11px);
+            max-width: 42px;
+            max-height: 42px;
+            display: block;
+        }
+
+        .social-card-details {
+            padding-left: 40px;
+    
+            .heading {
+                font-size: 48px;
+                line-height: 130%;
+                color: white;
+                margin-bottom: 7px;
+            }
+    
+            a {
+                font-size: 18px;
+                line-height: 170%;
+                font-family: 'CenturyGothicBold';
+                text-decoration: none;
+                color: white;
+    
+                svg {
+                    margin-left: 13px;
+                }
+            }
+        }
+    }
+}
