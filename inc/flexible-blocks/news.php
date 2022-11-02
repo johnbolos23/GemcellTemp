@@ -1,4 +1,4 @@
-<section class="page-title news" id="news-<?php echo get_row_index(); ?>">
+<section class="page-section news" id="news-<?php echo get_row_index(); ?>">
     
     <div class="news-inner">
         <div class="container-inner">

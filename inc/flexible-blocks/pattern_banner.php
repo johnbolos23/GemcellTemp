@@ -1,21 +1,30 @@
 
 <style>
     .pattern-banner .row .col-a{
-        background-image: url("<?php echo get_stylesheet_directory_uri() ?>/icons/pattern bg.png");
+        /* background-image: url("<?php echo get_stylesheet_directory_uri() ?>/icons/pattern bg.png"); */
         background-size: cover; 
         background-repeat: no-repeat;
         background-position: center;
         position:relative;
+        z-index: 2;
     }
 
     .pattern-banner .row .col-b{
         /* background-image: url("<?php echo get_stylesheet_directory_uri() ?>/icons/road.png"); background-size: cover; background-repeat: no-repeat; background-position: center; position:relative; */
     }
 
+    img.vector-image-bg {
+        position: absolute;
+        height: 100%;
+        width: 60% !important;
+        z-index: 2;
+        display:block;
+    }
+
 </style>
 
 
-<section class="page-title pattern-banner" id="pattern-banner-<?php echo get_row_index(); ?>">
+<section class="page-section pattern-banner" id="pattern-banner-<?php echo get_row_index(); ?>">
     
     <div class="pattern-banner">
         <div class="container">
@@ -24,7 +33,10 @@
             <?php if( get_sub_field('banner_slider') ) : ?>
             <?php foreach( get_sub_field('banner_slider') as $block ) : ?>            
             <div class="row-inner">
+
+                <img src="<?php echo get_stylesheet_directory_uri() ?>/icons/pattern bg.png ?>"  alt="" class="vector-image-bg">
                 <div class="col-a" style="">
+                    
                     <h2 class="heading">
                         <?php echo $block['heading']; ?>
                         <!-- Take the road to Rewards -->

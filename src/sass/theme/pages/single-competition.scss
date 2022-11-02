@@ -2,8 +2,44 @@ section#single-competition{
     padding-top: 90px;
     padding-bottom: 210px;
 
+    
+
     .container{
         max-width: 1533px;
+
+        .competition-col-wrapper.small-device {
+
+            @media (max-width: $smallLaptop){
+                &{
+                    display: block !important;
+                    padding: 20px;
+                    max-width: 1100px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            
+        }
+        
+        .col-12.col-lg-8 .competition-col-wrapper {
+
+            @media (max-width: $smallLaptop){
+                &{
+                    display: none;
+                }
+            }
+            
+        }
+
+        .wysiwyg-content li{
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 16px;
+                }
+            }
+        }
+
+
     }
     
     .single-competition-image {
@@ -40,6 +76,12 @@ section#single-competition{
     .single-competition-details{
         padding-left: 40px;
 
+        @media (max-width: $bigScreen){
+            &{
+                padding-left: 15px;
+            }
+        }
+
         .heading{
             margin-bottom: 30px;
         }
@@ -52,6 +94,12 @@ section#single-competition{
             line-height: 170%;
         /* identical to box height, or 41px */
             color: #263238;
+
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 20px;
+                }
+            }
         }
 
         h4.subheading-competition {
@@ -81,12 +129,43 @@ section#single-competition{
         margin-left: -18px;
         margin-right: -18px;
 
+        @media (max-width: $tablet){
+            &{
+               
+                padding:10px;
+            }
+        }
+
         > div[class^="col-"] {
             padding: 18px;
         }
 
+        .col-12.col-lg-4{
+
+            @media (max-width: $tablet){
+                &{
+                    width: 33.33% !important;
+                    padding:8px;
+                }
+            }
+
+            @media (max-width: $mobile){
+                &{
+                    width: 100% !important;
+                    padding:8px;
+                }
+            }
+        }
+        
         .competition-block-border img {
             display: block;
+
+            @media (max-width: $mobile){
+                &{
+                    width: 100%;
+                }
+            }
+
         }
         .competition-block-item {
             height: 100%;
@@ -99,6 +178,12 @@ section#single-competition{
                 padding: 65px 45px 75px;
                 flex: 1;
                 transition: all 0.5s ease;
+
+                @media (max-width: $tablet){
+                    &{
+                        padding: 45px 20px 45px;
+                    }
+                }
     
                 .block-title {
                     margin-top: 32px;
@@ -108,13 +193,26 @@ section#single-competition{
                     line-height: 110%;
                     font-family: 'CenturyGothicBold';
                     letter-spacing: -0.02em;
+
+                    @media (max-width: $tablet){
+                        &{
+                            font-size: 28px;
+                        }
+                    }
+
                 }
                 
                 .block-title, .wysiwyg-content, .wysiwyg-content *, svg path{
                     transition: all 0.5s ease;
                 }
 
-
+                img{
+                    @media (max-width: $tablet){
+                        &{
+                            width: 70px;
+                        }
+                    }   
+                }
                 a{
                     margin-top: 23px;
                     display: inline-block;
@@ -125,6 +223,14 @@ section#single-competition{
                     font-family: 'CenturyGothicBold';
                     text-decoration: none;
                     transition: all 0.5s ease;
+                    
+                    @media (max-width: $tablet){
+                        &{
+                            font-size: 16px;
+                        }
+                    }
+                        
+
     
                     svg{
                         margin-left: 18px;
@@ -141,6 +247,9 @@ section#single-competition{
 
                 .competition-block-item-wrapper {
                     background: #263238;
+
+                    
+                    
 
                     .block-title, .wysiwyg-content, .wysiwyg-content *, a{
                         color: white;
@@ -182,6 +291,12 @@ section#single-competition{
         background: linear-gradient(180deg,#2876b3 0,#34ac9e 100%);
         min-height: 350px;
         transition: .3s;
+
+        @media (max-width: $bigScreen){
+            &{
+                padding: 53px 30px 50px;
+            }
+        }
     }
 
     .post-list-item-title-wrapper.style-green {
@@ -205,6 +320,12 @@ section#single-competition{
         height: 322px;
         -o-object-fit: cover;
         object-fit: cover;
+
+        @media (max-width: $bigScreen){
+            &{
+                height:250px;
+            }
+        }
     }
     
     .post-list-item-image-title {

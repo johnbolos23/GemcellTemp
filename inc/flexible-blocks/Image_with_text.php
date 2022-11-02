@@ -1,4 +1,4 @@
-<section class="page-title image-with-text" id="image-with-text-<?php echo get_row_index(); ?>">
+<section class="page-section image-with-text" id="image-with-text-<?php echo get_row_index(); ?>">
     
     <div class="image-with-text-inner">
         <div class="container">

@@ -50,6 +50,18 @@ section.competitions-summary{
     .col-12 {
         width: 33.33%;
 
+        @media (max-width: $tablet){
+            &{
+                    width: 50%;
+            }
+        }
+
+        @media (max-width: $mobile){
+            &{
+                    width: 100%;
+            }
+        }
+
         .post-list-item-wrapper:hover {
             border-color: #0796bf;
              transition:.3s;
@@ -95,7 +107,75 @@ section.competitions-summary{
                 position: relative;
                 padding-top: 250px;
 
-                
+                @media (max-width: $bigScreen){
+                    &{
+                        padding-top: 200px;
+                    }
+                }
+
+                @media (max-width: $mobile){
+                    &{
+                        padding-top: 150px;
+                    }
+                }
+
+                .post-list-item-image img{
+
+                    @media (max-width: $bigScreen){
+                        &{
+                            height: 238px;
+                        }
+                    }
+                }
+
+                .post-list-item-meta{
+                    a{
+                        font-weight: 700;
+                        @media (max-width: $bigScreen){
+                            &{
+                                font-size: 14px;
+                            }
+                        }
+
+                        @media (max-width: $mobile){
+                            &{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    .heading{
+                        @media (max-width: $bigScreen){
+                            &{
+                                font-size: 24px;
+                            }
+                        }
+
+                        @media (max-width: $mobile){
+                            &{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+
+                }
+
+
+                .post-list-item-link{
+                    a{
+                        @media (max-width: $bigScreen){
+                            &{
+                                font-size: 16px;
+                            }
+                        }
+
+                        @media (max-width: $mobile){
+                            &{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
     
                 .post-list-item-title-wrapper {
                     position: absolute;
@@ -120,7 +200,20 @@ section.competitions-summary{
                         background: linear-gradient(180deg,#2876b3 0,#34ac9e 100%);
                         min-height: 350px;
                         transition:.3s;
+
+                        @media (max-width: $bigScreen){
+                            &{
+                                font-size: 42px;
+                                padding: 40px 30px 40px;
+                                min-height: 295px;
+                            }
+                        }
                     
+                        @media (max-width: $mobile){
+                            &{
+                                min-height: 240px;
+                            }
+                        }
                     }
                     
                 }

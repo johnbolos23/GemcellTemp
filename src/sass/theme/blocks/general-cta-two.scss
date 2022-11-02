@@ -5,17 +5,138 @@ section.general-cta.cta-two {
         bottom: unset !important;
         top: 0 !important;
         transform: translatey(-47.5%);
+
+        @media (max-width: $tablet){
+            &{
+                transform: translatey(-48.1%);
+                width: 11em;
+            }
+        }
+
+        @media (max-width: $mobile){
+            &{
+                transform: translatey(-48.3%);
+                width: 8em;
+            }
+        }
     }
 
     .general-cta-wrapper {
         padding: 100px 0 100px 200px;
+
+        @media (max-width: $bigScreen){
+            &{
+                padding: 75px 0 75px 140px;
+            }
+        }
+
+        @media (max-width: $tablet){
+            &{
+                margin-right: 10px;
+                padding: 75px 0 75px 100px;
+            }
+        }
+
+        @media (max-width: $mobile){
+            &{
+                padding: 75px 0 75px 38px;
+            }
+        }
+
+
+
+        .col-5 {
+
+            @media (max-width: $tablet){
+                &{
+                    width: 100%;
+                }
+            } 
+
+            .wysiwyg-content{
+                @media (max-width: $tablet){
+                    &{
+                        display: block !important;
+                        margin-bottom: 10px;
+                    }
+                } 
+            }
+            
+        }
+        
+        .col-6 {
+            @media (max-width: $tablet){
+                &{
+                    display: none;
+                }
+            } 
+            
+        }
+
+        .heading{
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 36px;
+                }
+            } 
+
+            @media (max-width: $mobile){
+                &{
+                    font-size: 28px;
+                }
+            } 
+        }
+
+        .wysiwyg-content p {
+
+            @media (max-width: $mobile){
+                &{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .main-button{
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 16px;
+                }
+            } 
+
+            @media (max-width: $mobile){
+                &{
+                    font-size: 14px;
+                }
+            } 
+        }
     }
+
+    .general-cta-buttons-wrapper{
+        @media (max-width: $bigScreen){
+            &{
+                padding-left: 0px;
+            }
+        }
+    }
+
     .general-cta-buttons-wrapper .wysiwyg-content {
         padding-left: 50px;
 
-        p {
-            font-size: 20px;
+        @media (max-width: $bigScreen){
+            &{
+                padding-left: 0px;
+            }
         }
+
+        p{
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 18px;
+                }
+            }
+        }
+
+        
     }
 
     h2.heading {

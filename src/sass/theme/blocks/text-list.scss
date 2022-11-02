@@ -7,6 +7,20 @@
             display: grid;
             grid-template-columns: 45% 55%;
             align-items: center;
+
+            @media (max-width: $tablet){
+                &{
+                    grid-template-columns: 100%;
+                }
+            }
+
+            .col-b{
+                @media (max-width: $tablet){
+                    &{
+                        margin-top:15px;
+                    }
+                }
+            }
         }
         
 
@@ -24,12 +38,25 @@
             padding-left: 0;
             width: 50%;
             margin-bottom: 1em;
+
+            @media (max-width: $tablet){
+                &{
+                    width: 100%;
+                }
+            }
     
             > img {
                 margin-right: 2em;
                 width: 75px;
                 height: 75px;
                 object-fit: contain;
+
+                @media (max-width: $mobile){
+                    &{
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
             }
     
             .step-col-inner-content span {
@@ -41,6 +68,12 @@
                 letter-spacing: -0.02em;
                 font-feature-settings: 'salt' on, 'liga' off;
                 color: #263238;
+
+                @media (max-width: $mobile){
+                    &{
+                        font-size: 20px;
+                    }
+                }
             }
     
             

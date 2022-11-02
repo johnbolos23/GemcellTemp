@@ -39,6 +39,46 @@ section#single-members{
 
     .container{
         max-width: 1533px;
+
+        .row{
+
+            .col-12.col-lg-4{
+                @media (max-width: $tablet){
+                    &{
+                        width: 100%;
+                    }
+                }
+
+                .single-members-details.top-position {
+
+                    @media (max-width: $tablet){
+                        &{
+                            display: block !important;
+                            text-align: center;
+                        }
+                    }
+                    
+                }
+            }
+            .col-12.col-lg-8{
+                @media (max-width: $tablet){
+                    &{
+                        width: 100%;
+                        margin-top: 20px;
+                    }
+                }
+
+                .single-members-categories, .heading{
+
+                    @media (max-width: $tablet){
+                        &{
+                            display: none !important;
+                        }
+                    }
+
+                }
+            }
+        }
     }
     .member-list-col{
 
@@ -54,6 +94,18 @@ section#single-members{
                     line-height: 170%;
                     text-align: center;
                     color: #263238;
+                }
+
+                img{
+
+                    @media (max-width: $tablet){
+                        &{
+                            max-width: 25em;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
+                   
                 }
                 
                 .name {
@@ -102,10 +154,32 @@ section#single-members{
         padding-bottom: 50px;
         background: #F8F8F8;
 
+        @media (max-width: $tablet){
+            &{
+                display: grid;
+                grid-template-columns: 30% 70%;
+                padding-bottom: 20px;
+            }
+        }
+
+        @media (max-width: $tablet){
+            &{
+                display: grid;
+                grid-template-columns: 100%;
+                padding-bottom: 20px;
+            }
+        }
+
         .single-members-image-wrapper {
             background: white;
             padding: 50px 80px;
             text-align: center;
+
+            @media (max-width: $mobile){
+                &{
+                    padding:20px;
+                }
+            }
         }
 
         .members-website {
@@ -135,6 +209,11 @@ section#single-members{
             line-height: 170%;
         /* identical to box height, or 31px */
             color: #263238;
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 16px;
+                }
+            }
         }
         
         p.m-0 {
@@ -145,6 +224,12 @@ section#single-members{
         /* or 31px */
             color: #263238;
             width: 70%;
+
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 16px;
+                }
+            }
         }
         
         .member-website, .member-phone, .member-email {
@@ -154,6 +239,17 @@ section#single-members{
         
         h4{
             width: 30%;
+            @media (max-width: $tablet){
+                &{
+                    width: 20%;
+                }
+            }
+
+            @media (max-width: $mobile){
+                &{
+                    width: 5em;
+                }
+            }
         }
         
         .member-website {
@@ -164,6 +260,12 @@ section#single-members{
     .single-members-details{
         padding-left: 40px;
 
+        @media (max-width: $tablet){
+            &{
+                padding:15px;
+            }
+        }
+
         .heading{
             margin-bottom: 30px;
         }
@@ -173,6 +275,11 @@ section#single-members{
         padding-left: 40px;
         margin-top: 2em;
         margin-bottom: 3em;
+        @media (max-width: $tablet){
+            &{
+                padding:15px;
+            }
+        }
 
         h3.members-col-title {
             font-family: "Century Gothic";
@@ -190,6 +297,11 @@ section#single-members{
         padding-left: 40px;
         margin-top: 2em;
         height: 20em;
+        @media (max-width: $tablet){
+            &{
+                padding:15px;
+            }
+        }
 
         h3.members-col-title {
             font-family: 'Century Gothic';
@@ -258,6 +370,12 @@ section#single-members{
 
                             p.item {
                                 margin-bottom: 10px;
+
+                                @media (max-width: $bigScreen){
+                                    &{
+                                        font-size: 16px;
+                                    }
+                                }
                             }
                         }
                     }
@@ -294,6 +412,11 @@ section#single-members{
 
     .member-other-images-col {
         padding-left: 40px;
+        @media (max-width: $tablet){
+            &{
+                padding:15px;
+            }
+        }
 
         h3.members-col-title {
             font-family: "Century Gothic";
@@ -334,12 +457,43 @@ section#single-members{
         margin-left: -18px;
         margin-right: -18px;
 
+        @media (max-width: $tablet){
+            &{
+               
+                padding:10px;
+            }
+        }
+
         > div[class^="col-"] {
             padding: 18px;
         }
 
+        .col-12.col-lg-4{
+
+            @media (max-width: $tablet){
+                &{
+                    width: 33.33% !important;
+                    padding:8px;
+                }
+            }
+
+            @media (max-width: $mobile){
+                &{
+                    width: 100% !important;
+                    padding:8px;
+                }
+            }
+        }
+        
         .members-block-border img {
             display: block;
+
+            @media (max-width: $mobile){
+                &{
+                    width: 100%;
+                }
+            }
+
         }
         .members-block-item {
             height: 100%;
@@ -352,6 +506,12 @@ section#single-members{
                 padding: 65px 45px 75px;
                 flex: 1;
                 transition: all 0.5s ease;
+
+                @media (max-width: $tablet){
+                    &{
+                        padding: 45px 20px 45px;
+                    }
+                }
     
                 .block-title {
                     margin-top: 32px;
@@ -361,13 +521,26 @@ section#single-members{
                     line-height: 110%;
                     font-family: 'CenturyGothicBold';
                     letter-spacing: -0.02em;
+
+                    @media (max-width: $tablet){
+                        &{
+                            font-size: 28px;
+                        }
+                    }
+
                 }
                 
                 .block-title, .wysiwyg-content, .wysiwyg-content *, svg path{
                     transition: all 0.5s ease;
                 }
 
-
+                img{
+                    @media (max-width: $tablet){
+                        &{
+                            width: 70px;
+                        }
+                    }   
+                }
                 a{
                     margin-top: 23px;
                     display: inline-block;
@@ -378,6 +551,14 @@ section#single-members{
                     font-family: 'CenturyGothicBold';
                     text-decoration: none;
                     transition: all 0.5s ease;
+                    
+                    @media (max-width: $tablet){
+                        &{
+                            font-size: 16px;
+                        }
+                    }
+                        
+
     
                     svg{
                         margin-left: 18px;
@@ -394,6 +575,9 @@ section#single-members{
 
                 .members-block-item-wrapper {
                     background: #263238;
+
+                    
+                    
 
                     .block-title, .wysiwyg-content, .wysiwyg-content *, a{
                         color: white;

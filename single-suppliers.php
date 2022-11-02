@@ -71,12 +71,18 @@ ob_end_clean();
                     <div class="single-supplier-image-wrapper">
                         <?php echo get_the_post_thumbnail(); ?>
                     </div>
-                    <?php if( get_field('website') ) : ?>
-                    <div class="supplier-website">
-                        <h4 class="m-0"><b>Website:</b></h4>
-                        <p class="m-0"><a href="<?php echo get_field('website'); ?>" target="_blank"><?php echo get_field('website'); ?></a></p>
+                    
+                    <div class="suppler-col-website">
+                        
+                        <h3 class="heading"><?php the_title(); ?></h3>
+                        <?php if( get_field('website') ) : ?>
+                        <div class="supplier-website">
+                            <h4 class="m-0"><b>Website:</b></h4>
+                            <p class="m-0"><a href="<?php echo get_field('website'); ?>" target="_blank"><?php echo get_field('website'); ?></a></p>
+                        </div>
+                        <?php endif; ?>
                     </div>
-                    <?php endif; ?>
+                    
                 </div>
             </div>
             <div class="col-12 col-lg-8">

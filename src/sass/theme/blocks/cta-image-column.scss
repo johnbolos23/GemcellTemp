@@ -10,6 +10,12 @@
         width: 1;
         border-right: 0;
 
+        @media (max-width: $tablet){
+            &{
+                width: 100%;
+            }
+        }
+
         
     }
 
@@ -17,6 +23,19 @@
         width: 100%;
         padding: 0 !important;
         height: 577px;
+        object-fit: cover;
+
+        @media (max-width: $bigScreen){
+            &{
+                height: 520px;
+            }
+        }
+
+        @media (max-width: $tablet){
+            &{
+                height: 400px;
+            }
+        }
     }
 
     .col-6.col-a {
@@ -46,6 +65,12 @@
                     width: 100%;
                     max-width: 34em;
                     margin-top: 12px;
+
+                    @media (max-width: $tablet){
+                        &{
+                            max-width: 100%;
+                        }
+                    }
                 }
             }
         }
@@ -55,6 +80,21 @@
             background: #F8F8F8;
             padding: 30px;
             height: 25%;
+
+            @media (max-width: $bigScreen){
+                &{
+                    height: auto;
+                }
+            }
+
+
+            img{
+                @media (max-width: $bigScreen){
+                    &{
+                        height: 60px;
+                    }
+                }
+            }
         }
 
         .main-button {

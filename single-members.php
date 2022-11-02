@@ -85,6 +85,24 @@ ob_end_clean();
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-4">
+                <div class="single-members-details top-position" style="display:none;">
+                        <?php 
+                        $categories = get_the_terms( get_the_ID(), 'member_categories' );
+                        $output = '';
+
+                        if( $categories ){
+                            echo '<div class="single-members-categories">';
+                                echo '<h4 class="subheading"><span>';
+                            foreach( $categories as $category ) {
+                                $output .= '<a>' . esc_html( $category->name ) . '</a>' . ', ';
+                            }
+                            echo trim( $output, ', ' );
+                                echo '</span></h4>';
+                            echo '</div>';
+                        }
+                        ?>
+                    <h2 class="heading"><?php the_title(); ?></h2>
+                </div>
                 <div class="member-list-col">
                     <div class="owl-carousel member-list-slider owl-theme">
                     <?php if( get_field('member_list') ) : ?>
@@ -118,6 +136,7 @@ ob_end_clean();
                     <div class="single-members-image-wrapper">
                         <?php echo get_the_post_thumbnail(); ?>
                     </div>
+                    <div class="member-a-col">
                     <?php if( get_field('address') ) : ?>
                     <div class="member-website">
                         <h4 class="m-0"><b>Address:</b></h4>
@@ -134,6 +153,7 @@ ob_end_clean();
                     <div class="member-email">
                         <h4 class="m-0"><b>Email:</b></h4>
                         <p class="m-0"><?php echo get_field('email'); ?></p>
+                    </div>
                     </div>
                     <?php endif; ?>
                 </div>

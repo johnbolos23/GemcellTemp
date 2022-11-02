@@ -4,6 +4,39 @@
 
 .preferred-supplier-inner{
     padding: 50px 0px;
+
+    .col-6.col-a{
+        .heading{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .col-6{
+        @media (max-width: $mobile){
+            &{
+                width: 100%;
+            }
+        }
+
+        .wysiwyg-content{
+
+            @media (max-width: $mobile){
+                &{
+                    margin-top:16px;
+                }
+            }
+        }
+
+        h3.heading svg{
+            @media (max-width: $tablet){
+                &{
+                    width: 50;
+                }
+            }
+        }
+    }
+
     .col-12 {
         display: flex;
         flex-wrap: wrap;
@@ -15,6 +48,17 @@
             position: relative;
             transition: .3s;
             bottom: 0;
+            @media (max-width: $tablet){
+                &{
+                    width: 33.33%;
+                }
+            }
+
+            @media (max-width: $mobile){
+                &{
+                    width: 50%;
+                }
+            }
     
         
             .supplier-item-inner {
@@ -41,6 +85,17 @@
                     z-index: 1;
                     width: 100%;
                     padding: 25px 18px;
+
+                    @media (max-width: $bigScreen){
+                        &{
+                            font-size: 24px;
+                        }
+                    }
+                    @media (max-width: $mobile){
+                        &{
+                            font-size: 18px;
+                        }
+                    }
                 }
         
                 .suplier-poster img {
@@ -51,6 +106,13 @@
                     padding: 30px;
                     height: 270px;
                     object-fit: contain;
+
+                    @media (max-width: $mobile){
+                        &{
+                            padding: 10px;
+                            height: 145px;
+                        }
+                    }
                 }
                 
                 .suplier-poster {
@@ -65,6 +127,7 @@
         .suplier-item:hover .supplier-item-inner h5{
             display:block !important;
             transition:.3s;
+            
         }
     
         .suplier-item:hover .supplier-item-inner{
