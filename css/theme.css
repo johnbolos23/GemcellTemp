@@ -19050,120 +19050,118 @@ section.general-cta.cta-two h2.heading, section.general-cta.cta-two .heading.h2 
 }
 
 @media (max-width: 1399px) {
-  .container {
+  section.image-with-text .container {
     max-width: 1200px;
   }
 }
-
 @media (max-width: 1480px) {
-  .container .subheading span {
+  section.image-with-text .container .subheading span {
     font-size: 14px;
   }
 }
 @media (max-width: 767px) {
-  .container .subheading span {
+  section.image-with-text .container .subheading span {
     font-size: 12px;
   }
 }
 @media (max-width: 1480px) {
-  .container .heading {
+  section.image-with-text .container .heading {
     font-size: 36px;
   }
 }
 @media (max-width: 767px) {
-  .container .heading {
+  section.image-with-text .container .heading {
     font-size: 28px;
   }
 }
 @media (max-width: 1480px) {
-  .container .wysiwyg-content p {
+  section.image-with-text .container .wysiwyg-content p {
     font-size: 16px;
   }
 }
 @media (max-width: 767px) {
-  .container .wysiwyg-content p {
+  section.image-with-text .container .wysiwyg-content p {
     font-size: 14px;
   }
 }
 @media (max-width: 1480px) {
-  .container a.main-button {
+  section.image-with-text .container a.main-button {
     font-size: 14px;
   }
 }
-
-.image-with-text-inner .row {
+section.image-with-text .image-with-text-inner .row {
   align-items: center;
   padding: 70px;
 }
 @media (max-width: 1480px) {
-  .image-with-text-inner .row {
+  section.image-with-text .image-with-text-inner .row {
     padding: 40px 10px;
   }
 }
-.image-with-text-inner .row .col-6.col-a img {
+section.image-with-text .image-with-text-inner .row .col-6.col-a img {
   width: 100%;
   padding-right: 30px;
 }
 @media (max-width: 1480px) {
-  .image-with-text-inner .row .col-6.col-a img {
+  section.image-with-text .image-with-text-inner .row .col-6.col-a img {
     padding-right: 0px;
   }
 }
 @media (max-width: 1480px) {
-  .image-with-text-inner .row .col-6.col-a {
+  section.image-with-text .image-with-text-inner .row .col-6.col-a {
     width: 40%;
   }
 }
 @media (max-width: 1024px) {
-  .image-with-text-inner .row .col-6.col-a {
+  section.image-with-text .image-with-text-inner .row .col-6.col-a {
     width: 100%;
   }
 }
 @media (max-width: 1480px) {
-  .image-with-text-inner .row .col-6.col-b {
+  section.image-with-text .image-with-text-inner .row .col-6.col-b {
     width: 60%;
   }
 }
 @media (max-width: 1024px) {
-  .image-with-text-inner .row .col-6.col-b {
+  section.image-with-text .image-with-text-inner .row .col-6.col-b {
     width: 100%;
     padding: 10px !important;
   }
 }
-.image-with-text-inner .row .col-6.col-b {
+section.image-with-text .image-with-text-inner .row .col-6.col-b {
   padding-left: 30px;
 }
 @media (max-width: 1480px) {
-  .image-with-text-inner .row .col-6.col-b .subheading span {
+  section.image-with-text .image-with-text-inner .row .col-6.col-b .subheading span {
     font-size: 14px;
   }
 }
-.image-with-text-inner .row .col-6.col-b .heading {
+section.image-with-text .image-with-text-inner .row .col-6.col-b .heading {
   width: 100%;
   max-width: 14em;
   margin-bottom: 25px;
 }
 @media (max-width: 1480px) {
-  .image-with-text-inner .row .col-6.col-b .heading {
+  section.image-with-text .image-with-text-inner .row .col-6.col-b .heading {
     font-size: 36px;
   }
 }
 @media (max-width: 1024px) {
-  .image-with-text-inner .row .col-6.col-b .heading {
+  section.image-with-text .image-with-text-inner .row .col-6.col-b .heading {
     max-width: 100%;
   }
 }
-.image-with-text-inner .row .col-6.col-b .wysiwyg-content {
+section.image-with-text .image-with-text-inner .row .col-6.col-b .wysiwyg-content {
   width: 100%;
   max-width: 38em;
 }
 @media (max-width: 1024px) {
-  .image-with-text-inner .row .col-6.col-b .wysiwyg-content {
+  section.image-with-text .image-with-text-inner .row .col-6.col-b .wysiwyg-content {
     max-width: 100%;
   }
 }
 @media (max-width: 1480px) {
-  .image-with-text-inner .row .col-6.col-b .wysiwyg-content p {
+  section.image-with-text .image-with-text-inner .row .col-6.col-b .wysiwyg-content p {
     font-size: 16px;
   }
 }
