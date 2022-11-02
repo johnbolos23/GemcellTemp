@@ -2,9 +2,19 @@ section.step-by-step {
     padding-top: 150px;
     padding-bottom: 250px;
 
+    @media ( max-width: $smallLaptop ){
+        padding-top: 120px;
+        padding-bottom: 250px;
+    }
+
     .heading{
         padding-right: 120px;
         font-size: 56px;
+
+        @media ( max-width: $smallLaptop ){
+            font-size: 42px;
+            padding-right: 0;
+        }
     }
     .wysiwyg-content{
         margin-top: 15px;

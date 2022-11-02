@@ -149,5 +149,38 @@
         $('#branch-finder-toggle').click(function(){
             $(this).closest('form').submit();
         });
+
+
+        $('.main-header-hamburger-toggle').on('click', function(){
+            $('.main-header-menu').toggleClass('active');
+        });
+
+        $(document).mouseup(function(e){
+            var container = $(".menu-main-menu-container");
+
+            // if the target of the click isn't the container nor a descendant of the container
+            if (!container.is(e.target) && container.has(e.target).length === 0) 
+            {
+                $('.main-header-menu').removeClass('active');
+            }
+        });
+
+        $('.form-control').focus( function(){
+            $(this).closest('.form-group').addClass('active');
+        }).focusout(function(){
+            if( $(this).val() == '' ){
+                $(this).closest('.form-group').removeClass('active');
+            }
+        });
+
+        $('.form-control').keyup( function(){
+            if( $(this).val() !== '' ){
+                $(this).closest('.form-group').addClass('active');
+            }else{
+                $(this).closest('.form-group').removeClass('active');
+            }
+        });
+
+        $('#commentform .form-submit input').val('Submit');
     });
 })(jQuery);

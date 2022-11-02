@@ -24,10 +24,10 @@ foreach( get_sub_field('steps') as $key => $step ){
     ?>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-7">
+            <div class="col-12 col-lg-6 col-xxl-7">
                 <h2 class="heading"><?php echo get_sub_field('heading'); ?></h2>
             </div>
-            <div class="col-12 col-lg-5">
+            <div class="col-12 col-lg-6 col-xxl-5">
                 <div class="wysiwyg-content"><?php echo get_sub_field('content'); ?></div>
             </div>
         </div>

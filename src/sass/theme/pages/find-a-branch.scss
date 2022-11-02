@@ -2,6 +2,10 @@ section#find-a-branch{
     #branch-finder {
         padding: 30px 33px 27px;
         border-bottom: 1.5px solid #DFDFDF;
+
+        @media (max-width: $smallLaptop){
+            padding: 30px 20px 20px 24px;
+        }
     }
     
     .branch-field-wrapper{
@@ -11,6 +15,19 @@ section#find-a-branch{
             line-height: 58px;
             width: 100%;
             padding: 15px 20px;
+
+            @media (max-width: $smallLaptop){
+                height: 52px;
+                padding: 14px 23px 13px;
+                line-height: 52px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: $smallLaptop){
+            select{
+                padding-left: 18px;
+            }
         }
     }
     
@@ -37,17 +54,29 @@ section#find-a-branch{
                 color: #263238;
                 font-size: 28px;
                 margin-right: 10px;
+
+                @media (max-width: $smallLaptop){
+                    font-size: 24px;
+                }
             }
             .num-results {
                 color: #9D9D9D;
                 font-size: 20px;
                 line-height: 110%;
                 font-family: 'CenturyGothicBold';
+
+                @media (max-width: $smallLaptop){
+                    font-size: 18px;
+                }
             }
         }
 
         .branch-results-items {
             margin-top: 35px;
+
+            @media (max-width: $smallLaptop){
+                margin-top: 30px;
+            }
 
             .branch-results-item-wrapper {
                 background-color: #F8F8F8;
@@ -62,11 +91,19 @@ section#find-a-branch{
                         .heading {
                             color: #263238;
                             font-size: 24px;
+
+                            @media (max-width: $smallLaptop){
+                                font-size: 20px;
+                            }
                         }
 
                         .distance {
                             color: #9D9D9D;
                             font-size: 20px;
+
+                            @media (max-width: $smallLaptop){
+                                font-size: 18px;
+                            }
                         }
                     }
 
@@ -77,6 +114,10 @@ section#find-a-branch{
                         text-decoration: none;
                         margin-top: 6px;
                         display: inline-block;
+
+                        @media (max-width: $smallLaptop){
+                            font-size: 16px;
+                        }
                     }
                 }
 

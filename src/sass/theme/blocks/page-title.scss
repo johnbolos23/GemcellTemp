@@ -1,6 +1,10 @@
 section.page-title{
     h1.heading{
         font-size: 56px;
+
+        @media ( max-width: $smallLaptop ){
+            font-size: 42px;
+        }
     }
 
     .page-title-image-heading {
@@ -14,13 +18,33 @@ section.page-title{
         display: flex;
         align-items: flex-end;
 
+        @media ( max-width: $smallLaptop ){
+            padding-left: 42px;
+            padding-bottom: 59px;
+            height: 300px;
+        }
+
         span.icon-top {
             position: absolute;
             top: -25px;
             right: 11px;
             transform: translateX(50%);
             z-index: 2;
+
+            @media ( max-width: $smallLaptop ){
+                top: -40px;
+                right: 7px;
+
+                svg{
+                    width: 324px;
+                }
+            }
         }
+    }
+
+    .page-title-image, .page-title-image img {
+        height: 100%;
+        object-fit: cover;
     }
     
     .breadcrumbs {
@@ -32,6 +56,10 @@ section.page-title{
             line-height: 170%;
             text-decoration: none;
             color: #58595B;
+
+            @media ( max-width: $smallLaptop ){
+                font-size: 16px;
+            }
         }
         
         svg {
@@ -44,6 +72,10 @@ section.page-title{
             color: #58595B;
             font-family: 'CenturyGothicBold';
             text-transform: capitalize;
+
+            @media ( max-width: $smallLaptop ){
+                font-size: 16px;
+            }
         }
     }
 }
