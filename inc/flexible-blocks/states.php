@@ -10,7 +10,7 @@
 </style>
 
 
-<section class="page-title state-row" id="state-row-<?php echo get_row_index(); ?>">
+<section class="page-section state-row" id="state-row-<?php echo get_row_index(); ?>">
     
     <div class="state-row-inner">
         <div class="container">

@@ -122,6 +122,21 @@ ob_end_clean();
                     </div>
                 </div>
             </div>
+
+            <div class="competition-col-wrapper small-device" style="display:none;">
+                <?php if( get_field('competition_form', 'option')['show_form'] ) : $competitionGroup = get_field('competition_form', 'option'); ?>
+                <div class="competition-wrapper">
+                    <?php if( $competitionGroup['form_heading'] ) : ?>
+                        <h3><?php echo $competitionGroup['form_heading']; ?></h3>
+                    <?php endif; ?>
+                    <?php 
+                        if( $competitionGroup['form'] ){
+                            gravity_form( $competitionGroup['form'] );
+                        }
+                    ?>
+                </div>
+                <?php endif; ?>
+            </div>
         </div>
 <!-- 
         <?php if( get_field('info_blocks') ) : ?>

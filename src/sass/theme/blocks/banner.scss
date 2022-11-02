@@ -1,9 +1,41 @@
 .section-banner{
+    @media (max-width: $tablet){
+        &{
+            overflow: hidden;
+        }
+    }
+    
+    .col-12 {
+        @media (max-width: $tablet){
+            &{
+                width: 100%;
+            }
+        }
+    }
+
     .banner-content-wrapper{
         height: 100%;
         padding-top: 148px;
         padding-left: calc( calc(100vw - 1680px ) / 2);
         padding-right: 124px;
+
+        @media (max-width: 1780px){
+            &{
+                padding: 120px 60px;
+            }
+        }
+
+        @media (max-width: $bigScreen){
+            &{
+                padding: 120px 35px;
+            }
+        }
+
+        @media (max-width: $mobile){
+            &{
+                padding: 85px 20px;
+            }
+        }
 
         span.icon-top {
             position: absolute;
@@ -11,18 +43,107 @@
             right: 11px;
             transform: translateX(50%);
             z-index: 2;
+
+            @media (max-width: $bigScreen){
+                &{
+                    top: -40px;
+                    right: 7px;
+                }
+            }
+
+
+            @media (max-width: $tablet){
+                &{
+                    transform: rotate(90deg);
+                    right: -4.7em;
+                    bottom: -7.35em;
+                    top: unset;
+                }
+            }
+
+            
+            @media (max-width: $mobile){
+                &{
+                    right: -3.8em !important;
+                    bottom: -7.35em !important;
+                }
+            }
+
+            svg {
+                @media (max-width: $bigScreen){
+                    &{
+                        width: 20em;
+                    }
+                }
+
+                @media (max-width: $mobile){
+                    &{
+                        width: 14em;
+                    }
+                }
+            }
         }
         
         span.icon-bottom {
             position: absolute;
             bottom: 0;
             left: 0;
+
+            @media (max-width: $bigScreen){
+                &{
+                    bottom: -28px;
+                }
+            }
+
+            @media (max-width: $mobile){
+                &{
+                    bottom: -52px;
+                }
+            }
+
+            svg {
+                @media (max-width: $bigScreen){
+                    &{
+                        width: 6em;
+                    }
+                }
+            }
+
         }
         
         .heading {
             margin-bottom: 47px;
             font-family: 'CenturyGothic';
             font-weight: 600;
+
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 56px !important;
+                }
+            }
+
+            @media (max-width: $mobile){
+                &{
+                    font-size: 42px !important;
+                }
+            }
+    
+
+        }
+
+        .wysiwyg-content p {
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 18px !important;
+                }
+            }
+
+            @media (max-width: $mobile){
+                &{
+                    font-size: 16px !important;
+                }
+            }
+                
         }
         
         .banner-link-list {
@@ -52,8 +173,33 @@
                         top: 50%;
                         transform: translateY(-30%);
                     }
+
+                    span{
+                        @media (max-width: $bigScreen){
+                            &{
+                                font-size: 16px !important;
+                            }
+                        }
+
+                        @media (max-width: $mobile){
+                            &{
+                                font-size: 14px !important;
+                            }
+                        }
+                           
+                    }
                 }
             }
+        }
+    }
+
+
+    .banner-image-wrapper {
+        height: 100%;
+
+        img{
+            height: 100%;
+            object-fit: cover;
         }
     }
 }

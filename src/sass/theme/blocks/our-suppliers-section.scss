@@ -19,6 +19,12 @@ section.our-suppliers-section{
     .our-suppliers-content-wrapper {
         padding: 100px;
 
+        @media (max-width: $mobile){
+            &{
+                padding: 35px;
+            }
+        }
+
         .wysiwyg-content {
             max-width: 635px;
             margin: 23px auto 40px;

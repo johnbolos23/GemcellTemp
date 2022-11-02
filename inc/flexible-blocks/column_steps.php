@@ -1,4 +1,4 @@
-<section class="page-title column-steps" id="column-steps-<?php echo get_row_index(); ?>">
+<section class="page-section column-steps" id="column-steps-<?php echo get_row_index(); ?>">
     
     <div class="column-steps-inner">
         <div class="container">

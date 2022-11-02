@@ -1,4 +1,4 @@
-<section class="page-title cta-image-column" id="cta-image-column-<?php echo get_row_index(); ?>">
+<section class="page-section cta-image-column" id="cta-image-column-<?php echo get_row_index(); ?>">
     
     <div class="cta-image-column-inner">
         <div class="container">

@@ -1,5 +1,5 @@
 
-<section class="page-title preferred-supplier members-list" id="members-list-<?php echo get_row_index(); ?>">
+<section class="page-section preferred-supplier members-list" id="members-list-<?php echo get_row_index(); ?>">
     
     <div class="preferred-supplier-inner members-list-inner">
         <div class="container">

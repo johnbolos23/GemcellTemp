@@ -1,4 +1,4 @@
-<section class="page-title approved-supplier" id="approved-supplier-<?php echo get_row_index(); ?>">
+<section class="page-section approved-supplier" id="approved-supplier-<?php echo get_row_index(); ?>">
     
     <div class="approved-supplier-inner">
         <div class="container">
