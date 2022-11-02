@@ -2,9 +2,57 @@ section.client-logos{
     margin-top: 120px;
     margin-bottom: 120px;
 
+
+    .col-12.col-lg-4 {
+
+        @media (max-width: $bigScreen){
+            &{
+                width: 43%;
+            }
+        }
+
+        @media (max-width: $tablet){
+            &{
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media (max-width: $mobile){
+            &{
+                width: 100%;
+            }
+        }
+        
+    }
+    
+    .col-12.col-lg-8 {
+
+        @media (max-width: $bigScreen){
+            &{
+                width: 57%;
+            }
+        }
+
+        @media (max-width: $tablet){
+            &{
+                width: 100%;
+                margin-top: 35px;
+            }
+        }
+        
+    }
+
     .client-logo-content {
         padding: 67px 80px 67px 60px;
         clip-path: polygon(calc(100% - 100px) 0, 100% 100px, 100% 100%, 0 100%, 0 0);
+
+        @media (max-width: $mobile){
+            &{
+                padding: 60px 45px 60px 45px;
+            }
+        }
 
         h2.heading{
             margin-bottom: 30px;
@@ -12,6 +60,12 @@ section.client-logos{
 
         .wysiwyg-content{
             margin-bottom: 60px;
+
+            @media (max-width: $bigScreen){
+                &{
+                    margin-bottom: 35px;
+                }
+            }
         }
 
         a{
@@ -37,6 +91,26 @@ section.client-logos{
 
         > div {
             padding-bottom: 50px;
+
+            @media (max-width: $tablet){
+                &{
+                    width: 16.66%;
+                }
+            }
+
+            @media (max-width: $mobile){
+                &{
+                    width: 33.33%;
+                }
+            }
+
+            img{
+                @media (max-width: $tablet){
+                    &{
+                        width: 90%;
+                    }
+                }
+            }
         }
 
         &:before {
