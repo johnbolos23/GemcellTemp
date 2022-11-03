@@ -16014,6 +16014,12 @@ body * {
   text-align: right;
 }
 
+@media (min-width: 1399px) {
+  .text-lg-left {
+    text-align: left !important;
+  }
+}
+
 .main-button {
   background-color: #B9D22E;
   display: inline-block;
