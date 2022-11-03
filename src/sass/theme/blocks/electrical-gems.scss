@@ -1,12 +1,47 @@
 section.electrical-gems {
     padding-top: 70px;
     padding-bottom: 100px;
-
+    @media (max-width: $smallLaptop) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    @media (max-width: $tablet) {
+        padding-bottom: 20px;
+    }
+    @media (max-width: $mobile) {
+        padding-bottom: 195px;
+    }
     .container {
         max-width: 1537px;
         margin-bottom: 70px;
+        @media (max-width: $smallLaptop) {
+            margin-bottom: 50px;
+        }
+        @media (max-width: $tablet) {
+            margin-bottom: 40px;
+        }
     }
-
+    .heading {
+        @media (max-width: $tablet) {
+            font-size: 36px;
+        }
+        @media (max-width: $mobile) {
+            font-size: 28px;
+        }
+    }
+    .text-right {
+        @media (max-width: $mobile) {
+            text-align: left;
+        }
+    }
+    .main-button-bordered {
+        @media (max-width: $mobile) {
+            position: absolute;
+            top: 90%;
+            font-size: 14px;
+            min-width: 180px;
+        }
+    }
     .posts-slider{
         .slick-list {
             margin: 0 -12px;
@@ -90,16 +125,46 @@ section.electrical-gems {
 
             > div[class^="col-"] {
                 padding: 34px;
+                @media (max-width: $tablet) {
+                    padding-bottom: 0;
+                }
+                @media (max-width: $mobile) {
+                    padding-bottom: 0;
+                }
 
                 &.post-grid-first-article{
                     .post-grid-item-wrapper {
+                        @media (max-width: $mobile) {
+                            flex-direction: column;
+                        }
                         img {
                             max-width: 500px;
                             display: block;
+                            @media (max-width: $tablet) {
+                                max-width: 370px;
+                            }
+                            @media (max-width: $mobile) {
+                                width: 100%;
+                            }
                         }
 
                         .post-grid-item-details {
                             padding-left: 75px;
+                            @media (max-width: $smallLaptop) {
+                                padding-left: 60px;
+                            }
+                            @media (max-width: $tablet) {
+                                padding-left: 30px;
+                            }
+                            @media (max-width: $mobile) {
+                                padding-left: 0%;
+                                padding-top: 25px;
+                            }
+                            .wysiwyg-content {
+                                @media (max-width: $mobile) {
+                                    font-size: 14px;
+                                }
+                            }
                         }
                     }
                     
@@ -111,11 +176,30 @@ section.electrical-gems {
 
                     .post-grid-item-details{
                         padding-left: 35px;
+                        @media (max-width: $smallLaptop) {
+                            padding-left: 25px;
+                        }
+                        @media (max-width: $mobile) {
+                            padding-left: 15px;
+                        }
 
                         .heading {
                             font-size: 28px;
                             line-height: 130%;
                             margin: 18px 0 22px;
+                            @media (max-width: $smallLaptop) {
+                                font-size: 24px;
+                            }
+                            @media (max-width: $mobile) {
+                                font-size: 16px;
+                                margin-top: 10px;
+                                line-height: 20.8px;
+                            }
+                            @media (max-width: 280px) {
+                                font-size: 12px;
+                                line-height: 15.8px;
+                                margin-top: 5px;
+                            }
                         }
             
                         a {
@@ -151,16 +235,45 @@ section.electrical-gems {
                                 text-decoration: none;
                                 color: #263238;
                                 font-weight: 600;
+                                @media (max-width: $smallLaptop) {
+                                    font-size: 14px;
+                                }
+                                @media (max-width: $mobile) {
+                                    font-size: 12px;
+                                }
+                                @media (max-width: 280px) {
+                                    font-size: 10px;
+                                }
                             }
 
                             &:not(:last-child){
                                 margin-right: 16px;
+                                @media (max-width: $smallLaptop) {
+                                    font-size: 14px;
+                                    margin-right: 0;
+                                }
+                                @media (max-width: $mobile) {
+                                    font-size: 12px;
+                                    margin-right: 0;
+                                }
+                                @media (max-width: 280px) {
+                                    font-size: 10px;
+                                }
                             }
                         }
                     }
 
                     img {
                         max-width: 370px;
+                        @media (max-width: $tablet) {
+                            max-width: 265px;
+                        }
+                        @media (max-width: $mobile) {
+                            max-width: 120px;
+                        }
+                        @media (max-width: 280px) {
+                            max-width: 78px;
+                        }
                     }
                 }
             }
@@ -185,6 +298,11 @@ section.electrical-gems {
 
                         .post-grid-item-details{
                             padding-left: 75px;
+                            .wysiwyg-content {
+                                @media (max-width: $mobile) {
+                                   font-size: 14px;
+                                }
+                            }                      
                         }
                     }
                 }
@@ -325,94 +443,8 @@ section.electrical-gems {
 
         #respond{
             .comment-reply-title,
-            .logged-in-as,
-            .comment-notes {
+            .logged-in-as {
                 display: none;
-            }
-
-            #commentform{
-                display: flex;
-                flex-wrap: wrap;
-                margin: 0 -7.5px;
-                padding-top: 40px;
-
-                .form-group {
-                    padding: 0 7.5px;
-                    position: relative;
-
-                    &.mb-3comment-form-url,
-                    &.comment-form-cookies-consent{
-                        display: none;
-                    }
-                    &.mb-3comment-form-author, &.mb-3comment-form-email {
-                        flex: 0 0 50%;
-                        margin-bottom: 22px;
-                    }
-                    &.mb-3comment-form-author {
-                        order: 1;
-                    }
-                    &.mb-3comment-form-email {
-                        order: 2;
-                    }
-                    &.comment-form-comment {
-                        order: 3;
-                        flex: 0 0 100%;
-                    }
-
-                    label {
-                        position: absolute;
-                        top: 14px;
-                        left: 30px;
-                        font-size: 18px;
-                        line-height: 170%;
-                        opacity: 0.5;
-                        transition: all 0.3s ease;
-                        pointer-events: none;
-
-                        span {
-                            display: none;
-                        }
-                    }
-
-                    input, textarea {
-                        height: 60px;
-                        padding: 14px 22px;
-                        border: 1px solid #DFDFDF;
-                        border-radius: 0;
-                        color: black;
-                        font-size: 18px;
-                    }
-
-                    textarea{
-                        min-height: 126px;
-                    }
-
-                    &.active{
-                        label {
-                            font-size: 12px;
-                            top: 7px;
-                        }
-                    }
-                }
-
-                .form-submit{
-                    order: 4;
-                    flex: 0 0 100%;
-                    padding: 0 7.5px;
-
-                    input {
-                        background: #263238;
-                        border: 0;
-                        border-radius: 0;
-                        height: 60px;
-                        line-height: 60px;
-                        width: 192px;
-                        text-align: center;
-                        padding: 0 20px;
-                        font-size: 18px;
-                        font-family: 'CenturyGothicBold';
-                    }
-                }
             }
         }
     }

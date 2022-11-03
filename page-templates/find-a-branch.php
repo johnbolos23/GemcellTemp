@@ -42,13 +42,13 @@ $theQuery = new WP_Query( $args );
                 <div id="branch-finder">
                     <form action="" method="POST">
                         <div class="row">
-                            <div class="col-12 col-lg-7">
+                            <div class="col-12 col-md-8 col-lg-7">
                                 <div class="branch-field-wrapper pos-relative">
                                     <input name="keyword" type="text" placeholder="Search" <?php echo isset( $_POST['keyword'] ) && $_POST['keyword'] ? 'value="'. $_POST['keyword'] .'"': ''; ?>/>
                                     <span id="branch-finder-toggle"><?php get_template_part('icons/search-icon'); ?></span>
                                 </div>
                             </div>
-                            <div class="col-12 col-lg-5">
+                            <div class="col-12 col-md-4 col-lg-5">
                                 <div class="branch-field-wrapper">
                                     <select name="state" id="state-picker">
                                         <option value="all">All States</option>
@@ -72,7 +72,7 @@ $theQuery = new WP_Query( $args );
                         </div>
                     </form>
                 </div>
-                <div id="branch-results">
+                <div id="branch-results" class="d-none d-lg-block">
                     <div class="branch-result-main-list show">
                         <div class="branch-results-heading">
                             <span class="heading"><?php echo $selectedState; ?> States</span>
@@ -135,6 +135,43 @@ $theQuery = new WP_Query( $args );
                     ?>
                 </div>
                 <?php endif; ?>
+            </div>
+            <div id="branch-results" class="d-block d-lg-none">
+                <div class="branch-result-main-list show">
+                    <div class="branch-results-heading">
+                        <span class="heading"><?php echo $selectedState; ?> States</span>
+                        <span class="num-results"><?php echo $theQuery->found_posts; ?> Results</span>
+                    </div>
+                    <div class="branch-results-items">
+                        <?php 
+                        if( $theQuery->have_posts() ) {
+                            while( $theQuery->have_posts() ) { 
+                                $theQuery->the_post();
+                                
+                                get_template_part('inc/helpers/branch-item');
+                            }
+                            wp_reset_postdata(); 
+                        }else{
+                            echo 'No results';
+                        } ?>
+                    </div>
+                </div>
+                <div class="branch-result-list-details hide">
+                    <div class="branch-result-list-details-heading">
+                        <span class="heading branch-result-list-details-toggle"><?php get_template_part('icons/chevron-left'); ?> Back</span>
+                    </div>
+                    <div class="branch-result-list-details-wrapper">
+                    <?php 
+                        if( $theQuery->have_posts() ) {
+                            while( $theQuery->have_posts() ) { 
+                                $theQuery->the_post();
+                                
+                                get_template_part('inc/helpers/branch-item-details');
+                            }
+                            wp_reset_postdata(); 
+                        } ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

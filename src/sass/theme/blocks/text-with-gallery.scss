@@ -6,6 +6,10 @@ section.text-gallery{
         padding-top: 80px;
     }
 
+    @media ( max-width: $tablet ){
+        padding-top: 60px;
+    }
+
     .text-gallery-content {
         max-width: 1538px;
         margin: auto;
@@ -31,6 +35,10 @@ section.text-gallery{
 
         @media ( max-width: $smallLaptop ){
             margin-top: 95px;
+        }
+
+        @media ( max-width: $tablet ){
+            margin-top: 60px;
         }
 
         .slick-list {
