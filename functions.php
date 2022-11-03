@@ -27,7 +27,7 @@ $understrap_includes = array(
 	'/editor.php',                          // Load Editor functions.
 	'/block-editor.php',                    // Load Block Editor functions.
 	'/deprecated.php',                      // Load deprecated functions.
-	// '/acf-fields.php',
+	'/acf-fields.php',
 	'/post-types.php'
 );
 
@@ -58,7 +58,7 @@ function fetch_blog_list() {
     $category = $_POST['category'];
     $args = array(
         'post_type'      => 'competition',
-        'posts_per_page' => '3',
+        'posts_per_page' => '6',
         'publish_status' => 'published',
         'orderby' => 'post_date',
         'order' => 'ASC',

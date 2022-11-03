@@ -6,6 +6,29 @@
             slidesToShow: <?php echo get_sub_field('column') ? get_sub_field('column') : 3; ?>,
             dots: <?php echo get_sub_field('slider_nav_dots') ? 'true' : 'false'; ?>,
             arrows: <?php echo get_sub_field('slider_nav_arrow') ? 'true' : 'false'; ?>,
+            responsive: [
+                {
+                    breakpoint: 9999,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: <?php echo get_sub_field('post_type') == 'competition' ? 2 : 3; ?>,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
         });
     });
 </script>

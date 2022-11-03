@@ -1,8 +1,20 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
-
-@media(min-width: $bigScreen){
-    .container{
+.container{
+    @media(min-width: $bigScreen){
         max-width: 1680px;
+    }
+
+    @media (max-width: $smallLaptop){
+        max-width: 100%;
+        padding: 0 40px;
+    }
+
+    @media ( max-width: $tablet){
+        padding: 0 27px;
+    }
+
+    @media ( max-width: $mobile){
+        padding: 0 15px;
     }
 }
 
@@ -48,6 +60,13 @@ body *{
     border: 2px solid #B9D22E;
     padding-left: 31px;
     padding-right: 32px;
+
+    @media ( max-width: $smallLaptop ){
+        font-size: 16px;
+        line-height: 50px;
+        min-width: 166px;
+        padding: 0 20px;
+    }
 
     &.main-button-blue{
         background-color: #0796BF;
@@ -102,6 +121,10 @@ body *{
         letter-spacing: -0.02em;
         font-family: 'CenturyGothicBold';
     }
+
+    @media ( max-width: $smallLaptop ){
+        font-size: 42px;
+    }
 }
 .subheading{
     font-family: 'CenturyGothicBold';
@@ -109,6 +132,10 @@ body *{
     line-height: 170%;
     letter-spacing: 0.2em;
     text-transform: uppercase;
+
+    @media ( max-width: $smallLaptop ){
+        font-size: 14px;
+    }
 
     span{
         letter-spacing: 0.2em;
@@ -138,6 +165,10 @@ body *{
     p:not(:last-child){
         margin-bottom: 30px;
     }
+
+    @media ( max-width: $smallLaptop ){
+        font-size: 16px;
+    }
 }
 
 
@@ -155,27 +186,109 @@ body *{
     top: 0;
     z-index: 99;
 
-    .main-header-menu ul.menu {
-        padding: 0;
-        margin: 0 -25px;
-        list-style: none;
-        display: flex;
-        justify-content: center;
+    @media ( max-width: $smallLaptop){
+        padding: 18px 0;
+    }
 
-        > li {
-            padding: 0 25px;
+    @media ( max-width: $tablet ){
+        .main-header-hamburger-toggle{
+            cursor: pointer;
+        }
+    }
+
+    .main-header-menu{
+        ul.menu {
+            padding: 0;
+            margin: 0 -25px;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+    
+            @media ( max-width: $smallLaptop ){
+                margin: 0 -15px;
+            }
+
+            @media ( max-width: $tablet ){
+                flex-direction: column;
+                padding: 100px 30px;
+            }
+    
+            > li {
+                padding: 0 25px;
+    
+                @media ( max-width: $smallLaptop ){
+                    padding: 0 15px;
+                }
+            }
+    
+            a {
+                text-decoration: none;
+                color: #58595B;
+                font-family: 'CenturyGothicBold';
+                font-size: 20px;
+                line-height: 170%;
+    
+                @media ( max-width: $smallLaptop ){
+                    font-size: 18px;
+                }
+            }
         }
 
-        a {
-            text-decoration: none;
-            color: #58595B;
-            font-family: 'CenturyGothicBold';
-            font-size: 20px;
-            line-height: 170%;
+        @media ( max-width: $tablet ){
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9;
+            background: rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            transition-delay: .15s;
+            opacity: 0;
+            pointer-events: none;
+
+            .menu-main-menu-container {
+                height: 100%;
+                max-width: 300px;
+                background: white;
+                transform: translateX(-100%);
+                transition: all 0.3s ease;
+                transition-delay: 0s;
+            }
+
+            &.active{
+                transition-delay: 0s;
+                pointer-events: all;
+                opacity: 1;
+
+                .menu-main-menu-container{
+                    transition-delay: .15s;
+                    transform: translateX(0%);
+                }
+            }
         }
     }
     .main-header-search-cta a:first-child {
         margin-right: 30px;
+
+        @media ( max-width: $smallLaptop ){
+            margin-right: 22px;
+        }
+
+        svg{
+            @media ( max-width: $smallLaptop ){
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    .main-header-logo{
+        img{
+            @media ( max-width: $smallLaptop ){
+                max-width: 190px;
+            }
+        }
     }
 }
 
@@ -192,10 +305,26 @@ footer.main-footer {
         letter-spacing: -0.02em;
         color: #000000;
         margin-bottom: 0;
+
+        @media (max-width: $smallLaptop){
+            font-size: 18px;
+        }
+
+        @media (max-width: $mobile){
+            font-size: 16px;
+
+            br{
+                display: none;
+            }
+        }
     }
 
     > .container{
         padding-bottom: 132px;
+
+        @media (max-width: $tablet){
+            padding-bottom: 0;
+        }
 
         .main-footer-col-wrapper{
             h4 {
@@ -204,10 +333,28 @@ footer.main-footer {
                 letter-spacing: -0.02em;
                 color: #000000;
                 margin-bottom: 24px;
+
+                @media ( max-width: $smallLaptop ){
+                    font-size: 18px;
+                    margin-bottom: 26px;
+                }
+
+                @media ( max-width: $mobile ){
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
             }
 
             .main-footer-copyright-text {
                 margin-top: 45px;
+
+                @media ( max-width: $smallLaptop ){
+                    margin-top: 20px;
+                }
+
+                @media ( max-width: $tablet ){
+                    margin-top: 0px;
+                }
             }
 
             .main-footer-member-logos {
@@ -235,6 +382,10 @@ footer.main-footer {
                         li{
                             &:not(:last-child) {
                                 margin-bottom: 20px;
+
+                                @media ( max-width: $mobile ){
+                                    margin-bottom: 15px;
+                                }
                             }
     
                             a {
@@ -243,9 +394,54 @@ footer.main-footer {
                                 line-height: 150%;
                                 letter-spacing: -0.02em;
                                 color: #000000;
+
+                                @media( max-width: $smallLaptop ){
+                                    font-size: 16px;
+                                }
+
+                                @media ( max-width: $mobile ){
+                                    font-size: 14px;
+                                }
                             }
                         }
                     }
+                }
+            }
+
+            img{
+                @media (max-width: $smallLaptop){
+                    max-width: 190px;
+                    max-height: 56px;
+                }
+
+                @media (max-width: $mobile){
+                    width: 100%;
+                }
+            }
+
+            &.main-footer-logo-copyright {
+                @media (max-width: $tablet){
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                @media (max-width: $mobile){
+                    display: block;
+
+                    p{
+                        margin-top: 23px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $tablet){
+            .main-footer-footer-menus {
+                margin-bottom: 91px;
+
+                @media (max-width: $mobile){
+                    margin-bottom: 40px;
                 }
             }
         }
@@ -258,6 +454,11 @@ footer.main-footer {
             padding-top: 25px;
             padding-bottom: 25px;
 
+            @media ( max-width: $smallLaptop ){
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+
             .back-to-top {
                 font-size: 20px;
                 line-height: 150%;
@@ -267,6 +468,16 @@ footer.main-footer {
                 display: flex;
                 align-items: center;
                 justify-content: end;
+
+                @media ( max-width: $smallLaptop ){
+                    font-size: 18px;
+                }
+
+                @media ( max-width: $mobile ){
+                    font-size: 16px;
+                    justify-content: center;
+                    margin-top: 11px;
+                }
 
                 svg {
                     margin-left: 12px;

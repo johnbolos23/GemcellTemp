@@ -1,0 +1,365 @@
+section.archived-gems {
+    padding-top: 130px;
+
+    .container {
+        max-width: 1560px;
+
+        .archive-gems-featured {
+            position: relative;
+            background: linear-gradient(90deg, #E5E5E5 2.05%, #FEFEFE 96.09%);
+
+            &:before {
+                background: linear-gradient(90deg, #CBCBCB 2.05%, #F5F5F5 96.09%);
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 379px;
+                z-index: 1;
+            }
+
+            .archive-gems-featured-wrapper {
+                max-width: 720px;
+                margin: auto;
+                padding: 50px 0;
+
+                .row{
+                    @media (max-width: $tablet){
+                        &{
+                            padding: 0px 30px;
+                        }
+                    } 
+
+                    .col-6:nth-child(1){
+                        @media (max-width: $tablet){
+                            &{
+                                width:55%;
+                            }
+                        }
+
+                        img{
+                            @media (max-width: $tablet){
+                                &{
+                                    width:100%;
+                                }
+                            } 
+                        }
+                    }
+
+                    .col-6:nth-child(2){
+                        @media (max-width: $tablet){
+                            &{
+                                width:45%;
+                            }
+                        }
+
+                        @media (max-width: $mobile){
+                            &{
+                                text-align: center;
+                                margin-top: 25px;
+                            
+                            }
+                        }
+                    }
+
+                    .col-6{
+                        @media (max-width: $mobile){
+                            &{
+                                width:100% !important;
+                            }
+                        }
+                    }
+                }
+
+                .heading{
+                    @media (max-width: $bigScreen){
+                        &{
+                            font-size: 36px;
+                        }
+                    }
+
+                    @media (max-width: $tablet){
+                        &{
+                            font-size: 28px;
+                        }
+                    }
+
+                }
+
+                .archive-gems-featured-details {
+                    padding-left: 95px;
+
+                    @media (max-width: $bigScreen){
+                        &{
+                            padding-left: 30px;
+                        }
+                    }
+                    @media (max-width: $tablet){
+                        &{
+                            padding-left: 0px;
+                        }
+                    }
+                    .wysiwyg-content {
+                        margin-top: 31px;
+                        margin-bottom: 53px;
+
+                        @media (max-width: $mobile){
+                            &{
+                                margin-top: 15px;
+                                margin-bottom: 30px;
+                            }
+                        }
+
+                        p {
+                            margin-bottom: 0;
+                            color: #263238;
+
+                            @media (max-width: $bigScreen){
+                                &{
+                                    font-size: 20px;
+                                }
+                            }
+
+                            @media (max-width: $mobile){
+                                &{
+                                    font-size: 16px !important;
+                                }
+                            }
+                        }
+                    }
+
+                    a.main-button.main-button-bordered{
+                        @media (max-width: $mobile){
+                            &{
+                                max-width: fit-content;
+                            }
+                        }
+                    }
+                }
+
+                .archive-gems-image-wrapper {
+                    position: relative;
+                    overflow: visible;
+
+                    &:after {
+                        content: '';
+                        left: 50%;
+                        width: calc(100% + 50px);
+                        transform: translateX(-50%);
+                        height: 54px;
+                        border-radius: 50%;
+                        background: rgba(0, 0, 0, 0.15);
+                        filter: blur(12px);
+                        position: absolute;
+                        bottom: -11px;
+                        z-index: -1;
+                    }
+                }
+            }
+
+            > div {
+                position: relative;
+                z-index: 2;
+            }
+
+            .archive-gems-block-border{
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        }
+
+        .archive-gems-posts {
+            margin-top: 150px;
+
+            @media (max-width: $tablet){
+                &{
+                    margin-top: 50px;
+                }
+            }
+            .row {
+                margin: 0 -25px;
+
+                @media (max-width: $mobile){
+                    &{
+                        margin: 0;
+                    }
+                }
+
+                > div[class^="col-"] {
+                    padding: 25px;
+                    position: relative;
+
+                    @media (max-width: $mobile){
+                        &{
+                            padding: 6px;
+                            padding-bottom: 25px;
+                        }
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: 32px;
+                        left: 0;
+                        width: 100%;
+                        height: 40px;
+                        background: white;
+                    }
+
+                    .archive-gems-post-item {
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+                        
+                        &:hover{
+                            transform: translateY(-30px);
+                        }
+
+                        img {
+                            filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.12));
+                        }
+
+                        .archive-gems-post-item-details {
+                            margin-top: 43px;
+
+                            @media (max-width: $mobile){
+                                &{
+                                    margin-top: 25px;
+                                }
+                            }
+
+                            .archive-gems-post-item-meta{
+
+                                @media (max-width: $mobile){
+                                    &{
+                                        display: grid;
+                                        justify-items: start;
+                                    }
+                                }
+
+                                .archive-gems-post-item-date{
+                                    
+                                    @media (max-width: $mobile){
+                                        &{
+                                            margin-top: 5px;
+                                        }
+                                    }
+                                }
+                                span{
+
+                                    @media (max-width: $bigScreen){
+                                        &{
+                                            font-size: 14px !important;
+                                        }
+                                    }
+
+                                    @media (max-width: $mobile){
+                                        &{
+                                            font-size: 12px !important;
+                                        }
+                                    }
+                                    &:not(.archive-gems-post-item-date) {
+                                        color: #263238;
+                                        font-size: 16px;
+                                        line-height: 170%;
+                                        padding: 4px 10px;
+                                        background: #f2f2f2;
+                                        border-radius: 8px;
+                                        margin-right: 20px;
+                                    }
+    
+                                    &:not(:last-child) {
+                                        margin-right: 16px;
+                                    }
+    
+                                    a {
+                                        color: #263238;
+                                        text-decoration: none;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+
+                            .heading {
+                                margin-top: 17px;
+                                font-size: 28px;
+                                margin-bottom: 7px;
+
+                                @media (max-width: $bigScreen){
+                                    &{
+                                        font-size: 24px !important;
+                                    }
+                                }
+
+                                @media (max-width: $tablet){
+                                    &{
+                                        font-size: 20px !important;
+                                    }
+                                }
+                            }
+
+                            .wysiwyg-content{
+                                @media (max-width: $mobile){
+                                    &{
+                                        font-size: 14px !important;
+                                    }
+                                }
+                            }
+
+                            .view-issue {
+                                color: #0796BF;
+                                text-decoration: none;
+                                font-size: 18px;
+                                line-height: 170%;
+                                font-family: 'CenturyGothicBold';
+                                margin-top: 25px;
+                                display: block;
+
+                                svg {
+                                    margin-left: 13px;
+
+                                    path {
+                                        stroke: #0796BF;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }        
+            }
+
+            .archive-gems-pagination{
+                margin-bottom: 50px;
+                
+                .pagination {
+                    justify-content: center;
+
+                    .page-numbers {
+                        margin: 0 10px;
+                        width: 64px;
+                        height: 64px;
+                        line-height: 63px;
+                        text-decoration: none;
+                        border: 1px solid #BCBCBC;
+                        border-radius: 50%;
+                        text-align: center;
+                        color: #263238;
+                        font-size: 18px;
+
+                        &:not(.next):not(.prev){
+                            border-color: transparent;
+                        }
+
+                        &.current,
+                        &:not(.next):not(.prev):hover{
+                            color: #0796BF;
+                            font-family: 'CenturyGothicBold';
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

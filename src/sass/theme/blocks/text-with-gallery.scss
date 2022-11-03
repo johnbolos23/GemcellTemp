@@ -2,6 +2,10 @@ section.text-gallery{
     padding-top: 120px;
     padding-bottom: 50px;
 
+    @media ( max-width: $smallLaptop ){
+        padding-top: 80px;
+    }
+
     .text-gallery-content {
         max-width: 1538px;
         margin: auto;
@@ -13,10 +17,21 @@ section.text-gallery{
         .wysiwyg-content{
             margin-top: 10px;
         }
+
+        .heading{
+            @media ( max-width: $smallLaptop ){
+                font-size: 36px;
+                line-height: 120%;
+            }
+        }
     }
 
     .text-gallery-images-slider{
         margin-top: 100px;
+
+        @media ( max-width: $smallLaptop ){
+            margin-top: 95px;
+        }
 
         .slick-list {
             margin: 0 -10px;

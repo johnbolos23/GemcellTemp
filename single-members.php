@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 
 ?>
-<section class="page-title-main">
+<section class="page-title page-title-main">
 <div class="row m-0">
         <div class="col-12 col-lg-5 p-0 background-member-color">
             <div class="page-title-wrapper pos-relative">
@@ -177,7 +177,7 @@ ob_end_clean();
                         }
                         ?>
 
-                        <h2 class="heading"><?php the_title(); ?></h2>
+                        <h2 class="heading">Member Profile</h2>
                         
                         <div class="wysiwyg-content"><?php echo get_field('description'); ?></div>
                     </div>

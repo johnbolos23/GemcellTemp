@@ -45,12 +45,17 @@ $headerClass = 'main-header';
 							</a>
 						</div>
 					</div>
-					<div class="col-8 p-0">
+					<div class="col-6 col-lg-8 p-0">
+						<div class="d-block d-lg-none <?php echo $headerClass; ?>-hamburger text-right">
+							<span class="<?php echo $headerClass; ?>-hamburger-toggle">
+								<?php get_template_part('icons/hamburger-icon'); ?>
+							</span>
+						</div>
 						<div class="<?php echo $headerClass; ?>-menu">
 							<?php wp_nav_menu( array( 'menu' => get_field('menu','option') ) ); ?>
 						</div>
 					</div>
-					<div class="col-6 col-lg-2 p-0">
+					<div class="col-6 col-lg-2 p-0 d-none d-lg-block">
 						<div class="<?php echo $headerClass; ?>-search-cta d-flex align-items-center justify-content-end">
 							<a><?php get_template_part('icons/search-icon'); ?></a>
 							<a href="<?php echo get_field('cta_button','option')['url']; ?>" class="main-button">
