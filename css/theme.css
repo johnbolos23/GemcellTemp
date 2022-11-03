@@ -18380,19 +18380,9 @@ section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrap
 section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper img {
   max-width: 370px;
 }
-@media (max-width: 1024px) {
-  section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper img {
-    max-width: 265px;
-  }
-}
 @media (max-width: 767px) {
   section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper img {
-    max-width: 120px;
-  }
-}
-@media (max-width: 280px) {
-  section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper img {
-    max-width: 78px;
+    width: 100%;
   }
 }
 section.electrical-gems .posts-grid.post-featured .row {
