@@ -5,6 +5,10 @@ section.page-title{
         @media ( max-width: $smallLaptop ){
             font-size: 42px;
         }
+
+        @media ( max-width: $mobile ){
+            font-size: 36px;
+        }
     }
 
     .page-title-image-heading {
@@ -24,6 +28,18 @@ section.page-title{
             height: 300px;
         }
 
+        @media ( max-width: $tablet ){
+            padding-left: 26px;
+            padding-bottom: 46px;
+            height: 230px;
+        }
+
+        @media ( max-width: $mobile ){
+            padding-left: 16px;
+            padding-bottom: 45px;
+            height: 175px;
+        }
+
         span.icon-top {
             position: absolute;
             top: -25px;
@@ -39,12 +55,28 @@ section.page-title{
                     width: 324px;
                 }
             }
+
+            @media (max-width: $mobile){
+                transform: rotate(90deg) translateX(50%);
+                top: -81px;
+                right: -60px;
+
+                svg {
+                    width: 250px;
+                }
+            }
         }
     }
 
     .page-title-image, .page-title-image img {
         height: 100%;
         object-fit: cover;
+    }
+
+    .page-title-image img{
+        @media ( max-width: $mobile ){
+            height: 175px;
+        }
     }
     
     .breadcrumbs {

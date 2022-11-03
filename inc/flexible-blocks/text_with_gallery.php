@@ -11,10 +11,10 @@
                     <h4 class="subheading"><?php echo get_sub_field('subheading'); ?></h4>
                 </div>
                 <?php endif; ?>
-                <div class="col-6">
+                <div class="col-12 col-lg-6">
                     <h2 class="heading"><?php echo get_sub_field('heading'); ?></h2>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-lg-6">
                     <?php if( get_sub_field('content') ) : ?>
                     <div class="wysiwyg-content"><?php echo get_sub_field('content'); ?></div>
                     <?php endif; ?>

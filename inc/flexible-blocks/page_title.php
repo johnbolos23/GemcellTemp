@@ -41,14 +41,14 @@ get_template_part('inc/style-helper', null, array('target' => '#page-title-'. ge
     </div>
     <?php else : ?>
     <div class="row m-0">
-        <div class="col-12 col-lg-5 p-0">
+        <div class="col-12 col-md-5 p-0">
             <div class="page-title-wrapper pos-relative">
                 <span class="icon-top"><?php get_template_part('icons/banner-content-icon-top'); ?></span>
 
                 <h1 class="heading"><?php echo get_sub_field('heading') ? get_sub_field('heading') : get_the_title(); ?></h1>
             </div>
         </div>
-        <div class="col-12 col-lg-7 p-0">
+        <div class="col-12 col-md-7 p-0">
             <div class="page-title-image pos-relative">
                 <img src="<?php echo get_sub_field('image'); ?>" />
             </div>

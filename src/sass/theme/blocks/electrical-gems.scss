@@ -34,7 +34,6 @@ section.electrical-gems {
 
         
     }
-
     .posts-slider{
 
         @media (max-width: $bigScreen){
@@ -293,6 +292,12 @@ section.electrical-gems {
 
             > div[class^="col-"] {
                 padding: 34px;
+                @media (max-width: $tablet) {
+                    padding-bottom: 0;
+                }
+                @media (max-width: $mobile) {
+                    padding-bottom: 0;
+                }
 
                 &.post-grid-first-article{
 
@@ -385,6 +390,12 @@ section.electrical-gems {
 
                     .post-grid-item-details{
                         padding-left: 35px;
+                        @media (max-width: $smallLaptop) {
+                            padding-left: 25px;
+                        }
+                        @media (max-width: $mobile) {
+                            padding-left: 15px;
+                        }
 
                         
 
@@ -445,12 +456,32 @@ section.electrical-gems {
 
                             &:not(:last-child){
                                 margin-right: 16px;
+                                @media (max-width: $smallLaptop) {
+                                    font-size: 14px;
+                                    margin-right: 0;
+                                }
+                                @media (max-width: $mobile) {
+                                    font-size: 12px;
+                                    margin-right: 0;
+                                }
+                                @media (max-width: 280px) {
+                                    font-size: 10px;
+                                }
                             }
                         }
                     }
 
                     img {
                         max-width: 370px;
+                        @media (max-width: $tablet) {
+                            max-width: 265px;
+                        }
+                        @media (max-width: $mobile) {
+                            max-width: 120px;
+                        }
+                        @media (max-width: 280px) {
+                            max-width: 78px;
+                        }
                     }
                 }
             }
@@ -763,94 +794,8 @@ section.electrical-gems {
 
         #respond{
             .comment-reply-title,
-            .logged-in-as,
-            .comment-notes {
+            .logged-in-as {
                 display: none;
-            }
-
-            #commentform{
-                display: flex;
-                flex-wrap: wrap;
-                margin: 0 -7.5px;
-                padding-top: 40px;
-
-                .form-group {
-                    padding: 0 7.5px;
-                    position: relative;
-
-                    &.mb-3comment-form-url,
-                    &.comment-form-cookies-consent{
-                        display: none;
-                    }
-                    &.mb-3comment-form-author, &.mb-3comment-form-email {
-                        flex: 0 0 50%;
-                        margin-bottom: 22px;
-                    }
-                    &.mb-3comment-form-author {
-                        order: 1;
-                    }
-                    &.mb-3comment-form-email {
-                        order: 2;
-                    }
-                    &.comment-form-comment {
-                        order: 3;
-                        flex: 0 0 100%;
-                    }
-
-                    label {
-                        position: absolute;
-                        top: 14px;
-                        left: 30px;
-                        font-size: 18px;
-                        line-height: 170%;
-                        opacity: 0.5;
-                        transition: all 0.3s ease;
-                        pointer-events: none;
-
-                        span {
-                            display: none;
-                        }
-                    }
-
-                    input, textarea {
-                        height: 60px;
-                        padding: 14px 22px;
-                        border: 1px solid #DFDFDF;
-                        border-radius: 0;
-                        color: black;
-                        font-size: 18px;
-                    }
-
-                    textarea{
-                        min-height: 126px;
-                    }
-
-                    &.active{
-                        label {
-                            font-size: 12px;
-                            top: 7px;
-                        }
-                    }
-                }
-
-                .form-submit{
-                    order: 4;
-                    flex: 0 0 100%;
-                    padding: 0 7.5px;
-
-                    input {
-                        background: #263238;
-                        border: 0;
-                        border-radius: 0;
-                        height: 60px;
-                        line-height: 60px;
-                        width: 192px;
-                        text-align: center;
-                        padding: 0 20px;
-                        font-size: 18px;
-                        font-family: 'CenturyGothicBold';
-                    }
-                }
             }
         }
     }
