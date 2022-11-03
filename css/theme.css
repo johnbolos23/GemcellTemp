@@ -20235,6 +20235,12 @@ section#single-members .members-info-blocks .members-block-item:hover .members-b
   stroke: white;
 }
 
+@media (max-width: 767px) {
+  div#page {
+    overflow: hidden;
+  }
+}
+
 section#single-competition {
   padding-top: 90px;
   padding-bottom: 210px;
