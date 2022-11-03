@@ -10,7 +10,7 @@
                 {
                     breakpoint: 9999,
                     settings: {
-                        slidesToShow: 3,
+                        slidesToShow: <?php echo get_sub_field('post_type') == 'competittion' ? 2 : 3; ?>,
                         slidesToScroll: 1,
                     }
                 },
