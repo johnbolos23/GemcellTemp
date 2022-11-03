@@ -15950,8 +15950,12 @@ figure.woocommerce-product-gallery__wrapper {
   clip: auto;
 }
 
-section, body {
+body {
   overflow-x: hidden;
+}
+
+section {
+  overflow: hidden;
 }
 
 @media (max-width: 1024px) {
