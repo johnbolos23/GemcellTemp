@@ -604,6 +604,61 @@ section.electrical-gems {
             }
         }
     }
+
+    .container {
+
+        .subheading span{
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 14px;
+                }
+            }
+    
+            @media (max-width: $mobile){
+                &{
+                    font-size: 12px;
+                }
+            }
+        }
+    
+        .heading{
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 36px;
+                }
+            }
+    
+            @media (max-width: $mobile){
+                &{
+                    font-size: 28px;
+                }
+            }
+        }
+                    
+        .wysiwyg-content {
+            p{
+                @media (max-width: $bigScreen){
+                    &{
+                        font-size: 16px;
+                    }
+                }
+    
+                @media (max-width: $mobile){
+                    &{
+                        font-size: 14px;
+                    }
+                }
+    
+            }
+        }
+        a.main-button {
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
 }
 
 #post-single {
@@ -835,66 +890,3 @@ section.electrical-gems {
 
 
 
-
-.container {
-    @media (max-width: $smallLaptop){
-        &{
-        max-width: 1200px;
-        }
-    }
-}
-
-.container {
-
-    .subheading span{
-        @media (max-width: $bigScreen){
-            &{
-                font-size: 14px;
-            }
-        }
-
-        @media (max-width: $mobile){
-            &{
-                font-size: 12px;
-            }
-        }
-    }
-
-    .heading{
-        @media (max-width: $bigScreen){
-            &{
-                font-size: 36px;
-            }
-        }
-
-        @media (max-width: $mobile){
-            &{
-                font-size: 28px;
-            }
-        }
-    }
-                
-    .wysiwyg-content {
-        p{
-            @media (max-width: $bigScreen){
-                &{
-                    font-size: 16px;
-                }
-            }
-
-            @media (max-width: $mobile){
-                &{
-                    font-size: 14px;
-                }
-            }
-
-        }
-    }
-    a.main-button {
-        @media (max-width: $bigScreen){
-            &{
-                font-size: 14px;
-            }
-        }
-    }
-}

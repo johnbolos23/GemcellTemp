@@ -59,6 +59,12 @@ body *{
     text-align: right;
 }
 
+.text-lg-left{
+    @media (min-width: $smallLaptop){
+        text-align: left !important;
+    }
+}
+
 .main-button {
     background-color: #B9D22E;
     display: inline-block;

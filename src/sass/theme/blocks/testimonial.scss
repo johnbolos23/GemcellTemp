@@ -1,6 +1,10 @@
 section.testimonial-section{
     padding: 50px 0;
 
+    @media (max-width: $mobile){
+        padding-bottom: 0;
+    }
+
     .testimonial-slider .slick-dots {
         bottom: 40px;
         width: auto;
@@ -21,6 +25,9 @@ section.testimonial-section{
         @media (max-width: $mobile){
             &{
                 bottom: -30px;
+                transform: unset;
+                bottom: 55%;
+                left: 0;
             }
         }
 
@@ -82,7 +89,7 @@ section.testimonial-section{
         margin: 0 162px;
         flex: 0 0 403px;
 
-        @media (max-width: $bigScreen){
+        @media (min-width: $mobile) and (max-width: $bigScreen){
             &{
                 width: 50%;
                 margin: 0;
