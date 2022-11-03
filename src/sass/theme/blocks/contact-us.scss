@@ -1,0 +1,243 @@
+.contact-us {
+    margin-top: 5rem;
+    .accordion {
+        .card {
+            .card-header {
+                background-color: white;
+                border-bottom: none;
+                padding: 1rem;
+                &.active {
+                    background-color: #F8F8F8;
+                }
+                .custom-control {
+                    svg {
+                        path {
+                            stroke: #AEB6BA;
+                        }
+                        float: right;
+                    }
+                    input:not(.collapsed){
+                        + label + svg {
+                            path {
+                                fill: #C2DA3D;
+                            }
+                        }
+                    }
+                    &.custom-radio {
+                        display: flex;
+                        flex-wrap: nowrap;   
+                        position: relative;
+                        input {
+                            opacity: 0;
+                        }
+                        label {
+                            flex: 1;
+                            margin-left: 20px;
+                        }
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 3px;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            border: 2px solid #DFDFDF;
+                        }
+                    }
+                }
+                &.active{
+                    .custom-control{
+                        &.custom-radio{
+                            &:before{
+                                border: 7px solid #0493B8;
+                            }
+                        }
+                    }
+                }
+
+                label {
+                    font-weight: 700;
+                    @media (max-width: $smallLaptop) {
+                        font-size: 16px;
+                        line-height: 170%;
+                    }
+                    @media (max-width: $mobile) {
+                        font-size: 14px;
+                        line-height: 150%;
+                    }
+                }
+            }
+            .card-body {
+                background-color: #F8F8F8;
+                .accordion-content {
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                    @media (max-width: $smallLaptop) {
+                        p {
+                            font-size: 16px;
+                            line-height: 27.2px;
+                        }
+                    }
+                    @media (min-width: $mobile) {
+                        p {
+                            font-size: 14px;
+                            line-height: 23.8px;
+                        }
+                    } 
+                }
+            } 
+        }
+    }
+    .get-in-touch {
+        h2 {
+            @media (max-width: $smallLaptop) {
+                font-size: 42px;
+                margin-bottom: 1.5rem;
+                font-weight: 700;
+                letter-spacing: -0.02em;
+                line-height: 110%;
+            }
+            @media (max-width: $tablet) {
+                margin-top: 3rem;
+            }
+            @media (max-width: $mobile) {
+                font-size: 36px;
+            }
+            @media (max-width: 375px) {
+                font-size: 33px;
+            }
+        }
+        h6 {
+            @media (max-width: $smallLaptop) {
+                font-size: 18px;
+                line-height: 170%;
+            }
+            @media (max-width: $tablet) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .left-side-image {
+        position: relative;
+        @media (max-width: $smallLaptop) {
+            span {
+                z-index: 2;
+                position: absolute;
+                top: -1px;
+                transform: translateX(65%);
+            }
+        }
+        @media (max-width: $tablet) {
+            span {
+                z-index: 2;
+                position: absolute;
+                top: -1px;
+                right: 12px; 
+                left: unset; 
+                transform: unset;
+            }
+        }
+        @media (max-width: $mobile) {
+            span {
+                z-index: 2;
+                position: absolute;
+                top: -1px; 
+                right: 12px; 
+                left: unset; 
+                transform: unset;
+            }
+        }
+        .for-laptop {
+            width: 95%;
+        }
+        @media (max-width: $mobile) {
+            .for-laptop {
+                width: 100%;
+            }
+        }
+        @media (max-width: $tablet) {
+            .for-tablet {
+                width: 100%;
+            }
+        }
+        @media (min-width: $tablet) and (max-width: $smallLaptop){
+            .for-laptop{
+                display: block;
+            }
+            .for-tablet{
+                display: none;
+            }
+        }
+        @media (min-width: $mobile) and (max-width: $tablet){
+            .for-tablet{
+                display: block;
+            }
+            .for-laptop{
+                display: none;
+            }
+        }
+        @media (max-width: $mobile){
+            .for-laptop{
+                display: block;
+            }
+            .for-tablet{
+                display: none;
+            }
+        }
+    }
+    .contact {
+        @media (max-width: $smallLaptop) {
+            margin-top: 8rem;
+        }
+        @media (max-width: $tablet) {
+            margin-top: 6rem;
+            margin-bottom: 8rem;
+        }
+        @media (max-width: $mobile) {
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+        }
+        .contact-details {   
+            @media (max-width: $tablet) {
+                .contact-detail-icon {
+                    margin-bottom: 2rem;
+                    // svg {
+                    //     width: 5rem;
+                    //     height: 5rem;
+                    // }
+                }
+            }
+            @media (max-width: $mobile) {
+                margin-bottom: 4rem;
+            }
+            .contact-info {
+                h5 {
+                    font-weight: 700;
+                    letter-spacing: -0.02em;
+                    @media (max-width: $smallLaptop) {
+                        font-size: 28px;
+                        margin-bottom: 1rem;
+                        line-height: 110%;
+                    }
+                    @media (max-width: $mobile) {
+                        font-size: 24px;
+                        margin-top: 0%;
+                    }
+                }
+                p {
+                    @media (max-width: $smallLaptop) {
+                        font-size: 20px;
+                        line-height: 170%;
+                    }
+                    @media (max-width: $tablet) {
+                        margin-top: 1rem;
+                    }
+                    @media (max-width: $mobile) {
+                        font-size: 18px;
+                    }
+                }
+            }    
+        }
+    }
+}
