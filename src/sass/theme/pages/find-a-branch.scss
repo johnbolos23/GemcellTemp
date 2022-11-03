@@ -111,8 +111,19 @@ section#find-a-branch{
                 background-color: #F8F8F8;
                 padding: 30px 22px;
 
+                @media (max-width: $mobile){
+                    > div{
+                        flex-direction: column;
+                    }
+                }
+
                 .branch-item-details {
                     padding-left: 43px;
+
+                    @media (max-width: $mobile){
+                        padding-left: 0px;
+                        padding-top: 20px;
+                    }
 
                     .branch-item-heading{
                         margin-bottom: 7px;
@@ -189,6 +200,7 @@ section#find-a-branch{
                 font-family: 'CenturyGothicBold';
                 color: #263238;
                 width: 120px;
+                flex: 0 0 120px;
             }
 
             .branch-detail-text {
@@ -207,6 +219,15 @@ section#find-a-branch{
     min-height: 1000px;
     // border: #ccc solid 1px;
     // margin: 20px 0;
+
+    @media ( max-width: $tablet ){
+        height: 745px;
+        min-height: 1px;
+    }
+
+    @media ( max-width: $mobile ){
+        height: 460px;
+    }
 }
 
 // Fixes potential theme css conflict.
