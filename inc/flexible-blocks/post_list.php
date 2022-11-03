@@ -18,7 +18,7 @@
 
                     <h2 class="heading"><?php echo get_sub_field('heading'); ?></h2>
                 </div>
-                <div class="col-6 text-right d-none d-lg-block">
+                <div class="col-6 text-right d-none d-md-block">
                     <a href="<?php echo get_sub_field('button')['url']; ?>" class="main-button main-button-bordered"><?php echo get_sub_field('button')['title']; get_template_part('icons/arrow-up'); ?></a>
                 </div>
             </div>
@@ -28,7 +28,7 @@
             <?php get_template_part('inc/helpers/posts-list'); ?>
         </div>
 
-        <div class="d-block d-lg-none text-left">
+        <div class="d-block d-md-none text-left">
             <a href="<?php echo get_sub_field('button')['url']; ?>" class="main-button main-button-bordered"><?php echo get_sub_field('button')['title']; get_template_part('icons/arrow-up'); ?></a>
         </div>
     </div>
