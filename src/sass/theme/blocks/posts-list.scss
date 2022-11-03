@@ -1,6 +1,6 @@
 section.posts-list {
     padding: 150px 0 50px;
-    @media (max-width: $smallLaptop) {
+    @media (min-width: $tablet) and (max-width: $smallLaptop) {
         padding-left: 1rem;
         padding-right: 1rem;
     }
@@ -11,10 +11,10 @@ section.posts-list {
     }
     .main-button-bordered {
         @media (max-width: $mobile) {
-            position: absolute;
-            font-size: 14px;
-            min-width: 180px;
-            top: 85%;
+            // position: absolute;
+            // font-size: 14px;
+            // min-width: 180px;
+            // top: 85%;
         }
     }
     .heading {
@@ -96,6 +96,10 @@ section.posts-list {
             &.has-overlap{
                 margin: 0 calc( calc(calc(100vw - 1673px) / 2) * -1);
 
+                @media ( max-width: $smallLaptop){
+                    margin: 0;
+                }
+
                 .slick-list{
                     padding: 0 calc((100vw - 1700px)/ 2 ) !important;
 
@@ -169,6 +173,12 @@ section.posts-list {
                                     clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 70px), 0% 100%);
                                     background: linear-gradient(180deg, #2876B3 0%, #34AC9E 100%);
                                     min-height: 350px;
+
+                                    @media ( max-width: $smallLaptop ){
+                                        font-size: 43.8512px;
+                                        padding: 40px;
+                                        min-height: 300px;
+                                    }
                                 }
 
                                 &.style-green{
@@ -192,11 +202,20 @@ section.posts-list {
                         &.competition-type{
                             .post-list-item-image-title {
                                 padding-top: 250px;
+
+                                @media ( max-width: $smallLaptop ){
+                                    padding-top: 200px;
+                                }
                             }
                         }
                     }
                 }
             }
+        }
+
+        &.has-overlap{
+            margin-left: -12px;
+            margin-right: -12px;
         }
     }
 }

@@ -7,6 +7,8 @@
 
     get_template_part('inc/style-helper', null, array('target' => '#posts-list-'. get_row_index(), 'additional' => $additionalStyles )); 
 
+    $overlapClass = get_sub_field('visible_previous_and_next_items') ? 'has-overlap' : '';
+
     ?>
     <div class="container">
         <div class="posts-list-top">
@@ -24,7 +26,7 @@
             </div>
         </div>
 
-        <div class="posts-list-items">
+        <div class="posts-list-items <?php echo $overlapClass; ?>">
             <?php get_template_part('inc/helpers/posts-list'); ?>
         </div>
 
