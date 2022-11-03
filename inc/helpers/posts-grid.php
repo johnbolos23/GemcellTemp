@@ -24,11 +24,20 @@ if( $args['theQuery']->have_posts() ) : ?>
                             <?php 
                                 $theContent = get_the_content();
 
-                                if (str_word_count($theContent, 0) > 40) {
-                                    $words = str_word_count($theContent, 2);
-                                    $pos   = array_keys($words);
-                                    $theContent  = substr($theContent, 0, $pos[40]) . '...';
+                                if( wp_is_mobile() ){
+                                    if (str_word_count($theContent, 0) > 8) {
+                                        $words = str_word_count($theContent, 2);
+                                        $pos   = array_keys($words);
+                                        $theContent  = substr($theContent, 0, $pos[8]) . '...';
+                                    }
+                                }else{
+                                    if (str_word_count($theContent, 0) > 40) {
+                                        $words = str_word_count($theContent, 2);
+                                        $pos   = array_keys($words);
+                                        $theContent  = substr($theContent, 0, $pos[40]) . '...';
+                                    }
                                 }
+                                
                             ?>
                             <div class="wysiwyg-content"><?php echo $theContent; ?></div>
 
