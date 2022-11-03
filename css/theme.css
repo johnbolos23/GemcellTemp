@@ -20088,6 +20088,249 @@ section.archived-gems .container .archive-gems-posts .archive-gems-pagination .p
   font-family: "CenturyGothicBold";
 }
 
+.contact-us {
+  margin-top: 5rem;
+}
+.contact-us .accordion .card .card-header {
+  background-color: white;
+  border-bottom: none;
+  padding: 1rem;
+}
+.contact-us .accordion .card .card-header.active {
+  background-color: #F8F8F8;
+}
+.contact-us .accordion .card .card-header .custom-control svg {
+  float: right;
+}
+.contact-us .accordion .card .card-header .custom-control svg path {
+  stroke: #AEB6BA;
+}
+.contact-us .accordion .card .card-header .custom-control input:not(.collapsed) + label + svg path {
+  fill: #C2DA3D;
+}
+.contact-us .accordion .card .card-header .custom-control.custom-radio {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.contact-us .accordion .card .card-header .custom-control.custom-radio input {
+  opacity: 0;
+}
+.contact-us .accordion .card .card-header .custom-control.custom-radio label {
+  flex: 1;
+  margin-left: 20px;
+}
+.contact-us .accordion .card .card-header .custom-control.custom-radio:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #DFDFDF;
+}
+.contact-us .accordion .card .card-header.active .custom-control.custom-radio:before {
+  border: 7px solid #0493B8;
+}
+.contact-us .accordion .card .card-header label {
+  font-weight: 700;
+}
+@media (max-width: 1399px) {
+  .contact-us .accordion .card .card-header label {
+    font-size: 16px;
+    line-height: 170%;
+  }
+}
+@media (max-width: 767px) {
+  .contact-us .accordion .card .card-header label {
+    font-size: 14px;
+    line-height: 150%;
+  }
+}
+.contact-us .accordion .card .card-body {
+  background-color: #F8F8F8;
+}
+.contact-us .accordion .card .card-body .accordion-content {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media (max-width: 1399px) {
+  .contact-us .accordion .card .card-body .accordion-content p {
+    font-size: 16px;
+    line-height: 27.2px;
+  }
+}
+@media (min-width: 767px) {
+  .contact-us .accordion .card .card-body .accordion-content p {
+    font-size: 14px;
+    line-height: 23.8px;
+  }
+}
+@media (max-width: 1399px) {
+  .contact-us .get-in-touch h2, .contact-us .get-in-touch .h2 {
+    font-size: 42px;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 110%;
+  }
+}
+@media (max-width: 1024px) {
+  .contact-us .get-in-touch h2, .contact-us .get-in-touch .h2 {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .contact-us .get-in-touch h2, .contact-us .get-in-touch .h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 375px) {
+  .contact-us .get-in-touch h2, .contact-us .get-in-touch .h2 {
+    font-size: 33px;
+  }
+}
+@media (max-width: 1399px) {
+  .contact-us .get-in-touch h6, .contact-us .get-in-touch .h6 {
+    font-size: 18px;
+    line-height: 170%;
+  }
+}
+@media (max-width: 1024px) {
+  .contact-us .get-in-touch h6, .contact-us .get-in-touch .h6 {
+    margin-bottom: 1rem;
+  }
+}
+.contact-us .left-side-image {
+  position: relative;
+}
+@media (max-width: 1399px) {
+  .contact-us .left-side-image span {
+    z-index: 2;
+    position: absolute;
+    top: -1px;
+    transform: translateX(65%);
+  }
+}
+@media (max-width: 1024px) {
+  .contact-us .left-side-image span {
+    z-index: 2;
+    position: absolute;
+    top: -1px;
+    right: 12px;
+    left: unset;
+    transform: unset;
+  }
+}
+@media (max-width: 767px) {
+  .contact-us .left-side-image span {
+    z-index: 2;
+    position: absolute;
+    top: -1px;
+    right: 12px;
+    left: unset;
+    transform: unset;
+  }
+}
+.contact-us .left-side-image .for-laptop {
+  width: 95%;
+}
+@media (max-width: 767px) {
+  .contact-us .left-side-image .for-laptop {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .contact-us .left-side-image .for-tablet {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .contact-us .left-side-image .for-laptop {
+    display: block;
+  }
+  .contact-us .left-side-image .for-tablet {
+    display: none;
+  }
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .contact-us .left-side-image .for-tablet {
+    display: block;
+  }
+  .contact-us .left-side-image .for-laptop {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .contact-us .left-side-image .for-laptop {
+    display: block;
+  }
+  .contact-us .left-side-image .for-tablet {
+    display: none;
+  }
+}
+@media (max-width: 1399px) {
+  .contact-us .contact {
+    margin-top: 8rem;
+  }
+}
+@media (max-width: 1024px) {
+  .contact-us .contact {
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+  }
+}
+@media (max-width: 767px) {
+  .contact-us .contact {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  .contact-us .contact .contact-details .contact-detail-icon {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .contact-us .contact .contact-details {
+    margin-bottom: 4rem;
+  }
+}
+.contact-us .contact .contact-details .contact-info h5, .contact-us .contact .contact-details .contact-info .h5 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+@media (max-width: 1399px) {
+  .contact-us .contact .contact-details .contact-info h5, .contact-us .contact .contact-details .contact-info .h5 {
+    font-size: 28px;
+    margin-bottom: 1rem;
+    line-height: 110%;
+  }
+}
+@media (max-width: 767px) {
+  .contact-us .contact .contact-details .contact-info h5, .contact-us .contact .contact-details .contact-info .h5 {
+    font-size: 24px;
+    margin-top: 0%;
+  }
+}
+@media (max-width: 1399px) {
+  .contact-us .contact .contact-details .contact-info p {
+    font-size: 20px;
+    line-height: 170%;
+  }
+}
+@media (max-width: 1024px) {
+  .contact-us .contact .contact-details .contact-info p {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .contact-us .contact .contact-details .contact-info p {
+    font-size: 18px;
+  }
+}
+
 section#single-suppliers {
   padding-top: 90px;
   padding-bottom: 210px;
