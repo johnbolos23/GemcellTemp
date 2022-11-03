@@ -6,31 +6,97 @@ section.social-cards{
 
         .social-card-items{
             margin: 0 -25px;
+
+            @media (max-width: $tablet){
+                &{
+                    padding: 0px 20px;
+                }
+            }
     
             > div[class^="col-"]{
                 padding: 0 25px;
+
+                @media (max-width: $tablet){
+                    &{
+                        padding: 0 10px;
+                    }
+                }
+            }
+
+
+            .col-12{
+                @media (max-width: $tablet){
+                    &{
+                        width: 50%;
+                    }
+                }
+
+                @media (max-width: $mobile){
+                    &{
+                        width: 100%;
+                    }
+                }
             }
         }
     }
     
     .social-card-wrapper {
         padding: 50px;
+
+        @media (max-width: $tablet){
+            &{
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: $mobile){
+            &{
+                padding: 50px 30px;
+                margin-bottom: 25px;
+            }
+        }
+    
     
         img{
             transform: translateY(11px);
             max-width: 42px;
             max-height: 42px;
             display: block;
+
+            @media (max-width: $tablet){
+                &{
+                    width: 12%;
+                }
+            }
         }
 
         .social-card-details {
             padding-left: 40px;
+
+            @media (max-width: $tablet){
+                &{
+                    width: 88%;
+                    padding-left: 16px;
+                }
+            }
     
             .heading {
                 font-size: 48px;
                 line-height: 130%;
                 color: white;
                 margin-bottom: 7px;
+
+                @media (max-width: $bigScreen){
+                    &{
+                        font-size: 36px;
+                    }
+                }
+
+                @media (max-width: $mobile){
+                    &{
+                        font-size: 28px;
+                    }
+                }
             }
     
             a {
@@ -39,6 +105,12 @@ section.social-cards{
                 font-family: 'CenturyGothicBold';
                 text-decoration: none;
                 color: white;
+
+                @media (max-width: $mobile){
+                    &{
+                        font-size: 14px;
+                    }
+                }
     
                 svg {
                     margin-left: 13px;

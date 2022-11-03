@@ -1,3 +1,13 @@
+div#page {
+    @media (max-width: $mobile){
+        &{
+            overflow: hidden;
+        }
+    }
+    
+}
+
+
 section#single-competition{  
     padding-top: 90px;
     padding-bottom: 210px;

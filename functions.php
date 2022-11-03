@@ -58,7 +58,7 @@ function fetch_blog_list() {
     $category = $_POST['category'];
     $args = array(
         'post_type'      => 'competition',
-        'posts_per_page' => '3',
+        'posts_per_page' => '6',
         'publish_status' => 'published',
         'orderby' => 'post_date',
         'order' => 'ASC',
