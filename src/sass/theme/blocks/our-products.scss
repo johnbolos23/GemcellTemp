@@ -1,23 +1,80 @@
 section.our-products{
     padding-top: 120px;
     padding-bottom: 50px;
-
+    @media (max-width: $smallLaptop) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    @media (max-width: $tablet) {
+        padding-top: 95px;
+    }
+    @media (max-width: $mobile) {
+        padding-top: 55px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-bottom: 20px;
+    }
     .container {
         max-width: 1537px;
     }
 
     .subheading {
         margin-bottom: 20px;
+        @media (max-width: $mobile) {
+            font-size: 12px;
+        }
+        @media (max-width: 280px) {
+            font-size: 10px;
+        }
     }
 
+    .heading {
+        @media (max-width: $tablet) {
+            font-size: 36px;
+            padding-bottom: 25px;
+        }
+        @media (max-width: $mobile) {
+            font-size: 28px;
+            padding-bottom: 15px;
+        }
+        @media (max-width: 280px) {
+            font-size: 20px;
+        }
+    }
+    .wysiwyg-content {
+        p {
+            @media (max-width: $mobile) {
+                font-size: 14px;
+            }
+            @media (max-width: 280px) {
+                font-size: 14px;
+            }
+        }
+    }
     .our-products-wrapper {
         padding-top: 80px;
-
+        @media (max-width: $smallLaptop) {
+            padding-top: 145px;
+        }
+        @media (max-width: $tablet) {
+            padding-top: 55px;
+        }
+        @media (max-width: $mobile) {
+            padding-top: 35px;
+        }
         .our-product-item {
             padding: 16px;
             flex: 0 0 calc(100% / 5);
             width: calc(100% / 5);
-
+            @media (max-width: $smallLaptop) {
+                flex: 0 0 calc(100% / 4);
+            }
+            @media (max-width: $tablet) {
+                flex: 0 0 calc(100% / 3);
+            }
+            @media (max-width: $mobile) {
+                flex: 0 0 calc(100% / 2);
+            }
             .our-product-item-wrapper {
                 background: #FFFFFF;
                 border: 2px solid #E4E4E4;
@@ -27,6 +84,19 @@ section.our-products{
                 .our-product-item-image {
                     height: 238px;
                     line-height: 238px;
+                    @media (max-width: $mobile) {
+                        img {
+                            max-width: 50%;
+                        }
+                    }
+                    @media (max-width: $mobile) {
+                        height: 150px;
+                        line-height: 150px;
+                    }
+                    @media (max-width: 280px) {
+                        height: 120px;
+                        line-height: 120px;
+                    }
                 }
 
                 .our-product-item-name {
@@ -36,6 +106,22 @@ section.our-products{
                     .heading {
                         font-size: 24px;
                         line-height: 130%;
+                        @media (max-width: $tablet) {
+                            font-size: 20px;
+                            padding: 0%;
+                        }
+                        @media (max-width: $mobile) {
+                            font-size: 16px;
+                            padding: 0%;
+                        }
+                        @media (max-width: 576px) {
+                            font-size: 14px;
+                            padding: 0%;
+                        }
+                        @media (max-width: 280px) {
+                            font-size: 10px;
+                            padding: 0%;
+                        }
                     }
                 }
 

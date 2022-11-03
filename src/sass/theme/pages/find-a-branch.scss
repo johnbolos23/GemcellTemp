@@ -6,6 +6,14 @@ section#find-a-branch{
         @media (max-width: $smallLaptop){
             padding: 30px 20px 20px 24px;
         }
+
+        @media (max-width: $tablet){
+            padding: 30px 24px;
+        }
+
+        @media (max-width: $mobile){
+            padding: 22px 15px;
+        }
     }
     
     .branch-field-wrapper{
@@ -21,6 +29,19 @@ section#find-a-branch{
                 padding: 14px 23px 13px;
                 line-height: 52px;
                 font-size: 16px;
+            }
+
+            @media ( max-width: $mobile ){
+                height: 46px;
+                font-size: 14px;
+                line-height: 48px;
+                padding: 12px 16px;
+            }
+        }
+
+        select{
+            @media ( max-width: $mobile ){
+                margin-top: 13px;
             }
         }
 
@@ -48,6 +69,14 @@ section#find-a-branch{
     #branch-results {
         padding: 30px 33px 27px;
         max-height: 892px;
+
+        @media (max-width: $tablet){
+            padding: 30px 24px;
+        }
+
+        @media (max-width: $mobile){
+            padding: 22px 15px;
+        }
 
         .branch-results-heading{
             .heading {
