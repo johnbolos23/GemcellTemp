@@ -194,9 +194,8 @@
         }
     }
     .contact {
-        @media (max-width: $smallLaptop) {
-            margin-top: 8rem;
-        }
+        margin-top: 8rem;
+        
         @media (max-width: $tablet) {
             margin-top: 6rem;
             margin-bottom: 8rem;
