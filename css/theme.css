@@ -16168,7 +16168,7 @@ body * {
   display: flex;
   justify-content: center;
 }
-@media (max-width: 1399px) {
+@media (max-width: 1480px) {
   .main-header .main-header-menu ul.menu {
     margin: 0 -15px;
   }
@@ -16182,7 +16182,7 @@ body * {
 .main-header .main-header-menu ul.menu > li {
   padding: 0 25px;
 }
-@media (max-width: 1399px) {
+@media (max-width: 1480px) {
   .main-header .main-header-menu ul.menu > li {
     padding: 0 15px;
   }
@@ -16194,7 +16194,7 @@ body * {
   font-size: 20px;
   line-height: 170%;
 }
-@media (max-width: 1399px) {
+@media (max-width: 1480px) {
   .main-header .main-header-menu ul.menu a {
     font-size: 18px;
   }
