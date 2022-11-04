@@ -223,7 +223,7 @@ body *{
             display: flex;
             justify-content: center;
     
-            @media ( max-width: $smallLaptop ){
+            @media ( max-width: $bigScreen ){
                 margin: 0 -15px;
             }
 
@@ -235,7 +235,7 @@ body *{
             > li {
                 padding: 0 25px;
     
-                @media ( max-width: $smallLaptop ){
+                @media ( max-width: $bigScreen ){
                     padding: 0 15px;
                 }
             }
@@ -247,7 +247,7 @@ body *{
                 font-size: 20px;
                 line-height: 170%;
     
-                @media ( max-width: $smallLaptop ){
+                @media ( max-width: $bigScreen ){
                     font-size: 18px;
                 }
             }

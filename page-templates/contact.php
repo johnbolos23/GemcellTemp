@@ -3,6 +3,9 @@
 /* Template Name: Contact Us */ 
 
 get_header();
+
+get_template_part('inc/flexible-blocks/breadcrumbs'); 
+
 ?>
 <!-- Container -->
 <div class="container contact-us">
