@@ -81,10 +81,12 @@ get_header();
 
     $(document).on('click', 'input[name="customRadio"]', function(){
         $('.card-header').removeClass('active');
+        $('.card .collapse').removeClass('show');
 
         if( $(this).is(':checked') ){
             $(this).closest('.card-header').addClass('active');
-    } 
+            $(this).closest('.card-header').next('.collapse').addClass('show');
+        } 
     });
 </script>
 
