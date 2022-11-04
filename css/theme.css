@@ -20907,9 +20907,6 @@ section.archived-gems .container .archive-gems-posts .archive-gems-pagination .p
 .contact-us .accordion .card .card-header .custom-control svg path {
   stroke: #AEB6BA;
 }
-.contact-us .accordion .card .card-header .custom-control input:not(.collapsed) + label + svg path {
-  fill: #C2DA3D;
-}
 .contact-us .accordion .card .card-header .custom-control.custom-radio {
   display: flex;
   flex-wrap: nowrap;
@@ -20934,6 +20931,10 @@ section.archived-gems .container .archive-gems-posts .archive-gems-pagination .p
 }
 .contact-us .accordion .card .card-header.active .custom-control.custom-radio:before {
   border: 7px solid #0493B8;
+}
+.contact-us .accordion .card .card-header.active .custom-control input:not(.collapsed) + label + svg path {
+  fill: #C2DA3D;
+  stroke: #C2DA3D;
 }
 .contact-us .accordion .card .card-header label {
   font-weight: 700;

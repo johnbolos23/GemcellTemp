@@ -16,13 +16,7 @@
                         }
                         float: right;
                     }
-                    input:not(.collapsed){
-                        + label + svg {
-                            path {
-                                fill: #C2DA3D;
-                            }
-                        }
-                    }
+                    
                     &.custom-radio {
                         display: flex;
                         flex-wrap: nowrap;   
@@ -51,6 +45,15 @@
                         &.custom-radio{
                             &:before{
                                 border: 7px solid #0493B8;
+                            }
+                        }
+
+                        input:not(.collapsed){
+                            + label + svg {
+                                path {
+                                    fill: #C2DA3D;
+                                    stroke: #C2DA3D;
+                                }
                             }
                         }
                     }
@@ -195,7 +198,7 @@
     }
     .contact {
         margin-top: 8rem;
-        
+
         @media (max-width: $tablet) {
             margin-top: 6rem;
             margin-bottom: 8rem;
