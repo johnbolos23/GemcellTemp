@@ -21078,10 +21078,8 @@ section.archived-gems .container .archive-gems-posts .archive-gems-pagination .p
   right: 5%;
   transform: translateX(-4%);
 }
-@media (max-width: 1399px) {
-  .contact-us .contact {
-    margin-top: 8rem;
-  }
+.contact-us .contact {
+  margin-top: 8rem;
 }
 @media (max-width: 1024px) {
   .contact-us .contact {
