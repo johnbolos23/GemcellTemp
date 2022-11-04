@@ -187,6 +187,7 @@
 		$(document).on("click", ".branch-result-list-details-toggle", function () {
 			$(".branch-result-main-list").removeClass("hide").addClass("show");
 			$(".branch-result-list-details").removeClass("show").addClass("hide");
+			$('.branch-result-list-detail-wrapper').removeClass("hide show");
 		});
 
 		$("#branch-finder-toggle").click(function () {

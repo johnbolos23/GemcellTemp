@@ -21048,7 +21048,7 @@ section.archived-gems .container .archive-gems-posts .archive-gems-pagination .p
     width: 100%;
   }
 }
-@media (min-width: 1024px) and (max-width: 1399px) {
+@media (min-width: 1024px) {
   .contact-us .left-side-image .for-laptop {
     display: block;
   }
@@ -21071,6 +21071,12 @@ section.archived-gems .container .archive-gems-posts .archive-gems-pagination .p
   .contact-us .left-side-image .for-tablet {
     display: none;
   }
+}
+.contact-us .left-side-image span {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  transform: translateX(-4%);
 }
 @media (max-width: 1399px) {
   .contact-us .contact {
