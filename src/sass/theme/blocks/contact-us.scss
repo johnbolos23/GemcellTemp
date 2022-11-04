@@ -161,7 +161,7 @@
                 width: 100%;
             }
         }
-        @media (min-width: $tablet) and (max-width: $smallLaptop){
+        @media (min-width: $tablet){
             .for-laptop{
                 display: block;
             }
@@ -184,6 +184,13 @@
             .for-tablet{
                 display: none;
             }
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            right: 5%;
+            transform: translateX(-4%);
         }
     }
     .contact {

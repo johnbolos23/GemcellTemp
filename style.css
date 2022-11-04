@@ -38,8 +38,8 @@ Full developer documentation: https://docs.understrap.com
 
 @font-face {
     font-family: 'CenturyGothicBold';
-    src: url('fonts/Century-Gothic/CenturyGothicBold.ttf');
-    src: url('fonts/Century-Gothic/CenturyGothicBold.ttf') format('truetype'),
+    src: url('fonts/Century-Gothic/CenturyGothicBold.TTF');
+    src: url('fonts/Century-Gothic/CenturyGothicBold.TTF') format('truetype'),
          url('fonts/Century-Gothic/CenturyGothicBold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -47,8 +47,8 @@ Full developer documentation: https://docs.understrap.com
 
 @font-face {
     font-family: 'CenturyGothicItalic';
-    src: url('fonts/Century-Gothic/CenturyGothicItalic.ttf');
-    src: url('fonts/Century-Gothic/CenturyGothicItalic.ttf') format('truetype'),
+    src: url('fonts/Century-Gothic/CenturyGothicItalic.TTF');
+    src: url('fonts/Century-Gothic/CenturyGothicItalic.TTF') format('truetype'),
          url('fonts/Century-Gothic/CenturyGothicItalic.woff') format('woff');
     font-weight: normal;
     font-style: normal;

@@ -33,7 +33,7 @@ get_header();
                                     <?php if( $accordion['accordion_icon'] ){  echo $accordion['accordion_icon']; } ?>
                                 </div>
                             </div>
-                            <div id="collapse<?php echo $key; ?>" class="collapse show" data-parent="#accordion">
+                            <div id="collapse<?php echo $key; ?>" class="collapse <?php echo $key == 0 ? 'show': ''; ?>" data-parent="#accordion">
                                 <div class="card-body"> 
                                     <div class="accordion-content">
                                         <?php echo $accordion['accordion_content'];?>
