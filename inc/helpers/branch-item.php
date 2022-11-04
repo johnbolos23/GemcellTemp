@@ -17,7 +17,7 @@ $Branchaddress = get_field('maps')['address'];
 
 $distance = getDistanceBetweenCoordinates( $Branchlatitude, $Branchlongtitude, $currentUserAddress['lat'], $currentUserAddress['lng'], 'K' );
 
-
+$distance = number_format((float)$distance, 2, '.', '');
 ?>
 
 <div class="branch-results-item-wrapper" data-branch-id="<?php echo get_the_ID(); ?>">

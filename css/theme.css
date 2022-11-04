@@ -21479,6 +21479,10 @@ section#find-a-branch #branch-results .branch-results-items .branch-results-item
 section#find-a-branch #branch-results .branch-results-items .branch-results-item-wrapper:not(:last-child) {
   margin-bottom: 27px;
 }
+section#find-a-branch #branch-results .branch-results-items .branch-results-item-wrapper .branch-item-image {
+  width: 200px;
+  flex: 0 0 200px;
+}
 section#find-a-branch #branch-results .branch-result-list-details-toggle {
   cursor: pointer;
   color: #58595B;
