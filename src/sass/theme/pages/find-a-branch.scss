@@ -164,6 +164,16 @@ section#find-a-branch{
                 &:not(:last-child) {
                     margin-bottom: 27px;
                 }
+
+                .branch-item-image {
+                    width: 200px;
+                    flex: 0 0 200px;
+
+                    @media (max-width: $tablet){
+                        width: 100%;
+                        flex: 0 0 100%;
+                    }
+                }
             }
         }
 
