@@ -26,7 +26,7 @@ get_header();
                 <div class="accordion" id="accordion">
                     <?php foreach( get_field('accordion') as $key => $accordion ) : ?>
                         <div class="card">
-                            <div class="card-header">
+                            <div class="card-header <?php echo $key == 0 ? 'active' : ''; ?>">
                                 <div class="custom-control custom-radio">
                                     <input checked="<?php echo $key == 0 ? true : false; ?>" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo $key; ?>" type="radio" id="customRadio<?php echo $key; ?>_PreChecked" name="customRadio" class="custom-control-input" />
                                     <label class="custom-control-label" for="customRadio<?php echo $key; ?>_PreChecked"><?php echo $accordion['accordion_header']; ?></label>
