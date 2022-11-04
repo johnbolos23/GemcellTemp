@@ -21483,6 +21483,12 @@ section#find-a-branch #branch-results .branch-results-items .branch-results-item
   width: 200px;
   flex: 0 0 200px;
 }
+@media (max-width: 1024px) {
+  section#find-a-branch #branch-results .branch-results-items .branch-results-item-wrapper .branch-item-image {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+}
 section#find-a-branch #branch-results .branch-result-list-details-toggle {
   cursor: pointer;
   color: #58595B;
