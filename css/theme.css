@@ -20934,7 +20934,7 @@ section.archived-gems .container .archive-gems-posts .archive-gems-pagination .p
 }
 .contact-us .accordion .card .card-header.active .custom-control input:not(.collapsed) + label + svg path {
   fill: #C2DA3D;
-  stroke: #C2DA3D;
+  stroke: #F9F9FA;
 }
 .contact-us .accordion .card .card-header label {
   font-weight: 700;
