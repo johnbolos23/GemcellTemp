@@ -80,6 +80,7 @@ section.our-products{
                 border: 2px solid #E4E4E4;
                 box-shadow: 0px 4px 12px rgba(152, 152, 152, 0.2);
                 text-align: center;
+                height: 100%;
 
                 .our-product-item-image {
                     height: 238px;
@@ -102,6 +103,7 @@ section.our-products{
                 .our-product-item-name {
                     padding: 30px 20px;
                     background: #F8F8F8;
+                    height: 100%;
 
                     .heading {
                         font-size: 24px;
@@ -127,6 +129,9 @@ section.our-products{
 
                 a {
                     text-decoration: none;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
                 }
             }
         }
