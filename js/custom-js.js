@@ -246,7 +246,11 @@
 		$('.view-archive-toggle').on('click', function(e){
 			e.preventDefault();
 
-			$(this).closest('.archive-gems-post-item').find('.archive-item-image-gallery a:first-child')[0].click();
+			if( $(this).hasClass('view-issue') ){
+				$(this).closest('.archive-gems-post-item').find('.archive-item-image-gallery a:first-child')[0].click();
+			 }else{
+				$(this).closest('.archive-gems-featured-wrapper').find('.archive-item-image-gallery a:first-child')[0].click();
+				}
 		});
 		
 	});
