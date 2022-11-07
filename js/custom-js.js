@@ -226,5 +226,28 @@
 		});
 
 		$("#commentform .form-submit input").val("Submit");
+
+
+		$(window).ready(function(){
+			if( $('.archive-item-image-gallery').length !== 0 ){
+
+				$('.archive-item-image-gallery').each(function(){
+					$lightGalleryID = $(this).attr('id');
+
+					lightGallery( document.getElementById( $lightGalleryID ), {
+						speed: 500,
+						licenseKey: '`0000-0000-000-0000',
+						plugins: [lgZoom, lgAutoplay, lgFullscreen , lgHash, lgRotate, lgShare, lgThumbnail, lgVideo],
+					} );
+				});
+			}
+		});
+
+		$('.view-archive-toggle').on('click', function(e){
+			e.preventDefault();
+
+			$(this).closest('.archive-gems-post-item').find('.archive-item-image-gallery a:first-child')[0].click();
+		});
+		
 	});
 })(jQuery);

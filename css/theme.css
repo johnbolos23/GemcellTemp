@@ -20890,6 +20890,36 @@ section.archived-gems .container .archive-gems-posts .archive-gems-pagination .p
   font-family: "CenturyGothicBold";
 }
 
+.lg-container .lg-toolbar {
+  bottom: 120px;
+  top: unset;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.12));
+  border-radius: 4px;
+  background: white;
+}
+
+.lg-container .lg-toolbar .lg-counter {
+  display: none;
+}
+
+.lg-container .lg-toolbar button, .lg-container .lg-toolbar button:after, .lg-container .lg-toolbar a, .lg-container .lg-toolbar a:after {
+  color: black !important;
+}
+
+.lg-container .lg-backdrop.in {
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.lg-container .lg-content button.lg-icon {
+  background: transparent !important;
+  color: black;
+}
+
 .contact-us {
   margin-top: 5rem;
 }
