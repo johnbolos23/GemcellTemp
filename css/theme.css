@@ -16518,7 +16518,7 @@ body.home section.big-cta {
 }
 @media (max-width: 1480px) {
   .section-banner .banner-content-wrapper span.icon-bottom {
-    bottom: -28px;
+    bottom: -52px;
   }
 }
 @media (max-width: 767px) {
@@ -16539,6 +16539,11 @@ body.home section.big-cta {
 @media (max-width: 1480px) {
   .section-banner .banner-content-wrapper .heading {
     font-size: 56px !important;
+  }
+}
+@media (max-width: 1399px) {
+  .section-banner .banner-content-wrapper .heading {
+    font-family: "CenturyGothicBold";
   }
 }
 @media (max-width: 767px) {
@@ -16572,6 +16577,11 @@ body.home section.big-cta {
   line-height: 170%;
   color: white;
   font-weight: 600;
+}
+@media (max-width: 1399px) {
+  .section-banner .banner-content-wrapper .banner-link-list .banner-link-list-item a {
+    font-family: "CenturyGothicBold";
+  }
 }
 .section-banner .banner-content-wrapper .banner-link-list .banner-link-list-item a img {
   margin-right: 25px;
@@ -16677,12 +16687,15 @@ body.home section.big-cta {
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
+    transform: unset;
+    margin-top: -200px;
   }
 }
 @media (max-width: 767px) {
   .image-floating-box .floating-box {
     max-width: 100%;
     transform: unset;
+    margin-top: 0;
   }
 }
 .image-floating-box .floating-box .floating-box-wrapper {
@@ -16707,25 +16720,29 @@ body.home section.big-cta {
 section.posts-list {
   padding: 150px 0 50px;
 }
-@media (min-width: 1024px) and (max-width: 1399px) {
-  section.posts-list {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
 @media (max-width: 767px) {
   section.posts-list .text-right {
     text-align: left;
   }
 }
-@media (max-width: 1024px) {
+@media (min-width: 1480px) {
   section.posts-list .heading {
-    font-size: 36px;
+    font-size: 56px;
+  }
+}
+@media (max-width: 1399px) {
+  section.posts-list .heading {
+    font-size: 42px;
   }
 }
 @media (max-width: 767px) {
   section.posts-list .heading {
     font-size: 28px;
+  }
+}
+@media (max-width: 1399px) {
+  section.posts-list .main-button {
+    font-family: "CenturyGothicBold";
   }
 }
 section.posts-list .posts-list-items {
@@ -16747,6 +16764,11 @@ section.posts-list .posts-list-items .post-list-item-image img {
   -o-object-fit: cover;
   object-fit: cover;
 }
+@media (max-width: 1399px) {
+  section.posts-list .posts-list-items .post-list-item-image img {
+    height: 245px;
+  }
+}
 @media (max-width: 1024px) {
   section.posts-list .posts-list-items .post-list-item-image img {
     height: 205px;
@@ -16766,16 +16788,43 @@ section.posts-list .posts-list-items .post-list-item-meta span:not(.post-list-it
   text-decoration: none;
   color: #263238;
 }
+@media (max-width: 1399px) {
+  section.posts-list .posts-list-items .post-list-item-meta span:not(.post-list-item-date) a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  section.posts-list .posts-list-items .post-list-item-meta span:not(.post-list-item-date) a {
+    font-size: 12px;
+  }
+}
 section.posts-list .posts-list-items .post-list-item-meta span:not(:last-child) {
   margin-right: 16px;
+}
+@media (max-width: 1399px) {
+  section.posts-list .posts-list-items .post-list-item-meta span.post-list-item-date {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  section.posts-list .posts-list-items .post-list-item-meta span.post-list-item-date {
+    font-size: 12px;
+  }
 }
 section.posts-list .posts-list-items h3.heading, section.posts-list .posts-list-items .heading.h3 {
   font-size: 28px;
   line-height: 130%;
+  margin-bottom: 15px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1399px) {
   section.posts-list .posts-list-items h3.heading, section.posts-list .posts-list-items .heading.h3 {
     font-size: 24px;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 767px) {
+  section.posts-list .posts-list-items h3.heading, section.posts-list .posts-list-items .heading.h3 {
+    font-size: 20px;
   }
 }
 section.posts-list .posts-list-items .post-list-slider {
@@ -16823,6 +16872,7 @@ section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .
   font-size: 18px;
   line-height: 170%;
   color: #0796BF;
+  font-family: "CenturyGothicBold";
 }
 section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .post-list-item-wrapper .post-list-item-link a svg path {
   stroke: #0796BF;
@@ -16869,6 +16919,12 @@ section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .
     min-height: 300px;
   }
 }
+@media (max-width: 767px) {
+  section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .post-list-item-wrapper .post-list-item-image-title .post-list-item-title-wrapper .post-list-item-title-inner-wrapper {
+    min-height: 250px;
+    font-size: 39.9816px;
+  }
+}
 section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .post-list-item-wrapper .post-list-item-image-title .post-list-item-title-wrapper.style-green {
   background: linear-gradient(180deg, #2876B3 0%, #34AC9E 100%);
 }
@@ -16889,6 +16945,64 @@ section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .
     padding-top: 200px;
   }
 }
+@media (max-width: 767px) {
+  section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .post-list-item-wrapper.competition-type .post-list-item-image-title {
+    padding-top: 180px;
+  }
+}
+section.posts-list .posts-list-items .post-list-slider .slick-arrow {
+  background: rgba(248, 248, 248, 0.9);
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.16);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  line-height: 54px;
+  text-align: center;
+  padding: 0;
+  z-index: 9;
+  top: 260px;
+}
+section.posts-list .posts-list-items .post-list-slider .slick-arrow:before {
+  display: none;
+}
+section.posts-list .posts-list-items .post-list-slider .slick-arrow.slick-prev {
+  left: 0;
+  transform: translateX(calc((50% - 11px) * -1));
+}
+section.posts-list .posts-list-items .post-list-slider .slick-arrow.slick-next {
+  right: 0;
+  transform: translateX(calc(50% - 11px));
+}
+section.posts-list .posts-list-items .post-list-slider.post-list-slider.hasArrows {
+  padding-bottom: 100px;
+}
+@media (max-width: 767px) {
+  section.posts-list .posts-list-items .post-list-slider.post-list-slider.hasArrows .slick-arrow {
+    top: unset;
+    bottom: 0;
+    border: 1px solid #BFBFBF;
+    border-radius: 0;
+    box-shadow: none;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  section.posts-list .posts-list-items .post-list-slider.post-list-slider.hasArrows .slick-arrow.slick-prev {
+    left: 13px;
+    transform: unset;
+  }
+}
+@media (max-width: 767px) {
+  section.posts-list .posts-list-items .post-list-slider.post-list-slider.hasArrows .slick-arrow.slick-next {
+    right: unset;
+    left: 80px;
+    transform: unset;
+  }
+}
 section.posts-list .posts-list-items.has-overlap {
   margin-left: -12px;
   margin-right: -12px;
@@ -16904,6 +17018,12 @@ body.page-id-25 section.posts-list .container {
 section.client-logos {
   margin-top: 120px;
   margin-bottom: 120px;
+}
+@media (max-width: 1399px) {
+  section.client-logos {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
 }
 @media (max-width: 1480px) {
   section.client-logos .col-12.col-lg-4 {
@@ -16959,6 +17079,7 @@ section.client-logos .client-logo-content a {
   text-decoration: none;
   font-size: 18px;
   line-height: 170%;
+  font-family: "CenturyGothicBold";
 }
 section.client-logos .client-logo-content a > svg {
   margin-left: 18px;
@@ -17105,8 +17226,10 @@ section.testimonial-section .testimonial-item-details .heading {
   font-size: 36px;
   line-height: 140%;
   margin-bottom: 30px;
+  font-weight: 400;
+  font-family: "CenturyGothic";
 }
-@media (max-width: 1024px) {
+@media (max-width: 1399px) {
   section.testimonial-section .testimonial-item-details .heading {
     font-size: 28px !important;
   }
@@ -17123,9 +17246,9 @@ section.testimonial-section .testimonial-item-details .testimony-name {
 section.testimonial-section .testimonial-item-details .testimony-name .name {
   font-size: 24px;
   line-height: 1;
-  font-weight: 600;
+  font-family: "CenturyGothicBold";
 }
-@media (max-width: 1024px) {
+@media (max-width: 1399px) {
   section.testimonial-section .testimonial-item-details .testimony-name .name {
     font-size: 20px !important;
   }
@@ -17139,7 +17262,7 @@ section.testimonial-section .testimonial-item-details .testimony-name .position 
   font-size: 18px;
   line-height: 170%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1399px) {
   section.testimonial-section .testimonial-item-details .testimony-name .position {
     font-size: 16px !important;
   }

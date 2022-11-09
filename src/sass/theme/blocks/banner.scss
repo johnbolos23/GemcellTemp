@@ -91,7 +91,7 @@
 
             @media (max-width: $bigScreen){
                 &{
-                    bottom: -28px;
+                    bottom: -52px;
                 }
             }
 
@@ -120,6 +120,10 @@
                 &{
                     font-size: 56px !important;
                 }
+            }
+
+            @media ( max-width: $smallLaptop ){
+                font-family: 'CenturyGothicBold';
             }
 
             @media (max-width: $mobile){
@@ -162,6 +166,10 @@
                     line-height: 170%;
                     color: white;
                     font-weight: 600;
+
+                    @media (max-width: $smallLaptop){
+                        font-family: 'CenturyGothicBold';
+                    }
 
                     img {
                         margin-right: 25px;
