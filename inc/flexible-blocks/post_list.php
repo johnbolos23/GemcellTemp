@@ -30,8 +30,10 @@
             <?php get_template_part('inc/helpers/posts-list'); ?>
         </div>
 
+        <?php if( get_row_index() != 6) : ?>
         <div class="d-block d-md-none text-left">
             <a href="<?php echo get_sub_field('button')['url']; ?>" class="main-button main-button-bordered"><?php echo get_sub_field('button')['title']; get_template_part('icons/arrow-up'); ?></a>
         </div>
+        <?php endif; ?>
     </div>
 </section>
