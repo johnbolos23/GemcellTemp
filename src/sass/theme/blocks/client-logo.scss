@@ -93,7 +93,9 @@ section.client-logos{
     }
 
     .client-logos-wrapper {
-        margin-bottom: -50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        // margin-bottom: -50px;
 
         > div {
             padding-bottom: 50px;
@@ -119,6 +121,11 @@ section.client-logos{
             }
         }
 
+        
+    }
+    .flickity-rows-wrapper{
+        position: relative;
+
         &:before {
             content: '';
             position: absolute;
@@ -128,6 +135,7 @@ section.client-logos{
             height: 100%;
             pointer-events: none;
             background: linear-gradient(90deg, white 3%, transparent 30%, transparent 70%, white 97%);
+            z-index: 2;
         }
     }
 }

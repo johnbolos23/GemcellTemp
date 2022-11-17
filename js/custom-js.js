@@ -1,4 +1,5 @@
 (function ($) {
+
 	$.fn.countTo = function (options) {
 		// merge the default plugin settings with the custom options
 		options = $.extend({}, $.fn.countTo.defaults, options || {});
@@ -263,6 +264,106 @@
 			$('section.our-suppliers-section').addClass('hide');
 			$('#'+ $stepTarget).removeClass('hide');
 		});
-		
+
+
+		if( $('.client-logos-wrapper').length !== 0 ){
+			let tickerSpeed = 0.5;
+			let flickity = null;
+			let isPaused = false;
+			const slideshowEl = document.querySelector('.client-logos-wrapper');
+
+			const update = () => {
+			if (isPaused) return;
+			if (flickity.slides) {
+				flickity.x = (flickity.x - tickerSpeed) % flickity.slideableWidth;
+				flickity.selectedIndex = flickity.dragEndRestingSelect();
+				flickity.updateSelectedSlide();
+				flickity.settle(flickity.x);
+			}
+			window.requestAnimationFrame(update);
+			};
+
+			flickity = new Flickity(slideshowEl, {
+				autoPlay: false,
+				prevNextButtons: false,
+				pageDots: false,
+				draggable: true,
+				wrapAround: true,
+				selectedAttraction: 0.015,
+				friction: 0.25
+			});
+			flickity.x = 0;
+
+			flickity.on('dragStart', () => {
+				isPaused = true;
+			});
+
+			update();
+
+			let flickity2 = null;
+			let isPaused2 = false;
+			const slideshowEl2 = document.querySelector('.client-logos-wrapper.reverse');
+
+			const update2 = () => {
+			if (isPaused2) return;
+			if (flickity2.slides) {
+				flickity2.x = (flickity2.x - tickerSpeed) % flickity2.slideableWidth;
+				flickity2.selectedIndex = flickity2.dragEndRestingSelect();
+				flickity2.updateSelectedSlide();
+				flickity2.settle(flickity2.x);
+			}
+			window.requestAnimationFrame(update2);
+			};
+
+			flickity2 = new Flickity(slideshowEl2, {
+				autoPlay: false,
+				prevNextButtons: false,
+				pageDots: false,
+				draggable: true,
+				wrapAround: true,
+				selectedAttraction: 0.015,
+				friction: 0.25,
+				rightToLeft: true
+			});
+			flickity2.x = 0;
+
+			flickity2.on('dragStart', () => {
+				isPaused2 = true;
+			});
+
+			update2();
+
+			let flickity3 = null;
+			let isPaused3 = false;
+			const slideshowEl3 = document.querySelector('.client-logos-wrapper.another');
+
+			const update3 = () => {
+			if (isPaused3) return;
+			if (flickity3.slides) {
+				flickity3.x = (flickity3.x - tickerSpeed) % flickity3.slideableWidth;
+				flickity3.selectedIndex = flickity3.dragEndRestingSelect();
+				flickity3.updateSelectedSlide();
+				flickity3.settle(flickity3.x);
+			}
+			window.requestAnimationFrame(update3);
+			};
+
+			flickity3 = new Flickity(slideshowEl3, {
+				autoPlay: false,
+				prevNextButtons: false,
+				pageDots: false,
+				draggable: true,
+				wrapAround: true,
+				selectedAttraction: 0.015,
+				friction: 0.25,
+			});
+			flickity3.x = 0;
+
+			flickity3.on('dragStart', () => {
+				isPaused3 = true;
+			});
+
+			update3();
+		}
 	});
 })(jQuery);

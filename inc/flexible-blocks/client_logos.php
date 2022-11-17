@@ -34,8 +34,22 @@
                     <?php get_template_part('icons/client-logo-icon-bottom'); ?>
                 </div>
             </div>
-            <div class="col-12 col-lg-8">
+            <div class="col-12 col-lg-8 flickity-rows-wrapper">
                 <div class="row client-logos-wrapper pos-relative">
+                    <?php foreach( get_sub_field('logos') as $logo ) : ?>
+                    <div class="col-4 col-lg-2 text-center">
+                        <img src="<?php echo $logo; ?>" />
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+                <div class="row client-logos-wrapper pos-relative reverse">
+                    <?php foreach( get_sub_field('logos') as $logo ) : ?>
+                    <div class="col-4 col-lg-2 text-center">
+                        <img src="<?php echo $logo; ?>" />
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+                <div class="row client-logos-wrapper pos-relative another">
                     <?php foreach( get_sub_field('logos') as $logo ) : ?>
                     <div class="col-4 col-lg-2 text-center">
                         <img src="<?php echo $logo; ?>" />
