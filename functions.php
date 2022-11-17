@@ -31,6 +31,7 @@ $understrap_includes = array(
 	'/post-types.php'
 );
 
+
 // Load WooCommerce functions if WooCommerce is activated.
 if ( class_exists( 'WooCommerce' ) ) {
 	$understrap_includes[] = '/woocommerce.php';

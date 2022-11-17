@@ -1,0 +1,37 @@
+section.our-suppliers-section{
+    &.has-overlay-top {
+        background-color: #F8F8F8;
+        position: relative;
+        z-index: 2;
+
+        + section {
+            z-index: 3;
+        }
+    }
+
+    .our-suppliers-content{
+        &.overlap-top{
+            margin-bottom: -170px;
+            transform: translateY(-170px);
+        }
+    }
+
+    .our-suppliers-content-wrapper {
+        padding: 100px;
+
+        @media (max-width: $mobile){
+            &{
+                padding: 35px;
+            }
+        }
+
+        .wysiwyg-content {
+            max-width: 635px;
+            margin: 23px auto 40px;
+        }
+
+        .see-all-button-wrapper{
+            margin-top: 35px;
+        }
+    }
+}

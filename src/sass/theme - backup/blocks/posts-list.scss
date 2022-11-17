@@ -17,21 +17,6 @@ section.posts-list {
             // top: 85%;
         }
     }
-
-    .container{
-        @media (max-width: $smallLaptop){
-            // max-width: 100%;
-        }
-
-        // .posts-list-top{
-        //     @media (max-width: $smallLaptop){
-        //         max-width: 1350px;
-        //         margin-left: auto;
-        //         margin-right: auto;
-        //     }
-
-        // }
-    }
     .heading {
         @media (min-width: $bigScreen){
             font-size: 56px;
@@ -148,11 +133,7 @@ section.posts-list {
                 margin: 0 calc( calc(calc(100vw - 1673px) / 2) * -1);
 
                 @media ( max-width: $smallLaptop){
-                    margin: 0 calc( calc(calc(100vw - 1362px) / 2) * -1);
-                }
-
-                @media ( max-width: $tablet){
-                    margin: 0 ;
+                    margin: 0;
                 }
 
                 .slick-list{
