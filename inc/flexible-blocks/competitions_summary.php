@@ -113,7 +113,7 @@
                                 'add_args'     => false,
                                 'add_fragment' => '',
                             ));?>
-                        </div>
+                            </div>
 
                         <?php endif; wp_reset_postData();?>
 
