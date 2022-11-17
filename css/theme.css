@@ -17091,7 +17091,8 @@ section.client-logos .client-logo-content > svg {
   right: 0;
 }
 section.client-logos .client-logos-wrapper {
-  margin-bottom: -50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 section.client-logos .client-logos-wrapper > div {
   padding-bottom: 50px;
@@ -17111,7 +17112,10 @@ section.client-logos .client-logos-wrapper > div {
     width: 90%;
   }
 }
-section.client-logos .client-logos-wrapper:before {
+section.client-logos .flickity-rows-wrapper {
+  position: relative;
+}
+section.client-logos .flickity-rows-wrapper:before {
   content: "";
   position: absolute;
   top: 0;
@@ -17120,6 +17124,7 @@ section.client-logos .client-logos-wrapper:before {
   height: 100%;
   pointer-events: none;
   background: linear-gradient(90deg, white 3%, transparent 30%, transparent 70%, white 97%);
+  z-index: 2;
 }
 
 section.testimonial-section {
@@ -17615,6 +17620,7 @@ section.our-suppliers-section .our-suppliers-content-wrapper .our-supplier-text-
 }
 section.our-suppliers-section .our-suppliers-content-wrapper .our-supplier-text-images-wrapper .image-wrapper {
   padding: 0 32px;
+  flex: 1;
 }
 section.our-suppliers-section .our-suppliers-content-wrapper .our-supplier-text-images-wrapper .image-wrapper img {
   display: block;
