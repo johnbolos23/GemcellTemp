@@ -17091,8 +17091,11 @@ section.client-logos .client-logo-content > svg {
   right: 0;
 }
 section.client-logos .client-logos-wrapper {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+section.client-logos .client-logos-wrapper .flickity-cell {
+  padding: 0 15px;
 }
 section.client-logos .client-logos-wrapper > div {
   padding-bottom: 50px;
