@@ -48,6 +48,7 @@ section.step-by-step {
                     left: 100%;
                     transform: translateY(-100%) translateX(-50%);
                     top: 50%;
+                    width: 185px;
 
                     @media (max-width: 1550px){
                         &{
@@ -93,7 +94,7 @@ section.step-by-step {
 
                     @media (max-width: $smallLaptop){
                         &{
-                            left: 10%;
+                            left: 12.5%;
                         }
                     }
 
@@ -175,8 +176,8 @@ section.step-by-step {
                         }
                     }
 
-                    &:hover {
-                        background: #C2DA3D;
+                    &:hover, &.active {
+                        // background: #C2DA3D;
 
                         img {
                             filter: invert(999) brightness(9999);
