@@ -3,7 +3,7 @@ body{
     overflow-x: hidden;
 }
 
-section{
+section:not(.has-overlay-top){
     overflow: hidden;
 }
 

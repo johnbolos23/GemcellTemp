@@ -13,6 +13,7 @@ section.our-suppliers-section{
         &.overlap-top{
             margin-bottom: -170px;
             transform: translateY(-170px);
+            background-color: white;
         }
     }
 
@@ -28,10 +29,45 @@ section.our-suppliers-section{
         .wysiwyg-content {
             max-width: 635px;
             margin: 23px auto 40px;
+
+            &.full{
+                max-width: 1114px;
+            }
         }
+        
 
         .see-all-button-wrapper{
             margin-top: 35px;
+        }
+
+        .row{
+            .overlay-content {
+                padding-left: 40px;
+                padding-right: 0;
+            }
+
+            &.flex-row-reverse{
+                .overlay-content {
+                    padding-left: 0;
+                    padding-right: 40px;
+                }
+            }
+        }
+
+        .our-supplier-text-images-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -32px;
+
+            .image-wrapper{
+                padding: 0 32px;
+
+                img{
+                    display: block;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
         }
     }
 }

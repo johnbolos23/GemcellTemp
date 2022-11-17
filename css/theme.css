@@ -15954,7 +15954,7 @@ body {
   overflow-x: hidden;
 }
 
-section {
+section:not(.has-overlay-top) {
   overflow: hidden;
 }
 
@@ -17580,6 +17580,7 @@ section.our-suppliers-section.has-overlay-top + section {
 section.our-suppliers-section .our-suppliers-content.overlap-top {
   margin-bottom: -170px;
   transform: translateY(-170px);
+  background-color: white;
 }
 section.our-suppliers-section .our-suppliers-content-wrapper {
   padding: 100px;
@@ -17593,8 +17594,33 @@ section.our-suppliers-section .our-suppliers-content-wrapper .wysiwyg-content {
   max-width: 635px;
   margin: 23px auto 40px;
 }
+section.our-suppliers-section .our-suppliers-content-wrapper .wysiwyg-content.full {
+  max-width: 1114px;
+}
 section.our-suppliers-section .our-suppliers-content-wrapper .see-all-button-wrapper {
   margin-top: 35px;
+}
+section.our-suppliers-section .our-suppliers-content-wrapper .row .overlay-content {
+  padding-left: 40px;
+  padding-right: 0;
+}
+section.our-suppliers-section .our-suppliers-content-wrapper .row.flex-row-reverse .overlay-content {
+  padding-left: 0;
+  padding-right: 40px;
+}
+section.our-suppliers-section .our-suppliers-content-wrapper .our-supplier-text-images-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -32px;
+}
+section.our-suppliers-section .our-suppliers-content-wrapper .our-supplier-text-images-wrapper .image-wrapper {
+  padding: 0 32px;
+}
+section.our-suppliers-section .our-suppliers-content-wrapper .our-supplier-text-images-wrapper .image-wrapper img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 section.step-by-step {
@@ -17645,6 +17671,7 @@ section.step-by-step .step-by-step-wrapper .step-by-steps .step-item svg {
   left: 100%;
   transform: translateY(-100%) translateX(-50%);
   top: 50%;
+  width: 185px;
 }
 @media (max-width: 1550px) {
   section.step-by-step .step-by-step-wrapper .step-by-steps .step-item svg {
@@ -17683,7 +17710,7 @@ section.step-by-step .step-by-step-wrapper .step-by-steps .step-item.step-2.step
 }
 @media (max-width: 9999px) {
   section.step-by-step .step-by-step-wrapper .step-by-steps .step-item.step-2.step-is-parent {
-    left: 10%;
+    left: 12.5%;
   }
 }
 @media (max-width: 1024px) {
@@ -17753,10 +17780,7 @@ section.step-by-step .step-by-step-wrapper .step-by-steps .step-item .step-item-
     width: 35%;
   }
 }
-section.step-by-step .step-by-step-wrapper .step-by-steps .step-item .step-item-image:hover {
-  background: #C2DA3D;
-}
-section.step-by-step .step-by-step-wrapper .step-by-steps .step-item .step-item-image:hover img {
+section.step-by-step .step-by-step-wrapper .step-by-steps .step-item .step-item-image:hover img, section.step-by-step .step-by-step-wrapper .step-by-steps .step-item .step-item-image.active img {
   filter: invert(999) brightness(9999);
 }
 @media (max-width: 767px) {

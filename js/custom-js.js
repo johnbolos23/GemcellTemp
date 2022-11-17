@@ -252,6 +252,17 @@
 				$(this).closest('.archive-gems-featured-wrapper').find('.archive-item-image-gallery a:first-child')[0].click();
 			}
 		});
+
+
+		$('.step-item-image').on('click', function(){
+			$stepTarget = $(this).data('step-content');
+			
+			$('.step-item-image').removeClass('active');
+			$(this).addClass('active');
+
+			$('section.our-suppliers-section').addClass('hide');
+			$('#'+ $stepTarget).removeClass('hide');
+		});
 		
 	});
 })(jQuery);
