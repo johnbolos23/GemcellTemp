@@ -16,14 +16,14 @@ section.page-title{
     }
 
     .page-title-wrapper {
-        padding-left: calc((100vw - 1680px)/ 2);
+        padding-left: calc((100vw - 1350px)/ 2);
         height: 100%;
         padding-bottom: 70px;
         display: flex;
         align-items: flex-end;
 
         @media ( max-width: $smallLaptop ){
-            padding-left: 42px;
+            // padding-left: 42px;
             padding-bottom: 59px;
             height: 100%;
         }
