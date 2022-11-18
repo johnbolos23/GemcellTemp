@@ -156,7 +156,7 @@ section.posts-list {
                 }
 
                 .slick-list{
-                    padding: 0 calc((100vw - 1700px)/ 2 ) !important;
+                    padding: 0 calc((100vw - 1350px)/ 2 ) !important;
 
                     .post-list-item-wrapper{
                         position: relative;
@@ -295,12 +295,12 @@ section.posts-list {
                 }
 
                 &.slick-prev {
-                    left: 0;
+                    left: 40px;
                     transform: translateX(calc( calc(50% - 11px) * -1) );
                 }
 
                 &.slick-next {
-                    right: 0;
+                    right: 40px;
                     transform: translateX( calc(50% - 11px) );
                 }
             }

@@ -16848,7 +16848,7 @@ section.posts-list .posts-list-items .post-list-slider.has-overlap {
   }
 }
 section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list {
-  padding: 0 calc((100vw - 1700px) / 2) !important;
+  padding: 0 calc((100vw - 1350px) / 2) !important;
 }
 section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .post-list-item-wrapper {
   position: relative;
@@ -16969,11 +16969,11 @@ section.posts-list .posts-list-items .post-list-slider .slick-arrow:before {
   display: none;
 }
 section.posts-list .posts-list-items .post-list-slider .slick-arrow.slick-prev {
-  left: 0;
+  left: 40px;
   transform: translateX(calc((50% - 11px) * -1));
 }
 section.posts-list .posts-list-items .post-list-slider .slick-arrow.slick-next {
-  right: 0;
+  right: 40px;
   transform: translateX(calc(50% - 11px));
 }
 section.posts-list .posts-list-items .post-list-slider.post-list-slider.hasArrows {
