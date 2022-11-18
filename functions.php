@@ -171,6 +171,7 @@ add_action('acf/init', 'my_acf_init');
 
 function getGeoCode($address)
 {
+        $address = urlencode($address);
         // geocoding api url
         $url = "https://maps.google.com/maps/api/geocode/json?address=$address&key=AIzaSyApyclQTE-uyeCjNphglXkawNegc2QPiiw";
 

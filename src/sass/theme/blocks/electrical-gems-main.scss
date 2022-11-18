@@ -38,7 +38,7 @@ section.electrical-gems-main {
 
         @media (max-width: $bigScreen){
             &{
-                padding: 0px 30px;
+                // padding: 0px 30px;
             }
         }
 
@@ -57,7 +57,7 @@ section.electrical-gems-main {
         }
         .slick-list {
             margin: 0 -12px;
-            padding: 0 calc( calc(100vw - 1537px) / 2);
+            padding: 0 calc( calc(100vw - 1350px) / 2);
 
             .post-slider-item {
                 padding: 0 12px;
@@ -665,7 +665,7 @@ section.electrical-gems-main {
     padding-top: 60px;
 
     .container {
-        max-width: 1397px;
+        // max-width: 1397px;
 
 
         .post-single-wrapper{

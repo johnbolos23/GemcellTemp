@@ -12918,7 +12918,7 @@ figure.woocommerce-product-gallery__wrapper {
   padding: 100px 0;
   margin-bottom: 185px;
   margin-top: 80px;
-  max-width: 1538px;
+  max-width: 1350px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -15965,22 +15965,22 @@ section:not(.has-overlay-top) {
 }
 
 @media (min-width: 9999px) {
-  .container {
+  #gemcell-customization .container {
     max-width: 1680px;
   }
 }
 @media (max-width: 9999px) {
-  .container {
+  #gemcell-customization .container {
     max-width: 1350px;
   }
 }
 @media (max-width: 1024px) {
-  .container {
+  #gemcell-customization .container {
     padding: 0 27px;
   }
 }
 @media (max-width: 767px) {
-  .container {
+  #gemcell-customization .container {
     padding: 0 15px;
   }
 }
@@ -18224,11 +18224,6 @@ section.electrical-gems .container {
   margin-bottom: 70px;
 }
 @media (max-width: 9999px) {
-  section.electrical-gems .posts-slider {
-    padding: 0px 30px;
-  }
-}
-@media (max-width: 9999px) {
   section.electrical-gems .posts-slider .heading {
     font-size: 24px !important;
   }
@@ -18240,7 +18235,7 @@ section.electrical-gems .container {
 }
 section.electrical-gems .posts-slider .slick-list {
   margin: 0 -12px;
-  padding: 0 calc((100vw - 1537px) / 2);
+  padding: 0 calc((100vw - 1350px) / 2);
 }
 section.electrical-gems .posts-slider .slick-list .post-slider-item {
   padding: 0 12px;
@@ -18687,9 +18682,6 @@ section.electrical-gems .posts-grid.post-featured .row > div[class^=col-] .post-
 #post-single {
   padding-top: 60px;
 }
-#post-single .container {
-  max-width: 1397px;
-}
 #post-single .container .post-single-wrapper > img {
   width: 100%;
   max-height: 606px;
@@ -18885,11 +18877,6 @@ section.electrical-gems-main .container {
   margin-bottom: 70px;
 }
 @media (max-width: 9999px) {
-  section.electrical-gems-main .posts-slider {
-    padding: 0px 30px;
-  }
-}
-@media (max-width: 9999px) {
   section.electrical-gems-main .posts-slider .heading {
     font-size: 24px !important;
   }
@@ -18901,7 +18888,7 @@ section.electrical-gems-main .container {
 }
 section.electrical-gems-main .posts-slider .slick-list {
   margin: 0 -12px;
-  padding: 0 calc((100vw - 1537px) / 2);
+  padding: 0 calc((100vw - 1350px) / 2);
 }
 section.electrical-gems-main .posts-slider .slick-list .post-slider-item {
   padding: 0 12px;
@@ -19347,9 +19334,6 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
 
 #post-single {
   padding-top: 60px;
-}
-#post-single .container {
-  max-width: 1397px;
 }
 #post-single .container .post-single-wrapper > img {
   width: 100%;
