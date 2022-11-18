@@ -15965,22 +15965,22 @@ section:not(.has-overlay-top) {
 }
 
 @media (min-width: 9999px) {
-  .container {
+  #gemcell-customization .container {
     max-width: 1680px;
   }
 }
 @media (max-width: 9999px) {
-  .container {
+  #gemcell-customization .container {
     max-width: 1350px;
   }
 }
 @media (max-width: 1024px) {
-  .container {
+  #gemcell-customization .container {
     padding: 0 27px;
   }
 }
 @media (max-width: 767px) {
-  .container {
+  #gemcell-customization .container {
     padding: 0 15px;
   }
 }

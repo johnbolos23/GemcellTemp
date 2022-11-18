@@ -12,7 +12,7 @@ html{
         overflow-x: hidden;
     }
 }
-.container{
+#gemcell-customization .container{
     @media(min-width: $bigScreen){
         max-width: 1680px;
     }
