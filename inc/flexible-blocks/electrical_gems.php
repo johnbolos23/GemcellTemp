@@ -14,7 +14,7 @@
                 <h2 class="heading"><?php echo get_sub_field('heading'); ?></h2>
             </div>
             <div class="col-12 col-lg-6 text-right">
-                <a href="#" class="main-button main-button-bordered">View More <?php get_template_part('icons/arrow-up'); ?></a>
+                <a href="https://gemcelldev.wpengine.com/latest-news/" class="main-button main-button-bordered">View More <?php get_template_part('icons/arrow-up'); ?></a>
             </div>
         </div>
     </div>
