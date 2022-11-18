@@ -1,4 +1,4 @@
-section.electrical-gems {
+section.electrical-gems-main {
     padding-top: 70px;
     padding-bottom: 100px;
 
@@ -890,3 +890,49 @@ section.electrical-gems {
 
 
 
+.posts-grid.post-featured.grid-main .post-grid-item-wrapper {
+    grid-template-columns: 100% !important;
+}
+
+.posts-grid.post-featured.grid-main .post-grid-item-wrapper .post-grid-item-details {
+    padding: 20px 0px !important;
+}
+
+.posts-grid.post-featured.grid-main .post-grid-item-wrapper .post-grid-item-details .wysiwyg-content {
+    display: none;
+}
+
+.posts-grid.post-featured.grid-main .post-grid-item-wrapper .post-grid-item-details a.post-grid-readmore {
+    display: none !important;
+}
+
+
+.pagination-col-custom {
+    text-align: center;
+}
+
+.pagination-col-custom .page-numbers {
+    padding: 20px;
+    color: black;
+    text-decoration: none;
+    font-family: 'Century Gothic';
+    font-size: 18px;
+}
+
+.pagination-col-custom .page-numbers.current {
+    color: #0796BF;
+    font-weight: 600;
+}
+
+
+.pagination-col-custom .next.page-numbers {
+    border: 1px solid #b3b3b3;
+    border-radius: 100px;
+    padding: 18px 23px !important;
+}
+
+.pagination-col-custom .prev.page-numbers {
+    border: 1px solid #b3b3b3;
+    border-radius: 100px;
+    padding: 18px 23px !important;
+}
