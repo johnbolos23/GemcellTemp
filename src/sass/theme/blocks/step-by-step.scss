@@ -296,8 +296,14 @@ section.step-by-step {
             .step-title{
                 font-size: 20px;
                 line-height: 170%;
-                font-weight: 600;
+                font-weight: 700;
                 margin-top: 6px;
+                @media (max-width: $smallLaptop) {
+                    font-size: 18px;
+                }
+                @media (max-width: $mobile) {
+                    font-size: 16px;
+                }
             }
         } 
     }

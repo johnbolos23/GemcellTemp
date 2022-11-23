@@ -35,6 +35,16 @@ section.information-with-video {
     .information-with-video-wrapper {
         max-width: 1253px;
         margin: auto;
+        @media (max-width: $smallLaptop) {
+            .heading {
+                font-size: 36px;
+            }
+        }
+        @media (max-width: $mobile) {
+            .heading {
+                font-size: 28px;
+            }
+        }
 
         .information-with-video-video {
             margin-top: 75px;
@@ -58,7 +68,7 @@ section.information-with-video {
 
             .video-popup-trigger {
                 position: absolute;
-                top: 50%;
+                top: 55%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 text-align: center;
@@ -70,9 +80,14 @@ section.information-with-video {
 
                 h4 {
                     font-weight: 700;
-                    font-size: 24px;
                     line-height: 170%;
                     color: white;
+                    @media (max-width: $smallLaptop) {
+                        font-size: 20px;
+                    }
+                    @media (max-width: $mobile) {
+                        font-size: 18px;
+                    }
                 }
             }
         }
