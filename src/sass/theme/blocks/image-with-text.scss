@@ -8,7 +8,6 @@ section.image-with-text{
     }
     
     .container {
-    
         .subheading span{
             @media (max-width: $bigScreen){
                 &{
@@ -140,6 +139,12 @@ section.image-with-text{
                     @media (max-width: $bigScreen){
                         &{
                             font-size: 36px;
+                            line-height: 120%;
+                        }
+                    }
+                    @media (max-width: $mobile){
+                        &{
+                            font-size: 28px;
                         }
                     }
     
