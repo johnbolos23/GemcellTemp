@@ -1,0 +1,52 @@
+section.cta-wide {
+    padding: 116px 0;
+
+    @media (max-width: $mobile){
+        &{
+            padding-bottom: 16em !important;
+        }
+    }
+    
+
+    .container {
+        max-width: 1537px;
+    }
+
+    .heading {
+        font-size: 56px;
+
+        @media (max-width: $bigScreen){
+            &{
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: $mobile){
+            &{
+                font-size: 36px;
+            }
+        }
+    }
+
+    .main-button {
+        border-color: white;
+        color: white;
+        margin-top: 42px;
+
+        @media (max-width: $bigScreen){
+            &{
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: $mobile){
+            &{
+                font-size: 14px;
+            }
+        }
+
+        &:before {
+            background: white;
+        }
+    }
+}

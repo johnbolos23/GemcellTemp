@@ -1,0 +1,102 @@
+.text-list-inner {
+
+    .row {
+        padding: 0px 25px !important;
+
+        .text-list-top-content {
+            display: grid;
+            grid-template-columns: 45% 55%;
+            align-items: center;
+
+            @media (max-width: $tablet){
+                &{
+                    grid-template-columns: 100%;
+                }
+            }
+
+            .col-b{
+                @media (max-width: $tablet){
+                    &{
+                        margin-top:15px;
+                    }
+                }
+            }
+        }
+        
+
+    }
+
+    .col-list-inner {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 4em;
+
+        .step-col {
+            display: flex;
+            align-items: flex-start;
+            padding: 30px;
+            padding-left: 0;
+            width: 50%;
+            margin-bottom: 1em;
+
+            @media (max-width: $tablet){
+                &{
+                    width: 100%;
+                }
+            }
+    
+            > img {
+                margin-right: 2em;
+                width: 75px;
+                height: 75px;
+                object-fit: contain;
+
+                @media (max-width: $mobile){
+                    &{
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+    
+            .step-col-inner-content span {
+                font-family: 'Century Gothic';
+                font-weight: 600;
+                font-size: 28px;
+                line-height: 130%;
+            /* or 36px */
+                letter-spacing: -0.02em;
+                font-feature-settings: 'salt' on, 'liga' off;
+                color: #263238;
+
+                @media (max-width: $mobile){
+                    &{
+                        font-size: 20px;
+                    }
+                }
+            }
+    
+            
+            .step-col-inner-content .wysiwyg-content {
+                margin-top: 5px;
+            }
+    
+    
+    
+        }
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
