@@ -113,6 +113,7 @@ section.image-with-text{
                     &{
                         width: 100%;
                         padding:10px !important;
+                        padding-top: 40px !important;
                     }
                 }
                 
@@ -120,7 +121,7 @@ section.image-with-text{
     
             .col-6.col-b {
                 padding-left: 30px;
-    
+                
                 .subheading span{
                     @media (max-width: $bigScreen){
                         &{
@@ -170,6 +171,11 @@ section.image-with-text{
                         @media (max-width: $bigScreen){
                             &{
                                 font-size: 16px;
+                            }
+                        }
+                        @media (max-width: $mobile){
+                            &{
+                                font-size: 14px;
                             }
                         }
         

@@ -9,6 +9,12 @@
         .heading{
             display: flex;
             align-items: center;
+            font-size: 36px;
+            @media (max-width: $mobile){
+                &{
+                    font-size: 28px;
+                }
+            }
         }
     }
 
@@ -32,6 +38,12 @@
             @media (max-width: $tablet){
                 &{
                     width: 50;
+                }
+            }
+            @media (max-width: $mobile){
+                &{
+                    width: 60px;
+                    height: 60px;
                 }
             }
         }
@@ -85,10 +97,17 @@
                     height: 150px;
                     object-fit: contain;
 
-                    @media (max-width: $mobile){
+                    @media (max-width: $tablet){
                         &{
                             padding: 8px;
                             height:85px;
+                        }
+                    }
+
+                    @media (max-width: $mobile){
+                        &{
+                            padding: 8px;
+                            height:65px;
                         }
                     }
                 }
