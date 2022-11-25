@@ -47,7 +47,7 @@ $headerClass = 'main-header';
 
 	<div class="modal fade"></div>
 	<div class="fb3d-modal light">
-		<a href="#" class="cmd-close"><span class="glyphicon glyphicon-remove"></span></a>
+		<a href="#" class="cmd-close"><i class="fa fa-times"></i></a>
 		<div class="mount-container"></div>
 	</div>
 	<?php do_action('wp_body_open'); ?>

@@ -22,7 +22,6 @@ jobs:
           npm run dist
           npm run dist-build
           ls
-
       - name: 📂 Sync files
         uses: Creepios/sftp-action@v1.0.3
         with:

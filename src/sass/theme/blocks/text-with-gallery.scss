@@ -27,6 +27,9 @@ section.text-gallery{
                 font-size: 36px;
                 line-height: 120%;
             }
+            @media ( max-width: $mobile ){
+                font-size: 28px;
+            }
         }
     }
 

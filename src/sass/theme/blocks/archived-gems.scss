@@ -79,7 +79,7 @@ section.archived-gems {
                         }
                     }
 
-                    @media (max-width: $tablet){
+                    @media (max-width: $mobile){
                         &{
                             font-size: 28px;
                         }
@@ -117,14 +117,26 @@ section.archived-gems {
 
                             @media (max-width: $bigScreen){
                                 &{
-                                    font-size: 20px;
-                                }
+                                    font-size: 20px !important;
+                                }                
                             }
 
                             @media (max-width: $mobile){
                                 &{
                                     font-size: 16px !important;
-                                }
+                                }                
+                            }
+
+                            @media (max-width: $bigScreen){
+                                b {
+                                    font-size: 20px !important;
+                                }                 
+                            }
+
+                            @media (max-width: $mobile){
+                                b {
+                                    font-size: 16px !important;
+                                }   
                             }
                         }
                     }
@@ -133,6 +145,7 @@ section.archived-gems {
                         @media (max-width: $mobile){
                             &{
                                 max-width: fit-content;
+                                font-size: 14px !important;
                             }
                         }
                     }

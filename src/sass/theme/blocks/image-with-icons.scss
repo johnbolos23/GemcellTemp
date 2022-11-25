@@ -7,7 +7,10 @@ section.image-with-icons{
         padding-top: 20px;
         padding-bottom: 20px;
 
-        @media ( max-width: $smallLaptop ){
+        @media ( max-width: $bigScreen ){
+            padding-left: 30px;
+        }
+        @media ( max-width: $mobile){
             padding-left: 0;
         }
 
@@ -31,10 +34,12 @@ section.image-with-icons{
                     font-size: 24px;
                     line-height: 110%;
                     letter-spacing: -0.02em;
-
                     @media ( max-width: $smallLaptop ){
                         font-size: 20px;
                         margin-bottom: 15px;
+                    }
+                    @media ( max-width: $mobile ){
+                        font-size: 18px;
                     }
                 }
             }
