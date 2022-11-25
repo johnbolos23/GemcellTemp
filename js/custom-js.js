@@ -323,7 +323,7 @@
 				wrapAround: true,
 				selectedAttraction: 0.015,
 				friction: 0.25,
-				rightToLeft: true
+				rightToLeft: false
 			});
 			flickity2.x = 0;
 
