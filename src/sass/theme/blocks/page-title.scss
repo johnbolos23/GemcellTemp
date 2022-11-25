@@ -28,6 +28,10 @@ section.page-title{
             height: 100%;
         }
 
+        @media (max-width: 1350px){
+            padding-left: 40px;
+        }
+
         @media ( max-width: $tablet ){
             padding-left: 26px;
             padding-bottom: 46px;

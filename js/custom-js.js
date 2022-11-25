@@ -244,15 +244,19 @@
 			}
 		});
 
-		$('.view-archive-toggle').on('click', function(e){
-			e.preventDefault();
+		// $('.view-archive-toggle').on('click', function(e){
+		// 	e.preventDefault();
 
-			if( $(this).hasClass('view-issue') ){
-				$(this).closest('.archive-gems-post-item').find('.archive-item-image-gallery a:first-child')[0].click();
-			}else{
-				$(this).closest('.archive-gems-featured-wrapper').find('.archive-item-image-gallery a:first-child')[0].click();
-			}
-		});
+		// 	if( $(this).hasClass('view-issue') ){
+		// 		$(this).closest('.archive-gems-post-item').find('.flipbook-custom-container').addClass('visible');
+		// 		$(this).closest('.archive-gems-post-item').find('.solid-container').FlipBook({pdf: $(this).closest('.archive-gems-post-item').find('.solid-container').attr('src')});
+		// 		// $(this).closest('.archive-gems-post-item').find('.archive-item-image-gallery a:first-child')[0].click();
+		// 	}else{
+		// 		$(this).closest('.archive-gems-featured-wrapper').find('.flipbook-custom-container').addClass('visible');
+		// 		$(this).closest('.archive-gems-featured-wrapper').find('.solid-container').FlipBook({pdf: $(this).closest('.archive-gems-featured-wrapper').find('.solid-container').attr('src')});
+		// 		// $(this).closest('.archive-gems-featured-wrapper').find('.archive-item-image-gallery a:first-child')[0].click();
+		// 	}
+		// });
 
 
 		$('.step-item-image').on('click', function(){
