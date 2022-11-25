@@ -4,11 +4,18 @@
 
 .preferred-supplier-inner{
     padding: 50px 0px;
+    padding-bottom: 0 !important;
 
     .col-6.col-a{
         .heading{
             display: flex;
             align-items: center;
+            font-size: 36px;
+            @media (max-width: $mobile){
+                &{
+                    font-size: 28px;
+                }
+            }
         }
     }
 
@@ -34,6 +41,13 @@
                     width: 50;
                 }
             }
+            @media (max-width: $mobile){
+                &{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            
         }
     }
 
@@ -107,10 +121,17 @@
                     height: 270px;
                     object-fit: contain;
 
+                    @media (max-width: $tablet){
+                        &{
+                            padding: 10px;
+                            height: 170px;
+                        }
+                    }
+
                     @media (max-width: $mobile){
                         &{
                             padding: 10px;
-                            height: 145px;
+                            height: 125px;
                         }
                     }
                 }

@@ -138,14 +138,15 @@ body *{
     line-height: 110%;
     margin-bottom: 0;
     letter-spacing: -0.02em;
-
+    @media (max-width: $smallLaptop) {
+        font-size: 42px;
+    }
+    @media (max-width: $mobile) {
+        font-size: 36px;
+    }
     span{
         letter-spacing: -0.02em;
         font-family: 'CenturyGothicBold';
-    }
-
-    @media ( max-width: $smallLaptop ){
-        font-size: 42px;
     }
 }
 .subheading{
@@ -157,6 +158,9 @@ body *{
 
     @media ( max-width: $smallLaptop ){
         font-size: 14px;
+    }
+    @media ( max-width: 767px ){
+        font-size: 12px;
     }
 
     span{
@@ -190,6 +194,9 @@ body *{
 
     @media ( max-width: $smallLaptop ){
         font-size: 16px;
+    }
+    @media ( max-width: $mobile ){
+        font-size: 14px;
     }
 }
 
