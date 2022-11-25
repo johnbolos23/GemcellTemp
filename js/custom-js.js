@@ -294,9 +294,9 @@
 			});
 			flickity.x = 0;
 
-			flickity.on('dragStart', () => {
-				isPaused = true;
-			});
+			// flickity.on('dragStart', () => {
+			// 	isPaused = true;
+			// });
 
 			update();
 
@@ -327,9 +327,9 @@
 			});
 			flickity2.x = 0;
 
-			flickity2.on('dragStart', () => {
-				isPaused2 = true;
-			});
+			// flickity2.on('dragStart', () => {
+			// 	isPaused2 = true;
+			// });
 
 			update2();
 
@@ -359,9 +359,9 @@
 			});
 			flickity3.x = 0;
 
-			flickity3.on('dragStart', () => {
-				isPaused3 = true;
-			});
+			// flickity3.on('dragStart', () => {
+			// 	isPaused3 = true;
+			// });
 
 			update3();
 		}

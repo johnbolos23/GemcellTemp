@@ -8,7 +8,7 @@ section:not(.has-overlay-top){
 }
 
 html{
-    @media ( max-width: $tablet){
+    @media ( max-width: $smallLaptop){
         overflow-x: hidden;
     }
 }
@@ -19,15 +19,18 @@ html{
 
     @media (max-width: $smallLaptop){
         max-width: 1350px;
-        // padding: 0 40px;
+        padding-left: 40px;
+        padding-right: 40px;
     } 
 
     @media ( max-width: $tablet){
-        padding: 0 27px;
+        padding-left: 27px;
+        padding-right: 27px;
     }
 
     @media ( max-width: $mobile){
-        padding: 0 15px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 

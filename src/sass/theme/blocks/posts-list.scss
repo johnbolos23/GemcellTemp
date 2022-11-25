@@ -148,7 +148,7 @@ section.posts-list {
                 margin: 0 calc( calc(calc(100vw - 1673px) / 2) * -1);
 
                 @media ( max-width: $smallLaptop){
-                    margin: 0 calc( calc(calc(100vw - 1362px) / 2) * -1);
+                    margin: 0 calc(((100vw - 1362px)/ 2 + 40px ) * -1);
                 }
 
                 @media ( max-width: $tablet){
@@ -156,7 +156,7 @@ section.posts-list {
                 }
 
                 .slick-list{
-                    padding: 0 calc((100vw - 1350px)/ 2 ) !important;
+                    padding: 0 calc(( (100vw - 1350px)/ 2) + 40px ) !important;
 
                     .post-list-item-wrapper{
                         position: relative;
@@ -303,7 +303,9 @@ section.posts-list {
                     right: 40px;
                     transform: translateX( calc(50% - 11px) );
                 }
-            }
+            } 
+
+
 
             &.post-list-slider.hasArrows{
                 padding-bottom: 100px;

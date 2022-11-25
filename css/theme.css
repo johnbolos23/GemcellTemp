@@ -15958,7 +15958,7 @@ section:not(.has-overlay-top) {
   overflow: hidden;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 9999px) {
   html {
     overflow-x: hidden;
   }
@@ -15972,16 +15972,20 @@ section:not(.has-overlay-top) {
 @media (max-width: 9999px) {
   #gemcell-customization .container {
     max-width: 1350px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 @media (max-width: 1024px) {
   #gemcell-customization .container {
-    padding: 0 27px;
+    padding-left: 27px;
+    padding-right: 27px;
   }
 }
 @media (max-width: 767px) {
   #gemcell-customization .container {
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -16460,7 +16464,7 @@ body.home section.big-cta {
 }
 @media (max-width: 1780px) {
   .section-banner .banner-content-wrapper {
-    padding: 120px 60px;
+    padding: 120px 40px;
   }
 }
 @media (max-width: 767px) {
@@ -16839,7 +16843,7 @@ section.posts-list .posts-list-items .post-list-slider.has-overlap {
 }
 @media (max-width: 9999px) {
   section.posts-list .posts-list-items .post-list-slider.has-overlap {
-    margin: 0 calc((100vw - 1362px) / 2 * -1);
+    margin: 0 calc(((100vw - 1362px) / 2 + 40px) * -1);
   }
 }
 @media (max-width: 1024px) {
@@ -16848,7 +16852,7 @@ section.posts-list .posts-list-items .post-list-slider.has-overlap {
   }
 }
 section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list {
-  padding: 0 calc((100vw - 1350px) / 2) !important;
+  padding: 0 calc((100vw - 1350px) / 2 + 40px) !important;
 }
 section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .post-list-item-wrapper {
   position: relative;
@@ -17339,7 +17343,7 @@ section.page-title .page-title-image-heading {
   padding: 60px 0;
 }
 section.page-title .page-title-wrapper {
-  padding-left: calc((100vw - 1350px) / 2);
+  padding-left: calc((100vw - 1350px) / 2 + 40px);
   height: 100%;
   padding-bottom: 70px;
   display: flex;
@@ -18222,6 +18226,16 @@ section.electrical-gems .container {
   max-width: 1537px;
   margin-bottom: 70px;
 }
+@media (max-width: 1024px) {
+  section.electrical-gems .posts-slider {
+    padding: 0 27px;
+  }
+}
+@media (max-width: 767px) {
+  section.electrical-gems .posts-slider {
+    padding: 0 15px;
+  }
+}
 @media (max-width: 9999px) {
   section.electrical-gems .posts-slider .heading {
     font-size: 24px !important;
@@ -18234,7 +18248,7 @@ section.electrical-gems .container {
 }
 section.electrical-gems .posts-slider .slick-list {
   margin: 0 -12px;
-  padding: 0 calc((100vw - 1350px) / 2);
+  padding: 0 calc((100vw - 1350px + 52px) / 2);
 }
 section.electrical-gems .posts-slider .slick-list .post-slider-item {
   padding: 0 12px;
