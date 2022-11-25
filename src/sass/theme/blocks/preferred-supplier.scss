@@ -1,0 +1,166 @@
+.preferred-supplier-inner .col-6.col-a h3.heading svg {
+    margin-right: 15px;
+}
+
+.preferred-supplier-inner{
+    padding: 50px 0px;
+    padding-bottom: 0 !important;
+
+    .col-6.col-a{
+        .heading{
+            display: flex;
+            align-items: center;
+            font-size: 36px;
+            @media (max-width: $mobile){
+                &{
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+
+    .col-6{
+        @media (max-width: $mobile){
+            &{
+                width: 100%;
+            }
+        }
+
+        .wysiwyg-content{
+
+            @media (max-width: $mobile){
+                &{
+                    margin-top:16px;
+                }
+            }
+        }
+
+        h3.heading svg{
+            @media (max-width: $tablet){
+                &{
+                    width: 50;
+                }
+            }
+            @media (max-width: $mobile){
+                &{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            
+        }
+    }
+
+    .col-12 {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 0px;
+    
+        .suplier-item {
+            width: 25%;
+            padding: 12px;
+            position: relative;
+            transition: .3s;
+            bottom: 0;
+            @media (max-width: $tablet){
+                &{
+                    width: 33.33%;
+                }
+            }
+
+            @media (max-width: $mobile){
+                &{
+                    width: 50%;
+                }
+            }
+    
+        
+            .supplier-item-inner {
+                background: #F8F8F8;
+                padding: 16px;
+                position: relative;
+    
+                
+    
+                h5 {
+                    font-weight: 600;
+                    font-size: 28px;
+                    line-height: 110%;
+                /* identical to box height, or 31px */
+                    letter-spacing: -0.02em;
+                    color: #FFFFFF;
+                    margin-top: 18px;
+                    display:none;
+                    transition:.3s;
+                    position: absolute;
+                    bottom: -58px;
+                    left: 0;
+                    background: #263238;
+                    z-index: 1;
+                    width: 100%;
+                    padding: 25px 18px;
+
+                    @media (max-width: $bigScreen){
+                        &{
+                            font-size: 24px;
+                        }
+                    }
+                    @media (max-width: $mobile){
+                        &{
+                            font-size: 18px;
+                        }
+                    }
+                }
+        
+                .suplier-poster img {
+                    width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
+                    padding: 30px;
+                    height: 270px;
+                    object-fit: contain;
+
+                    @media (max-width: $tablet){
+                        &{
+                            padding: 10px;
+                            height: 170px;
+                        }
+                    }
+
+                    @media (max-width: $mobile){
+                        &{
+                            padding: 10px;
+                            height: 125px;
+                        }
+                    }
+                }
+                
+                .suplier-poster {
+                    /* padding: 15px; */
+                    background: white;
+                }
+                
+            }
+            
+        }
+    
+        .suplier-item:hover .supplier-item-inner h5{
+            display:block !important;
+            transition:.3s;
+            
+        }
+    
+        .suplier-item:hover .supplier-item-inner{
+            background:#263238;
+        }
+    
+        .suplier-item:hover {
+            bottom: 15px;
+            transition: .3s;
+        }
+        
+    }
+    
+    
+} 

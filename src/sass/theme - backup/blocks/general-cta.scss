@@ -1,0 +1,148 @@
+section.general-cta {
+    margin-top: -150px;
+    z-index: 3;
+
+    > svg {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(47.6%);
+        z-index: 2;
+
+        @media (max-width: $smallLaptop){
+            &{
+                width: 9em;
+                bottom: -4px;
+            }
+        }
+    }
+
+    .general-cta-wrapper {
+        margin-right: 120px;
+        padding: 100px 0 100px 300px;
+        clip-path: polygon(100% 0,100% calc(100% - 100px),calc(100% - 100px) 100%,0 100%,0 0);
+
+        @media (max-width: $bigScreen){
+            &{
+                padding: 100px 0 100px 150px;
+            }
+        }
+        
+        @media (max-width: $smallLaptop){
+            &{
+                padding: 70px 20px 70px 100px;
+            }
+        } 
+
+        @media (max-width: $tablet){
+            &{
+                margin-right: 20px;
+                padding: 75px 30px;;
+            }
+        } 
+
+        @media (max-width: $mobile){
+            &{
+                margin-right: 35px;
+                padding: 70px;
+            }
+        } 
+
+        .row{
+
+            @media (max-width: $bigScreen){
+                &{
+                    width: 100%;
+                }
+            } 
+
+            @media (max-width: $smallLaptop){
+                &{
+                    width: 90%;
+                }
+            } 
+
+            @media (max-width: $tablet){
+                &{
+                    width: 100%;
+                }
+            } 
+
+            .col-12{
+                @media (max-width: $tablet){
+                    &{
+                        width: 100%;
+                    }
+                } 
+            }
+        }
+
+        .general-cta-buttons-wrapper{
+            padding-left: 50px;
+
+            @media (max-width: $tablet){
+                &{
+                    display: flex;
+                    padding-left: 0;
+                    margin-top: 25px;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+            }
+
+            .main-button {
+                display: block;
+                max-width: 285px;
+                text-align: left;
+                position: relative;
+
+
+                @media (max-width: $tablet){
+                    &{
+                        width: 50%;
+                        max-width: 48% !important;
+                        margin-bottom: 0 !important;
+                        line-height: 48px;
+                        font-size: 16px;
+                    }
+                }
+
+                @media (max-width: $mobile){
+                    &{
+                        width: 100%;
+                        max-width: 100% !important;
+                        font-size: 14px;
+                        margin-bottom: 12px !important;
+                    }
+                }
+
+
+
+                svg {
+                    position: absolute;
+                    top: 50%;
+                    right: 30px;
+                    transform: translateY(-50%);
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 13px;
+                }
+            }
+        }
+    }
+
+    .heading {
+        line-height: 130%;
+        @media (max-width: $bigScreen){
+            &{
+                font-size: 36px;
+            }
+        } 
+
+        @media (max-width: $mobile){
+            &{
+                font-size: 28px;
+            }
+        } 
+    }
+}

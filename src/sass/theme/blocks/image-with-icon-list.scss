@@ -1,0 +1,68 @@
+.image-with-icon-list-inner {
+
+    .row {
+        align-items: center;
+        padding: 70px;
+
+        .col-6.col-a img {
+            width: 100%;
+            padding-right: 30px;
+        }
+
+        .col-6.col-b {
+            padding-left: 30px;
+
+            .heading {
+                width: 100%;
+                max-width: 14em;
+                margin-bottom: 25px;
+            }
+            
+            .wysiwyg-content {
+                width: 100%;
+                max-width: 38em;
+            }
+
+            .icon-list-col {
+                margin-top: 2.5em;
+            }
+            
+            .icon-list-col .icon-list-item {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 39px;
+            }
+            
+            .icon-list-col .icon-list-item img {
+                margin-right: 2em;
+                width: 52px;
+                object-fit: contain;
+            }
+            
+            h4.icon-title {
+                font-family: 'Century Gothic';
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 110%;
+            /* or 26px */
+                letter-spacing: -0.02em;
+                color: #263238;
+            }
+            
+            .big-cta-buttons {
+                display: flex;
+            }
+            
+            .big-cta-buttons a {
+                width: 40%;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-right: 1em;
+            }
+        }
+    }
+    
+}
+

@@ -1,0 +1,188 @@
+section.testimonial-section{
+    padding: 50px 0;
+
+    @media (max-width: $mobile){
+        padding-bottom: 0;
+    }
+
+    .testimonial-slider .slick-dots {
+        bottom: 40px;
+        width: auto;
+        left: 727px;
+
+        @media (max-width: $bigScreen){
+            &{
+                left: 50%;
+            }
+        }
+
+        @media (max-width: $tablet){
+            &{
+                bottom: 0;
+            }
+        }
+
+        @media (max-width: $mobile){
+            &{
+                bottom: -30px;
+                transform: unset;
+                bottom: 55%;
+                left: 0;
+            }
+        }
+
+        button {
+            width: 9px;
+            height: 9px;
+            transform: rotate(45deg);
+            border: 2px solid #B1B1B1;
+            margin: 0;
+            display: inline-block;
+            padding: 0;
+
+            &:before {
+                display: none;
+            }
+        }
+
+        li {
+            margin: 0 8px;
+            width: auto;
+            height: auto;
+
+            &.slick-active{
+                button {
+                    background: #0C96B2;
+                    border-color: #0C96B2;
+                }
+            }
+        }
+    } 
+
+    .d-flex {
+        @media (max-width: $mobile){
+            &{
+                flex-direction: column-reverse;
+            }
+        }
+
+        .testimonial-item-image{
+            @media (max-width: $mobile){
+                &{
+                    width: 100%;
+                }
+            }
+        }
+
+        .testimonial-item-details{
+            @media (max-width: $mobile){
+                &{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    
+    .testimonial-slider 
+    .testimonial-item-image {
+        margin: 0 162px;
+        flex: 0 0 403px;
+
+        @media (min-width: $mobile) and (max-width: $bigScreen){
+            &{
+                width: 50%;
+                margin: 0;
+                flex: 0 0 50%;
+            }
+        }
+
+        img{
+            @media (max-width: $bigScreen){
+                &{
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+            @media (max-width: $tablet){
+                &{
+                    padding: 0px 40px;
+                }
+            }
+        }
+    }
+    
+    .testimonial-item-details {
+        max-width: 750px;
+
+        @media (max-width: $bigScreen){
+            &{
+                width: 50%;
+                max-width: 100%;
+            }
+        }
+
+        .subheading{
+            margin-bottom: 30px;
+        }
+
+        .heading {
+            font-size: 36px;
+            line-height: 140%;
+            margin-bottom: 30px;
+            font-weight: 400;
+            font-family: 'CenturyGothic';
+
+            @media (max-width: $smallLaptop){
+                &{
+                    font-size: 28px !important;
+                }
+            }
+
+            @media (max-width: $mobile){
+                &{
+                    font-size: 24px !important;
+                }
+            }
+        }
+
+        .testimony-name {
+            border-left: 1px solid #BFBFBF;
+            padding-left: 33px;
+    
+            .name {
+                font-size: 24px;
+                line-height: 1;
+                font-family: 'CenturyGothicBold';
+
+                @media (max-width: $smallLaptop){
+                    &{
+                        font-size: 20px !important;
+                    }
+                }
+                @media (max-width: $mobile){
+                    &{
+                        font-size: 18px !important;
+                    }
+                }
+            }
+    
+            .position {
+                font-size: 18px;
+                line-height: 170%;
+
+                @media (max-width: $smallLaptop){
+                    &{
+                        font-size: 16px !important;
+                    }
+                }
+                @media (max-width: $mobile){
+                    &{
+                        font-size: 14px !important;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+section.image-with-icons{
+    padding-top: 50px;
+    padding-bottom: 140px;
+
+    .image-with-icons-content{
+        padding-left: 80px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        @media ( max-width: $bigScreen ){
+            padding-left: 30px;
+        }
+        @media ( max-width: $mobile){
+            padding-left: 0;
+        }
+
+        .image-with-icons-wrapper{
+            padding-top: 50px;
+            margin-bottom: -70px;
+
+            .row{
+                margin-left: -50px;
+                margin-right: -50px;
+
+                div[class^="col-"]{
+                    padding-bottom: 70px;
+                    padding-left: 50px;
+                    padding-right: 50px;
+                }
+    
+                .icon-title{
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                    font-size: 24px;
+                    line-height: 110%;
+                    letter-spacing: -0.02em;
+                    @media ( max-width: $smallLaptop ){
+                        font-size: 20px;
+                        margin-bottom: 15px;
+                    }
+                    @media ( max-width: $mobile ){
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .image-with-icons-image{
+        @media (max-width: $smallLaptop){
+            img{
+                height: 100%;
+                object-fit: cover;
+                max-width: 485px;
+                width: 100%;
+            }
+        }
+    }
+}

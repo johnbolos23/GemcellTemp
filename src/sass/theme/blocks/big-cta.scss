@@ -1,0 +1,53 @@
+section.big-cta{
+    padding: 50px 0;
+
+    .heading {
+
+        br{
+            @media (max-width: $mobile){
+                &{
+                    display: none !important;
+                }
+            } 
+        }
+    }
+
+    .subheading{
+        margin-bottom: 18px;
+    }
+
+    .big-cta-wrapper{
+        padding-top: 100px;
+        max-height: 740px;
+        height: 100vh;
+
+        .big-cta-buttons {
+            margin-top: 38px;
+
+            @media (max-width: $mobile){
+                &{
+                    flex-direction: column;
+                }
+            }
+            
+
+            .main-button {
+                min-width: 285px;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                margin: 0 12px;
+
+                @media (max-width: $mobile){
+                    &{
+                        margin-bottom:18px;
+                    }
+                }
+
+                svg {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+section.simple-text{
+    padding: 70px 0; 
+
+    @media (max-width: $smallLaptop){
+        padding: 50px 0;
+    }
+    
+    .simple-text-wrapper{
+        max-width: 1128px;
+        margin: auto;
+
+        @media (max-width: $smallLaptop){
+            max-width: 782px;
+        }
+    }
+}

@@ -5,6 +5,8 @@
 @import "theme/blocks";           // <-------- This adds Bootstrap styles to blocks.
 @import "theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support
 @import "theme/woocommerce"; // <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
+@import "theme/gravity-form";
+
 
 // Optional files - If you dont use the corresponding scripts/fonts comment em out
 @import "assets/fontawesome/font-awesome";    // <-------- Font Awesome Icon font
@@ -12,3 +14,147 @@
 // Any additional imported files //
 @import "theme/theme";            // <-------- That's where you can add your own design. Thats your part!
 
+
+
+// Flexible Block - Banner
+@import "theme/blocks/banner";
+
+// Flexible Block - Counter
+@import "theme/blocks/counter";
+
+// Flexible Block - Image with Floating Box
+@import "theme/blocks/image-floating-box";
+
+// Flexible Block - Posts List
+@import "theme/blocks/posts-list";
+
+// Flexible Block - Client Logos
+@import "theme/blocks/client-logo";
+
+// Flexible Block - Testimonial
+@import "theme/blocks/testimonial";
+
+// Flexible Block - Big CTA
+@import "theme/blocks/big-cta";
+
+
+// Flexible Block - Page Title
+@import "theme/blocks/page-title";
+
+// Flexible Block - Simple Text
+@import "theme/blocks/simple-text";
+
+// Flexible Block - Text with Gallery
+@import "theme/blocks/text-with-gallery";
+
+// Flexible Block - Image with Icons
+@import "theme/blocks/image-with-icons";
+
+// Flexible Block - Suppliers
+@import "theme/blocks/our-suppliers-section";
+
+// Flexible Block - Step by Step
+@import "theme/blocks/step-by-step";
+
+// Flexible Block - Team Members
+@import "theme/blocks/team-members";
+
+// Flexible Block - General CTA
+@import "theme/blocks/general-cta";
+
+// Flexible Block - Information with Video
+@import "theme/blocks/information-with-video";
+
+// Flexible Block - Testimonials v2
+@import "theme/blocks/testimonials-v2";
+
+// Flexible Block - Electrical Gems
+@import "theme/blocks/electrical-gems";
+
+// Flexible Block - Electrical Gems Main
+@import "theme/blocks/electrical-gems-main";
+
+
+// Flexible Block - Social Cards
+@import "theme/blocks/social-cards";
+
+// Flexible Block - CTA Wide
+@import "theme/blocks/cta-wide";
+
+// Flexible Block - Our Products
+@import "theme/blocks/our-products";
+// Flexible Block - Section Banner Two
+@import "theme/blocks/section-banner-two";
+
+// Flexible Block - List Points Text
+@import "theme/blocks/list-points-text";
+
+// Flexible Block - Group Box
+@import "theme/blocks/group-box";
+
+// Flexible Block - CTA Column List
+@import "theme/blocks/cta-image-column";
+
+// Flexible Block - Members Column List
+@import "theme/blocks/members-column-list";
+
+// Flexible Block - Column Steps
+@import "theme/blocks/column-steps";
+
+// Flexible Block - Text List
+@import "theme/blocks/text-list";
+
+// Flexible Block - Pattern Banner
+@import "theme/blocks/pattern-banner";
+
+// Flexible Block - General CTA Two
+@import "theme/blocks/general-cta-two";
+
+// Flexible Block - Image With Text
+@import "theme/blocks/image-with-text";
+
+// Flexible Block - Preferred Supplier
+@import "theme/blocks/preferred-supplier";
+
+// Flexible Block - Approved Supplier
+@import "theme/blocks/approved-supplier";
+
+// Flexible Block - Members List
+@import "theme/blocks/members-list";
+
+// Flexible Block - Image with Icon List
+@import "theme/blocks/image-with-icon-list";
+
+// Flexible Block - State
+@import "theme/blocks/state";
+
+// Flexible Block - Competitions Summary
+@import "theme/blocks/competitions-summary";
+
+// Flexible Block - Banner CTA
+@import "theme/blocks/banner-cta";
+
+// Flexible Block - Archived Gems
+@import "theme/blocks/archived-gems";
+
+// Flexible Block - Archived Gems
+@import "theme/blocks/contact-us";
+
+
+// Page - Single Supplier
+@import "theme/pages/single-supplier";
+
+// Page - Find a Branch
+@import "theme/pages/find-a-branch";
+// Page - Single Members
+@import "theme/pages/single-member";
+
+// Page - Single Competition
+@import "theme/pages/single-competition";
+
+
+
+
+
+// Page - Taxonomy State
+@import "theme/pages/tax-state";
