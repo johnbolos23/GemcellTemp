@@ -15,7 +15,11 @@ $Branchlatitude = get_field('maps')['lat'];
 $Branchlongtitude = get_field('maps')['lng'];
 $Branchaddress = get_field('maps')['address'];
 
-$distance = getDistanceBetweenCoordinates( $Branchlatitude, $Branchlongtitude, $currentUserAddress['lat'], $currentUserAddress['lng'], 'K' );
+if( $Branchlatitude != 'null' && $Branchlongtitude != 'null' ){
+    $distance = getDistanceBetweenCoordinates( $Branchlatitude, $Branchlongtitude, $currentUserAddress['lat'], $currentUserAddress['lng'], 'K' );
+}else{
+    $distance = 13685.38;
+}
 
 $distance = number_format((float)$distance, 2, '.', '');
 ?>
