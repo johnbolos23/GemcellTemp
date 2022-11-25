@@ -31,7 +31,7 @@ section.step-by-step {
         margin-top: 60px;
 
         &.has-step-parent{
-            margin-top: 280px;
+            margin-top: 240px;
         }
 
         .step-by-steps {
@@ -236,7 +236,7 @@ section.step-by-step {
                     @media (max-width: $mobile){
                         &{
                             width: 7em!important;
-                            top: 9em!important;
+                            top: 7em!important;
                             left: -3.3em;
                             transform: rotate(90deg)!important;
                         }
@@ -266,7 +266,7 @@ section.step-by-step {
                     @media (max-width: $mobile){
                         &{
                             width: 7em !important;
-                            top: 14em !important;
+                            top: 12em !important;
                             left: 50% !important;
                             transform: translate(-50%, -50%) rotate(90deg) !important;
                         }

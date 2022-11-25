@@ -8,7 +8,7 @@ get_template_part('inc/flexible-blocks/breadcrumbs'); ?>
 <section class="single-suppliers" id="single-suppliers">
     <div class="container">
         <div class="row">
-            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+            <div class="col-12 col-lg-4">
                 <div class="single-supplier-image">
                     <div class="single-supplier-image-wrapper">
                         <?php echo get_the_post_thumbnail(); ?>
@@ -79,7 +79,7 @@ get_template_part('inc/flexible-blocks/breadcrumbs'); ?>
         <?php if( get_field('info_blocks', 'option') ) : ?>
         <div class="row supplier-info-blocks">
             <?php $counter = 1; foreach( get_field('info_blocks', 'option') as $block ) : ?>
-            <div class="col-12 col-lg-4">
+            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
                 <div class="supplier-block-item">
                     <div class="supplier-block-item-wrapper">
                         <img src="<?php echo $block['icon']; ?>" />

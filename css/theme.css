@@ -17696,7 +17696,7 @@ section.step-by-step .step-by-step-wrapper {
   margin-top: 60px;
 }
 section.step-by-step .step-by-step-wrapper.has-step-parent {
-  margin-top: 280px;
+  margin-top: 240px;
 }
 section.step-by-step .step-by-step-wrapper .step-by-steps {
   display: flex;
@@ -17858,7 +17858,7 @@ section.step-by-step .step-by-step-wrapper .step-by-steps .step-item .step-item-
 @media (max-width: 767px) {
   section.step-by-step .step-by-step-wrapper .step-by-steps .step-item.step-3 svg {
     width: 7em !important;
-    top: 9em !important;
+    top: 7em !important;
     left: -3.3em;
     transform: rotate(90deg) !important;
   }
@@ -17878,7 +17878,7 @@ section.step-by-step .step-by-step-wrapper .step-by-steps .step-item .step-item-
 @media (max-width: 767px) {
   section.step-by-step .step-by-step-wrapper .step-by-steps .step-item.step-4 svg {
     width: 7em !important;
-    top: 14em !important;
+    top: 12em !important;
     left: 50% !important;
     transform: translate(-50%, -50%) rotate(90deg) !important;
   }
@@ -18286,11 +18286,6 @@ section.electrical-gems {
 @media (max-width: 767px) {
   section.electrical-gems .row > .col-12.col-lg-6 {
     width: 100%;
-  }
-}
-@media (max-width: 767px) {
-  section.electrical-gems .row .col-12.col-lg-6.text-right {
-    display: none;
   }
 }
 section.electrical-gems .container {
@@ -18749,6 +18744,11 @@ section.electrical-gems .posts-grid.post-featured .row > div[class^=col-] .post-
 }
 @media (max-width: 9999px) {
   section.electrical-gems .container a.main-button {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  section.electrical-gems .container a.main-button {
     font-size: 14px;
   }
 }
@@ -18924,6 +18924,22 @@ section.electrical-gems .posts-grid.post-featured .row > div[class^=col-] .post-
   #post-single-related .slick-track .col-12 {
     width: 100% !important;
     margin-bottom: 40px;
+  }
+}
+
+body.page-id-487 section#electrical-gems-5 a.main-button {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  body.page-id-487 section#electrical-gems-2 .col-12.col-lg-6.text-right {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  body.page-id-487 section#electrical-gems-4 .col-12.col-lg-6.text-right {
+    position: absolute !important;
+    bottom: 25px;
+    text-align: left;
   }
 }
 
@@ -21635,7 +21651,7 @@ section.archived-gems .container .archive-gems-featured .archive-gems-featured-w
     font-size: 36px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   section.archived-gems .container .archive-gems-featured .archive-gems-featured-wrapper .heading {
     font-size: 28px;
   }
@@ -21669,7 +21685,7 @@ section.archived-gems .container .archive-gems-featured .archive-gems-featured-w
 }
 @media (max-width: 9999px) {
   section.archived-gems .container .archive-gems-featured .archive-gems-featured-wrapper .archive-gems-featured-details .wysiwyg-content p {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 }
 @media (max-width: 767px) {
@@ -21677,10 +21693,21 @@ section.archived-gems .container .archive-gems-featured .archive-gems-featured-w
     font-size: 16px !important;
   }
 }
+@media (max-width: 9999px) {
+  section.archived-gems .container .archive-gems-featured .archive-gems-featured-wrapper .archive-gems-featured-details .wysiwyg-content p b {
+    font-size: 20px !important;
+  }
+}
+@media (max-width: 767px) {
+  section.archived-gems .container .archive-gems-featured .archive-gems-featured-wrapper .archive-gems-featured-details .wysiwyg-content p b {
+    font-size: 16px !important;
+  }
+}
 @media (max-width: 767px) {
   section.archived-gems .container .archive-gems-featured .archive-gems-featured-wrapper .archive-gems-featured-details a.main-button.main-button-bordered {
     max-width: -moz-fit-content;
     max-width: fit-content;
+    font-size: 14px !important;
   }
 }
 section.archived-gems .container .archive-gems-featured .archive-gems-featured-wrapper .archive-gems-image-wrapper {
@@ -22270,7 +22297,7 @@ section#single-suppliers .single-supplier-details .heading {
   margin-bottom: 30px;
 }
 section#single-suppliers .supplier-info-blocks {
-  margin-top: 125px;
+  margin-top: 100px;
   margin-left: -18px;
   margin-right: -18px;
 }
@@ -22498,6 +22525,11 @@ section#find-a-branch #branch-results .branch-results-items .branch-results-item
 @media (max-width: 9999px) {
   section#find-a-branch #branch-results .branch-results-items .branch-results-item-wrapper .branch-item-details .branch-item-heading .distance {
     font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  section#find-a-branch #branch-results .branch-results-items .branch-results-item-wrapper .branch-item-details .branch-item-heading .distance {
+    font-size: 16px;
   }
 }
 section#find-a-branch #branch-results .branch-results-items .branch-results-item-wrapper .branch-item-details a {

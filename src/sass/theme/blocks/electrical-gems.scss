@@ -18,14 +18,13 @@ section.electrical-gems {
                 }
             }
         }
-        .col-12.col-lg-6.text-right{
-            @media (max-width: $mobile){
-                &{
-                    
-                    display: none;
-                }
-            }
-        }
+        // .col-12.col-lg-6.text-right{
+        //     @media (max-width: $mobile){
+        //         &{
+        //             display: none;
+        //         }
+        //     }
+        // }
     }
 
     .container {
@@ -652,7 +651,13 @@ section.electrical-gems {
             }
         }
         a.main-button {
+            
             @media (max-width: $bigScreen){
+                &{
+                    font-size: 16px;
+                }
+            }
+            @media (max-width: $mobile){
                 &{
                     font-size: 14px;
                 }
@@ -887,6 +892,34 @@ section.electrical-gems {
         }
     }
 }
+body {
+    &.page-id-487 {
+        section {
+            &#electrical-gems-5 {
+                a.main-button {
+                    display: none !important;
+                }
+            }
+            &#electrical-gems-2 {
+                .col-12.col-lg-6.text-right {
+                    @media (max-width: $mobile){
+                       display: none !important;
+                    }
+                }
+            }
+            &#electrical-gems-4 {
+                .col-12.col-lg-6.text-right {
+                    @media (max-width: $mobile){
+                        position: absolute !important;
+                        bottom: 25px;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 
