@@ -38,10 +38,6 @@ $theQuery = new WP_Query( $args );
         <?php if( $theFeatured->have_posts() ) : $theFeatured->the_post(); ?>
             <div class="archive-gems-featured">
                 <div class="archive-gems-featured-wrapper">
-                    <div class="flipbook-custom-container">
-                        <a href="#" class="close-this-flipbook"><i class="far fa-times"></i></a>
-                        <div class="solid-container" src="<?php echo get_field('pdf_file'); ?>"></div>
-                    </div>
                     <div class="row align-items-center">
                         <div class="col-6">
                             <div class="archive-gems-image-wrapper">
@@ -68,7 +64,7 @@ $theQuery = new WP_Query( $args );
                                     <p><b><?php echo get_the_title(); ?></b></p>
                                     <p><?php echo get_field('date_start'); ?></p>
                                 </div>
-                                <a href="#" class="main-button main-button-bordered view-archive-toggle">View Issue</a>
+                                <a href="#" class="main-button main-button-bordered view-archive-toggle" src="<?php echo get_field('pdf_file'); ?>">View Issue</a>
                             </div>
                         </div>
                     </div>
@@ -85,10 +81,6 @@ $theQuery = new WP_Query( $args );
                     <?php while( $theQuery->have_posts() ) : $theQuery->the_post(); ?>
                     <div class="col-6 col-lg-3">
                         <div class="archive-gems-post-item">
-                            <div class="flipbook-custom-container">
-                                <a href="#" class="close-this-flipbook"><i class="far fa-times"></i></a>
-                                <div class="solid-container" src="<?php echo get_field('pdf_file'); ?>"></div>
-                            </div>
                             <div class="archive-item-image-gallery" src="<?php echo get_field('pdf_file'); ?>" >
                                 <a href="<?php echo get_the_post_thumbnail_url(); ?>">
                                     <img src="<?php echo get_the_post_thumbnail_url(); ?>" />
@@ -113,7 +105,7 @@ $theQuery = new WP_Query( $args );
                                 </div>
                                 <h3 class="heading"><?php echo get_the_title(); ?></h3>
                                 <div class="wysiwyg-content"><?php echo get_field('issue_number'); ?></div>
-                                <a href="#" class="view-issue view-archive-toggle">View Issue <?php get_template_part('icons/arrow-up'); ?></a>
+                                <a href="#"  src="<?php echo get_field('pdf_file'); ?>" class="view-issue view-archive-toggle">View Issue <?php get_template_part('icons/arrow-up'); ?></a>
                             </div>
                         </div>
                     </div>

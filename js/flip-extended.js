@@ -84,9 +84,9 @@
   });
   $('.view-archive-toggle').click(function(e) {
     e.preventDefault();
-    if( $(this).closest('.archive-gems-post-item').find('.solid-container').attr('src') || $(this).closest('.archive-gems-featured-wrapper').find('.solid-container').attr('src') ){
+    if( $(this).attr('src') ){
       instance.options = {
-        pdf: $(this).hasClass('view-issue') ? $(this).closest('.archive-gems-post-item').find('.solid-container').attr('src') : $(this).closest('.archive-gems-featured-wrapper').find('.solid-container').attr('src'),
+        pdf:$(this).attr('src'),
         template: {
           sounds: {"startFlip": themeURL.templateURL + "/sounds/start-flip.mp3","endFlip": themeURL.templateURL + "/sounds/end-flip.mp3"},
         }
