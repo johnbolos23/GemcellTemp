@@ -69,6 +69,7 @@ section#find-a-branch{
     #branch-results {
         padding: 30px 33px 27px;
         max-height: 892px;
+        overflow-y: auto;
 
         @media (max-width: $tablet){
             padding: 30px 24px;
