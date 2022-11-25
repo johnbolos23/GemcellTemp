@@ -42,6 +42,14 @@ section.electrical-gems {
             }
         }
 
+        @media ( max-width: $tablet ){
+            padding: 0 27px;
+        }
+        
+        @media (max-width: $mobile){
+            padding: 0 15px;
+        }
+
         .heading{
             @media (max-width: $bigScreen){
                 &{
@@ -57,7 +65,7 @@ section.electrical-gems {
         }
         .slick-list {
             margin: 0 -12px;
-            padding: 0 calc( calc(100vw - 1350px) / 2);
+            padding: 0 calc(( (100vw - 1350px) + 52px )/ 2);
 
             .post-slider-item {
                 padding: 0 12px;
