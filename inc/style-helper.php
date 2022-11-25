@@ -1,7 +1,7 @@
 <style>
     <?php if( !isset($args['additional']) || $args['additional']['default_bg'] ) : ?>
     <?php echo $args['target']; ?>{
-        background-color: <?php echo get_sub_field('color'); ?>;
+        background-color: <?php echo get_sub_field('color') ? get_sub_field('color') : 'white'; ?>;
         background-image: url(<?php echo get_sub_field('image'); ?>);
         background-repeat: no-repeat;
         background-size: cover;
