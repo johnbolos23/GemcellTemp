@@ -244,15 +244,19 @@
 			}
 		});
 
-		$('.view-archive-toggle').on('click', function(e){
-			e.preventDefault();
+		// $('.view-archive-toggle').on('click', function(e){
+		// 	e.preventDefault();
 
-			if( $(this).hasClass('view-issue') ){
-				$(this).closest('.archive-gems-post-item').find('.archive-item-image-gallery a:first-child')[0].click();
-			}else{
-				$(this).closest('.archive-gems-featured-wrapper').find('.archive-item-image-gallery a:first-child')[0].click();
-			}
-		});
+		// 	if( $(this).hasClass('view-issue') ){
+		// 		$(this).closest('.archive-gems-post-item').find('.flipbook-custom-container').addClass('visible');
+		// 		$(this).closest('.archive-gems-post-item').find('.solid-container').FlipBook({pdf: $(this).closest('.archive-gems-post-item').find('.solid-container').attr('src')});
+		// 		// $(this).closest('.archive-gems-post-item').find('.archive-item-image-gallery a:first-child')[0].click();
+		// 	}else{
+		// 		$(this).closest('.archive-gems-featured-wrapper').find('.flipbook-custom-container').addClass('visible');
+		// 		$(this).closest('.archive-gems-featured-wrapper').find('.solid-container').FlipBook({pdf: $(this).closest('.archive-gems-featured-wrapper').find('.solid-container').attr('src')});
+		// 		// $(this).closest('.archive-gems-featured-wrapper').find('.archive-item-image-gallery a:first-child')[0].click();
+		// 	}
+		// });
 
 
 		$('.step-item-image').on('click', function(){
@@ -294,9 +298,9 @@
 			});
 			flickity.x = 0;
 
-			flickity.on('dragStart', () => {
-				isPaused = true;
-			});
+			// flickity.on('dragStart', () => {
+			// 	isPaused = true;
+			// });
 
 			update();
 
@@ -323,13 +327,13 @@
 				wrapAround: true,
 				selectedAttraction: 0.015,
 				friction: 0.25,
-				rightToLeft: true
+				rightToLeft: false
 			});
 			flickity2.x = 0;
 
-			flickity2.on('dragStart', () => {
-				isPaused2 = true;
-			});
+			// flickity2.on('dragStart', () => {
+			// 	isPaused2 = true;
+			// });
 
 			update2();
 
@@ -359,9 +363,9 @@
 			});
 			flickity3.x = 0;
 
-			flickity3.on('dragStart', () => {
-				isPaused3 = true;
-			});
+			// flickity3.on('dragStart', () => {
+			// 	isPaused3 = true;
+			// });
 
 			update3();
 		}

@@ -1,5 +1,5 @@
 <?php
-$PublicIP = get_client_ip() != '::1' ? get_client_ip() : '49.146.44.197';
+$PublicIP = get_client_ip() != '::1' ? get_client_ip() : '35.201.24.201';
 $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
 $json     = json_decode($json, true);
 $country  = $json['country'];
@@ -15,7 +15,11 @@ $Branchlatitude = get_field('maps')['lat'];
 $Branchlongtitude = get_field('maps')['lng'];
 $Branchaddress = get_field('maps')['address'];
 
-$distance = getDistanceBetweenCoordinates( $Branchlatitude, $Branchlongtitude, $currentUserAddress['lat'], $currentUserAddress['lng'], 'K' );
+if( $Branchlatitude != 'null' && $Branchlongtitude != 'null' ){
+    $distance = getDistanceBetweenCoordinates( $Branchlatitude, $Branchlongtitude, $currentUserAddress['lat'], $currentUserAddress['lng'], 'K' );
+}else{
+    $distance = 13685.38;
+}
 
 $distance = number_format((float)$distance, 2, '.', '');
 ?>

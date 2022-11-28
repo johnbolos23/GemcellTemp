@@ -12,7 +12,7 @@ get_template_part('inc/flexible-blocks/breadcrumbs');
 $args = array(
     'post_type' => 'members',
     'post_status' => 'publish',
-    'posts_per_page' => -1
+    'posts_per_page' => 100
 );
 
 if( isset( $_POST['keyword'] ) && $_POST['keyword'] ){

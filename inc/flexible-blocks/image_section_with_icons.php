@@ -17,7 +17,7 @@
 
     ?>
     <div class="container">
-        <div class="row align-items-xxl-center <?php echo get_sub_field('image_position') == 'right' ? 'flex-row-reverse': ''; ?>">
+        <div class="row <?php echo get_sub_field('image_position') == 'right' ? 'flex-row-reverse': ''; ?>">
             <div class="col-12 col-md-12 col-lg-12 col-xl-5 col-xxl-4 image-with-icons-image">
                 <img src="<?php echo get_sub_field('image'); ?>" />
             </div>
