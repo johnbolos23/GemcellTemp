@@ -1,4 +1,10 @@
 section#find-a-branch{
+    .col-xl-7 {
+        @media only screen and (min-width: 1024px){
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
     #branch-finder {
         padding: 30px 33px 27px;
         border-bottom: 1.5px solid #DFDFDF;
@@ -88,6 +94,9 @@ section#find-a-branch{
                 @media (max-width: $smallLaptop){
                     font-size: 24px;
                 }
+                @media (max-width: $mobile){
+                    font-size: 20px;
+                }
             }
             .num-results {
                 color: #9D9D9D;
@@ -97,6 +106,9 @@ section#find-a-branch{
 
                 @media (max-width: $smallLaptop){
                     font-size: 18px;
+                }
+                @media (max-width: $mobile){
+                    font-size: 16px;
                 }
             }
         }
@@ -136,6 +148,9 @@ section#find-a-branch{
                             @media (max-width: $smallLaptop){
                                 font-size: 20px;
                             }
+                            @media (max-width: $mobile){
+                                font-size: 18px;
+                            }
                         }
 
                         .distance {
@@ -144,9 +159,11 @@ section#find-a-branch{
 
                             @media (max-width: $smallLaptop){
                                 font-size: 18px;
+                                font-weight: 700;
                             }
                             @media (max-width: $mobile){
                                 font-size: 16px;
+                                font-weight: 700;
                             }
                         }
                     }
@@ -173,10 +190,10 @@ section#find-a-branch{
                     width: 200px;
                     flex: 0 0 200px;
 
-                    @media (max-width: $tablet){
-                        width: 100%;
-                        flex: 0 0 100%;
-                    }
+                    // @media (max-width: $tablet){
+                    //     width: 100%;
+                    //     flex: 0 0 100%;
+                    // }
                 }
             }
         }
@@ -195,7 +212,12 @@ section#find-a-branch{
         .branch-result-list-detail-wrapper{
             .heading {
                 color: #263238;
-                font-size: 28px;
+                @media (max-width: $smallLaptop){
+                    font-size: 24px;
+                }
+                @media (max-width: $mobile){
+                    font-size: 20px;
+                }
             }
 
             a.main-button svg {
@@ -209,19 +231,29 @@ section#find-a-branch{
             margin-bottom: 35px;
 
             .branch-label {
-                font-size: 18px;
                 line-height: 170%;
                 font-family: 'CenturyGothicBold';
                 color: #263238;
                 width: 120px;
                 flex: 0 0 120px;
+                @media (max-width: $smallLaptop){
+                    font-size: 16px;
+                }
+                @media (max-width: $mobile){
+                    font-size: 14px;
+                }
             }
 
             .branch-detail-text {
                 max-width: 300px;
-                font-size: 18px;
                 line-height: 170%;
                 margin-bottom: 15px;
+                @media (max-width: $smallLaptop){
+                    font-size: 16px;
+                }
+                @media (max-width: $mobile){
+                    font-size: 14px;
+                }
             }
         }
     }

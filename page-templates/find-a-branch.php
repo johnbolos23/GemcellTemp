@@ -37,7 +37,7 @@ $theQuery = new WP_Query( $args );
 
 <section class="find-a-branch" id="find-a-branch">
     <div class="row m-0">
-        <div class="col-12 col-lg-5 p-0">
+        <div class="col-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5 p-0">
             <div class="branch-finder-wrapper">
                 <div id="branch-finder">
                     <form action="" method="POST">
@@ -111,7 +111,7 @@ $theQuery = new WP_Query( $args );
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-7 p-0">
+        <div class="col-12 col-md-12 col-lg-12 col-xl-7 col-xxl-7 p-0" >
             <div id="custom-map-render">
                 <?php if( $theQuery->have_posts() ) : ?>
                 <div class="custom-map" data-zoom="16">
