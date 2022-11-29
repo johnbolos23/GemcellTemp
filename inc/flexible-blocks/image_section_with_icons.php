@@ -19,7 +19,16 @@
     <div class="container">
         <div class="row <?php echo get_sub_field('image_position') == 'right' ? 'flex-row-reverse': ''; ?>">
             <div class="col-12 col-md-12 col-lg-12 col-xl-5 col-xxl-4 image-with-icons-image">
-                <img src="<?php echo get_sub_field('image'); ?>" />
+                <img src="<?php echo get_sub_field('image'); ?>" class="<?php echo get_sub_field('image_laptops') ? 'd-lg-none': 'd-block'; ?>" />
+                <?php if( get_sub_field('image_laptops') ) : ?>
+                <img src="<?php echo get_sub_field('image_laptops'); ?>" class="<?php echo get_sub_field('image_tablet') ? 'd-md-none': 'd-lg-block'; ?>" />
+                <?php endif; ?>
+                <?php if( get_sub_field('image_tablet') ) : ?>
+                <img src="<?php echo get_sub_field('image_tablet'); ?>" class="<?php echo get_sub_field('image_mobile') ? 'd-sm-none': 'd-md-block'; ?>" />
+                <?php endif; ?>
+                <?php if( get_sub_field('image_mobile') ) : ?>
+                <img src="<?php echo get_sub_field('image_mobile'); ?>" class="d-block <?php echo get_sub_field('image_tablet') ? 'd-md-none': 'd-lg-block'; ?>" />
+                <?php endif; ?>
             </div>
             <div class="col-12 col-md-12 col-lg-12 col-xl-7 col-xxl-8">
                 <div class="image-with-icons-content">
