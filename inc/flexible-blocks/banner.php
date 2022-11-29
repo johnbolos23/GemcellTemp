@@ -55,8 +55,8 @@
                 <?php endif; ?>
            </div> 
         </div>
-        <div class="col-12 col-lg-7 p-0">
-            <div class="banner-image-wrapper pos-relative">
+        <div class="col-12 col-xl-12 col-xxl-12 p-0">
+            <div class="banner-image-wrapper pos-absolute">
                 <img src="<?php echo get_sub_field('image'); ?>" />
             </div>
         </div>

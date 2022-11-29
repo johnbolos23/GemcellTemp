@@ -13,6 +13,20 @@
         }
     }
 
+    .col-lg-5 {
+        position: absolute;
+        z-index: 1;
+        top: 3%;
+        left: 4%;
+        @media (max-width: 1480px){
+            display: none;
+        }
+    }
+
+    .col-xl-12 {
+        position: relative;
+    }
+
     .banner-content-wrapper{
         height: 100%;
         padding-top: 148px;
@@ -38,6 +52,7 @@
         }
 
         span.icon-top {
+            display: none; //updated the new banner
             position: absolute;
             top: 0;
             right: 11px;
@@ -85,6 +100,7 @@
         }
         
         span.icon-bottom {
+            display: none; //updated the new banner
             position: absolute;
             bottom: 0;
             left: 0;
@@ -114,16 +130,17 @@
         .heading {
             margin-bottom: 47px;
             font-family: 'CenturyGothic';
-            font-weight: 600;
+            font-weight: 700;
 
             @media (max-width: $bigScreen){
                 &{
-                    font-size: 56px !important;
+                    font-size: 64px !important;
                 }
             }
 
-            @media ( max-width: $smallLaptop ){
+            @media ( max-width: 1399px ){
                 font-family: 'CenturyGothicBold';
+                font-size: 56px !important;
             }
 
             @media (max-width: $mobile){
@@ -151,11 +168,11 @@
         }
         
         .banner-link-list {
-            border-top: 1px solid #8FA1AA;
+            border-top: 1px solid #FFFFFF99;
             margin-top: 46px;
 
             .banner-link-list-item {
-                border-bottom: 1px solid #8FA1AA;
+                border-bottom: 1px solid #FFFFFF99;
 
                 a {
                     display: block;
@@ -204,6 +221,12 @@
 
     .banner-image-wrapper {
         height: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+        @media (max-width: 1399px){
+            padding-left: 40px;
+            padding-right: 40px;
+        }
 
         img{
             height: 100%;
