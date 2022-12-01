@@ -57,16 +57,10 @@
         </div>
         <div class="col-12 col-xl-12 col-xxl-12 p-0">
             <div class="banner-image-wrapper pos-absolute">
-                <img src="<?php echo get_sub_field('image'); ?>" class="<?php echo get_sub_field('image_laptops') ? 'd-lg-none': 'd-block'; ?>" />
-                <?php if( get_sub_field('image_laptops') ) : ?>
-                <img src="<?php echo get_sub_field('image_laptops'); ?>" class="<?php echo get_sub_field('image_tablet') ? 'd-md-none': 'd-lg-block'; ?>" />
-                <?php endif; ?>
-                <?php if( get_sub_field('image_tablet') ) : ?>
-                <img src="<?php echo get_sub_field('image_tablet'); ?>" class="<?php echo get_sub_field('image_mobile') ? 'd-sm-none': 'd-md-block'; ?>" />
-                <?php endif; ?>
-                <?php if( get_sub_field('image_mobile') ) : ?>
-                <img src="<?php echo get_sub_field('image_mobile'); ?>" class="d-block <?php echo get_sub_field('image_tablet') ? 'd-md-none': 'd-lg-block'; ?>" />
-                <?php endif; ?>
+                <img src="<?php echo get_sub_field('image'); ?>" class="image_desktops"/>
+                <img src="<?php echo get_sub_field('image_laptops'); ?>" class="image_laptops"/>
+                <img src="<?php echo get_sub_field('image_tablet'); ?>" class="image_tablet"/>
+                <img src="<?php echo get_sub_field('image_mobile'); ?>" class="image_mobile"/>
             </div>
         </div>
     </div>

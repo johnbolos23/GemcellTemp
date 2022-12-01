@@ -1,8 +1,8 @@
 section#find-a-branch{
-    .col-xl-7 {
-        @media only screen and (min-width: 1024px){
+    .col-xxl-7 {
+        @media (max-width: $tablet){
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column-reverse !important;
         }
     }
     #branch-finder {
