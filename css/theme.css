@@ -15950,18 +15950,8 @@ figure.woocommerce-product-gallery__wrapper {
   clip: auto;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 section:not(.has-overlay-top) {
   overflow: hidden;
-}
-
-@media (max-width: 9999px) {
-  html {
-    overflow-x: hidden;
-  }
 }
 
 @media (min-width: 9999px) {
