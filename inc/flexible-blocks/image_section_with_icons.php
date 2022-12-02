@@ -19,7 +19,8 @@
     <div class="container">
         <div class="row <?php echo get_sub_field('image_position') == 'right' ? 'flex-row-reverse': ''; ?>">
             <div class="col-12 col-md-12 col-lg-12 col-xl-5 col-xxl-4 image-with-icons-image">
-                <img src="<?php echo get_sub_field('image'); ?>" />
+                <img src="<?php echo get_sub_field('image'); ?>" class="image_desktop"/>
+                <img src="<?php echo get_sub_field('image_tablet'); ?>" class="image_tablet"/>
             </div>
             <div class="col-12 col-md-12 col-lg-12 col-xl-7 col-xxl-8">
                 <div class="image-with-icons-content">

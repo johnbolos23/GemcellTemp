@@ -95,6 +95,20 @@
 				slidesToShow: 3,
 				dots: false,
 				arrows: false,
+				responsive: [
+					{
+						breakpoint: 9999,
+						settings: {
+							slidesToShow: 3,
+						},
+					},
+					{
+						breakpoint: 767,
+						settings: {
+							slidesToShow: 2,
+						},
+					},
+				],
 			});
 		}
 		// $('.post-list-item-wrapper').mouseenter( function(){
