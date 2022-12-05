@@ -45,10 +45,13 @@ foreach( get_sub_field('steps') as $key => $step ){
                         </div>
                         <h4 class="step-title"><?php echo $step['title']; ?></h4>
                     </div>
+                    
                     <?php if( ( count( get_sub_field('steps') ) != ( $key + 1 ) ) && !$step['is_a_substep'] ) : ?>
                         <?php get_template_part('icons/line-arrow'); ?>
                     <?php endif; ?>
-
+                    <div class="for_mobile">
+                        <?php if( $step['is_a_substep'] ) { get_template_part('icons/done-right-arrow'); } ?>
+                    </div>
                     <?php if( $step['is_a_substep'] ) { get_template_part('icons/line-right-arrow'); } ?>
                 </div>
                 <?php endforeach; ?>
