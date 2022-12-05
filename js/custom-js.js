@@ -90,7 +90,7 @@
 			});
 		}
 
-		if ($(".text-gallery-images-slider").length !== 0) {
+		if ($(".s-slider").length !== 0) {
 			$(".text-gallery-images-slider").slick({
 				slidesToShow: 3,
 				dots: false,
@@ -132,6 +132,7 @@
 						settings: {
 							slidesToShow: 3,
 							slidesToScroll: 1,
+							arrows: true,
 						},
 					},
 					{

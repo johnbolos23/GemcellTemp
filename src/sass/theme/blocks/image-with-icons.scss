@@ -69,6 +69,7 @@ section.image-with-icons{
                 object-fit: cover;
                 max-width: 485px;
                 width: 100%;
+                
                 &.image_tablet {
                     max-width: none !important;
                     @media (max-width: $bigScreen){
@@ -89,6 +90,10 @@ section.image-with-icons{
                     @media (max-width: $mobile){
                         display: block !important;
                     }
+                }
+
+                @media (max-width: 540px){
+                    max-width: none !important;
                 }
             }
         }
