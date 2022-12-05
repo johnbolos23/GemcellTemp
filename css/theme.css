@@ -18472,13 +18472,34 @@ section.testimonials-v2 {
 section.testimonials-v2 .testimonials-content {
   margin-top: 75px;
 }
+section.testimonials-v2 .testimonials-content .testimonials-slider button.slick-prev.slick-arrow {
+  top: -25% !important;
+  right: 5%;
+  left: unset;
+}
+@media (max-width: 767px) {
+  section.testimonials-v2 .testimonials-content .testimonials-slider button.slick-prev.slick-arrow {
+    left: 0;
+    top: unset !important;
+    bottom: -25%;
+  }
+}
 section.testimonials-v2 .testimonials-content .testimonials-slider button.slick-prev.slick-arrow:before {
   color: #263238 !important;
-  display: none !important;
+}
+section.testimonials-v2 .testimonials-content .testimonials-slider button.slick-next.slick-arrow {
+  top: -25% !important;
+  right: 0%;
+}
+@media (max-width: 767px) {
+  section.testimonials-v2 .testimonials-content .testimonials-slider button.slick-next.slick-arrow {
+    left: 10%;
+    top: unset !important;
+    bottom: -25%;
+  }
 }
 section.testimonials-v2 .testimonials-content .testimonials-slider button.slick-next.slick-arrow:before {
   color: #263238 !important;
-  display: none !important;
 }
 section.testimonials-v2 .testimonials-content .testimonials-slider .slick-list {
   margin: 0 -16px;
