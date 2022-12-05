@@ -6,6 +6,43 @@ section.testimonials-v2 {
         margin-top: 75px;
     
         .testimonials-slider{
+            button {
+                &.slick-prev {
+                    &.slick-arrow {
+                        top: -25% !important;
+                        right: 5%;
+                        left: unset;
+
+                        @media (max-width: $mobile){
+                            left: 0;
+                            top: unset !important;
+                            bottom: -25%;
+                        }
+
+                        &:before {
+                            color: #263238 !important;
+                            // display: none !important
+                        }
+                    }
+                }
+                &.slick-next {
+                    &.slick-arrow {
+                        top: -25% !important;
+                        right: 0%;
+
+                        @media (max-width: $mobile){
+                            left: 10%;
+                            top: unset !important;
+                            bottom: -25%;
+                        }
+
+                        &:before {
+                            color: #263238 !important;
+                            // display: none !important;
+                        }
+                    }
+                }
+            }
             .slick-list {
                 margin: 0 -16px;
     
@@ -25,7 +62,7 @@ section.testimonials-v2 {
                         .testimonial-item-image-name {
                             display: flex;
                             align-items: center;
-                            margin-bottom: 25px;
+                            margin-bottom: 25px;    
                 
                             img {
                                 width: 60px;
