@@ -22992,12 +22992,6 @@ section#single-suppliers .supplier-info-blocks .supplier-block-item:hover .suppl
   stroke: white;
 }
 
-@media (max-width: 1024px) {
-  section#find-a-branch .col-xxl-7 {
-    display: flex;
-    flex-direction: column-reverse !important;
-  }
-}
 section#find-a-branch #branch-finder {
   padding: 30px 33px 27px;
   border-bottom: 1.5px solid #DFDFDF;

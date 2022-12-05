@@ -122,6 +122,10 @@
 				slidesToShow: 3,
 				dots: false,
 				arrows: true,
+				prevArrow:
+					'<button class="slick-arrow slick-prev"><svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="60" height="60" transform="matrix(-1 0 0 1 61 1)" stroke="#BFBFBF"/><path d="M28.5718 26.3579L23.1506 31.7791M23.1506 31.7791L28.5719 37.2003M23.1506 31.7791L37.9998 31.7781" stroke="#263238" stroke-width="2"/></svg></button>',
+				nextArrow:
+					'<button class="slick-arrow slick-next"><svg width="62" height="62" viewBox="0 0 62 62" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="60" height="60" stroke="#BFBFBF"/><path d="M33.4282 26.3579L38.8494 31.7791M38.8494 31.7791L33.4281 37.2003M38.8494 31.7791L24.0002 31.7781" stroke="#263238" stroke-width="2"/></svg></button>',
 				responsive: [
 					{
 						breakpoint: 9999,
