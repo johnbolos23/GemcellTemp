@@ -17043,19 +17043,6 @@ section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .
 section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .post-list-item-wrapper:hover > * {
   transform: translateY(-30px);
 }
-section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .post-list-item-wrapper .post-list-item-link {
-  margin-top: 17px;
-}
-section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .post-list-item-wrapper .post-list-item-link a {
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 170%;
-  color: #0796BF;
-  font-family: "CenturyGothicBold";
-}
-section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .post-list-item-wrapper .post-list-item-link a svg path {
-  stroke: #0796BF;
-}
 section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .post-list-item-wrapper:after {
   position: absolute;
   bottom: 0;
@@ -17128,6 +17115,19 @@ section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .
   section.posts-list .posts-list-items .post-list-slider.has-overlap .slick-list .post-list-item-wrapper.competition-type .post-list-item-image-title {
     padding-top: 180px;
   }
+}
+section.posts-list .posts-list-items .post-list-slider .post-list-item-link {
+  margin-top: 17px;
+}
+section.posts-list .posts-list-items .post-list-slider .post-list-item-link a {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 170%;
+  color: #0796BF;
+  font-family: "CenturyGothicBold";
+}
+section.posts-list .posts-list-items .post-list-slider .post-list-item-link a svg path {
+  stroke: #0796BF;
 }
 section.posts-list .posts-list-items .post-list-slider .slick-arrow {
   background: rgba(248, 248, 248, 0.9);

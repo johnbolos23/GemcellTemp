@@ -59,7 +59,7 @@ function cptui_register_my_cpts() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => false,
-		"can_export" => false,
+		"can_export" => true,
 		"rewrite" => [ "slug" => "competition", "with_front" => true ],
 		"query_var" => true,
 		"supports" => [ "title", "editor", "thumbnail" ],
@@ -126,7 +126,7 @@ function cptui_register_my_cpts() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => false,
-		"can_export" => false,
+		"can_export" => true,
 		"rewrite" => [ "slug" => "suppliers", "with_front" => true ],
 		"query_var" => true,
 		"supports" => [ "title", "editor", "thumbnail" ],
@@ -193,7 +193,7 @@ function cptui_register_my_cpts() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => false,
-		"can_export" => false,
+		"can_export" => true,
 		"rewrite" => [ "slug" => "archive_gems", "with_front" => false ],
 		"query_var" => true,
 		"supports" => [ "title", "editor", "thumbnail" ],
@@ -485,10 +485,10 @@ function cptui_register_my_cpts_gemcell_members() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => false,
-		"can_export" => false,
-		"rewrite" => [ "slug" => "member", "with_front" => true ],
+		"can_export" => true,
+		"rewrite" => [ "slug" => "members", "with_front" => true ],
 		"query_var" => true,
-		"supports" => [ "title", "editor", "thumbnail" ],
+		"supports" => [ "title", "editor", "thumbnail", "custom-fields", "author" ],
 		"show_in_graphql" => false,
 	];
 
@@ -496,6 +496,7 @@ function cptui_register_my_cpts_gemcell_members() {
 }
 
 add_action( 'init', 'cptui_register_my_cpts_gemcell_members' );
+
 
 function cptui_register_my_cpts_member_branches() {
 
@@ -557,10 +558,10 @@ function cptui_register_my_cpts_member_branches() {
 		"capability_type" => "post",
 		"map_meta_cap" => true,
 		"hierarchical" => false,
-		"can_export" => false,
+		"can_export" => true,
 		"rewrite" => [ "slug" => "member_branches", "with_front" => true ],
 		"query_var" => true,
-		"supports" => [ "title", "editor", "thumbnail" ],
+		"supports" => [ "title", "editor", "thumbnail", "custom-fields", "author" ],
 		"show_in_graphql" => false,
 	];
 
@@ -568,6 +569,7 @@ function cptui_register_my_cpts_member_branches() {
 }
 
 add_action( 'init', 'cptui_register_my_cpts_member_branches' );
+
 
 
 function cptui_register_my_taxes_gemcell_states() {
