@@ -1,6 +1,6 @@
 <style>
     .state-col ul li .list-inner{
-        background-image: url("http://localhost/gemcell/wp-content/uploads/2022/10/tasmania-img.png");
+        background-image: url("<?php echo site_url(); ?>/wp-content/uploads/2022/10/tasmania-img.png");
         background-size: cover; 
         background-repeat: no-repeat;
         background-position: center;
@@ -16,20 +16,20 @@
         <div class="container">
             <div class="row">
                 <h2 class="heading">
-                    <?php echo get_sub_field('heading'); ?>
+                    <?php echo get_sub_field('heading') ? get_sub_field('heading') : 'Find Members by States'; ?>
                 </h2>
                 <div class="state-col">  
                     <?php 
                     $categories = get_terms( array(
-                        'taxonomy' => 'state',
+                        'taxonomy' => 'gemcell_states',
                         'hide_empty' => false,
                         'parent' => 0,
                     ) );
                     ?>
                     <ul>
                         <?php foreach($categories as $category) { 
-                            $term_image = get_field( 'map_image', 'state_' . $category->term_id );     
-                            $bg_image = get_field( 'image', 'state_' . $category->term_id ); 
+                            $term_image = get_field( 'map_image', 'gemcell_states_' . $category->term_id );     
+                            $bg_image = get_field( 'background_image', 'gemcell_states_' . $category->term_id ); 
                         ?>
                             
                             <li value="<?php echo $category->term_id; ?>">

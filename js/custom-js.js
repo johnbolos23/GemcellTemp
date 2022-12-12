@@ -388,5 +388,15 @@
 
 			update3();
 		}
+
+
+		$('.member-tab').on('click', function(){
+			$('.member-tab, .member-branch-content').removeClass('active');
+			$(this).addClass('active');
+
+			$activeTabID = $(this).data('member-filter');
+
+			$('.member-branch-content[data-member-filter="'+ $activeTabID +'"]').addClass('active');
+		});
 	});
 })(jQuery);
