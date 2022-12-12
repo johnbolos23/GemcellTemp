@@ -87,11 +87,22 @@ add_action( 'getGemcellDataCron', 'getGemcellMembersAPI' );
 	);
 
 	$terms = get_terms( array(
-		'taxonomy' => 'state',
+		'taxonomy' => 'gemcell_states',
 		'hide_empty' => false,
 	) );
 
 	foreach( $jsonResponse as $memberData ){
+		// ACF Member ID
+		$companyName = $memberData['company_name'];
+		$memberID = $wpdb->get_row( "SELECT ID FROM wp_posts WHERE post_type = 'gemcell_members' and post_title LIKE '%$companyName%'" );
+
+		if( !$memberID ){
+			continue;
+		}else{
+			$memberID = $memberID->ID;
+		}
+
+
 		$existingChecker = json_decode( $wpdb->get_row( "SELECT * FROM wp_gemcell_members WHERE ID = 1" )->members_ids );
 
 		if( in_array($memberData['id'], $existingChecker ) ){
@@ -106,7 +117,7 @@ add_action( 'getGemcellDataCron', 'getGemcellMembersAPI' );
 
 			// get created post ID
 			$postID = wp_insert_post(array(
-				'post_type' => 'members',
+				'post_type' => 'member_branches',
 				'post_title' => $memberData['location_name'],
 				'post_status' => 'publish'
 			));
@@ -182,7 +193,13 @@ add_action( 'getGemcellDataCron', 'getGemcellMembersAPI' );
 			// ACF location field
 			$location = array('address' => $address, 'lat' => $memberData['latitude'], 'lng' => $memberData['longitude']);
 
-			update_field('maps', $location, $postID);
+			update_field('address', $location, $postID);
+
+
+			// ACF member ID
+			if( $memberID ){
+				update_post_meta($postID, 'gemcell_member_id', $memberID );
+			}
 
 
 			// Update State Taxonomy
@@ -193,7 +210,7 @@ add_action( 'getGemcellDataCron', 'getGemcellMembersAPI' );
 					$termId = $term->term_id;
 				}
 			}
-			wp_set_post_terms( $postID, array( $termId ), 'state' );
+			wp_set_post_terms( $postID, array( $termId ), 'gemcell_states' );
 		}
 	}
 }

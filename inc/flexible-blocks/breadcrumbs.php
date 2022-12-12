@@ -33,7 +33,12 @@ function breadcrumbs($separator = ' &raquo; ', $home = 'Home')
         }
         // Otherwise, just display the title (minus)
         else {
-            $breadcrumbs[] = '<span>'.str_replace( '-', ' ', get_the_title() ).'<span>';
+            if( is_tax() ){
+                $breadcrumbs[] = '<span>'.str_replace( '-', ' ', get_queried_object()->name ).'<span>';
+            }else{
+                $breadcrumbs[] = '<span>'.str_replace( '-', ' ', get_the_title() ).'<span>';
+            }
+            
         }
 
     }
