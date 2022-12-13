@@ -18451,6 +18451,13 @@ section.information-with-video .information-with-video-wrapper .information-with
     font-size: 18px;
   }
 }
+section.information-with-video .information-with-video-wrapper .information-with-video-video .embed-container {
+  display: none;
+}
+section.information-with-video .information-with-video-wrapper .information-with-video-video .embed-container iframe {
+  width: 100%;
+  height: 530px;
+}
 section.information-with-video .wysiwyg-content {
   padding-top: 38px;
 }
