@@ -44,9 +44,7 @@ $theQuery = new WP_Query( $args );
                         <div class="col-6">
                             <div class="archive-gems-image-wrapper">
                                 <div class="archive-item-image-gallery">
-                                    <a href="<?php echo get_the_post_thumbnail_url(); ?>">
-                                        <?php echo get_the_post_thumbnail(); ?>
-                                    </a>
+                                    <?php echo get_the_post_thumbnail(); ?>
                                     <?php if( get_field('contents') ) : ?>
                                     <?php foreach( get_field('contents') as $gallery ) : ?>
                                     <a href="<?php echo $gallery; ?>" style="display: none;">
@@ -84,9 +82,7 @@ $theQuery = new WP_Query( $args );
                     <div class="col-6 col-lg-3">
                         <div class="archive-gems-post-item">
                             <div class="archive-item-image-gallery" src="<?php echo get_field('pdf_file'); ?>" >
-                                <a href="<?php echo get_the_post_thumbnail_url(); ?>">
-                                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" />
-                                </a>
+                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" />
                                 <?php if( get_field('contents') ) : ?>
                                 <?php foreach( get_field('contents') as $gallery ) : ?>
                                 <a href="<?php echo $gallery; ?>" style="display: none;">

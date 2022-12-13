@@ -542,7 +542,7 @@ section.archived-gems {
     height: 95%;
     left: calc(5vw / 2);
     top: calc(5vh / 2);
-    box-shadow: 0 0 5px #fff;
+    box-shadow: 0 0 5px #222;
   
     z-index: -9;
     opacity: 0;
@@ -560,12 +560,12 @@ section.archived-gems {
     content: ' ';
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+    // opacity: 0.5;
     z-index: -1;
   }
   
   .fb3d-modal.light::before {
-    background-color: #fff;
+    background-color: #222;
   }
   
   .fb3d-modal.dark::before {
@@ -582,7 +582,7 @@ section.archived-gems {
   }
   
   .fb3d-modal.light .cmd-close {
-    color: #555;
+    color: #fff;
   }
   
   .fb3d-modal .mount-container {
@@ -795,3 +795,25 @@ section.archived-gems {
       bottom: 5px;
   }
   
+
+  .fb3d-modal.visible {
+    z-index: 999999;
+}
+
+body.fb3d-modal-shadow {
+    position: relative;
+}
+
+body.fb3d-modal-shadow:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 999;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    opacity: 0.6 !important;
+}
