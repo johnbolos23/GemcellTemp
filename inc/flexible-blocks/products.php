@@ -2,13 +2,13 @@
     <?php 
 
     get_template_part('inc/style-helper', null, array('target' => '#our-product-'. get_row_index() )); 
-
+ 
     ?>
     <div class="container">
         <div class="row">
             <?php if( get_sub_field('subheading') ) : ?>
             <div class="col-12">
-                <h4 class="subheading"><?php echo get_sub_field('subheading'); ?></h4>
+                <h4 class="subheading "><?php echo get_sub_field('subheading'); ?></h4>
             </div>
             <?php endif; ?>
             <div class="col-12 col-lg-6">

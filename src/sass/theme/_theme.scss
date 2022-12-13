@@ -1,33 +1,27 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
-body{
-    overflow-x: hidden;
-}
-
 section:not(.has-overlay-top){
     overflow: hidden;
 }
 
-html{
-    @media ( max-width: $tablet){
-        overflow-x: hidden;
-    }
-}
-.container{
+#gemcell-customization .container{
     @media(min-width: $bigScreen){
         max-width: 1680px;
     }
 
     @media (max-width: $smallLaptop){
         max-width: 1350px;
-        // padding: 0 40px;
-    }
+        padding-left: 40px;
+        padding-right: 40px;
+    } 
 
     @media ( max-width: $tablet){
-        padding: 0 27px;
+        padding-left: 27px;
+        padding-right: 27px;
     }
 
     @media ( max-width: $mobile){
-        padding: 0 15px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
@@ -135,14 +129,15 @@ body *{
     line-height: 110%;
     margin-bottom: 0;
     letter-spacing: -0.02em;
-
+    @media (max-width: $smallLaptop) {
+        font-size: 42px;
+    }
+    @media (max-width: $mobile) {
+        font-size: 36px;
+    }
     span{
         letter-spacing: -0.02em;
         font-family: 'CenturyGothicBold';
-    }
-
-    @media ( max-width: $smallLaptop ){
-        font-size: 42px;
     }
 }
 .subheading{
@@ -154,6 +149,9 @@ body *{
 
     @media ( max-width: $smallLaptop ){
         font-size: 14px;
+    }
+    @media ( max-width: 767px ){
+        font-size: 12px;
     }
 
     span{
@@ -187,6 +185,9 @@ body *{
 
     @media ( max-width: $smallLaptop ){
         font-size: 16px;
+    }
+    @media ( max-width: $mobile ){
+        font-size: 14px;
     }
 }
 

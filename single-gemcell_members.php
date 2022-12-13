@@ -3,80 +3,38 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
+$theTerms = get_terms( array(
+    'taxonomy' => 'gemcell_states',
+    'hide_empty' => true,
+) );
+
+$mainMemberTitle = get_the_title();
+$mainMemberID = get_the_ID();
 ?>
 <section class="page-title page-title-main">
 <div class="row m-0">
         <div class="col-12 col-lg-5 p-0 background-member-color">
             <div class="page-title-wrapper pos-relative">
             <span class="icon-top"><?php get_template_part('icons/banner-content-icon-top'); ?></span>
-                <h1 class="heading"><?php echo get_field('members_title', 'option'); ?></h1>
+                <h1 class="heading"><?php echo get_field('members_title', 'option') ? get_field('members_title', 'option') : 'Member Profile'; ?></h1>
             </div>
         </div>
     <div class="col-12 col-lg-7 p-0">
         <div class="page-title-image pos-relative">
-            <img src="<?php echo get_field('background_image') ?>">
+            <img src="<?php echo get_field('other_images')[0]; ?>">
         </div>
     </div>
 </div>
 </section>
-<?php
-
-function breadcrumbs($separator = ' &raquo; ', $home = 'Home')
-{
-    // This gets the REQUEST_URI (/path/to/file.php), splits the string (using '/') into an array, and then filters out any empty values
-    $path = array_filter(explode('/', parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)));
-
-    // This will build our "base URL" ... Also accounts for HTTPS :)
-    $base = ( ( isset( $_SERVER["HTTPS"] ) && strtolower( $_SERVER["HTTPS"] ) == "on" ) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
-
-    // Initialize a temporary array with our breadcrumbs. (starting with our home page, which I'm assuming will be the base URL)
-    $breadcrumbs = $_SERVER['HTTP_HOST'] == 'localhost' ? array() : array("<a href=\"$base\">$home</a>");
-
-    // Initialize crumbs to track path for proper link
-    $crumbs = '';
-
-    // Find out the index for the last value in our path array
-    $last = end(array_keys($path));
-
-    // Build the rest of the breadcrumbs
-    foreach ($path as $x => $crumb) {
-        // Our "title" is the text that will be displayed (strip out .php and turn '_' into a space)
-        $title = ucwords(str_replace(array('.php', '_', '%20'), array('', ' ', ' '), $crumb));
-
-        // If we are not on the last index, then display an <a> tag
-        if ($x != $last) {
-            if( $base . $crumbs . $crumb == site_url() ){
-                $breadcrumbs[] = "<a href=\"$base$crumbs$crumb\">$home</a>";
-            }else{
-                $breadcrumbs[] = "<a href=\"$base$crumbs$crumb\">$title</a>";
-            }
-            
-            $crumbs .= $crumb . '/';
-        }
-        // Otherwise, just display the title (minus)
-        else {
-            $breadcrumbs[] = '<span>'.str_replace( '-', ' ', get_the_title() ).'<span>';
-        }
-
-    }
-
-    // Build our temporary array (pieces of bread) into one big string :)
-    return implode($separator, $breadcrumbs);
-}
-
-
-ob_start();
-get_template_part('icons/breadcrumb-arrow');
-$breadArrow = ob_get_contents();
-ob_end_clean();
-
-?>
-
 
 <section class="page-title">
     <div class="breadcrumbs">
         <div class="container">
-            <?php echo breadcrumbs( $breadArrow ); ?>
+            <a href="<?= site_url(); ?>">Home</a>
+            <?php get_template_part('icons/breadcrumb-arrow'); ?>
+            <a href="<?= site_url(); ?>/members/">Members</a>
+            <?php get_template_part('icons/breadcrumb-arrow'); ?>
+            <span><?= get_the_title(); ?></span>
         </div>
     </div>
 </section>
@@ -86,202 +44,218 @@ ob_end_clean();
         <div class="row">
             <div class="col-12 col-lg-4">
                 <div class="single-members-details top-position" style="display:none;">
-                        <?php 
-                        $categories = get_the_terms( get_the_ID(), 'member_categories' );
-                        $output = '';
-
-                        if( $categories ){
-                            echo '<div class="single-members-categories">';
-                                echo '<h4 class="subheading"><span>';
-                            foreach( $categories as $category ) {
-                                $output .= '<a>' . esc_html( $category->name ) . '</a>' . ', ';
-                            }
-                            echo trim( $output, ', ' );
-                                echo '</span></h4>';
-                            echo '</div>';
-                        }
-                        ?>
-                    <h2 class="heading"><?php the_title(); ?></h2>
+                     <h4 class="subheading"><span>Member</span></h4>
+                    <h2 class="heading"><?php echo get_the_title(); ?></h2>
                 </div>
+                <?php if( get_field('contact_persons') ) : ?>
                 <div class="member-list-col">
                     <div class="owl-carousel member-list-slider owl-theme">
-                    <?php if( get_field('member_list') ) : ?>
-						<?php foreach( get_field('member_list') as $block ) : ?>
+						<?php foreach( get_field('contact_persons') as $block ) : ?>
                             <div class="members-item">
                                 <img src="<?php echo $block['image']; ?>" />
-                                <h4 class="name">
-                                    <?php    
-                                        if( $block['name'] ) {
-                                            echo $block['name'];
-                                        } else {
-                                            echo '';
-                                        }                                    
-                                    ?>
-                                </h4>
-                                <p class="position">
-                                    <?php    
-                                        if( $block['position'] ) {
-                                            echo $block['position'];
-                                        } else {
-                                            echo '';
-                                        }                                    
-                                    ?>
-                                </p>
+                                <h4 class="name"><?php echo $block['name'] ? $block['name'] : ''; ?></h4>
+                                <p class="position"><?php echo $block['position'] ? $block['position'] : ''; ?></p>
                             </div>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
+                        <?php endforeach; ?>
                     </div>
                 </div>
+                <?php endif; ?>
                 <div class="single-members-image">
                     <div class="single-members-image-wrapper">
-                        <?php echo get_the_post_thumbnail(); ?>
+                        <img src="<?php echo get_field('logo'); ?>" />
                     </div>
                     <div class="member-a-col">
-                    <?php if( get_field('address') ) : ?>
-                    <div class="member-website">
-                        <h4 class="m-0"><b>Address:</b></h4>
-                        <p class="m-0"><?php echo get_field('address'); ?></p>
+                        <?php if( get_field('gemcell_address') ) : ?>
+                        <div class="member-website">
+                            <h4 class="m-0"><b>Address:</b></h4>
+                            <p class="m-0"><?php echo get_field('gemcell_address')['address']; ?></p>
+                        </div>
+                        <?php endif; ?>
+                        <?php if( get_field('phone') ) : ?>
+                        <div class="member-phone">
+                            <h4 class="m-0"><b>Phone:</b></h4>
+                            <p class="m-0"><?php echo get_field('phone'); ?></p>
+                        </div>
+                        <?php endif; ?>
+                        <?php if( get_field('email') ) : ?>
+                        <div class="member-email">
+                            <h4 class="m-0"><b>Email:</b></h4>
+                            <p class="m-0"><?php echo get_field('email'); ?></p>
+                        </div>
+                        <?php endif; ?>
                     </div>
-                    <?php endif; ?>
-                    <?php if( get_field('phone') ) : ?>
-                    <div class="member-phone">
-                        <h4 class="m-0"><b>Phone:</b></h4>
-                        <p class="m-0"><?php echo get_field('phone'); ?></p>
-                    </div>
-                    <?php endif; ?>
-                    <?php if( get_field('email') ) : ?>
-                    <div class="member-email">
-                        <h4 class="m-0"><b>Email:</b></h4>
-                        <p class="m-0"><?php echo get_field('email'); ?></p>
-                    </div>
-                    </div>
-                    <?php endif; ?>
                 </div>
             </div>
             <div class="col-12 col-lg-8">
                 <div class="single-members-details">
                     <div class="single-members-details-wrapper">
-                        <?php 
-                        $categories = get_the_terms( get_the_ID(), 'member_categories' );
-                        $output = '';
-
-                        if( $categories ){
-                            echo '<div class="single-members-categories">';
-                                echo '<h4 class="subheading"><span>';
-                            foreach( $categories as $category ) {
-                                $output .= '<a>' . esc_html( $category->name ) . '</a>' . ', ';
-                            }
-                            echo trim( $output, ', ' );
-                                echo '</span></h4>';
-                            echo '</div>';
-                        }
-                        ?>
-
-                        <h2 class="heading">Member Profile</h2>
-                        
-                        <div class="wysiwyg-content"><?php echo get_field('description'); ?></div>
+                        <h4 class="subheading"><span>Member</span></h4>
+                        <h2 class="heading"><?php echo get_the_title(); ?></h2>
+                        <div class="wysiwyg-content"><?php echo get_the_content(); ?></div>
                     </div>
                 </div>
                 
                 
                 <div class="member-map-col">
                     <h3 class="members-col-title">Maps</h3>
-                    <!-- <img src="<?php echo get_stylesheet_directory_uri() . '/icons/members-image/maps.png'; ?>" /> -->
-                    
-                    <?php 
-                    $location = get_field('maps');
-                    if( $location ): ?>
-                        <div class="custom-map" data-zoom="16">
-                            <?php if( get_field('branches')['list_all'] ) : ?>
-                                <?php foreach( get_field('branches')['list_all'] as $block ) : ?>
-                                    <?php $address = getGeoCode ($block['address']); ?>
-                                    
-                                    <div class="marker" data-lat="<?php echo esc_attr($address['lat']); ?>" data-lng="<?php echo esc_attr($address['lng']); ?>" data-mappin="<?php echo get_stylesheet_directory_uri() .'/icons/images/map-marker.png'; ?>">
-                                        <?php echo $block['list_item']; ?>
-                                    </div>
+                    <div id="custom-map-render">
+                        <?php 
+                        $args = array(
+                            'post_type' => 'member_branches',
+                            'posts_per_page' => -1,
+                            'post_status' => 'publish',
+                            'meta_query' => array(
+                                array(
+                                    'key'     => 'gemcell_member_id',
+                                    'value'   => $mainMemberID,
+                                ),
+                            ),
+                        );
 
-                                <?php endforeach; ?>
-                            <?php endif; ?>   
+                        $theQuery = new WP_Query( $args );
+                        
+                        if( $theQuery->have_posts() ) : ?>
+                        <div class="custom-map" data-zoom="16">
+                            <?php while( $theQuery->have_posts() ) : $theQuery->the_post();
+
+                                $latitude = get_field('address')['lat'];
+                                $longtitude = get_field('address')['lng'];
+                                $address = get_field('address')['address'];
+
+                                ?>
+                                
+                                <div class="marker d-none" data-mappin="<?php echo get_stylesheet_directory_uri() .'/icons/images/map-marker.png'; ?>" data-lat="<?php echo esc_attr($latitude); ?>" data-lng="<?php echo esc_attr($longtitude); ?>">
+                                    <h3 class="heading"><?php echo get_the_title(); ?></h3>
+                                    <div class="wysiwyg-content"><?php echo $address; ?></div>
+                                </div>
+
+                                <?php
+
+                                endwhile;
+                                wp_reset_postdata();
+                            ?>
                         </div>
-                    <?php endif; ?>
+                        <?php endif; ?>
+                    </div>
                 </div>
 
+                <?php if( $theTerms ) : ?>
                 <div class="member-branches-col">
                     <h3 class="members-col-title">Branches</h3>
-                    <?php if( have_rows('branches') ): 
-                            while( have_rows('branches') ): the_row();                             
+                    <div class="member-branches-tabs-wrapper">
+                        <div class="member-branches-tabs">
+                            <div class="member-tab active" data-member-filter="all">All</div>
+                            <?php foreach( $theTerms as $theTerm ) : 
+                                $args = array(
+                                    'post_type' => 'member_branches',
+                                    'posts_per_page' => -1,
+                                    'post_status' => 'publish',
+                                    'meta_query' => array(
+                                        array(
+                                            'key'     => 'gemcell_member_id',
+                                            'value'   => $mainMemberID,
+                                        ),
+                                    ),
+                                    'tax_query' => array(
+                                        array(
+                                            'taxonomy' => 'gemcell_states',
+                                            'field'    => 'term_id',
+                                            'terms'    => array( $theTerm->term_id ),
+                                        ),
+                                    ),
+                                );
 
-                    ?>
-                    
-                    <ul class="tab-nav">
-                            <li class="tab"><span>All</span>
-                                <div class="content-holder">
-                                    <ul class="member-branch-inner"  id="tab1">
-                                        <?php if( get_sub_field('list_all') ) : ?>
-                                            <?php foreach( get_sub_field('list_all') as $block ) : ?>
-                                            
-                                            
-                                         
-                                            <li class="branch-item">
-                                                <p class="item">
-                                                    <?php    
-                                                        if( $block['list_item'] ) {
-                                                            echo $block['list_item'];
-                                                        } else {
-                                                            echo '';
-                                                        }                                    
-                                                    ?>
-                                                </p>
-                                            </li>
-                                            <?php endforeach; ?>
-                                        <?php endif; ?>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="tab"><span>VIC</span>
-                                <div class="content-holder">
-                                    <ul class="member-branch-inner"  id="tab1">
-                                            <?php if( get_sub_field('list_vic') ) : ?>
-                                                <?php foreach( get_sub_field('list_vic') as $block ) : ?>
-                                                
-                                                
-                                            
-                                                <li class="branch-item">
-                                                    <p class="item">
-                                                        <?php    
-                                                            if( $block['list_item'] ) {
-                                                                echo $block['list_item'];
-                                                            } else {
-                                                                echo '';
-                                                            }                                    
-                                                        ?>
-                                                    </p>
-                                                </li>
-                                                <?php endforeach; ?>
-                                            <?php endif; ?>
-                                        </ul>                      
-                                </div>
-                            </li>
-                    </ul>
-                    <?php
-                    endwhile;
-                    endif; ?>
+                                $theQuery = new WP_Query( $args );   
+                                
+                                if( $theQuery->found_posts <= 0 ) {
+                                    continue;
+                                }
+                            ?>
+                            <div class="member-tab" data-member-filter="<?php echo $theTerm->term_id; ?>"><?php echo get_field('state_code', 'gemcell_states_'. $theTerm->term_id);?></div>
+                            <?php endforeach; ?>
+                        </div>
+                        <div class="member-branches-content">
+                            <div class="member-branch-content active" data-member-filter="all">
+                                <ul>
+                                <?php 
+                                    $args = array(
+                                        'post_type' => 'member_branches',
+                                        'posts_per_page' => -1,
+                                        'post_status' => 'publish',
+                                        'meta_query' => array(
+                                            array(
+                                                'key'     => 'gemcell_member_id',
+                                                'value'   => $mainMemberID,
+                                            ),
+                                        ),
+                                    );
 
+                                    $theQuery = new WP_Query( $args );
+
+                                    while( $theQuery->have_posts() ){
+                                        $theQuery->the_post();
+
+                                        echo '<li>'. get_the_title() .'</li>';
+                                    }
+
+                                    wp_reset_postdata();
+                                ?>
+                                </ul>
+                            </div>
+                            <?php foreach( $theTerms as $theTerm ) : ?>
+                            <div class="member-branch-content" data-member-filter="<?php echo $theTerm->term_id; ?>">
+                                <ul>
+                                <?php 
+                                    $args = array(
+                                        'post_type' => 'member_branches',
+                                        'posts_per_page' => -1,
+                                        'post_status' => 'publish',
+                                        'tax_query' => array(
+                                            array(
+                                                'taxonomy' => 'gemcell_states',
+                                                'field'    => 'term_id',
+                                                'terms'    => array( $theTerm->term_id ),
+                                            ),
+                                        ),
+                                        'meta_query' => array(
+                                            array(
+                                                'key'     => 'gemcell_member_id',
+                                                'value'   => $mainMemberID,
+                                            ),
+                                        ),
+                                    );
+
+                                    $theQuery = new WP_Query( $args );
+
+                                    while( $theQuery->have_posts() ){
+                                        $theQuery->the_post();
+
+                                        echo '<li>'. get_the_title() .'</li>';
+                                    }
+
+                                    wp_reset_postdata();
+                                ?>
+                                </ul>
+                            </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
                 </div>
+                <?php endif; ?>
                 <div class="member-other-images-col">
                     <h3 class="members-col-title">Other Images</h3>
                     <?php 
-                        $images = get_field('other_image');
+                        $images = get_field('other_images');
                         $size = 'full'; // (thumbnail, medium, large, full or custom size)
                         if( $images ): ?>
                             <ul>
                                 <?php foreach( $images as $image_id ): ?>
                                     <li>
-                                        <?php echo wp_get_attachment_image( $image_id, $size ); ?>
+                                        <img src="<?php echo $image_id; ?>" />
                                     </li>
                                 <?php endforeach; ?>
                             </ul>
-                    <?php endif; ?>
+                        <?php endif; ?>
 
                 </div>
             </div>

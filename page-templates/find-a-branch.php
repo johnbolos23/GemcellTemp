@@ -10,9 +10,9 @@ get_header();
 get_template_part('inc/flexible-blocks/breadcrumbs'); 
 
 $args = array(
-    'post_type' => 'members',
+    'post_type' => 'member_branches',
     'post_status' => 'publish',
-    'posts_per_page' => -1
+    'posts_per_page' => 100
 );
 
 if( isset( $_POST['keyword'] ) && $_POST['keyword'] ){
@@ -22,7 +22,7 @@ if( isset( $_POST['keyword'] ) && $_POST['keyword'] ){
 if( isset( $_POST['state'] ) && ( $_POST['state'] && $_POST['state'] != 'all' ) ){
     $args['tax_query'] = array(
         array(
-			'taxonomy' => 'state',
+			'taxonomy' => 'gemcell_states',
 			'field'    => 'term_id',
 			'terms'    => $_POST['state'],
 		),
@@ -37,7 +37,7 @@ $theQuery = new WP_Query( $args );
 
 <section class="find-a-branch" id="find-a-branch">
     <div class="row m-0">
-        <div class="col-12 col-lg-5 p-0">
+        <div class="col-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5 p-0">
             <div class="branch-finder-wrapper">
                 <div id="branch-finder">
                     <form action="" method="POST">
@@ -54,7 +54,7 @@ $theQuery = new WP_Query( $args );
                                         <option value="all">All States</option>
                                         <?php 
                                         $theTerms = get_terms( array(
-                                            'taxonomy' => 'state',
+                                            'taxonomy' => 'gemcell_states',
                                             'hide_empty' => false,
                                         ) );
                                         foreach( $theTerms as $state ) : 
@@ -111,19 +111,19 @@ $theQuery = new WP_Query( $args );
                 </div>
             </div>
         </div>
-        <div class="col-12 col-lg-7 p-0">
+        <div class="col-12 col-md-12 col-lg-12 col-xl-7 col-xxl-7 p-0" >
             <div id="custom-map-render">
                 <?php if( $theQuery->have_posts() ) : ?>
                 <div class="custom-map" data-zoom="16">
                     <?php while( $theQuery->have_posts() ) : $theQuery->the_post();
 
-                        $latitude = get_field('maps')['lat'];
-                        $longtitude = get_field('maps')['lng'];
-                        $address = get_field('maps')['address'];
+                        $latitude = get_field('address')['lat'];
+                        $longtitude = get_field('address')['lng'];
+                        $address = get_field('address')['address'];
 
                         ?>
                         
-                        <div class="marker" data-mappin="<?php echo get_stylesheet_directory_uri() .'/icons/images/map-marker.png'; ?>" data-lat="<?php echo esc_attr($latitude); ?>" data-lng="<?php echo esc_attr($longtitude); ?>">
+                        <div class="marker d-none" data-mappin="<?php echo get_stylesheet_directory_uri() .'/icons/images/map-marker.png'; ?>" data-lat="<?php echo esc_attr($latitude); ?>" data-lng="<?php echo esc_attr($longtitude); ?>">
                             <h3 class="heading"><?php echo get_the_title(); ?></h3>
                             <div class="wysiwyg-content"><?php echo $address; ?></div>
                         </div>

@@ -44,6 +44,12 @@ $headerClass = 'main-header';
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<div class="modal fade"></div>
+	<div class="fb3d-modal light">
+		<a href="#" class="cmd-close"><i class="fa fa-times"></i></a>
+		<div class="mount-container"></div>
+	</div>
 	<?php do_action('wp_body_open'); ?>
 	<div class="site" id="page">
 

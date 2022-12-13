@@ -24,10 +24,10 @@ foreach( get_sub_field('steps') as $key => $step ){
     ?>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-6 col-xxl-7">
+            <div class="col-12 col-md-12 col-lg-12 col-xl-7 col-xxl-7">
                 <h2 class="heading"><?php echo get_sub_field('heading'); ?></h2>
             </div>
-            <div class="col-12 col-lg-6 col-xxl-5">
+            <div class="col-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
                 <div class="wysiwyg-content"><?php echo get_sub_field('content'); ?></div>
             </div>
         </div>
@@ -45,10 +45,13 @@ foreach( get_sub_field('steps') as $key => $step ){
                         </div>
                         <h4 class="step-title"><?php echo $step['title']; ?></h4>
                     </div>
+                    
                     <?php if( ( count( get_sub_field('steps') ) != ( $key + 1 ) ) && !$step['is_a_substep'] ) : ?>
                         <?php get_template_part('icons/line-arrow'); ?>
                     <?php endif; ?>
-
+                    <div class="for_mobile">
+                        <?php if( $step['is_a_substep'] ) { get_template_part('icons/done-right-arrow'); } ?>
+                    </div>
                     <?php if( $step['is_a_substep'] ) { get_template_part('icons/line-right-arrow'); } ?>
                 </div>
                 <?php endforeach; ?>

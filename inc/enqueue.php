@@ -58,11 +58,23 @@ if (!function_exists('understrap_scripts')) {
 		// Flickity JS
 		wp_enqueue_script( 'flickity-script', '//cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js', array('jquery'), true, true);	
 		wp_enqueue_style( 'flickity-style', '//cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.css' );
-		
 
+
+
+		// 3d Flip Book
+		wp_enqueue_script( 'html2canvas-script', get_stylesheet_directory_uri() . '/js/html2canvas.min.js', array('jquery'), true, true);
+		wp_enqueue_script( 'three-script', get_stylesheet_directory_uri() . '/js/three.min.js', array('jquery'), true, true);	
+		wp_enqueue_script( 'pdf-script', get_stylesheet_directory_uri() . '/js/pdf.min.js', array('jquery'), true, true);
+		wp_localize_script( 'pdf-script', 'themeURL', array('templateURL' => get_stylesheet_directory_uri() ) );
+
+		wp_enqueue_script( '3dflipbook-script', get_stylesheet_directory_uri() . '/js/3dflipbook.min.js', array('jquery'), true, true);
+		wp_localize_script( '3dflipbook-script', 'themeURL', array('templateURL' => get_stylesheet_directory_uri() ) );
+		
+		wp_enqueue_script( 'flip-extended-js', get_stylesheet_directory_uri() . '/js/flip-extended.js', array('jquery'), true, true);  
+		wp_localize_script( 'flip-extended-js', 'themeURL', array('templateURL' => get_stylesheet_directory_uri() ) );
 		wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/js/custom-js.js', array('jquery'), true, true);  
 
-		wp_enqueue_script( 'googlemapapi', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyApyclQTE-uyeCjNphglXkawNegc2QPiiw', array('jquery'), true, true);  
+		wp_enqueue_script( 'googlemapapi', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCApwB8Swt_t4MlQN8qnvKMVl5cawtl6Og', array('jquery'), true, true);  
 
 		wp_enqueue_script( 'map-helper', get_stylesheet_directory_uri() . '/js/map-helper.js', array('jquery'), true, true);  
 		

@@ -31,7 +31,7 @@ section.step-by-step {
         margin-top: 60px;
 
         &.has-step-parent{
-            margin-top: 280px;
+            margin-top: 240px;
         }
 
         .step-by-steps {
@@ -42,6 +42,24 @@ section.step-by-step {
             .step-item {
                 position: relative;
                 flex: 0 0 25%;
+
+                .for_mobile {
+                    @media (max-width: $bigScreen){
+                        display: none !important;
+                    }
+                    @media (max-width: $mobile){
+                        display: block !important;
+                        position: absolute;
+                        bottom: -70%;
+                        left: 10%;
+                    }
+                    @media (max-width: 540px){
+                        left: 20%;
+                    }
+                    @media (max-width: 414px){
+                        left: 10%;
+                    }
+                }
 
                 svg {
                     position: absolute;
@@ -191,6 +209,7 @@ section.step-by-step {
                     &{
                         width: 50%;
                         flex: 0 0 50% !important;
+                        right: 3%;
                     }
                 }
 
@@ -204,7 +223,8 @@ section.step-by-step {
 
                     @media (max-width: 550px){
                         &{
-                            width: 7em !important;
+                            width: 6em !important;
+                            margin-left: 15px;
                         }
                     }
 
@@ -216,7 +236,8 @@ section.step-by-step {
 
                     @media (max-width: 420px){
                         &{
-                            width: 3.8em!important;
+                            width: 5em!important;
+                            margin-left: 12px;
                         }
                     }
 
@@ -228,6 +249,7 @@ section.step-by-step {
                 @media (max-width: $mobile){
                     &{
                         flex: 0 0 50% !important;
+                        left: 3%;
                     }
                 }
 
@@ -235,8 +257,9 @@ section.step-by-step {
 
                     @media (max-width: $mobile){
                         &{
+                            display: none !important;
                             width: 7em!important;
-                            top: 9em!important;
+                            top: 7em!important;
                             left: -3.3em;
                             transform: rotate(90deg)!important;
                         }
@@ -257,7 +280,17 @@ section.step-by-step {
                 @media (max-width: $mobile){
                     &{
                         flex: 0 0 100% !important;
-                        margin-top: 4em;
+                        margin-top: 2em;
+                    }
+                }
+                @media (max-width: 540px){
+                    &{
+                        margin-top: 1em;
+                    }
+                }
+                @media (max-width: 414px){
+                    &{
+                        margin-top: 2em;
                     }
                 }
 
@@ -266,9 +299,15 @@ section.step-by-step {
                     @media (max-width: $mobile){
                         &{
                             width: 7em !important;
-                            top: 14em !important;
+                            top: 12em !important;
                             left: 50% !important;
                             transform: translate(-50%, -50%) rotate(90deg) !important;
+                        }
+                    }
+
+                    @media (max-width: 540px){
+                        &{
+                            top: 14em !important;
                         }
                     }
 
@@ -278,6 +317,11 @@ section.step-by-step {
                         }
                     }
 
+                    @media (max-width: 414px){
+                        &{
+                            top: 12em !important;
+                        }
+                    }
 
                 }
                 
@@ -296,8 +340,14 @@ section.step-by-step {
             .step-title{
                 font-size: 20px;
                 line-height: 170%;
-                font-weight: 600;
+                font-weight: 700;
                 margin-top: 6px;
+                @media (max-width: $smallLaptop) {
+                    font-size: 18px;
+                }
+                @media (max-width: $mobile) {
+                    font-size: 16px;
+                }
             }
         } 
     }
