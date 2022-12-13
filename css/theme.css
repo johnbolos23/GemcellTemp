@@ -22099,7 +22099,7 @@ section.archived-gems .container .archive-gems-posts .row > div[class^=col-] {
 section.archived-gems .container .archive-gems-posts .row > div[class^=col-]:after {
   content: "";
   position: absolute;
-  bottom: 32px;
+  bottom: 33px;
   left: 0;
   width: 100%;
   height: 40px;
