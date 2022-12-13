@@ -12,6 +12,7 @@ $args = array(
     'post_type' => 'archive_gems',
     'post_status' => 'publish',
     'posts_per_page' => 1,
+    'order' => 'DESC',
     'meta_query' => array(
         array(
             'key' => 'featured',
@@ -25,6 +26,7 @@ $theFeatured = new WP_Query( $args );
 $args = array(
     'post_type' => 'archive_gems',
     'post_status' => 'publish',
+    'order' => 'DESC',
     'posts_per_page' => get_option( 'posts_per_page' ),
     'paged' => $paged
 );

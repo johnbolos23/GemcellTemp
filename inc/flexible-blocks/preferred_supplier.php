@@ -22,6 +22,7 @@
                             'post_type'      => 'suppliers',
                             'posts_per_page' => '-1',
                             'publish_status' => 'published',
+                            'orderby' => 'title',
                             'order' => 'ASC',
                             'tax_query' => array(
                                 array(
