@@ -21,6 +21,7 @@
                             'post_type'      => 'suppliers',
                             'posts_per_page' => '-1',
                             'publish_status' => 'published',
+                            'orderby' => 'title',
                             'order' => 'ASC',
                             'tax_query' => array(
                                 array(
@@ -37,7 +38,8 @@
                         <?php while ($query->have_posts()) : $query->the_post();?>
                             <div class="suplier-item">
                                 <div class="supplier-item-inner">
-                                <a href="<?php echo get_post_permalink(); ?>">
+                                <a>
+                                
                                     <div class="suplier-poster"><?php echo get_the_post_thumbnail(); ?></div>
                                     
                                 </a>
