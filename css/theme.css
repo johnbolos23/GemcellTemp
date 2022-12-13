@@ -21280,9 +21280,25 @@ section.image-with-text .image-with-text-inner .row .col-6.col-b .wysiwyg-conten
     height: 65px;
   }
 }
+.approved-supplier-inner .col-12 .suplier-item .supplier-item-inner h5, .approved-supplier-inner .col-12 .suplier-item .supplier-item-inner .h5 {
+  display: none;
+  margin-bottom: 0;
+  padding-top: 11px;
+  font-weight: 600;
+  transition: 0.3s;
+}
 .approved-supplier-inner .col-12 .suplier-item .supplier-item-inner .suplier-poster {
   /* padding: 15px; */
   background: white;
+}
+.approved-supplier-inner .col-12 .suplier-item:hover .supplier-item-inner {
+  background: #263238;
+  transition: 0.3s;
+}
+.approved-supplier-inner .col-12 .suplier-item:hover .supplier-item-inner h5, .approved-supplier-inner .col-12 .suplier-item:hover .supplier-item-inner .h5 {
+  display: block !important;
+  color: white;
+  transition: 0.3s;
 }
 
 .members-list-inner .col-6.col-a h3.heading svg, .members-list-inner .col-6.col-a .heading.h3 svg {

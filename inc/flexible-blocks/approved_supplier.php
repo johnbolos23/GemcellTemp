@@ -41,7 +41,7 @@
                                 <a>
                                 
                                     <div class="suplier-poster"><?php echo get_the_post_thumbnail(); ?></div>
-                                    
+                                    <h5><?php echo get_the_title(); ?></h5>
                                 </a>
                                 </div>
                             </div>
