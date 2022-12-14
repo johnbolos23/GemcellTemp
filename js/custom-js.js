@@ -214,6 +214,10 @@
 			$(this).closest("form").submit();
 		});
 
+		$('#state-picker').on('change', function(){
+			$(this).closest("form").submit();
+		});
+
 		$(".main-header-hamburger-toggle").on("click", function () {
 			$(".main-header-menu").toggleClass("active");
 		});
