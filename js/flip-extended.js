@@ -96,3 +96,6 @@
       
   });
 
+  $('.archive-gems-post-item').click(function(){
+    $(this).find('.view-archive-toggle').click();
+  });
