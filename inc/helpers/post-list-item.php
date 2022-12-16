@@ -36,7 +36,7 @@
 
         <?php if( $args['show_view_more'] ) : ?>
         <div class="post-list-item-link">
-            <a href="<?php the_permalink( get_the_ID() ); ?>">View More <?php get_template_part('icons/arrow-up'); ?></a>
+            <a href="<?php the_permalink( get_the_ID() ); ?>">Explore More <?php get_template_part('icons/arrow-up'); ?></a>
         </div>
         <?php endif; ?>
     </div>
