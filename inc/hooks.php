@@ -195,22 +195,24 @@ function getGemcellMembersAPI(){
 	$jsonResponse = json_decode( $response, true )['data'];
 
 	foreach( $jsonResponse as $memberData ){
-		// ACF Member ID
-		$companyName = $memberData['company_name'];
-		$memberID = $wpdb->get_row( "SELECT ID FROM wp_posts WHERE post_type = 'gemcell_members' and post_title LIKE '%$companyName%'" );
+		if( $memberData['company_type'] == 'Member' || strtolower( $memberData['company_type'] ) == 'member' ){
+			// ACF Member ID
+			$companyName = $memberData['company_name'];
+			$memberID = $wpdb->get_row( "SELECT ID FROM wp_posts WHERE post_type = 'gemcell_members' and post_title LIKE '%$companyName%'" );
 
-		if( $memberID ){
-			continue;
+			if( $memberID ){
+				continue;
+			}
+
+			// get created post ID
+			$postID = wp_insert_post(array(
+				'post_type' => 'gemcell_members',
+				'post_title' => $companyName,
+				'post_status' => 'publish'
+			));
+
+			// ACF phone field
+			update_field('phone', $memberData['abn'], $postID);
 		}
-
-		// get created post ID
-		$postID = wp_insert_post(array(
-			'post_type' => 'gemcell_members',
-			'post_title' => $companyName,
-			'post_status' => 'publish'
-		));
-
-		// ACF phone field
-		update_field('phone', $memberData['abn'], $postID);
 	}
 }
