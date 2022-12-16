@@ -93,7 +93,7 @@ $mainMemberID = get_the_ID();
                     <div class="single-members-details-wrapper">
                         <h4 class="subheading"><span>Member</span></h4>
                         <h2 class="heading"><?php echo get_the_title(); ?></h2>
-                        <div class="wysiwyg-content"><?php echo get_the_content(); ?></div>
+                        <div class="wysiwyg-content"><?php the_content(); ?></div>
                     </div>
                 </div>
                 
@@ -250,13 +250,13 @@ $mainMemberID = get_the_ID();
                         $images = get_field('other_images');
                         $size = 'full'; // (thumbnail, medium, large, full or custom size)
                         if( $images ): ?>
-                            <ul>
+                            <div class="slider-items">
                                 <?php foreach( $images as $image_id ): ?>
-                                    <li>
+                                    <div class="slider-item">
                                         <img src="<?php echo $image_id; ?>" />
-                                    </li>
+                                    </div>
                                 <?php endforeach; ?>
-                            </ul>
+                            </div>
                         <?php endif; ?>
 
                 </div>

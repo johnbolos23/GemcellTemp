@@ -411,4 +411,15 @@
 		$('.custom-loading-container').fadeIn(250);
 	});
 
+	$(document).ready(function() {
+		if($('body').hasClass('single-gemcell_members')){
+			$(".slider-items").slick({
+					slidesToShow: 1,
+					dots: false,
+					arrows: false,
+			});
+		}
+	});
+
+
 })(jQuery);
