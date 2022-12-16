@@ -21,7 +21,9 @@ $mainMemberID = get_the_ID();
         </div>
     <div class="col-12 col-lg-7 p-0">
         <div class="page-title-image pos-relative">
-            <img src="<?php echo get_field('other_images')[0]; ?>">
+            <img src="
+            <?php echo get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : get_field('other_images')[0]; ?>
+            ">
         </div>
     </div>
 </div>
