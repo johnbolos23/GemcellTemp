@@ -520,3 +520,32 @@ body.home {
         z-index: 1;
     }
 }
+
+@media ( max-width: 1200px ) {
+    .main-header .main-header-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        background: rgba(0,0,0,.2);
+        transition: all .3s ease;
+        transition-delay: 0.15s;
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    .for-tablet {
+        display: block !important;
+    }
+
+    .for-desktop  {
+        display: none !important;
+    }
+    
+}
+
+.for-desktop {
+    display: block;
+}
