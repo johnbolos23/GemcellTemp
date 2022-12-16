@@ -12,7 +12,7 @@ get_template_part('inc/flexible-blocks/breadcrumbs');
 $args = array(
     'post_type' => 'member_branches',
     'post_status' => 'publish',
-    'posts_per_page' => 5
+    'posts_per_page' => 20
 );
 
 if( isset( $_POST['keyword'] ) && $_POST['keyword'] ){
@@ -38,6 +38,10 @@ if( isset( $_POST['state'] ) && ( $_POST['state'] && $_POST['state'] != 'all' ) 
 }
 
 $selectedState = 'All';
+
+if( $_GET['branch-detail'] ) {
+    $args['post__in'] = array( $_GET['branch-detail'] );
+}
 
 $theQuery = new WP_Query( $args );
 
@@ -186,3 +190,13 @@ $theQuery = new WP_Query( $args );
 </section>
 
 <?php get_footer(); ?>
+
+
+<?php if( $_GET['branch-detail'] ) : ?>
+<script>
+    jQuery(window).ready(function(){
+        jQuery('.branch-item-details a[data-branch-target-detail="<?php echo $_GET['branch-detail']; ?>"]').trigger('click');
+    });
+    
+</script>
+<?php endif; ?>
