@@ -68,7 +68,7 @@ $mainMemberID = get_the_ID();
                     </div>
                     <div class="member-a-col">
                         <?php if( get_field('gemcell_address') ) : ?>
-                        <div class="member-website">
+                        <div class="member-website m-0">
                             <h4 class="m-0"><b>Address:</b></h4>
                             <p class="m-0"><?php echo get_field('gemcell_address')['address']; ?></p>
                         </div>
@@ -86,7 +86,7 @@ $mainMemberID = get_the_ID();
                         </div>
                         <?php endif; ?>
                         <?php if( get_field('website') ) : ?>
-                        <div class="member-website">
+                        <div class="member-website-address">
                             <h4 class="m-0"><b>Website:</b></h4>
                             <p class="m-0"><?php echo get_field('website'); ?></p>
                         </div>
