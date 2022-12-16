@@ -65,7 +65,7 @@ $headerClass = 'main-header';
 						</div>
 					</div>
 					<div class="col-6 col-lg-8 p-0">
-						<div class="d-block d-lg-none <?php echo $headerClass; ?>-hamburger text-right">
+						<div class="d-block d-lg-none <?php echo $headerClass; ?>-hamburger text-right for-tablet for-mobile">
 							<span class="<?php echo $headerClass; ?>-hamburger-toggle">
 								<?php get_template_part('icons/hamburger-icon'); ?>
 							</span>
@@ -74,7 +74,7 @@ $headerClass = 'main-header';
 							<?php wp_nav_menu( array( 'menu' => get_field('menu','option') ) ); ?>
 						</div>
 					</div>
-					<div class="col-6 col-lg-2 p-0 d-none d-lg-block">
+					<div class="col-6 col-lg-2 p-0 for-desktop">
 						<div class="<?php echo $headerClass; ?>-search-cta d-flex align-items-center justify-content-end">
 							<a><?php get_template_part('icons/search-icon'); ?></a>
 							<a href="<?php echo get_field('cta_button','option')['url']; ?>" class="main-button">
