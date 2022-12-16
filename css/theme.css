@@ -21450,13 +21450,15 @@ section.image-with-text .image-with-text-inner .row .col-6.col-b .wysiwyg-conten
   /* padding: 15px; */
   background: white;
 }
-.approved-supplier-inner .col-12 .suplier-item:hover .supplier-item-inner {
-  background: #263238;
-  transition: 0.3s;
-}
 .approved-supplier-inner .col-12 .suplier-item:hover .supplier-item-inner h5, .approved-supplier-inner .col-12 .suplier-item:hover .supplier-item-inner .h5 {
   display: block !important;
-  color: white;
+  transition: 0.3s;
+}
+.approved-supplier-inner .col-12 .suplier-item:hover .supplier-item-inner {
+  background: #263238;
+}
+.approved-supplier-inner .col-12 .suplier-item:hover {
+  bottom: 15px;
   transition: 0.3s;
 }
 
