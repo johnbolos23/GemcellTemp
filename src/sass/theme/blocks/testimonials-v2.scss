@@ -9,9 +9,11 @@ section.testimonials-v2 {
             button {
                 &.slick-prev {
                     &.slick-arrow {
-                        top: -25% !important;
+                        top: -100px;
                         right: 5%;
                         left: unset;
+                        width: auto;
+                        height: auto;
 
                         @media (max-width: $mobile){
                             left: 0;
@@ -21,14 +23,16 @@ section.testimonials-v2 {
 
                         &:before {
                             color: #263238 !important;
-                            // display: none !important
+                            display: none !important
                         }
                     }
                 }
                 &.slick-next {
                     &.slick-arrow {
-                        top: -25% !important;
+                        top: -100px;
                         right: 0%;
+                        width: auto;
+                        height: auto;
 
                         @media (max-width: $mobile){
                             left: 10%;
@@ -38,7 +42,7 @@ section.testimonials-v2 {
 
                         &:before {
                             color: #263238 !important;
-                            // display: none !important;
+                            display: none !important;
                         }
                     }
                 }

@@ -42,7 +42,7 @@
                             'post_type'      => 'competition',
                             'posts_per_page' => '6',
                             'publish_status' => 'published',
-                            'order' => 'ASC',
+                            'order' => 'DESC',
                         );
 
                         if( isset($_GET['search']) ){

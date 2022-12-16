@@ -157,14 +157,14 @@ function fetch_blog_list() {
 
 // Method 1: Filter.
 function my_acf_google_map_api( $api ){
-    $api['key'] = 'AIzaSyApyclQTE-uyeCjNphglXkawNegc2QPiiw';
+    $api['key'] = 'AIzaSyAEPh1fe1kgVloGScUKPpxhlyzG1j5gsX8';
     return $api;
 }
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 // Method 2: Setting.
 function my_acf_init() {
-    acf_update_setting('google_api_key', 'AIzaSyApyclQTE-uyeCjNphglXkawNegc2QPiiw');
+    acf_update_setting('google_api_key', 'AIzaSyAEPh1fe1kgVloGScUKPpxhlyzG1j5gsX8');
 }
 add_action('acf/init', 'my_acf_init');
 
@@ -173,13 +173,19 @@ function getGeoCode($address)
 {
         $address = urlencode($address);
         // geocoding api url
-        $url = "https://maps.google.com/maps/api/geocode/json?address=$address&key=AIzaSyApyclQTE-uyeCjNphglXkawNegc2QPiiw";
+        $url = "https://maps.google.com/maps/api/geocode/json?address=$address&key=AIzaSyAEPh1fe1kgVloGScUKPpxhlyzG1j5gsX8";
 
         // send api request
         $geocode = file_get_contents($url);
         $json = json_decode($geocode);
-        $data['lat'] = $json->results[0]->geometry->location->lat;
-        $data['lng'] = $json->results[0]->geometry->location->lng;
+
+        if( $json->results ){
+            $data['lat'] = $json->results[0]->geometry->location->lat;
+            $data['lng'] = $json->results[0]->geometry->location->lng;
+        }else{
+            return false;
+        }
+        
 
         return $data;
 }

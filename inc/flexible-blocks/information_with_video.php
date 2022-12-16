@@ -23,6 +23,12 @@
                         <div class="video-popup-trigger">
                             <?php get_template_part('icons/play-icon'); ?>
                             <h4><?php echo get_sub_field('video')['video_title']; ?></h4>
+
+                        </div>
+                        <div class="embed-container">
+                            <?php echo get_sub_field('video')['video_link'] ?>
+
+
                         </div>
                     </div>
                 </div>

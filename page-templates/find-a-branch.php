@@ -10,9 +10,9 @@ get_header();
 get_template_part('inc/flexible-blocks/breadcrumbs'); 
 
 $args = array(
-    'post_type' => 'members',
+    'post_type' => 'member_branches',
     'post_status' => 'publish',
-    'posts_per_page' => 100
+    'posts_per_page' => 5
 );
 
 if( isset( $_POST['keyword'] ) && $_POST['keyword'] ){
@@ -22,7 +22,7 @@ if( isset( $_POST['keyword'] ) && $_POST['keyword'] ){
 if( isset( $_POST['state'] ) && ( $_POST['state'] && $_POST['state'] != 'all' ) ){
     $args['tax_query'] = array(
         array(
-			'taxonomy' => 'state',
+			'taxonomy' => 'gemcell_states',
 			'field'    => 'term_id',
 			'terms'    => $_POST['state'],
 		),
@@ -54,7 +54,7 @@ $theQuery = new WP_Query( $args );
                                         <option value="all">All States</option>
                                         <?php 
                                         $theTerms = get_terms( array(
-                                            'taxonomy' => 'state',
+                                            'taxonomy' => 'gemcell_states',
                                             'hide_empty' => false,
                                         ) );
                                         foreach( $theTerms as $state ) : 
@@ -117,13 +117,13 @@ $theQuery = new WP_Query( $args );
                 <div class="custom-map" data-zoom="16">
                     <?php while( $theQuery->have_posts() ) : $theQuery->the_post();
 
-                        $latitude = get_field('maps')['lat'];
-                        $longtitude = get_field('maps')['lng'];
-                        $address = get_field('maps')['address'];
+                        $latitude = get_field('address')['lat'];
+                        $longtitude = get_field('address')['lng'];
+                        $address = get_field('address')['address'];
 
                         ?>
                         
-                        <div class="marker" data-mappin="<?php echo get_stylesheet_directory_uri() .'/icons/images/map-marker.png'; ?>" data-lat="<?php echo esc_attr($latitude); ?>" data-lng="<?php echo esc_attr($longtitude); ?>">
+                        <div class="marker d-none" data-mappin="<?php echo get_stylesheet_directory_uri() .'/icons/images/map-marker.png'; ?>" data-lat="<?php echo esc_attr($latitude); ?>" data-lng="<?php echo esc_attr($longtitude); ?>">
                             <h3 class="heading"><?php echo get_the_title(); ?></h3>
                             <div class="wysiwyg-content"><?php echo $address; ?></div>
                         </div>

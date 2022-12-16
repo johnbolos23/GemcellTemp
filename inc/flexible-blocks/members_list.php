@@ -17,7 +17,7 @@
                     <?php
 
                     $args = array(
-                            'post_type'      => 'members',
+                            'post_type'      => 'gemcell_members',
                             'posts_per_page' => '-1',
                             'publish_status' => 'published',
                             'order' => 'ASC',
@@ -31,7 +31,7 @@
                             <div class="members-item">
                                 <div class="members-item-inner">
                                 <a href="<?php echo get_post_permalink(); ?>">
-                                    <div class="members-poster"><?php echo get_the_post_thumbnail(); ?></div>
+                                    <div class="members-poster"><img src="<?php echo get_field('logo'); ?>" /></div>
                                     <h5><?php echo get_the_title(); ?></h5>
                                 </a>
                                 </div>

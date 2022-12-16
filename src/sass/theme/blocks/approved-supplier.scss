@@ -73,6 +73,8 @@
                     width: 33.33%;
                 }
             }
+
+            
     
     
         
@@ -111,6 +113,16 @@
                         }
                     }
                 }
+
+                h5 {
+                    display: none;
+                    margin-bottom: 0;
+                    padding-top: 11px;
+                    font-weight: 600;
+                    transition:.3s;
+                }
+
+
                 
                 .suplier-poster {
                     /* padding: 15px; */
@@ -119,6 +131,18 @@
                 
             }
             
+        }
+
+        
+        .suplier-item:hover .supplier-item-inner {
+            background: #263238;
+            transition:.3s;
+        }
+        
+        .suplier-item:hover .supplier-item-inner h5{
+            display:block !important;
+            color:white;
+            transition:.3s;
         }
     
         

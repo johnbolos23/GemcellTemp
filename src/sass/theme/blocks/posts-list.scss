@@ -176,25 +176,7 @@ section.posts-list {
                             border-color: #0796BF;
                         }
 
-                        .post-list-item-link{
-                            // position: absolute;
-                            // bottom: 0;
-                            margin-top: 17px;
-
-                            a{
-                                text-decoration: none;
-                                font-size: 18px;
-                                line-height: 170%;
-                                color: #0796BF;
-                                font-family: 'CenturyGothicBold';
-
-                                svg{
-                                    path{
-                                        stroke: #0796BF;
-                                    }
-                                }
-                            }
-                        }
+                        
 
                         &:after {
                             position: absolute;
@@ -272,6 +254,26 @@ section.posts-list {
                                     padding-top: 180px;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+
+            .post-list-item-link{
+                // position: absolute;
+                // bottom: 0;
+                margin-top: 17px;
+
+                a{
+                    text-decoration: none;
+                    font-size: 18px;
+                    line-height: 170%;
+                    color: #0796BF;
+                    font-family: 'CenturyGothicBold';
+
+                    svg{
+                        path{
+                            stroke: #0796BF;
                         }
                     }
                 }

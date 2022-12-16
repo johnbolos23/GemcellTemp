@@ -90,6 +90,17 @@ section.information-with-video {
                     }
                 }
             }
+
+            .embed-container {
+                display: none;
+
+                            
+                iframe {
+                    width: 100%;
+                    height: 530px;
+                }
+            }
+
         }
     }
 

@@ -7,20 +7,20 @@ $region   = $json['region'];
 $city     = $json['city'];
 
 $origin = $city . ','. $region . ','. $country;
-$destination = get_field('maps')['address'];
+$destination = get_field('address')['address'];
 $directionURL = "https://www.google.com/maps/dir/?api=1&origin=$origin&destination=$destination";
 
 ?>
 
 <div class="branch-result-list-detail-wrapper hide" data-branch-detail="<?php echo get_the_ID(); ?>">
-    <?php echo get_the_post_thumbnail(); ?>
+    <img src="<?php echo get_field('logo');?>" />
 
     <h3 class="heading"><?php echo get_the_title(); ?></h3>
     <div class="branch-result-list-detailed">
-        <?php if( get_field('maps')['address'] ) : ?>
+        <?php if( get_field('address')['address'] ) : ?>
         <div class="d-flex">
             <div class="branch-label">Address:</div>
-            <div class="branch-detail-text"><?php echo get_field('maps')['address']; ?></div>
+            <div class="branch-detail-text"><?php echo get_field('address')['address']; ?></div>
         </div>
         <?php endif;?>
         <?php if( get_field('phone') ) : ?>
