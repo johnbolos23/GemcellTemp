@@ -213,6 +213,9 @@ function getGemcellMembersAPI(){
 
 			// ACF phone field
 			update_field('phone', $memberData['abn'], $postID);
+
+			// ACF website field
+			update_field('phone', $memberData['website'], $postID);
 		}
 	}
 }
