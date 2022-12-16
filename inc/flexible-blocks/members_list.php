@@ -17,11 +17,11 @@
                     <?php
 
                     $args = array(
-                            'post_type'      => 'gemcell_members',
-                            'posts_per_page' => '-1',
-                            'publish_status' => 'published',
-                            'order' => 'ASC',
-                            
+                        'post_type'      => 'gemcell_members',
+                        'posts_per_page' => '-1',
+                        'publish_status' => 'published',
+                        'orderby' => 'title',
+                        'order' => 'ASC',
                     );
         
                     $query = new WP_Query($args);

@@ -106,6 +106,8 @@ $mainMemberID = get_the_ID();
                             'post_type' => 'member_branches',
                             'posts_per_page' => -1,
                             'post_status' => 'publish',
+                            'orderby' => 'title',
+                            'order' => 'ASC',
                             'meta_query' => array(
                                 array(
                                     'key'     => 'gemcell_member_id',
@@ -152,6 +154,8 @@ $mainMemberID = get_the_ID();
                                     'post_type' => 'member_branches',
                                     'posts_per_page' => -1,
                                     'post_status' => 'publish',
+                                    'orderby' => 'title',
+                            		'order' => 'ASC',
                                     'meta_query' => array(
                                         array(
                                             'key'     => 'gemcell_member_id',
@@ -184,6 +188,8 @@ $mainMemberID = get_the_ID();
                                         'post_type' => 'member_branches',
                                         'posts_per_page' => -1,
                                         'post_status' => 'publish',
+                                        'orderby' => 'title',
+                                        'order' => 'ASC',
                                         'meta_query' => array(
                                             array(
                                                 'key'     => 'gemcell_member_id',
@@ -212,6 +218,8 @@ $mainMemberID = get_the_ID();
                                         'post_type' => 'member_branches',
                                         'posts_per_page' => -1,
                                         'post_status' => 'publish',
+                                        'orderby' => 'title',
+                                        'order' => 'ASC',
                                         'tax_query' => array(
                                             array(
                                                 'taxonomy' => 'gemcell_states',
@@ -232,7 +240,7 @@ $mainMemberID = get_the_ID();
                                     while( $theQuery->have_posts() ){
                                         $theQuery->the_post();
 
-                                        echo '<li>'. get_the_title() .'</li>';
+                                        echo '<li><a href="'. site_url() .'/find-a-branch/?branch-detail='. get_the_ID() .'">'. get_the_title() .'</a></li>';
                                     }
 
                                     wp_reset_postdata();
