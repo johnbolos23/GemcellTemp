@@ -93,7 +93,7 @@ $mainMemberID = get_the_ID();
                     <div class="single-members-details-wrapper">
                         <h4 class="subheading"><span>Member</span></h4>
                         <h2 class="heading"><?php echo get_the_title(); ?></h2>
-                        <div class="wysiwyg-content"><?php echo get_the_content(); ?></div>
+                        <div class="wysiwyg-content"><?php the_content(); ?></div>
                     </div>
                 </div>
                 
