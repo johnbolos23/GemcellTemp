@@ -9145,9 +9145,7 @@ acf_add_local_field_group(array(
 	'style' => 'default',
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
-	'hide_on_screen' => array(
-		0 => 'featured_image',
-	),
+	'hide_on_screen' => '',
 	'active' => true,
 	'description' => '',
 	'show_in_rest' => 0,

@@ -16,7 +16,15 @@ $args = array(
 );
 
 if( isset( $_POST['keyword'] ) && $_POST['keyword'] ){
-    $args['s'] = $_POST['keyword'];
+    // $args['s'] = $_POST['keyword'];
+
+    $args['meta_query'] = array(
+        array(
+            'key' => 'address',
+            'value' => $_POST['keyword'],
+            'compare' => 'LIKE'
+        )
+    );
 }
 
 if( isset( $_POST['state'] ) && ( $_POST['state'] && $_POST['state'] != 'all' ) ){
@@ -44,7 +52,7 @@ $theQuery = new WP_Query( $args );
                         <div class="row">
                             <div class="col-12 col-md-8 col-lg-7">
                                 <div class="branch-field-wrapper pos-relative">
-                                    <input name="keyword" type="text" placeholder="Search" <?php echo isset( $_POST['keyword'] ) && $_POST['keyword'] ? 'value="'. $_POST['keyword'] .'"': ''; ?>/>
+                                    <input name="keyword" type="text" placeholder="Enter postcode or suburb" <?php echo isset( $_POST['keyword'] ) && $_POST['keyword'] ? 'value="'. $_POST['keyword'] .'"': ''; ?>/>
                                     <span id="branch-finder-toggle"><?php get_template_part('icons/search-icon'); ?></span>
                                 </div>
                             </div>
@@ -64,7 +72,7 @@ $theQuery = new WP_Query( $args );
                                             }
 
                                         ?>
-                                        <option <?php echo isset( $_POST['state'] ) && $_POST['state'] == $state->term_id ? 'selected': ''; ?> value="<?php echo $state->term_id; ?>"><?php echo $state->name; ?></option>
+                                        <option <?php echo isset( $_POST['state'] ) && $_POST['state'] == $state->term_id ? 'selected': ''; ?> value="<?php echo $state->term_id; ?>"><?php echo get_field('state_code', 'term_'. $state->term_id); ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                 </div>
