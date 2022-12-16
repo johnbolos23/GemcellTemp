@@ -21412,9 +21412,32 @@ section.image-with-text .image-with-text-inner .row .col-6.col-b .wysiwyg-conten
   padding: 16px;
   position: relative;
 }
+.approved-supplier-inner .col-12 .suplier-item .supplier-item-inner h5, .approved-supplier-inner .col-12 .suplier-item .supplier-item-inner .h5 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 110%;
+  /* identical to box height, or 31px */
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin-top: 18px;
+  display: none;
+  transition: 0.3s;
+  position: absolute;
+  bottom: -58px;
+  left: 0;
+  background: #263238;
+  z-index: 1;
+  width: 100%;
+  padding: 25px 18px;
+}
+@media (max-width: 9999px) {
+  .approved-supplier-inner .col-12 .suplier-item .supplier-item-inner h5, .approved-supplier-inner .col-12 .suplier-item .supplier-item-inner .h5 {
+    font-size: 24px;
+  }
+}
 @media (max-width: 767px) {
-  .approved-supplier-inner .col-12 .suplier-item .supplier-item-inner {
-    padding: 8px;
+  .approved-supplier-inner .col-12 .suplier-item .supplier-item-inner h5, .approved-supplier-inner .col-12 .suplier-item .supplier-item-inner .h5 {
+    font-size: 18px;
   }
 }
 .approved-supplier-inner .col-12 .suplier-item .supplier-item-inner .suplier-poster img {
@@ -21429,22 +21452,15 @@ section.image-with-text .image-with-text-inner .row .col-6.col-b .wysiwyg-conten
 }
 @media (max-width: 1024px) {
   .approved-supplier-inner .col-12 .suplier-item .supplier-item-inner .suplier-poster img {
-    padding: 8px;
-    height: 85px;
+    padding: 10px;
+    height: 170px;
   }
 }
 @media (max-width: 767px) {
   .approved-supplier-inner .col-12 .suplier-item .supplier-item-inner .suplier-poster img {
-    padding: 8px;
-    height: 65px;
+    padding: 10px;
+    height: 125px;
   }
-}
-.approved-supplier-inner .col-12 .suplier-item .supplier-item-inner h5, .approved-supplier-inner .col-12 .suplier-item .supplier-item-inner .h5 {
-  display: none;
-  margin-bottom: 0;
-  padding-top: 11px;
-  font-weight: 600;
-  transition: 0.3s;
 }
 .approved-supplier-inner .col-12 .suplier-item .supplier-item-inner .suplier-poster {
   /* padding: 15px; */

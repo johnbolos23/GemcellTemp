@@ -77,19 +77,43 @@
             
     
     
-        
-            .supplier-item-inner {
+                        .supplier-item-inner {
                 background: #F8F8F8;
                 padding: 16px;
                 position: relative;
-
-                @media (max-width: $mobile){
-                    &{
-                        padding: 8px;
-                    }
-                }
     
                 
+    
+                h5 {
+                    font-weight: 600;
+                    font-size: 28px;
+                    line-height: 110%;
+                /* identical to box height, or 31px */
+                    letter-spacing: -0.02em;
+                    color: #FFFFFF;
+                    margin-top: 18px;
+                    display:none;
+                    transition:.3s;
+                    position: absolute;
+                    bottom: -58px;
+                    left: 0;
+                    background: #263238;
+                    z-index: 1;
+                    width: 100%;
+                    padding: 25px 18px;
+
+                    @media (max-width: $bigScreen){
+                        &{
+                            font-size: 24px;
+                        }
+                    }
+                    @media (max-width: $mobile){
+                        &{
+                            font-size: 18px;
+                        }
+                    }
+                }
+        
                 .suplier-poster img {
                     width: 100%;
                     margin-left: auto;
@@ -101,28 +125,18 @@
 
                     @media (max-width: $tablet){
                         &{
-                            padding: 8px;
-                            height:85px;
+                            padding: 10px;
+                            height: 170px;
                         }
                     }
 
                     @media (max-width: $mobile){
                         &{
-                            padding: 8px;
-                            height:65px;
+                            padding: 10px;
+                            height: 125px;
                         }
                     }
                 }
-
-                h5 {
-                    display: none;
-                    margin-bottom: 0;
-                    padding-top: 11px;
-                    font-weight: 600;
-                    transition:.3s;
-                }
-
-
                 
                 .suplier-poster {
                     /* padding: 15px; */
