@@ -93,7 +93,7 @@ $mainMemberID = get_the_ID();
                     <div class="single-members-details-wrapper">
                         <h4 class="subheading"><span>Member</span></h4>
                         <h2 class="heading"><?php echo get_the_title(); ?></h2>
-                        <div class="wysiwyg-content"><?php echo get_the_content(); ?></div>
+                        <div class="wysiwyg-content"><?php the_content(); ?></div>
                     </div>
                 </div>
                 
@@ -106,6 +106,8 @@ $mainMemberID = get_the_ID();
                             'post_type' => 'member_branches',
                             'posts_per_page' => -1,
                             'post_status' => 'publish',
+                            'orderby' => 'title',
+                            'order' => 'ASC',
                             'meta_query' => array(
                                 array(
                                     'key'     => 'gemcell_member_id',
@@ -152,6 +154,8 @@ $mainMemberID = get_the_ID();
                                     'post_type' => 'member_branches',
                                     'posts_per_page' => -1,
                                     'post_status' => 'publish',
+                                    'orderby' => 'title',
+                            		'order' => 'ASC',
                                     'meta_query' => array(
                                         array(
                                             'key'     => 'gemcell_member_id',
@@ -184,6 +188,8 @@ $mainMemberID = get_the_ID();
                                         'post_type' => 'member_branches',
                                         'posts_per_page' => -1,
                                         'post_status' => 'publish',
+                                        'orderby' => 'title',
+                                        'order' => 'ASC',
                                         'meta_query' => array(
                                             array(
                                                 'key'     => 'gemcell_member_id',
@@ -197,7 +203,7 @@ $mainMemberID = get_the_ID();
                                     while( $theQuery->have_posts() ){
                                         $theQuery->the_post();
 
-                                        echo '<li>'. get_the_title() .'</li>';
+                                        echo '<li><a href="'. site_url() .'/find-a-branch/?branch-detail='. get_the_ID() .'">'. get_the_title() .'</a></li>';
                                     }
 
                                     wp_reset_postdata();
@@ -212,6 +218,8 @@ $mainMemberID = get_the_ID();
                                         'post_type' => 'member_branches',
                                         'posts_per_page' => -1,
                                         'post_status' => 'publish',
+                                        'orderby' => 'title',
+                                        'order' => 'ASC',
                                         'tax_query' => array(
                                             array(
                                                 'taxonomy' => 'gemcell_states',
@@ -232,7 +240,7 @@ $mainMemberID = get_the_ID();
                                     while( $theQuery->have_posts() ){
                                         $theQuery->the_post();
 
-                                        echo '<li>'. get_the_title() .'</li>';
+                                        echo '<li><a href="'. site_url() .'/find-a-branch/?branch-detail='. get_the_ID() .'">'. get_the_title() .'</a></li>';
                                     }
 
                                     wp_reset_postdata();
@@ -250,13 +258,13 @@ $mainMemberID = get_the_ID();
                         $images = get_field('other_images');
                         $size = 'full'; // (thumbnail, medium, large, full or custom size)
                         if( $images ): ?>
-                            <ul>
+                            <div class="slider-items">
                                 <?php foreach( $images as $image_id ): ?>
-                                    <li>
+                                    <div class="slider-item">
                                         <img src="<?php echo $image_id; ?>" />
-                                    </li>
+                                    </div>
                                 <?php endforeach; ?>
-                            </ul>
+                            </div>
                         <?php endif; ?>
 
                 </div>

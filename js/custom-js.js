@@ -403,4 +403,23 @@
 			$('.member-branch-content[data-member-filter="'+ $activeTabID +'"]').addClass('active');
 		});
 	});
+
+	$(window).on('beforeunload', function(){
+		console.log('working');
+		$('body').append('<div class="custom-loading-container"><div class="custom-loading"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div></div>');
+
+		$('.custom-loading-container').fadeIn(250);
+	});
+
+	$(document).ready(function() {
+		if($('body').hasClass('single-gemcell_members')){
+			$(".slider-items").slick({
+					slidesToShow: 1,
+					dots: false,
+					arrows: false,
+			});
+		}
+	});
+
+
 })(jQuery);
