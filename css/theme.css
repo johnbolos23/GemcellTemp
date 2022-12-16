@@ -24031,6 +24031,10 @@ section#single-members #custom-map-render .custom-map {
     padding-right: 0;
   }
 }
+.member-branches-tabs-wrapper .member-branches-content .member-branch-content ul li a {
+  color: #000;
+  text-decoration: none;
+}
 
 .custom-map .heading {
   font-size: 24px;
