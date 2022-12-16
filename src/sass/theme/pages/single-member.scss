@@ -398,14 +398,14 @@ section#single-members{
             color: #263238;
         }
 
-        ul {
+        .slider-items {
             padding-left: 0;
             list-style-type: none;
             margin-top: 2em;
 
             
             
-            li {
+            .slider-item {
                 margin-bottom: 30px;
 
                 img {
@@ -633,8 +633,19 @@ section#single-members{
                         flex: 0 0 100%;
                         padding-right: 0;
                     }
+
+                    a{
+                        color: #000;
+                        text-decoration: none;
+                    }
                 }
             }
         }
+    }
+}
+
+.custom-map{
+    .heading {
+        font-size: 24px;
     }
 }
