@@ -250,13 +250,13 @@ $mainMemberID = get_the_ID();
                         $images = get_field('other_images');
                         $size = 'full'; // (thumbnail, medium, large, full or custom size)
                         if( $images ): ?>
-                            <ul>
+                            <div class="slider-items">
                                 <?php foreach( $images as $image_id ): ?>
-                                    <li>
+                                    <div class="slider-item">
                                         <img src="<?php echo $image_id; ?>" />
-                                    </li>
+                                    </div>
                                 <?php endforeach; ?>
-                            </ul>
+                            </div>
                         <?php endif; ?>
 
                 </div>
