@@ -192,7 +192,7 @@ $theQuery = new WP_Query( $args );
 <?php get_footer(); ?>
 
 
-<?php if( $_GET['branch-detail'] ) : ?>
+<?php if( isset( $_GET['branch-detail'] )) : ?>
 <script>
     jQuery(window).ready(function(){
         jQuery('.branch-item-details a[data-branch-target-detail="<?php echo $_GET['branch-detail']; ?>"]').trigger('click');
