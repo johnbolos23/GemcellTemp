@@ -85,6 +85,12 @@ $mainMemberID = get_the_ID();
                             <p class="m-0"><?php echo get_field('email'); ?></p>
                         </div>
                         <?php endif; ?>
+                        <?php if( get_field('website') ) : ?>
+                        <div class="member-websie">
+                            <h4 class="m-0"><b>Website:</b></h4>
+                            <p class="m-0"><?php echo get_field('website'); ?></p>
+                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
