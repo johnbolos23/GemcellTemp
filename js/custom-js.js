@@ -416,7 +416,12 @@
 			$(".slider-items").slick({
 					slidesToShow: 1,
 					dots: false,
-					arrows: false,
+					arrows: true,
+					prevArrow:
+						'<button class="slick-arrow slick-prev"><svg width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 2L3.5 12.5L14 23" stroke="#263238" stroke-width="4"/></svg></button>',
+					nextArrow:
+						'<button class="slick-arrow slick-next"><svg width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L12.5 12.5L2 23" stroke="#263238" stroke-width="4"/></svg></button>',
+					
 			});
 		}
 	});
