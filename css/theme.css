@@ -17042,6 +17042,11 @@ section.posts-list {
   padding: 150px 0 50px;
 }
 @media (max-width: 767px) {
+  section.posts-list {
+    padding: 10px 0 50px;
+  }
+}
+@media (max-width: 767px) {
   section.posts-list .text-right {
     text-align: left;
   }
@@ -17432,7 +17437,7 @@ section.client-logos .client-logos-wrapper > div {
 }
 @media (max-width: 767px) {
   section.client-logos .client-logos-wrapper > div {
-    width: 33.33%;
+    width: 100%;
   }
 }
 @media (max-width: 1200px) {
