@@ -39,7 +39,7 @@ if( isset( $_POST['state'] ) && ( $_POST['state'] && $_POST['state'] != 'all' ) 
 
 $selectedState = 'All';
 
-if( $_GET['branch-detail'] ) {
+if( isset( $_GET['branch-detail'] ) ) {
     $args['post__in'] = array( $_GET['branch-detail'] );
 }
 
