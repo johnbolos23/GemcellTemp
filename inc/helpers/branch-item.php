@@ -1,22 +1,28 @@
 <?php
-$PublicIP = get_client_ip() != '::1' ? get_client_ip() : '35.201.24.201';
-$json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
-$json     = json_decode($json, true);
-$country  = $json['country'];
-$region   = $json['region'];
-$city     = $json['city'];
+$json = json_decode($args['json'], true);
 
-$addressString = $city . ','. $region . ','. $country;
+if( $json['loc'] ){
+	$currentUserLatLong = explode(',', $json['loc']);
+}else{
+    $country  = $json['country'];
+    $region   = $json['region'];
+    $city     = $json['city'];
 
-$currentUserAddress = getGeoCode($addressString);
+    $addressString = $city . ','. $region . ','. $country;
+
+	$currentUserAddress = getGeoCode($addressString);
+	
+	$currentUserLatLong[] = $currentUserAddress['lat'];
+	$currentUserLatLong[] = $currentUserAddress['lng'];
+}
 
 
 $Branchlatitude = get_field('address')['lat'];
 $Branchlongtitude = get_field('address')['lng'];
 $Branchaddress = get_field('address')['address'];
 
-if( $currentUserAddress != false && ( $Branchlatitude != 'null' && $Branchlongtitude != 'null' ) ){
-    $distance = getDistanceBetweenCoordinates( $Branchlatitude, $Branchlongtitude, $currentUserAddress['lat'], $currentUserAddress['lng'], 'K' );
+if( $currentUserLatLong && ( $Branchlatitude != 'null' && $Branchlongtitude != 'null' ) ){
+    $distance = getDistanceBetweenCoordinates( $Branchlatitude, $Branchlongtitude, $currentUserLatLong[0], $currentUserLatLong[1], 'K' );
 }else{
     $distance = 13685.38;
 }
