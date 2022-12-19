@@ -45,6 +45,10 @@ if( isset( $_GET['branch-detail'] ) ) {
 
 $theQuery = new WP_Query( $args );
 
+
+$PublicIP = get_client_ip() != '::1' ? get_client_ip() : '35.201.24.201';
+$json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
+
 ?>
 
 <section class="find-a-branch" id="find-a-branch">
@@ -96,7 +100,7 @@ $theQuery = new WP_Query( $args );
                                 while( $theQuery->have_posts() ) { 
                                     $theQuery->the_post();
                                     
-                                    get_template_part('inc/helpers/branch-item');
+                                    get_template_part('inc/helpers/branch-item', '', array( 'json' => $json));
                                 }
                                 wp_reset_postdata(); 
                             }else{
@@ -114,7 +118,7 @@ $theQuery = new WP_Query( $args );
                                 while( $theQuery->have_posts() ) { 
                                     $theQuery->the_post();
                                     
-                                    get_template_part('inc/helpers/branch-item-details');
+                                    get_template_part('inc/helpers/branch-item-details', '', array( 'json' => $json));
                                 }
                                 wp_reset_postdata(); 
                             } ?>
