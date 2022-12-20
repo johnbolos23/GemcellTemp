@@ -310,11 +310,6 @@
 				window.requestAnimationFrame(update);
 			};
 
-
-			if(n % 2 == 0){
-
-			}
-
 			flickity = new Flickity(slideshowEl, {
 				autoPlay: false,
 				prevNextButtons: false,
@@ -326,8 +321,6 @@
 				rightToLeft: (n % 2 == 0) ? true:false
 			});
 			flickity.x = 0;
-
-
 
 			update();
 		}
