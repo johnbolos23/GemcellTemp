@@ -265,6 +265,9 @@ section#find-a-branch{
     min-height: 1000px;
     // border: #ccc solid 1px;
     // margin: 20px 0;
+    @media ( max-width: $tablet ){
+        height: 83vh;
+    }
 
     @media ( max-width: $tablet ){
         height: 745px;
