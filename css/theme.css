@@ -17080,7 +17080,7 @@ section.posts-list {
 }
 @media (max-width: 767px) {
   section.posts-list .heading {
-    font-size: 28px;
+    font-size: 36px;
   }
 }
 @media (max-width: 9999px) {
