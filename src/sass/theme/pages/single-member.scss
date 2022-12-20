@@ -205,6 +205,17 @@ section#single-members{
         .member-website, .member-phone, .member-email, .member-website {
             display: flex;
             padding: 0px 20px;
+            align-items: center;
+            h4{
+                display: flex;
+                align-items: center;
+            }
+            p{
+                overflow-wrap: anywhere;
+                line-height: 14px;
+                display: flex;
+                align-items: center;
+            }
         }
         
         h4{
@@ -220,10 +231,6 @@ section#single-members{
                     width: 5em;
                 }
             }
-        }
-        
-        .member-website {
-            margin-top: 2em;
         }
     }
 

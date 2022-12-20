@@ -23748,6 +23748,17 @@ section#single-members .single-members-image p.m-0 {
 section#single-members .single-members-image .member-website, section#single-members .single-members-image .member-phone, section#single-members .single-members-image .member-email, section#single-members .single-members-image .member-website {
   display: flex;
   padding: 0px 20px;
+  align-items: center;
+}
+section#single-members .single-members-image .member-website h4, section#single-members .single-members-image .member-website .h4, section#single-members .single-members-image .member-phone h4, section#single-members .single-members-image .member-phone .h4, section#single-members .single-members-image .member-email h4, section#single-members .single-members-image .member-email .h4, section#single-members .single-members-image .member-website h4 {
+  display: flex;
+  align-items: center;
+}
+section#single-members .single-members-image .member-website p, section#single-members .single-members-image .member-phone p, section#single-members .single-members-image .member-email p, section#single-members .single-members-image .member-website p {
+  overflow-wrap: anywhere;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
 }
 section#single-members .single-members-image h4, section#single-members .single-members-image .h4 {
   width: 30%;
@@ -23761,9 +23772,6 @@ section#single-members .single-members-image h4, section#single-members .single-
   section#single-members .single-members-image h4, section#single-members .single-members-image .h4 {
     width: 5em;
   }
-}
-section#single-members .single-members-image .member-website {
-  margin-top: 2em;
 }
 section#single-members .single-members-details {
   padding-left: 40px;
