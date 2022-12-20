@@ -57,6 +57,13 @@
                     padding-bottom: 65px;
                 }
             }
+            
+            @media (max-width: $mobile){
+                &{
+                    padding-left: 32.5px;
+                    padding-right: 32.5px;
+                }
+            }
         
             svg {
                 position: absolute;

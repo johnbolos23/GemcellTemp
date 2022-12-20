@@ -17040,6 +17040,12 @@ body.home section.big-cta {
     padding-bottom: 65px;
   }
 }
+@media (max-width: 767px) {
+  .image-floating-box .floating-box .floating-box-wrapper {
+    padding-left: 32.5px;
+    padding-right: 32.5px;
+  }
+}
 .image-floating-box .floating-box .floating-box-wrapper svg {
   position: absolute;
   top: 0;
