@@ -1,12 +1,10 @@
 <?php
-$PublicIP = get_client_ip() != '::1' ? get_client_ip() : '180.190.20.203';
-$json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
-$json     = json_decode($json, true);
+$json = json_decode($args['json'], true);
 $country  = $json['country'];
 $region   = $json['region'];
 $city     = $json['city'];
 
-$origin = $city . ','. $region . ','. $country;
+$origin = urlencode( $city . ','. $region . ','. $country );
 $destination = get_field('address')['address'];
 $directionURL = "https://www.google.com/maps/dir/?api=1&origin=$origin&destination=$destination";
 
