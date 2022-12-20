@@ -77,52 +77,70 @@
             
     
     
-        
             .supplier-item-inner {
                 background: #F8F8F8;
                 padding: 16px;
                 position: relative;
-
-                @media (max-width: $mobile){
-                    &{
-                        padding: 8px;
-                    }
-                }
     
                 
+    
+                h5 {
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 110%;
+                    /* identical to box height, or 31px */
+                    letter-spacing: -0.02em;
+                    color: #FFFFFF;
+                    margin-top: 18px;
+                    display:none;
+                    transition:.3s;
+                    position: absolute;
+                    bottom: -58px;
+                    left: 0;
+                    background: #263238;
+                    z-index: 1;
+                    width: 100%;
+                    padding: 25px 18px;
+
+                    @media (max-width: $bigScreen){
+                        &{
+                            font-size: 18px;
+                        }
+                    }
+                    @media (max-width: $mobile){
+                        &{
+                            font-size: 14px;
+                        }
+                    }
+                }
+        
                 .suplier-poster img {
                     width: 100%;
                     margin-left: auto;
                     margin-right: auto;
                     display: block;
                     padding: 30px;
-                    height: 150px;
+                    height: 91.9px;
                     object-fit: contain;
-
+                    object-position: center;
+                    scale: 2;
+                    
                     @media (max-width: $tablet){
                         &{
-                            padding: 8px;
-                            height:85px;
+                            padding: 10px;
+                            height: 83.45px;
+                            scale: 1.3;
                         }
                     }
-
+                    
                     @media (max-width: $mobile){
                         &{
-                            padding: 8px;
-                            height:65px;
+                            padding: 10px;
+                            height: 53.41px;
+                            scale: 1.3;
                         }
                     }
                 }
-
-                h5 {
-                    display: none;
-                    margin-bottom: 0;
-                    padding-top: 11px;
-                    font-weight: 600;
-                    transition:.3s;
-                }
-
-
                 
                 .suplier-poster {
                     /* padding: 15px; */
@@ -134,15 +152,19 @@
         }
 
         
-        .suplier-item:hover .supplier-item-inner {
-            background: #263238;
-            transition:.3s;
-        }
-        
         .suplier-item:hover .supplier-item-inner h5{
             display:block !important;
-            color:white;
             transition:.3s;
+            
+        }
+    
+        .suplier-item:hover .supplier-item-inner{
+            background:#263238;
+        }
+    
+        .suplier-item:hover {
+            bottom: 15px;
+            transition: .3s;
         }
     
         

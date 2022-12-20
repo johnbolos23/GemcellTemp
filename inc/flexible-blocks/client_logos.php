@@ -57,6 +57,31 @@
                     <?php endforeach; ?>
                 </div>
                     
+
+                <?php if ( wp_is_mobile() ) : ?>
+                    
+                    <div class="row client-logos-wrapper pos-relative">
+                        <?php foreach( $logosField as $logo ) : ?>
+                        <div class="col-4 col-lg-2 text-center">
+                            <img src="<?php echo $logo; ?>" />
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="row client-logos-wrapper pos-relative reverse">
+                        <?php  shuffle( $logosField ); foreach( $logosField as $logo ) : ?>
+                        <div class="col-4 col-lg-2 text-center">
+                            <img src="<?php echo $logo; ?>" />
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="row client-logos-wrapper pos-relative another">
+                        <?php shuffle( $logosField ); foreach( $logosField as $logo ) : ?>
+                        <div class="col-4 col-lg-2 text-center">
+                            <img src="<?php echo $logo; ?>" />
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

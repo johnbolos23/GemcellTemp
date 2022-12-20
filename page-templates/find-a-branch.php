@@ -39,11 +39,15 @@ if( isset( $_POST['state'] ) && ( $_POST['state'] && $_POST['state'] != 'all' ) 
 
 $selectedState = 'All';
 
-if( $_GET['branch-detail'] ) {
+if( isset( $_GET['branch-detail'] ) ) {
     $args['post__in'] = array( $_GET['branch-detail'] );
 }
 
 $theQuery = new WP_Query( $args );
+
+
+$PublicIP = get_client_ip() != '::1' ? get_client_ip() : '35.201.24.201';
+$json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
 
 ?>
 
@@ -96,7 +100,7 @@ $theQuery = new WP_Query( $args );
                                 while( $theQuery->have_posts() ) { 
                                     $theQuery->the_post();
                                     
-                                    get_template_part('inc/helpers/branch-item');
+                                    get_template_part('inc/helpers/branch-item', '', array( 'json' => $json));
                                 }
                                 wp_reset_postdata(); 
                             }else{
@@ -114,7 +118,7 @@ $theQuery = new WP_Query( $args );
                                 while( $theQuery->have_posts() ) { 
                                     $theQuery->the_post();
                                     
-                                    get_template_part('inc/helpers/branch-item-details');
+                                    get_template_part('inc/helpers/branch-item-details', '', array( 'json' => $json));
                                 }
                                 wp_reset_postdata(); 
                             } ?>
@@ -192,7 +196,7 @@ $theQuery = new WP_Query( $args );
 <?php get_footer(); ?>
 
 
-<?php if( $_GET['branch-detail'] ) : ?>
+<?php if( isset( $_GET['branch-detail'] )) : ?>
 <script>
     jQuery(window).ready(function(){
         jQuery('.branch-item-details a[data-branch-target-detail="<?php echo $_GET['branch-detail']; ?>"]').trigger('click');

@@ -4,6 +4,9 @@ section.posts-list {
         // padding-left: 1rem;
         // padding-right: 1rem;
     }
+    @media (max-width: $mobile) {
+         padding: 10px 0 50px;
+    }
     .text-right {
         @media (max-width: $mobile) {
             text-align: left;

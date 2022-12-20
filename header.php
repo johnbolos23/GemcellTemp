@@ -56,7 +56,7 @@ $headerClass = 'main-header';
 		<!-- ******************* The Navbar Area ******************* -->
 		<header id="<?php echo $headerClass; ?>" class="<?php echo $headerClass; ?>">
 			<div class="container">
-				<div class="row align-items-center m-0">
+				<div class="row align-items-center m-0 jcc">
 					<div class="col-6 col-lg-2 p-0">
 						<div class="<?php echo $headerClass; ?>-logo">
 							<a href="<?php echo site_url(); ?>">
