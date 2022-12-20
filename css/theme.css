@@ -23745,7 +23745,7 @@ section#single-members .single-members-image p.m-0 {
     font-size: 16px;
   }
 }
-section#single-members .single-members-image .member-website, section#single-members .single-members-image .member-phone, section#single-members .single-members-image .member-email, section#single-members .single-members-image .member-websie {
+section#single-members .single-members-image .member-website, section#single-members .single-members-image .member-phone, section#single-members .single-members-image .member-email, section#single-members .single-members-image .member-website {
   display: flex;
   padding: 0px 20px;
 }
