@@ -86,7 +86,7 @@ $mainMemberID = get_the_ID();
                         </div>
                         <?php endif; ?>
                         <?php if( get_field('website') ) : ?>
-                        <div class="member-websie">
+                        <div class="member-website">
                             <h4 class="m-0"><b>Website:</b></h4>
                             <p class="m-0"><?php echo get_field('website'); ?></p>
                         </div>
