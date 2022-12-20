@@ -16200,6 +16200,17 @@ body * {
   stroke: #263238;
 }
 
+.secondary-button {
+  background-color: #B9D22E;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.secondary-button.secondary-button-bordered {
+  background-color: transparent;
+  border: 1px solid #BFBFBF;
+}
+
 .heading {
   font-family: "CenturyGothicBold";
   font-size: 48px;
