@@ -17443,7 +17443,7 @@ section.client-logos .client-logos-wrapper > div {
 }
 @media (max-width: 1200px) {
   section.client-logos .client-logos-wrapper > div {
-    width: 16.66%;
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
