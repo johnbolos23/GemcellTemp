@@ -16084,7 +16084,7 @@ section:not(.has-overlay-top) {
   overflow: hidden;
 }
 
-.fine-print {
+.wysiwyg-content .fine-print {
   font-family: "CenturyGothic" !important;
   font-style: normal !important;
   font-weight: 400 !important;
@@ -17506,6 +17506,7 @@ section.testimonial-section .testimonial-slider .slick-dots {
 @media (max-width: 1200px) {
   section.testimonial-section .testimonial-slider .slick-dots {
     bottom: 0;
+    left: 45%;
   }
 }
 @media (max-width: 767px) {
@@ -17558,9 +17559,9 @@ section.testimonial-section .testimonial-slider .testimonial-item-image {
 }
 @media (min-width: 767px) and (max-width: 9999px) {
   section.testimonial-section .testimonial-slider .testimonial-item-image {
-    width: 50%;
+    width: 45%;
     margin: 0;
-    flex: 0 0 50%;
+    flex: 0 0 45%;
   }
 }
 @media (max-width: 9999px) {
@@ -17571,7 +17572,15 @@ section.testimonial-section .testimonial-slider .testimonial-item-image {
 }
 @media (max-width: 1200px) {
   section.testimonial-section .testimonial-slider .testimonial-item-image img {
-    padding: 0px 40px;
+    padding: 0px;
+    max-width: 282px;
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  section.testimonial-section .testimonial-slider .testimonial-item-image img {
+    max-width: 100%;
+    padding: 0 40px;
   }
 }
 section.testimonial-section .testimonial-item-details {
@@ -17583,8 +17592,20 @@ section.testimonial-section .testimonial-item-details {
     max-width: 100%;
   }
 }
+@media (max-width: 1200px) {
+  section.testimonial-section .testimonial-item-details {
+    width: 45%;
+    max-width: 100%;
+  }
+}
 section.testimonial-section .testimonial-item-details .subheading {
   margin-bottom: 30px;
+}
+@media (max-width: 1200px) {
+  section.testimonial-section .testimonial-item-details .subheading {
+    margin-top: 45px;
+    margin-bottom: 10px;
+  }
 }
 section.testimonial-section .testimonial-item-details .heading {
   font-size: 36px;
@@ -17596,6 +17617,11 @@ section.testimonial-section .testimonial-item-details .heading {
 @media (max-width: 9999px) {
   section.testimonial-section .testimonial-item-details .heading {
     font-size: 28px !important;
+  }
+}
+@media (max-width: 1200px) {
+  section.testimonial-section .testimonial-item-details .heading {
+    margin-bottom: 14px !important;
   }
 }
 @media (max-width: 767px) {
