@@ -4,7 +4,7 @@ $country  = $json['country'];
 $region   = $json['region'];
 $city     = $json['city'];
 
-$origin = $city . ','. $region . ','. $country;
+$origin = urlencode( $city . ','. $region . ','. $country );
 $destination = get_field('address')['address'];
 $directionURL = "https://www.google.com/maps/dir/?api=1&origin=$origin&destination=$destination";
 

@@ -88,7 +88,7 @@
       instance.options = {
         pdf:$(this).attr('src'),
         template: {
-          sounds: {"startFlip": themeURL.templateURL + "/sounds/start-flip.mp3","endFlip": themeURL.templateURL + "/sounds/end-flip.mp3"},
+          // sounds: {"startFlip": themeURL.templateURL + "/sounds/start-flip.mp3","endFlip": themeURL.templateURL + "/sounds/end-flip.mp3"},
         }
       };
       $('.fb3d-modal').fb3dModal('show');
