@@ -233,4 +233,29 @@ function getDistanceBetweenCoordinates($lat1, $lon1, $lat2, $lon2, $unit) {
     }
   }
 
-  
+  add_filter('tiny_mce_before_init', function($init_array) {
+    $init_array['formats'] = json_encode([
+        // add new format to formats
+        'finePrint' => [
+            'selector' => 'span',
+            'block'    => 'span',
+            'classes'  => 'fine-print',
+        ],
+    ], JSON_THROW_ON_ERROR);
+
+    // remove from that array not needed formats
+    $block_formats = [
+        'Paragraph=p',
+        'Heading 1=h1',
+        'Heading 2=h2',
+        'Heading 3=h3',
+        'Heading 4=h4',
+        'Heading 5=h5',
+        'Heading 6=h6',
+        'Preformatted=pre',
+        'Fine Print=finePrint',
+    ];
+    $init_array['block_formats'] = implode(';', $block_formats);
+
+    return $init_array;
+});
