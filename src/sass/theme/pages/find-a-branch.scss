@@ -210,10 +210,14 @@ section#find-a-branch{
         }
 
         .branch-result-list-detail-wrapper{
+            img {
+                padding-top: 30px;
+            }
             .heading {
                 color: #263238;
                 @media (max-width: $smallLaptop){
                     font-size: 24px;
+                    padding-top: 30px;
                 }
                 @media (max-width: $mobile){
                     font-size: 20px;

@@ -16599,6 +16599,10 @@ body.home section.big-cta {
   display: block;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (max-width: 1200px) {
   .section-banner {
     overflow: hidden;
@@ -16647,15 +16651,75 @@ body.home section.big-cta {
 .section-banner .col-xl-12 {
   position: relative;
 }
+.section-banner .scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  padding-left: 0 !important;
+}
+@media (max-width: 1399px) {
+  .section-banner .scroll-down {
+    bottom: 30px;
+  }
+}
+@media (max-width: 1024px) {
+  .section-banner .scroll-down {
+    display: none;
+  }
+}
+.section-banner .scroll-down .scroll-down-icon {
+  display: inline-block;
+}
+.section-banner .scroll-down .scroll-down-icon svg {
+  vertical-align: bottom;
+  width: 50px;
+}
+@media (max-width: 1399px) {
+  .section-banner .scroll-down .scroll-down-icon svg {
+    width: 40px;
+  }
+}
+.section-banner .scroll-down .scroll-down-content {
+  display: inline-block;
+  color: white;
+  padding-left: 20px;
+}
+@media (max-width: 1399px) {
+  .section-banner .scroll-down .scroll-down-content {
+    padding-left: 15px;
+  }
+}
+.section-banner .scroll-down .scroll-down-content span.scroll-down-text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 150%;
+}
+@media (max-width: 1399px) {
+  .section-banner .scroll-down .scroll-down-content span.scroll-down-text {
+    font-size: 18px;
+  }
+}
+.section-banner .scroll-down .scroll-down-content span.discover-more {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.67;
+  line-height: 140%;
+}
 .section-banner .banner-content-wrapper {
   height: 100%;
-  padding-top: 148px;
+  padding-top: 130px;
   padding-left: calc((100vw - 1680px) / 2);
   padding-right: 124px;
 }
 @media (max-width: 1780px) {
   .section-banner .banner-content-wrapper {
     padding: 120px 40px;
+  }
+}
+@media (max-width: 1399px) {
+  .section-banner .banner-content-wrapper {
+    padding: 100px 40px;
   }
 }
 @media (max-width: 1200px) {
@@ -23491,12 +23555,16 @@ section#find-a-branch #branch-results .branch-result-list-details-toggle {
 section#find-a-branch #branch-results .branch-result-list-details-toggle svg {
   margin-right: 20px;
 }
+section#find-a-branch #branch-results .branch-result-list-detail-wrapper img {
+  padding-top: 30px;
+}
 section#find-a-branch #branch-results .branch-result-list-detail-wrapper .heading {
   color: #263238;
 }
 @media (max-width: 9999px) {
   section#find-a-branch #branch-results .branch-result-list-detail-wrapper .heading {
     font-size: 24px;
+    padding-top: 30px;
   }
 }
 @media (max-width: 767px) {
