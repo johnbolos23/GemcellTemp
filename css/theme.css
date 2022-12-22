@@ -23410,7 +23410,7 @@ section#find-a-branch #branch-finder-toggle svg {
 }
 section#find-a-branch #branch-results {
   padding: 30px 33px 27px;
-  max-height: 892px;
+  max-height: calc(100vh - 285px);
   overflow-y: auto;
 }
 @media (max-width: 1200px) {
