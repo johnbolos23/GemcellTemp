@@ -23608,6 +23608,10 @@ section#find-a-branch #branch-results .branch-result-list-details-toggle svg {
 }
 section#find-a-branch #branch-results .branch-result-list-detail-wrapper img {
   padding-top: 30px;
+  height: 130px;
+  width: 270px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 section#find-a-branch #branch-results .branch-result-list-detail-wrapper .heading {
   color: #263238;
