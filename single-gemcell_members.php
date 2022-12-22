@@ -259,22 +259,23 @@ $mainMemberID = get_the_ID();
                     </div>
                 </div>
                 <?php endif; ?>
+                
+                <?php 
+				$images = get_field('other_images');
+				$size = 'full';
+				
+				if( $images ) : ?>
                 <div class="member-other-images-col">
                     <h3 class="members-col-title">Other Images</h3>
-                    <?php 
-                        $images = get_field('other_images');
-                        $size = 'full'; // (thumbnail, medium, large, full or custom size)
-                        if( $images ): ?>
-                            <div class="slider-items">
-                                <?php foreach( $images as $image_id ): ?>
-                                    <div class="slider-item">
-                                        <img src="<?php echo $image_id; ?>" />
-                                    </div>
-                                <?php endforeach; ?>
-                            </div>
-                        <?php endif; ?>
-
+					<div class="slider-items">
+						<?php foreach( $images as $image_id ): ?>
+						<div class="slider-item">
+							<img src="<?php echo $image_id; ?>" />
+						</div>
+						<?php endforeach; ?>
+					</div>
                 </div>
+				<?php endif; ?>
             </div>
         </div>
 
