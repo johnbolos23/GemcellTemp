@@ -15,6 +15,8 @@ $args = array(
     'posts_per_page' => 20
 );
 
+$hasfilter = false;
+
 if( isset( $_POST['keyword'] ) && $_POST['keyword'] ){
     // $args['s'] = $_POST['keyword'];
 
@@ -25,6 +27,8 @@ if( isset( $_POST['keyword'] ) && $_POST['keyword'] ){
             'compare' => 'LIKE'
         )
     );
+
+    $hasfilter = true;
 }
 
 if( isset( $_POST['state'] ) && ( $_POST['state'] && $_POST['state'] != 'all' ) ){
@@ -35,15 +39,30 @@ if( isset( $_POST['state'] ) && ( $_POST['state'] && $_POST['state'] != 'all' ) 
 			'terms'    => $_POST['state'],
 		),
     );
+
+    $hasfilter = true;
 }
 
 $selectedState = 'All';
 
 if( isset( $_GET['branch-detail'] ) ) {
     $args['post__in'] = array( $_GET['branch-detail'] );
+
+    $hasfilter = true;
 }
 
 $theQuery = new WP_Query( $args );
+
+if( !$hasfilter ){
+    $args2 = array(
+        'post_type' => 'member_branches',
+        'post_status' => 'publish',
+        'posts_per_page' => -1
+    );
+
+    $mapPinsQuery = new WP_Query( $args2 );
+}
+
 
 
 $PublicIP = get_client_ip() != '::1' ? get_client_ip() : '35.201.24.201';
@@ -129,9 +148,12 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
         </div>
         <div class="col-12 col-md-12 col-lg-12 col-xl-7 col-xxl-7 p-0" >
             <div id="custom-map-render">
-                <?php if( $theQuery->have_posts() ) : ?>
+                <?php 
+                $tempQuery = $hasfilter ?  $theQuery : $mapPinsQuery;
+
+                if( $tempQuery->have_posts() ) : ?>
                 <div class="custom-map" data-zoom="16">
-                    <?php while( $theQuery->have_posts() ) : $theQuery->the_post();
+                    <?php while( $tempQuery->have_posts() ) : $tempQuery->the_post();
 
                         $latitude = get_field('address')['lat'];
                         $longtitude = get_field('address')['lng'];

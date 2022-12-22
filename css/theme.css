@@ -16200,6 +16200,17 @@ body * {
   stroke: #263238;
 }
 
+.secondary-button {
+  background-color: #B9D22E;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.secondary-button.secondary-button-bordered {
+  background-color: transparent;
+  border: 1px solid #BFBFBF;
+}
+
 .heading {
   font-family: "CenturyGothicBold";
   font-size: 48px;
@@ -17093,6 +17104,12 @@ html {
     padding-bottom: 65px;
   }
 }
+@media (max-width: 767px) {
+  .image-floating-box .floating-box .floating-box-wrapper {
+    padding-left: 32.5px;
+    padding-right: 32.5px;
+  }
+}
 .image-floating-box .floating-box .floating-box-wrapper svg {
   position: absolute;
   top: 0;
@@ -17496,7 +17513,7 @@ section.client-logos .client-logos-wrapper > div {
 }
 @media (max-width: 1200px) {
   section.client-logos .client-logos-wrapper > div {
-    width: 16.66%;
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
