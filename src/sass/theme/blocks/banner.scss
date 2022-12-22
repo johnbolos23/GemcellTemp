@@ -1,4 +1,7 @@
-.section-banner{
+html {
+    scroll-behavior: smooth;
+}
+.section-banner {
     @media (max-width: $tablet){
         &{
             overflow: hidden;
@@ -44,15 +47,67 @@
         position: relative;
     }
 
+    .scroll-down {
+        position: absolute;
+        left: 50%;
+        bottom: 50px;
+        padding-left: 0 !important;
+        @media (max-width: 1399px) {
+            bottom: 30px;
+        }
+        @media (max-width: 1024px) {
+            display: none;
+        }
+        .scroll-down-icon {
+            display: inline-block;
+            svg {
+                vertical-align: bottom;
+                width: 50px;
+                @media (max-width: 1399px) {
+                    width: 40px;
+                }
+            }
+        }
+        .scroll-down-content {
+            display: inline-block;
+            color: white;
+            padding-left: 20px;
+            @media (max-width: 1399px) {
+                padding-left: 15px;
+            }
+            span.scroll-down-text {
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 150%;
+                @media (max-width: 1399px) {
+                    font-size: 18px;
+                }
+            }
+            span.discover-more {
+                display: block;
+                font-size: 16px;
+                font-weight: 400;
+                opacity: .67;
+                line-height: 140%;
+            }
+        }
+    }
+
     .banner-content-wrapper{
         height: 100%;
-        padding-top: 148px;
+        padding-top: 130px;
         padding-left: calc( calc(100vw - 1680px ) / 2);
         padding-right: 124px;
         
         @media (max-width: 1780px){
             &{
                 padding: 120px 40px;
+            }
+        }
+
+        @media (max-width: 1399px){
+            &{
+                padding: 100px 40px;
             }
         }
         

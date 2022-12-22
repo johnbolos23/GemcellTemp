@@ -210,10 +210,14 @@ section#find-a-branch{
         }
 
         .branch-result-list-detail-wrapper{
+            img {
+                padding-top: 30px;
+            }
             .heading {
                 color: #263238;
                 @media (max-width: $smallLaptop){
                     font-size: 24px;
+                    padding-top: 30px;
                 }
                 @media (max-width: $mobile){
                     font-size: 20px;
@@ -266,7 +270,19 @@ section#find-a-branch{
     min-height: calc(100vh - 185px);
     // border: #ccc solid 1px;
     // margin: 20px 0;
-    @media ( max-width: $tablet ){
+    @media ( max-width: $bigScreen ){
+        height: 85vh;
+    }
+
+    @media ( max-width: 1480px){
+        height: 83vh;
+    }
+
+    @media ( max-width: 1399px){
+        height: 85vh;
+    }
+
+    @media ( max-width: 1280px){
         height: 83vh;
     }
 
@@ -288,5 +304,31 @@ section#find-a-branch{
 .custom-map{
     .heading {
         font-size: 24px;
+    }
+}
+body {
+    &.page-id-626 {
+        section {
+            &#find-a-branch {
+                .col-12.col-md-12.col-lg-12.col-xl-5.col-xxl-5.p-0 {
+                    height: 83vh;
+                    @media ( max-width: 1480px){
+                        height: 79vh;
+                    }
+                    @media ( max-width: 1399px){
+                        height: 82vh;
+                    }
+                    @media ( max-width: 1399px){
+                        height: 82vh;
+                    }
+                    @media ( max-width: 1280px){
+                        height: 77vh;
+                    }
+                    @media ( max-width: 1024px){
+                        height: 0vh;
+                    }
+                }
+            }
+        }
     }
 }
