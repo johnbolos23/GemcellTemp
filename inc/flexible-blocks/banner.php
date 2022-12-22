@@ -63,5 +63,18 @@
                 <img src="<?php echo get_sub_field('image_mobile'); ?>" class="image_mobile"/>
             </div>
         </div>
+
+        <div class="scroll-down">
+            <div class="scroll-down-icon">
+                <a href="#counter-section-2"><?php get_template_part('icons/scroll-down'); ?></a>
+            </div>
+            <div class="scroll-down-content">
+                <span class="scroll-down-text">Scroll Down</span>
+                <span class="discover-more">to discover more</span>
+            </div>
+        </div>
     </div>
 </section>
+
+
+
