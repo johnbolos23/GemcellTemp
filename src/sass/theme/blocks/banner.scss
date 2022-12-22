@@ -63,24 +63,25 @@ html {
             svg {
                 vertical-align: bottom;
                 width: 50px;
-                @media (max-width: 1399px) {
+                @media (max-width: 1480px) {
                     width: 40px;
+                    padding-top: 7px;
                 }
             }
         }
         .scroll-down-content {
             display: inline-block;
             color: white;
-            padding-left: 20px;
-            @media (max-width: 1399px) {
-                padding-left: 15px;
+            padding-left: 15px;
+            @media (max-width: 1480px) {
+                padding-left: 10px;
             }
             span.scroll-down-text {
                 font-size: 20px;
                 font-weight: 700;
                 line-height: 150%;
-                @media (max-width: 1399px) {
-                    font-size: 18px;
+                @media (max-width: 1480px) {
+                    font-size: 16px;
                 }
             }
             span.discover-more {
@@ -89,6 +90,9 @@ html {
                 font-weight: 400;
                 opacity: .67;
                 line-height: 140%;
+                @media (max-width: 1480px) {
+                    font-size: 14px;  
+                }
             }
         }
     }
@@ -207,7 +211,7 @@ html {
         }
         
         .heading {
-            margin-bottom: 47px;
+            margin-bottom: 30px;
             font-family: 'CenturyGothic';
             font-weight: 700;
 
@@ -282,7 +286,7 @@ html {
         
         .banner-link-list {
             border-top: 1px solid #FFFFFF99;
-            margin-top: 46px;
+            margin-top: 30px;
 
             @media (max-width: $mobile){
                 border-top: 1px solid #8FA1AA;
