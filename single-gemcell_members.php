@@ -10,6 +10,7 @@ $theTerms = get_terms( array(
 
 $mainMemberTitle = get_the_title();
 $mainMemberID = get_the_ID();
+
 ?>
 <section class="page-title page-title-main">
 <div class="row m-0">
