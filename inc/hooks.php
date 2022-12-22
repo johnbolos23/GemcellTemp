@@ -93,9 +93,9 @@ add_action( 'getGemcellDataCron', 'getGemcellBranchesAPI' );
 
 	foreach( $jsonResponse as $memberData ){
 		// ACF Member ID
-		$companyName = $memberData['company_name'];
+		$companyName = str_replace("'", "\'", $memberData['company_name'] );
 		$memberID = $wpdb->get_row( "SELECT ID FROM wp_posts WHERE post_type = 'gemcell_members' and post_title LIKE '%$companyName%'" );
-
+	
 		if( !$memberID ){
 			continue;
 		}else{
@@ -106,10 +106,15 @@ add_action( 'getGemcellDataCron', 'getGemcellBranchesAPI' );
 		$existingChecker = json_decode( $wpdb->get_row( "SELECT * FROM wp_gemcell_members WHERE ID = 1" )->members_ids );
 
 		if( in_array($memberData['id'], $existingChecker ) ){
-			continue;
-		}
-		if( !in_array($memberData['id'], $existingChecker ) ){
+			// continue;
 
+			$branchID = $memberData['id'];
+
+			// ACF member ID
+			if( $memberID ){
+				update_post_meta($branchID, 'gemcell_member_id', $memberID );
+			}
+		}else{
 			$existingChecker[] = $memberData['id'];
 			$existingChecker = json_encode( $existingChecker );
 
@@ -170,6 +175,8 @@ add_action( 'getGemcellDataCron', 'getGemcellBranchesAPI' );
 			}
 			wp_set_post_terms( $postID, array( $termId ), 'gemcell_states' );
 		}
+
+		
 	}
 }
 
@@ -197,7 +204,7 @@ function getGemcellMembersAPI(){
 	foreach( $jsonResponse as $memberData ){
 		if( $memberData['company_type'] == 'Member' || strtolower( $memberData['company_type'] ) == 'member' ){
 			// ACF Member ID
-			$companyName = $memberData['company_name'];
+			$companyName = str_replace("'", "\'", $memberData['company_name'] );
 			$memberID = $wpdb->get_row( "SELECT ID FROM wp_posts WHERE post_type = 'gemcell_members' and post_title LIKE '%$companyName%'" );
 
 			if( $memberID ){

@@ -19,6 +19,7 @@ section.testimonial-section{
         @media (max-width: $tablet){
             &{
                 bottom: 0;
+                left: 45%;
             }
         }
 
@@ -91,9 +92,9 @@ section.testimonial-section{
 
         @media (min-width: $mobile) and (max-width: $bigScreen){
             &{
-                width: 50%;
+                width: 45%;
                 margin: 0;
-                flex: 0 0 50%;
+                flex: 0 0 45%;
             }
         }
 
@@ -107,7 +108,16 @@ section.testimonial-section{
 
             @media (max-width: $tablet){
                 &{
-                    padding: 0px 40px;
+                    padding: 0px;
+                    max-width: 282px;
+                    margin: 0;
+                }
+            }
+
+            @media (max-width: $mobile){
+                &{
+                    max-width: 100%;
+                    padding: 0 40px;
                 }
             }
         }
@@ -122,9 +132,23 @@ section.testimonial-section{
                 max-width: 100%;
             }
         }
+        @media (max-width: $tablet){
+            &{
+                width: 45%;
+                max-width: 100%;
+            }
+        }
 
         .subheading{
             margin-bottom: 30px;
+
+            @media (max-width: $tablet){
+            &{
+                margin-top: 45px;
+                margin-bottom: 10px;
+            }
+        }
+
         }
 
         .heading {
@@ -137,6 +161,12 @@ section.testimonial-section{
             @media (max-width: $smallLaptop){
                 &{
                     font-size: 28px !important;
+                }
+            }
+
+            @media (max-width: $tablet){
+                &{
+                    margin-bottom: 14px !important;
                 }
             }
 
