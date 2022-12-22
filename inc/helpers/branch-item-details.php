@@ -11,7 +11,7 @@ $directionURL = "https://www.google.com/maps/dir/?api=1&origin=$origin&destinati
 ?>
 
 <div class="branch-result-list-detail-wrapper hide" data-branch-detail="<?php echo get_the_ID(); ?>">
-    <img src="<?php echo get_field('logo');?>" />
+<img src="<?php echo get_field('logo') ? get_field('logo') : get_field('logo', get_field('gemcell_member_id') );?>" />
 
     <h3 class="heading"><?php echo get_the_title(); ?></h3>
     <div class="branch-result-list-detailed">
