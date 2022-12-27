@@ -16741,13 +16741,9 @@ html {
     padding: 100px 40px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .section-banner .banner-content-wrapper {
-    width: 52%;
-  }
-}
-@media (max-width: 768px) {
-  .section-banner .banner-content-wrapper {
+    padding: 115px 40px;
     width: 65%;
   }
 }
@@ -23067,7 +23063,12 @@ body.fb3d-modal-shadow:before {
     z-index: 2;
     position: absolute;
     top: -1px;
-    transform: translateX(65%);
+    transform: translateX(88%);
+  }
+}
+@media (max-width: 1280px) {
+  .contact-us .left-side-image span {
+    transform: translateX(78%);
   }
 }
 @media (max-width: 1200px) {
@@ -23124,7 +23125,7 @@ body.fb3d-modal-shadow:before {
     display: block;
   }
   .contact-us .left-side-image .for-tablet {
-    display: none;
+    display: none !important;
   }
 }
 .contact-us .left-side-image span {
@@ -23159,6 +23160,7 @@ body.fb3d-modal-shadow:before {
 }
 .contact-us .contact {
   margin-top: 8rem;
+  margin-bottom: 80px;
 }
 @media (max-width: 1200px) {
   .contact-us .contact {

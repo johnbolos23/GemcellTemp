@@ -24,7 +24,7 @@
     ?>
     <div class="row m-0">
         <div class="col-12 col-lg-5 p-0">
-           <div class="banner-content-wrapper pos-relative">
+            <div class="banner-content-wrapper pos-relative">
                 <span class="icon-top"><?php get_template_part('icons/banner-content-icon-top'); ?></span>
                 <span class="icon-bottom"><?php get_template_part('icons/banner-content-icon-bottom'); ?></span>
 
@@ -53,7 +53,7 @@
                     <?php endforeach; ?>
                 </div>
                 <?php endif; ?>
-           </div> 
+            </div> 
         </div>
         <div class="col-12 col-xl-12 col-xxl-12 p-0">
             <div class="banner-image-wrapper pos-absolute">
@@ -65,9 +65,11 @@
         </div>
 
         <div class="scroll-down">
-            <div class="scroll-down-icon">
-                <a href="#counter-section-2"><?php get_template_part('icons/scroll-down'); ?></a>
-            </div>
+            <a href="#counter-section-2">
+                <div class="scroll-down-icon">
+                    <?php get_template_part('icons/scroll-down'); ?>
+                </div>
+            </a>
             <div class="scroll-down-content">
                 <span class="scroll-down-text">Scroll Down</span>
                 <span class="discover-more">to discover more</span>
