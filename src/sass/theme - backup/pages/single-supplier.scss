@@ -116,12 +116,12 @@ section#single-suppliers{
     .single-supplier-details{
         padding-left: 40px;
 
+
         @media (max-width: $tablet){
             &{
                 padding: 10px;
             }
         }
-
         .heading{
             margin-bottom: 30px;
         }
@@ -189,7 +189,7 @@ section#single-suppliers{
                     display: inline-block;
                     color: #263238;
                     font-weight: 600;
-                    font-size: 18px;
+                    font-size: 16px;
                     line-height: 170%;
                     font-family: 'CenturyGothicBold';
                     text-decoration: none;

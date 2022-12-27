@@ -10,6 +10,12 @@ section.image-with-icons{
         @media ( max-width: $bigScreen ){
             padding-left: 30px;
         }
+<<<<<<< HEAD
+=======
+        @media ( max-width: $tablet){
+            padding-left: 0;
+        }
+>>>>>>> a9a768c067c74b0ac35f7619d366350ce7fe36c9
         @media ( max-width: $mobile){
             padding-left: 0;
         }
@@ -17,6 +23,20 @@ section.image-with-icons{
         .image-with-icons-wrapper{
             padding-top: 50px;
             margin-bottom: -70px;
+
+            div[class^="col-"] {
+                @media ( max-width: $mobile){
+                    position: relative;
+                    padding-left: 140px !important;
+                }
+                img {
+                    @media ( max-width: $mobile){
+                        position: absolute;
+                        left: 50px;
+                        top: 30px;
+                    }
+                }
+            }
 
             .row{
                 margin-left: -50px;
@@ -52,6 +72,32 @@ section.image-with-icons{
                 object-fit: cover;
                 max-width: 485px;
                 width: 100%;
+                
+                &.image_tablet {
+                    max-width: none !important;
+                    @media (max-width: $bigScreen){
+                        display: none !important;
+                    }
+                    @media (max-width: $tablet){
+                        display: block !important;
+                    }
+                    max-width: none !important;
+                    @media (max-width: $mobile){
+                        display: none !important;
+                    }
+                }
+                &.image_desktop {
+                    @media (max-width: $tablet){
+                        display: none !important;
+                    }
+                    @media (max-width: $mobile){
+                        display: block !important;
+                    }
+                }
+
+                @media (max-width: 540px){
+                    max-width: none !important;
+                }
             }
         }
     }

@@ -1,4 +1,10 @@
 section#find-a-branch{
+    // .col-xxl-7 {
+    //     @media (max-width: $tablet){
+    //         display: flex;
+    //         flex-direction: column-reverse !important;
+    //     }
+    // }
     #branch-finder {
         padding: 30px 33px 27px;
         border-bottom: 1.5px solid #DFDFDF;
@@ -68,7 +74,8 @@ section#find-a-branch{
 
     #branch-results {
         padding: 30px 33px 27px;
-        max-height: 892px;
+        max-height: calc(100vh - 285px);
+        overflow-y: auto;
 
         @media (max-width: $tablet){
             padding: 30px 24px;
@@ -87,6 +94,9 @@ section#find-a-branch{
                 @media (max-width: $smallLaptop){
                     font-size: 24px;
                 }
+                @media (max-width: $mobile){
+                    font-size: 20px;
+                }
             }
             .num-results {
                 color: #9D9D9D;
@@ -96,6 +106,9 @@ section#find-a-branch{
 
                 @media (max-width: $smallLaptop){
                     font-size: 18px;
+                }
+                @media (max-width: $mobile){
+                    font-size: 16px;
                 }
             }
         }
@@ -135,6 +148,9 @@ section#find-a-branch{
                             @media (max-width: $smallLaptop){
                                 font-size: 20px;
                             }
+                            @media (max-width: $mobile){
+                                font-size: 18px;
+                            }
                         }
 
                         .distance {
@@ -143,6 +159,11 @@ section#find-a-branch{
 
                             @media (max-width: $smallLaptop){
                                 font-size: 18px;
+                                font-weight: 700;
+                            }
+                            @media (max-width: $mobile){
+                                font-size: 16px;
+                                font-weight: 700;
                             }
                         }
                     }
@@ -169,10 +190,10 @@ section#find-a-branch{
                     width: 200px;
                     flex: 0 0 200px;
 
-                    @media (max-width: $tablet){
-                        width: 100%;
-                        flex: 0 0 100%;
-                    }
+                    // @media (max-width: $tablet){
+                    //     width: 100%;
+                    //     flex: 0 0 100%;
+                    // }
                 }
             }
         }
@@ -189,9 +210,21 @@ section#find-a-branch{
         }
 
         .branch-result-list-detail-wrapper{
+            img {
+                padding-top: 30px;
+                height: 130px;
+                width: 270px;
+                object-fit: cover;
+            }
             .heading {
                 color: #263238;
-                font-size: 28px;
+                @media (max-width: $smallLaptop){
+                    font-size: 24px;
+                    padding-top: 30px;
+                }
+                @media (max-width: $mobile){
+                    font-size: 20px;
+                }
             }
 
             a.main-button svg {
@@ -205,19 +238,29 @@ section#find-a-branch{
             margin-bottom: 35px;
 
             .branch-label {
-                font-size: 18px;
                 line-height: 170%;
                 font-family: 'CenturyGothicBold';
                 color: #263238;
                 width: 120px;
                 flex: 0 0 120px;
+                @media (max-width: $smallLaptop){
+                    font-size: 16px;
+                }
+                @media (max-width: $mobile){
+                    font-size: 14px;
+                }
             }
 
             .branch-detail-text {
                 max-width: 300px;
-                font-size: 18px;
                 line-height: 170%;
                 margin-bottom: 15px;
+                @media (max-width: $smallLaptop){
+                    font-size: 16px;
+                }
+                @media (max-width: $mobile){
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -226,9 +269,25 @@ section#find-a-branch{
 .custom-map {
     width: 100%;
     height: 100%;
-    min-height: 1000px;
+    // min-height: 1000px;
+    min-height: calc(100vh - 185px);
     // border: #ccc solid 1px;
     // margin: 20px 0;
+    @media ( max-width: $bigScreen ){
+        height: 85vh;
+    }
+
+    @media ( max-width: 1480px){
+        height: 83vh;
+    }
+
+    @media ( max-width: 1399px){
+        height: 85vh;
+    }
+
+    @media ( max-width: 1280px){
+        height: 83vh;
+    }
 
     @media ( max-width: $tablet ){
         height: 745px;
@@ -243,4 +302,36 @@ section#find-a-branch{
 // Fixes potential theme css conflict.
 .custom-map img {
    max-width: inherit !important;
+}
+
+.custom-map{
+    .heading {
+        font-size: 24px;
+    }
+}
+body {
+    &.page-id-626 {
+        section {
+            &#find-a-branch {
+                .col-12.col-md-12.col-lg-12.col-xl-5.col-xxl-5.p-0 {
+                    height: 83vh;
+                    @media ( max-width: 1480px){
+                        height: 79vh;
+                    }
+                    @media ( max-width: 1399px){
+                        height: 82vh;
+                    }
+                    @media ( max-width: 1399px){
+                        height: 82vh;
+                    }
+                    @media ( max-width: 1280px){
+                        height: 77vh;
+                    }
+                    @media ( max-width: 1024px){
+                        height: 0vh;
+                    }
+                }
+            }
+        }
+    }
 }

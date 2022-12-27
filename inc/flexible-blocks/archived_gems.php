@@ -12,6 +12,7 @@ $args = array(
     'post_type' => 'archive_gems',
     'post_status' => 'publish',
     'posts_per_page' => 1,
+    'order' => 'DESC',
     'meta_query' => array(
         array(
             'key' => 'featured',
@@ -25,6 +26,7 @@ $theFeatured = new WP_Query( $args );
 $args = array(
     'post_type' => 'archive_gems',
     'post_status' => 'publish',
+    'order' => 'DESC',
     'posts_per_page' => get_option( 'posts_per_page' ),
     'paged' => $paged
 );
@@ -41,10 +43,8 @@ $theQuery = new WP_Query( $args );
                     <div class="row align-items-center">
                         <div class="col-6">
                             <div class="archive-gems-image-wrapper">
-                                <div class="archive-item-image-gallery" id="lightgallery-feat-<?php echo get_the_ID(); ?>">
-                                    <a href="<?php echo get_the_post_thumbnail_url(); ?>">
-                                        <?php echo get_the_post_thumbnail(); ?>
-                                    </a>
+                                <div class="archive-item-image-gallery">
+                                    <?php echo get_the_post_thumbnail(); ?>
                                     <?php if( get_field('contents') ) : ?>
                                     <?php foreach( get_field('contents') as $gallery ) : ?>
                                     <a href="<?php echo $gallery; ?>" style="display: none;">
@@ -64,7 +64,7 @@ $theQuery = new WP_Query( $args );
                                     <p><b><?php echo get_the_title(); ?></b></p>
                                     <p><?php echo get_field('date_start'); ?></p>
                                 </div>
-                                <a href="#" class="main-button main-button-bordered view-archive-toggle">View Issue</a>
+                                <a href="#" class="main-button main-button-bordered view-archive-toggle" src="<?php echo get_field('pdf_file'); ?>">View Issue</a>
                             </div>
                         </div>
                     </div>
@@ -81,10 +81,8 @@ $theQuery = new WP_Query( $args );
                     <?php while( $theQuery->have_posts() ) : $theQuery->the_post(); ?>
                     <div class="col-6 col-lg-3">
                         <div class="archive-gems-post-item">
-                            <div class="archive-item-image-gallery" id="lightgallery-<?php echo get_the_ID(); ?>">
-                                <a href="<?php echo get_the_post_thumbnail_url(); ?>">
-                                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" />
-                                </a>
+                            <div class="archive-item-image-gallery" src="<?php echo get_field('pdf_file'); ?>" >
+                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" />
                                 <?php if( get_field('contents') ) : ?>
                                 <?php foreach( get_field('contents') as $gallery ) : ?>
                                 <a href="<?php echo $gallery; ?>" style="display: none;">
@@ -105,7 +103,7 @@ $theQuery = new WP_Query( $args );
                                 </div>
                                 <h3 class="heading"><?php echo get_the_title(); ?></h3>
                                 <div class="wysiwyg-content"><?php echo get_field('issue_number'); ?></div>
-                                <a href="#" class="view-issue view-archive-toggle">View Issue <?php get_template_part('icons/arrow-up'); ?></a>
+                                <a href="#"  src="<?php echo get_field('pdf_file'); ?>" class="view-issue view-archive-toggle">View Issue <?php get_template_part('icons/arrow-up'); ?></a>
                             </div>
                         </div>
                     </div>

@@ -55,10 +55,26 @@
                 <?php endif; ?>
            </div> 
         </div>
-        <div class="col-12 col-lg-7 p-0">
-            <div class="banner-image-wrapper pos-relative">
-                <img src="<?php echo get_sub_field('image'); ?>" />
+        <div class="col-12 col-xl-12 col-xxl-12 p-0">
+            <div class="banner-image-wrapper pos-absolute">
+                <img src="<?php echo get_sub_field('image'); ?>" class="image_desktops"/>
+                <img src="<?php echo get_sub_field('image_laptops'); ?>" class="image_laptops"/>
+                <img src="<?php echo get_sub_field('image_tablet'); ?>" class="image_tablet"/>
+                <img src="<?php echo get_sub_field('image_mobile'); ?>" class="image_mobile"/>
+            </div>
+        </div>
+
+        <div class="scroll-down">
+            <div class="scroll-down-icon">
+                <a href="#counter-section-2"><?php get_template_part('icons/scroll-down'); ?></a>
+            </div>
+            <div class="scroll-down-content">
+                <span class="scroll-down-text">Scroll Down</span>
+                <span class="discover-more">to discover more</span>
             </div>
         </div>
     </div>
 </section>
+
+
+

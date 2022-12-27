@@ -1,6 +1,7 @@
 section.page-title{
     h1.heading{
         font-size: 56px;
+        color: white;
 
         @media ( max-width: $smallLaptop ){
             font-size: 42px;
@@ -16,7 +17,7 @@ section.page-title{
     }
 
     .page-title-wrapper {
-        padding-left: calc((100vw - 1350px)/ 2);
+        padding-left: calc(( (100vw - 1350px)/ 2 ) + 40px);
         height: 100%;
         padding-bottom: 70px;
         display: flex;
@@ -26,6 +27,10 @@ section.page-title{
             // padding-left: 42px;
             padding-bottom: 59px;
             height: 100%;
+        }
+
+        @media (max-width: 1350px){
+            padding-left: 40px;
         }
 
         @media ( max-width: $tablet ){

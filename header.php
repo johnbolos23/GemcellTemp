@@ -44,13 +44,19 @@ $headerClass = 'main-header';
 
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<div class="modal fade"></div>
+	<div class="fb3d-modal light">
+		<a href="#" class="cmd-close"><i class="fa fa-times"></i></a>
+		<div class="mount-container"></div>
+	</div>
 	<?php do_action('wp_body_open'); ?>
 	<div class="site" id="page">
 
 		<!-- ******************* The Navbar Area ******************* -->
 		<header id="<?php echo $headerClass; ?>" class="<?php echo $headerClass; ?>">
 			<div class="container">
-				<div class="row align-items-center m-0">
+				<div class="row align-items-center m-0 jcc">
 					<div class="col-6 col-lg-2 p-0">
 						<div class="<?php echo $headerClass; ?>-logo">
 							<a href="<?php echo site_url(); ?>">
@@ -59,7 +65,7 @@ $headerClass = 'main-header';
 						</div>
 					</div>
 					<div class="col-6 col-lg-8 p-0">
-						<div class="d-block d-lg-none <?php echo $headerClass; ?>-hamburger text-right">
+						<div class="d-block d-lg-none <?php echo $headerClass; ?>-hamburger text-right for-tablet for-mobile">
 							<span class="<?php echo $headerClass; ?>-hamburger-toggle">
 								<?php get_template_part('icons/hamburger-icon'); ?>
 							</span>
@@ -68,7 +74,7 @@ $headerClass = 'main-header';
 							<?php wp_nav_menu( array( 'menu' => get_field('menu','option') ) ); ?>
 						</div>
 					</div>
-					<div class="col-6 col-lg-2 p-0 d-none d-lg-block">
+					<div class="col-6 col-lg-2 p-0 for-desktop">
 						<div class="<?php echo $headerClass; ?>-search-cta d-flex align-items-center justify-content-end">
 							<a><?php get_template_part('icons/search-icon'); ?></a>
 							<a href="<?php echo get_field('cta_button','option')['url']; ?>" class="main-button">

@@ -4,6 +4,9 @@ section.posts-list {
         // padding-left: 1rem;
         // padding-right: 1rem;
     }
+    @media (max-width: $mobile) {
+         padding: 10px 0 50px;
+    }
     .text-right {
         @media (max-width: $mobile) {
             text-align: left;
@@ -43,7 +46,7 @@ section.posts-list {
         //     font-size: 36px;
         // }
         @media (max-width: $mobile) {
-            font-size: 28px;
+            font-size: 36px;
         }
     }
     .main-button{
@@ -148,7 +151,7 @@ section.posts-list {
                 margin: 0 calc( calc(calc(100vw - 1673px) / 2) * -1);
 
                 @media ( max-width: $smallLaptop){
-                    margin: 0 calc( calc(calc(100vw - 1362px) / 2) * -1);
+                    margin: 0 calc(((100vw - 1362px)/ 2 + 40px ) * -1);
                 }
 
                 @media ( max-width: $tablet){
@@ -156,7 +159,7 @@ section.posts-list {
                 }
 
                 .slick-list{
-                    padding: 0 calc((100vw - 1350px)/ 2 ) !important;
+                    padding: 0 calc(( (100vw - 1350px)/ 2) + 40px ) !important;
 
                     .post-list-item-wrapper{
                         position: relative;
@@ -176,25 +179,7 @@ section.posts-list {
                             border-color: #0796BF;
                         }
 
-                        .post-list-item-link{
-                            // position: absolute;
-                            // bottom: 0;
-                            margin-top: 17px;
-
-                            a{
-                                text-decoration: none;
-                                font-size: 18px;
-                                line-height: 170%;
-                                color: #0796BF;
-                                font-family: 'CenturyGothicBold';
-
-                                svg{
-                                    path{
-                                        stroke: #0796BF;
-                                    }
-                                }
-                            }
-                        }
+                        
 
                         &:after {
                             position: absolute;
@@ -272,6 +257,26 @@ section.posts-list {
                                     padding-top: 180px;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+
+            .post-list-item-link{
+                // position: absolute;
+                // bottom: 0;
+                margin-top: 17px;
+
+                a{
+                    text-decoration: none;
+                    font-size: 18px;
+                    line-height: 170%;
+                    color: #0796BF;
+                    font-family: 'CenturyGothicBold';
+
+                    svg{
+                        path{
+                            stroke: #0796BF;
                         }
                     }
                 }

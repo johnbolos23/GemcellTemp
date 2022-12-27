@@ -146,3 +146,17 @@ jQuery(document).on("click", ".custom-pagination .page-numbers", function (e) {
 		);
 	});
 })(jQuery);
+
+$(document).ready(function () {
+	$(".video-popup-trigger svg").on("click", function (ev) {
+		$(".information-with-video-video img").css("display", "none");
+		$(".video-popup-trigger").css("display", "none");
+
+		$(".embed-container").css("display", "block");
+
+		$(".embed-container iframe")[0].src += "&autoplay=1";
+		ev.preventDefault();
+	});
+});
+
+

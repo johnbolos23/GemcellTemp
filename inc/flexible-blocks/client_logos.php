@@ -11,7 +11,7 @@
     ); 
 
     get_template_part('inc/style-helper', null, array('target' => '#client-logos-'. get_row_index(), 'additional' => $additionalStyles )); 
-
+	$logosField = get_sub_field('logos');
     ?>
     <div class="container">
         <div class="row align-items-center">
@@ -36,27 +36,52 @@
             </div>
             <div class="col-12 col-lg-8 flickity-rows-wrapper">
                 <div class="row client-logos-wrapper pos-relative">
-                    <?php foreach( get_sub_field('logos') as $logo ) : ?>
+                    <?php foreach( $logosField as $logo ) : ?>
                     <div class="col-4 col-lg-2 text-center">
                         <img src="<?php echo $logo; ?>" />
                     </div>
                     <?php endforeach; ?>
                 </div>
                 <div class="row client-logos-wrapper pos-relative reverse">
-                    <?php foreach( get_sub_field('logos') as $logo ) : ?>
+                    <?php  shuffle( $logosField ); foreach( $logosField as $logo ) : ?>
                     <div class="col-4 col-lg-2 text-center">
                         <img src="<?php echo $logo; ?>" />
                     </div>
                     <?php endforeach; ?>
                 </div>
                 <div class="row client-logos-wrapper pos-relative another">
-                    <?php foreach( get_sub_field('logos') as $logo ) : ?>
+                    <?php shuffle( $logosField ); foreach( $logosField as $logo ) : ?>
                     <div class="col-4 col-lg-2 text-center">
                         <img src="<?php echo $logo; ?>" />
                     </div>
                     <?php endforeach; ?>
                 </div>
                     
+
+                <?php if ( wp_is_mobile() ) : ?>
+                    
+                    <div class="row client-logos-wrapper pos-relative">
+                        <?php foreach( $logosField as $logo ) : ?>
+                        <div class="col-4 col-lg-2 text-center">
+                            <img src="<?php echo $logo; ?>" />
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="row client-logos-wrapper pos-relative reverse">
+                        <?php  shuffle( $logosField ); foreach( $logosField as $logo ) : ?>
+                        <div class="col-4 col-lg-2 text-center">
+                            <img src="<?php echo $logo; ?>" />
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <div class="row client-logos-wrapper pos-relative another">
+                        <?php shuffle( $logosField ); foreach( $logosField as $logo ) : ?>
+                        <div class="col-4 col-lg-2 text-center">
+                            <img src="<?php echo $logo; ?>" />
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>

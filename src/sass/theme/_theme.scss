@@ -1,17 +1,23 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
-body{
+html { 
     overflow-x: hidden;
 }
 
 section:not(.has-overlay-top){
     overflow: hidden;
 }
-
-html{
-    @media ( max-width: $tablet){
-        overflow-x: hidden;
+// tiny_mce_before_init
+.wysiwyg-content{
+    
+    .fine-print{
+        font-family: 'CenturyGothic' !important;
+        font-style: normal !important;
+        font-weight: 400 !important;
+        font-size: 16px !important;
+        line-height: 170% !important;
     }
 }
+
 #gemcell-customization .container{
     @media(min-width: $bigScreen){
         max-width: 1680px;
@@ -19,15 +25,18 @@ html{
 
     @media (max-width: $smallLaptop){
         max-width: 1350px;
-        // padding: 0 40px;
+        padding-left: 40px;
+        padding-right: 40px;
     } 
 
     @media ( max-width: $tablet){
-        padding: 0 27px;
+        padding-left: 27px;
+        padding-right: 27px;
     }
 
     @media ( max-width: $mobile){
-        padding: 0 15px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 
@@ -125,6 +134,22 @@ body *{
                 stroke: $textColor;
             }
         }
+    }
+}
+
+.secondary-button {
+    background-color: #B9D22E;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+    @media ( max-width: $smallLaptop ){
+     
+    }
+
+    &.secondary-button-bordered{
+        background-color: transparent;
+        border: 1px solid #BFBFBF;
     }
 }
 
@@ -525,4 +550,22 @@ body.home {
         position: relative;
         z-index: 1;
     }
+}
+
+@media ( max-width: $tablet ) {
+    .for-tablet {
+        display: block !important;
+    }
+
+    .for-desktop  {
+        display: none !important;
+    }
+
+    .jcc { // Justify Content Between
+        justify-content: space-between;
+    }
+}
+
+.for-desktop {
+    display: block;
 }
