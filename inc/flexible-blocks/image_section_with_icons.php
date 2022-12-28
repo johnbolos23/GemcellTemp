@@ -17,12 +17,20 @@
 
     ?>
     <div class="container">
+<<<<<<< HEAD
+        <div class="row align-items-xxl-center <?php echo get_sub_field('image_position') == 'right' ? 'flex-row-reverse': ''; ?>">
+            <div class="col-12 col-lg-6 col-xl-5 col-xxl-4 image-with-icons-image">
+                <img src="<?php echo get_sub_field('image'); ?>" />
+            </div>
+            <div class="col-12 col-lg-6 col-xl-7 col-xxl-8">
+=======
         <div class="row <?php echo get_sub_field('image_position') == 'right' ? 'flex-row-reverse': ''; ?>">
             <div class="col-12 col-md-12 col-lg-12 col-xl-5 col-xxl-4 image-with-icons-image">
                 <img src="<?php echo get_sub_field('image'); ?>" class="image_desktop"/>
                 <img src="<?php echo get_sub_field('image_tablet'); ?>" class="image_tablet"/>
             </div>
             <div class="col-12 col-md-12 col-lg-12 col-xl-7 col-xxl-8">
+>>>>>>> a9a768c067c74b0ac35f7619d366350ce7fe36c9
                 <div class="image-with-icons-content">
                     <?php if( get_sub_field('subheading') ) : ?>
                     <h4 class="subheading"><?php echo get_sub_field('subheading'); ?></h4>

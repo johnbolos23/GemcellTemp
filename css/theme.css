@@ -16741,13 +16741,9 @@ html {
     padding: 100px 40px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .section-banner .banner-content-wrapper {
-    width: 52%;
-  }
-}
-@media (max-width: 768px) {
-  .section-banner .banner-content-wrapper {
+    padding: 115px 40px;
     width: 65%;
   }
 }
@@ -18866,7 +18862,12 @@ section.electrical-gems {
 }
 section.electrical-gems .container {
   max-width: 1537px;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
+}
+@media (max-width: 1200px) {
+  section.electrical-gems .container {
+    margin-bottom: 25px;
+  }
 }
 @media (max-width: 1200px) {
   section.electrical-gems .posts-slider {
@@ -18930,11 +18931,16 @@ section.electrical-gems .posts-slider .slick-list .post-slider-item .post-slider
   border-radius: 8px;
   display: inline-block;
   padding: 4px 10px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 170%;
   text-decoration: none;
   color: #263238;
   font-weight: 600;
+}
+@media (max-width: 767px) {
+  section.electrical-gems .posts-slider .slick-list .post-slider-item .post-slider-item-wrapper .post-slider-item-details span a {
+    font-size: 12px;
+  }
 }
 section.electrical-gems .posts-slider .slick-list .post-slider-item .post-slider-item-wrapper .post-slider-item-details span:not(:last-child) {
   margin-right: 16px;
@@ -19164,6 +19170,11 @@ section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrap
   margin-top: 20px;
   display: inline-block;
 }
+@media (max-width: 767px) {
+  section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details a.post-grid-readmore {
+    font-size: 14px;
+  }
+}
 section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details a.post-grid-readmore svg {
   margin-left: 7px;
 }
@@ -19189,6 +19200,11 @@ section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrap
 @media (max-width: 9999px) {
   section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details span a {
     font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details span a {
+    font-size: 12px;
   }
 }
 section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details span:not(:last-child) {
@@ -19336,6 +19352,8 @@ section.electrical-gems .posts-grid.post-featured .row > div[class^=col-] .post-
 @media (max-width: 767px) {
   section.electrical-gems .container a.main-button {
     font-size: 14px;
+    padding: 10px 10px 10px 25px;
+    line-height: 31px;
   }
 }
 
@@ -19513,12 +19531,16 @@ section.electrical-gems .posts-grid.post-featured .row > div[class^=col-] .post-
   }
 }
 
-body.page-id-487 section#electrical-gems-5 a.main-button {
-  display: none !important;
-}
 @media (max-width: 767px) {
   body.page-id-487 section#electrical-gems-2 .col-12.col-lg-6.text-right {
     display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  body.page-id-487 section#electrical-gems-3 a.main-button {
+    position: absolute;
+    bottom: 0%;
+    left: 3%;
   }
 }
 @media (max-width: 767px) {
@@ -19526,6 +19548,19 @@ body.page-id-487 section#electrical-gems-5 a.main-button {
     position: absolute !important;
     bottom: 25px;
     text-align: left;
+  }
+}
+body.page-id-487 section#electrical-gems-5 a.main-button {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  body.page-id-487 section#electrical-gems-5 a.main-button {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  body.page-id-487 section#cta-wide-4 {
+    margin-top: 60px;
   }
 }
 
@@ -23067,7 +23102,12 @@ body.fb3d-modal-shadow:before {
     z-index: 2;
     position: absolute;
     top: -1px;
-    transform: translateX(65%);
+    transform: translateX(88%);
+  }
+}
+@media (max-width: 1280px) {
+  .contact-us .left-side-image span {
+    transform: translateX(78%);
   }
 }
 @media (max-width: 1200px) {
@@ -23124,7 +23164,7 @@ body.fb3d-modal-shadow:before {
     display: block;
   }
   .contact-us .left-side-image .for-tablet {
-    display: none;
+    display: none !important;
   }
 }
 .contact-us .left-side-image span {
@@ -23159,6 +23199,7 @@ body.fb3d-modal-shadow:before {
 }
 .contact-us .contact {
   margin-top: 8rem;
+  margin-bottom: 80px;
 }
 @media (max-width: 1200px) {
   .contact-us .contact {
