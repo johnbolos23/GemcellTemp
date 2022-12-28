@@ -95,7 +95,7 @@ section.page-title{
             text-decoration: none;
             color: #58595B;
 
-            @media ( max-width: $smallLaptop ){
+            @media ( max-width: $smallLaptop){
                 font-size: 16px;
             }
 
@@ -117,7 +117,7 @@ section.page-title{
             font-family: 'CenturyGothicBold';
             text-transform: capitalize;
 
-            @media ( max-width: $smallLaptop ){
+            @media ( max-width: $smallLaptop){
                 font-size: 16px;
             }
         }
