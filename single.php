@@ -39,7 +39,7 @@ get_template_part('inc/flexible-blocks/breadcrumbs'); ?>
 
                         <?php if( comments_open() ) : ?>
                         <div class="post-single-comments-section">
-                            <h3 class="heading">Comments(<?php echo count( $comments ); ?>)</h3>
+                            <h3 class="heading">Comments (<?php echo count( $comments ); ?>)</h3>
 
                             <?php if( $comments ): ?>
                                 <div class="post-single-comments">
