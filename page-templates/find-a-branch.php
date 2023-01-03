@@ -223,6 +223,5 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
     jQuery(window).ready(function(){
         jQuery('.branch-item-details a[data-branch-target-detail="<?php echo $_GET['branch-detail']; ?>"]').trigger('click');
     });
-    
 </script>
 <?php endif; ?>
