@@ -64,4 +64,10 @@ section.team-members{
             }
         }
     }
+
+    .team-members-wrapper{
+        .col-6 {
+            padding-bottom: var(--bs-gutter-x);
+        }
+    }
 }
