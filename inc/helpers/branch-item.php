@@ -30,7 +30,7 @@ if( $currentUserLatLong && ( $Branchlatitude != 'null' && $Branchlongtitude != '
 $distance = number_format((float)$distance, 2, '.', '');
 ?>
 
-<div class="branch-results-item-wrapper" data-branch-id="<?php echo get_the_ID(); ?>">
+<div class="branch-results-item-wrapper" data-distancefromuser="<?php echo $distance; ?>" data-branch-id="<?php echo get_the_ID(); ?>">
     <div class="d-flex align-items-center">
         <div class="branch-item-image">
             <img src="<?php echo get_field('logo') ? get_field('logo') : get_field('logo', get_field('gemcell_member_id') );?>" />
