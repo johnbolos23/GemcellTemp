@@ -23726,27 +23726,11 @@ section#find-a-branch #branch-results .branch-result-list-detailed .branch-detai
 }
 @media (max-width: 9999px) {
   .custom-map {
-    height: 85vh;
-  }
-}
-@media (max-width: 1480px) {
-  .custom-map {
-    height: 83vh;
-  }
-}
-@media (max-width: 1399px) {
-  .custom-map {
-    height: 85vh;
-  }
-}
-@media (max-width: 1280px) {
-  .custom-map {
-    height: 83vh;
+    height: calc(100vh - 185px);
   }
 }
 @media (max-width: 1200px) {
   .custom-map {
-    height: 745px;
     min-height: 1px;
   }
 }
