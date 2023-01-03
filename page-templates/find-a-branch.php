@@ -17,7 +17,7 @@ $args = array(
 
 $hasfilter = false;
 
-if( isset( $_POST['keyword'] ) && $_POST['keyword'] ){
+if( isset( $_POST['keyword'] ) && !is_numeric( $_POST['keyword'] ) ){
     // $args['s'] = $_POST['keyword'];
 
     $args['meta_query'] = array(
@@ -113,7 +113,7 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
                             <span class="heading"><?php echo $selectedState; ?> States</span>
                             <span class="num-results"><?php echo $theQuery->found_posts; ?> Results</span>
                         </div>
-                        <div class="branch-results-items">
+                        <div class="branch-results-items <?php echo isset( $_POST['keyword'] ) ? 'sort-results' : ''; ?>">
                             <?php 
                             if( $theQuery->have_posts() ) {
                                 while( $theQuery->have_posts() ) { 

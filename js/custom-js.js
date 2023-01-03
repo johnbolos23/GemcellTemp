@@ -467,7 +467,7 @@
 			});
 		}
 
-		var branchesWrapper = $('.branch-results-items');
+		var branchesWrapper = $('.branch-results-items.sort-results');
 
 		if( branchesWrapper.length !== 0 ){
 			branchesWrapper.find('.branch-results-item-wrapper').sort(function(a, b){
