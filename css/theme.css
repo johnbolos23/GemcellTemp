@@ -12929,6 +12929,12 @@ figure.woocommerce-product-gallery__wrapper {
 #gemcell-customization #post-single-newsletter .container .heading {
   line-height: 130%;
   margin-bottom: 20px;
+  font-size: 36px !important;
+}
+@media (max-width: 767px) {
+  #gemcell-customization #post-single-newsletter .container .heading {
+    font-size: 28px !important;
+  }
 }
 #gemcell-customization #post-single-newsletter .main-footer-newsletter-wrapper form {
   margin-bottom: 0;
@@ -16747,13 +16753,9 @@ html {
     padding: 100px 40px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .section-banner .banner-content-wrapper {
-    width: 52%;
-  }
-}
-@media (max-width: 768px) {
-  .section-banner .banner-content-wrapper {
+    padding: 115px 40px;
     width: 65%;
   }
 }
@@ -17156,9 +17158,14 @@ section.posts-list {
     font-size: 42px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   section.posts-list .heading {
     font-size: 36px;
+  }
+}
+@media (max-width: 767px) {
+  section.posts-list .heading {
+    font-size: 28px;
   }
 }
 @media (max-width: 9999px) {
@@ -17208,6 +17215,7 @@ section.posts-list .posts-list-items .post-list-item-meta span:not(.post-list-it
   line-height: 170%;
   text-decoration: none;
   color: #263238;
+  font-weight: 700;
 }
 @media (max-width: 9999px) {
   section.posts-list .posts-list-items .post-list-item-meta span:not(.post-list-item-date) a {
@@ -17894,26 +17902,41 @@ section.page-title .breadcrumbs span {
     font-size: 16px;
   }
 }
+@media (max-width: 767px) {
+  section.page-title .breadcrumbs span {
+    font-size: 14px;
+  }
+}
 
 .breadcrumbs {
   padding: 15px 0;
   background-color: #F8F8F8;
 }
 .breadcrumbs a {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 170%;
   text-decoration: none;
   color: #58595B;
+}
+@media (max-width: 767px) {
+  .breadcrumbs a {
+    font-size: 14px;
+  }
 }
 .breadcrumbs svg {
   margin: 0 20px;
 }
 .breadcrumbs span {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 170%;
   color: #58595B;
   font-family: "CenturyGothicBold";
   text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .breadcrumbs span {
+    font-size: 14px;
+  }
 }
 
 section.simple-text {
@@ -18872,7 +18895,12 @@ section.electrical-gems {
 }
 section.electrical-gems .container {
   max-width: 1537px;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
+}
+@media (max-width: 1200px) {
+  section.electrical-gems .container {
+    margin-bottom: 25px;
+  }
 }
 @media (max-width: 1200px) {
   section.electrical-gems .posts-slider {
@@ -18936,11 +18964,16 @@ section.electrical-gems .posts-slider .slick-list .post-slider-item .post-slider
   border-radius: 8px;
   display: inline-block;
   padding: 4px 10px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 170%;
   text-decoration: none;
   color: #263238;
   font-weight: 600;
+}
+@media (max-width: 767px) {
+  section.electrical-gems .posts-slider .slick-list .post-slider-item .post-slider-item-wrapper .post-slider-item-details span a {
+    font-size: 12px;
+  }
 }
 section.electrical-gems .posts-slider .slick-list .post-slider-item .post-slider-item-wrapper .post-slider-item-details span:not(:last-child) {
   margin-right: 16px;
@@ -19170,6 +19203,11 @@ section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrap
   margin-top: 20px;
   display: inline-block;
 }
+@media (max-width: 767px) {
+  section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details a.post-grid-readmore {
+    font-size: 14px;
+  }
+}
 section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details a.post-grid-readmore svg {
   margin-left: 7px;
 }
@@ -19195,6 +19233,11 @@ section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrap
 @media (max-width: 9999px) {
   section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details span a {
     font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details span a {
+    font-size: 12px;
   }
 }
 section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details span:not(:last-child) {
@@ -19342,6 +19385,8 @@ section.electrical-gems .posts-grid.post-featured .row > div[class^=col-] .post-
 @media (max-width: 767px) {
   section.electrical-gems .container a.main-button {
     font-size: 14px;
+    padding: 10px 10px 10px 25px;
+    line-height: 31px;
   }
 }
 
@@ -19519,12 +19564,16 @@ section.electrical-gems .posts-grid.post-featured .row > div[class^=col-] .post-
   }
 }
 
-body.page-id-487 section#electrical-gems-5 a.main-button {
-  display: none !important;
-}
 @media (max-width: 767px) {
   body.page-id-487 section#electrical-gems-2 .col-12.col-lg-6.text-right {
     display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  body.page-id-487 section#electrical-gems-3 a.main-button {
+    position: absolute;
+    bottom: 0%;
+    left: 3%;
   }
 }
 @media (max-width: 767px) {
@@ -19532,6 +19581,19 @@ body.page-id-487 section#electrical-gems-5 a.main-button {
     position: absolute !important;
     bottom: 25px;
     text-align: left;
+  }
+}
+body.page-id-487 section#electrical-gems-5 a.main-button {
+  display: none !important;
+}
+@media (max-width: 767px) {
+  body.page-id-487 section#electrical-gems-5 a.main-button {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  body.page-id-487 section#cta-wide-4 {
+    margin-top: 60px;
   }
 }
 
@@ -20056,6 +20118,11 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
     font-size: 14px !important;
   }
 }
+@media (max-width: 767px) {
+  #post-single .container .post-single-wrapper .post-single-content-wrapper .post-single-content-meta span {
+    font-size: 12px !important;
+  }
+}
 #post-single .container .post-single-wrapper .post-single-content-wrapper .post-single-content-meta span:not(.post-slider-item-date) {
   color: #263238;
   font-size: 16px;
@@ -20132,7 +20199,7 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
   font-size: 24px;
   line-height: 130%;
   letter-spacing: -0.02em;
-  font-weight: 600;
+  font-weight: 700;
   margin-right: 10px;
 }
 @media (max-width: 9999px) {
@@ -20146,7 +20213,7 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
   }
 }
 #post-single .post-single-comments-section .post-single-comments .post-single-comment-details span.post-single-comment-date {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 110%;
   letter-spacing: -0.02em;
@@ -20169,6 +20236,20 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
 #post-single .post-single-comments-section #respond .comment-reply-title,
 #post-single .post-single-comments-section #respond .logged-in-as {
   display: none;
+}
+#post-single .post-single-comments-section #respond form#commentform p.form-submit input#submit {
+  background-color: #263238;
+  min-width: 175px;
+  line-height: 60px;
+  font-size: 16px;
+  border-radius: 0px;
+}
+@media (max-width: 767px) {
+  #post-single .post-single-comments-section #respond form#commentform p.form-submit input#submit {
+    font-size: 14px;
+    width: 100%;
+    line-height: 52px;
+  }
 }
 
 #post-single-newsletter {
@@ -22222,7 +22303,17 @@ section.competitions-summary .posts-list-upper-custom aside.ja-filter-dropdwn-fo
 }
 
 section.archived-gems {
-  padding-top: 130px;
+  padding-top: 110px;
+}
+@media (max-width: 1200px) {
+  section.archived-gems {
+    padding-top: 90px;
+  }
+}
+@media (max-width: 767px) {
+  section.archived-gems {
+    padding-top: 70px;
+  }
 }
 section.archived-gems .container {
   max-width: 1560px;
@@ -23073,7 +23164,12 @@ body.fb3d-modal-shadow:before {
     z-index: 2;
     position: absolute;
     top: -1px;
-    transform: translateX(65%);
+    transform: translateX(88%);
+  }
+}
+@media (max-width: 1280px) {
+  .contact-us .left-side-image span {
+    transform: translateX(78%);
   }
 }
 @media (max-width: 1200px) {
@@ -23130,7 +23226,7 @@ body.fb3d-modal-shadow:before {
     display: block;
   }
   .contact-us .left-side-image .for-tablet {
-    display: none;
+    display: none !important;
   }
 }
 .contact-us .left-side-image span {
@@ -23165,6 +23261,7 @@ body.fb3d-modal-shadow:before {
 }
 .contact-us .contact {
   margin-top: 8rem;
+  margin-bottom: 80px;
 }
 @media (max-width: 1200px) {
   .contact-us .contact {

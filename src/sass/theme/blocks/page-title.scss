@@ -95,7 +95,7 @@ section.page-title{
             text-decoration: none;
             color: #58595B;
 
-            @media ( max-width: $smallLaptop ){
+            @media ( max-width: $smallLaptop){
                 font-size: 16px;
             }
 
@@ -117,8 +117,11 @@ section.page-title{
             font-family: 'CenturyGothicBold';
             text-transform: capitalize;
 
-            @media ( max-width: $smallLaptop ){
+            @media ( max-width: $smallLaptop){
                 font-size: 16px;
+            }
+            @media ( max-width: $mobile){
+                font-size: 14px;
             }
         }
     }
@@ -129,10 +132,13 @@ section.page-title{
     background-color: #F8F8F8;
 
     a {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 170%;
         text-decoration: none;
         color: #58595B;
+        @media (max-width: $mobile) {
+            font-size: 14px;
+        }
     }
     
     svg {
@@ -140,10 +146,13 @@ section.page-title{
     }
     
     span {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 170%;
         color: #58595B;
         font-family: 'CenturyGothicBold';
         text-transform: capitalize;
+        @media (max-width: $mobile) {
+            font-size: 14px;
+        }
     }
 }

@@ -128,7 +128,12 @@
                 z-index: 2;
                 position: absolute;
                 top: -1px;
-                transform: translateX(65%);
+                transform: translateX(88%);
+            }
+        }
+        @media (max-width: 1280px) {
+            span {
+                transform: translateX(78%);
             }
         }
         @media (max-width: $tablet) {
@@ -185,14 +190,13 @@
                 display: block;
             }
             .for-tablet{
-                display: none;
+                display: none !important;
             }
         }
 
         span {
             position: absolute;
             top: 0;
-
             @media (min-width: $smallLaptop){
                 right: 5%;
                 transform: translateX(-4%);
@@ -220,6 +224,7 @@
     }
     .contact {
         margin-top: 8rem;
+        margin-bottom: 80px;
 
         @media (max-width: $tablet) {
             margin-top: 6rem;
