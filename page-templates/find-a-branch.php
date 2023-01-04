@@ -29,6 +29,8 @@ if( isset( $_POST['keyword'] ) && !is_numeric( $_POST['keyword'] ) ){
     // );
 
     $hasfilter = true;
+
+    $args['posts_per_page'] = -1;
 }
 
 if( isset( $_POST['state'] ) && ( $_POST['state'] && $_POST['state'] != 'all' ) ){
@@ -39,6 +41,8 @@ if( isset( $_POST['state'] ) && ( $_POST['state'] && $_POST['state'] != 'all' ) 
 			'terms'    => $_POST['state'],
 		),
     );
+
+    $args['posts_per_page'] = -1;
 
     $hasfilter = true;
 }
@@ -75,7 +79,7 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
         <div class="col-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5 p-0">
             <div class="branch-finder-wrapper">
                 <div id="branch-finder">
-                    <form action="" method="POST">
+                    <form action="" method="POST" id="customBranchSearch">
                         <div class="row">
                             <div class="col-12 col-md-8 col-lg-7">
                                 <div class="branch-field-wrapper pos-relative">
@@ -113,7 +117,7 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
                     <div class="branch-result-main-list show">
                         <div class="branch-results-heading">
                             <span class="heading"><?php echo $selectedState; ?> States</span>
-                            <span class="num-results"><?php echo $theQuery->found_posts; ?> Results</span>
+                            <span class="num-results"><?php echo !$hasfilter ? $theQuery->found_posts : '0'; ?> Results</span>
                         </div>
                         <div class="branch-results-items <?php echo isset( $_POST['keyword'] ) ? 'sort-results' : ''; ?>">
                             <?php 
@@ -153,6 +157,12 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
                 <?php 
                 $tempQuery = $hasfilter ?  $theQuery : $mapPinsQuery;
 
+                $json = json_decode( $json, true);
+
+                $country  = $json['country'];
+                $region   = $json['region'];
+                $city     = $json['city'];
+
                 if( $tempQuery->have_posts() ) : ?>
                 <div class="custom-map" data-zoom="16">
                     <?php while( $tempQuery->have_posts() ) : $tempQuery->the_post();
@@ -160,6 +170,38 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
                         $latitude = get_field('address')['lat'];
                         $longtitude = get_field('address')['lng'];
                         $address = get_field('address')['address'];
+
+                        if( isset( $_POST['cityLat'] ) && isset( $_POST['cityLng'] ) ){
+                            $currentUserLatLong[] = $_POST['cityLat'];
+                            $currentUserLatLong[] = $_POST['cityLng'];
+                        }else{
+                            if( $json['loc'] ){
+                                $currentUserLatLong = explode(',', $json['loc']);
+                            }else{
+                                $addressString = $city . ','. $region . ','. $country;
+                            
+                                $currentUserAddress = getGeoCode($addressString);
+                                
+                                $currentUserLatLong[] = $currentUserAddress['lat'];
+                                $currentUserLatLong[] = $currentUserAddress['lng'];
+                            }
+                        }
+
+                        $Branchlatitude = get_field('address')['lat'];
+                        $Branchlongtitude = get_field('address')['lng'];
+                        $Branchaddress = get_field('address')['address'];
+
+                        if( $currentUserLatLong && ( $Branchlatitude != 'null' && $Branchlongtitude != 'null' ) ){
+                            $distance = getDistanceBetweenCoordinates( $Branchlatitude, $Branchlongtitude, $currentUserLatLong[0], $currentUserLatLong[1], 'K' );
+                        }else{
+                            $distance = 13685.38;
+                        }
+
+                        $distance = number_format((float)$distance, 2, '.', '');
+
+                        if( $distance > 100 ){
+                            continue;
+                        }
 
                         ?>
                         
@@ -180,7 +222,7 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
                 <div class="branch-result-main-list show">
                     <div class="branch-results-heading">
                         <span class="heading"><?php echo $selectedState; ?> States</span>
-                        <span class="num-results"><?php echo $theQuery->found_posts; ?> Results</span>
+                        <span class="num-results"><?php echo !$hasfilter ? $theQuery->found_posts : '0'; ?> Results</span>
                     </div>
                     <div class="branch-results-items">
                         <?php 

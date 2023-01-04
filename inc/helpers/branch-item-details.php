@@ -4,6 +4,43 @@ $country  = $json['country'];
 $region   = $json['region'];
 $city     = $json['city'];
 
+
+if( isset( $_POST['cityLat'] ) && isset( $_POST['cityLng'] ) ){
+    $currentUserLatLong[] = $_POST['cityLat'];
+    $currentUserLatLong[] = $_POST['cityLng'];
+}else{
+    if( $json['loc'] ){
+        $currentUserLatLong = explode(',', $json['loc']);
+    }else{
+        $country  = $json['country'];
+        $region   = $json['region'];
+        $city     = $json['city'];
+    
+        $addressString = $city . ','. $region . ','. $country;
+    
+        $currentUserAddress = getGeoCode($addressString);
+        
+        $currentUserLatLong[] = $currentUserAddress['lat'];
+        $currentUserLatLong[] = $currentUserAddress['lng'];
+    }
+}
+
+$Branchlatitude = get_field('address')['lat'];
+$Branchlongtitude = get_field('address')['lng'];
+$Branchaddress = get_field('address')['address'];
+
+if( $currentUserLatLong && ( $Branchlatitude != 'null' && $Branchlongtitude != 'null' ) ){
+    $distance = getDistanceBetweenCoordinates( $Branchlatitude, $Branchlongtitude, $currentUserLatLong[0], $currentUserLatLong[1], 'K' );
+}else{
+    $distance = 13685.38;
+}
+
+$distance = number_format((float)$distance, 2, '.', '');
+
+if( $distance > 100 ){
+    return false;
+}
+
 $origin = urlencode( $city . ','. $region . ','. $country );
 $destination = get_field('address')['address'];
 $directionURL = "https://www.google.com/maps/dir/?api=1&origin=$origin&destination=$destination";
