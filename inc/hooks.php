@@ -57,7 +57,7 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
 }
 
 add_action( 'getGemcellDataCron', 'getGemcellBranchesAPI' );
-  function getGemcellBranchesAPI(){
+function getGemcellBranchesAPI(){
 	global $wpdb;
 
 	$endpoint = 'member_locations';

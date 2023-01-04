@@ -21,6 +21,11 @@ section.image-with-icons{
             padding-top: 50px;
             margin-bottom: -70px;
 
+            img {
+                height: 70px;
+                object-fit: contain;
+            }
+
             div[class^="col-"] {
                 @media ( max-width: $mobile){
                     position: relative;

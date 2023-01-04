@@ -205,6 +205,7 @@ section.electrical-gems-main {
 
                 .post-grid-item-wrapper {
                     >a{
+                        height: 100%;
 
                         @media (max-width: $bigScreen){
                             &{
@@ -225,6 +226,8 @@ section.electrical-gems-main {
                         }
 
                         img{
+                            height: 100%;
+
                             @media (max-width: $bigScreen){
                                 &{
                                     width: 100%;
@@ -385,6 +388,7 @@ section.electrical-gems-main {
                 .post-grid-item-wrapper {
                     display: flex;
                     align-items: center;
+                    height: 100%;
 
                     
 

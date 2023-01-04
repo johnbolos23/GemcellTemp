@@ -18040,6 +18040,11 @@ section.image-with-icons .image-with-icons-content .image-with-icons-wrapper {
   padding-top: 50px;
   margin-bottom: -70px;
 }
+section.image-with-icons .image-with-icons-content .image-with-icons-wrapper img {
+  height: 70px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
 @media (max-width: 767px) {
   section.image-with-icons .image-with-icons-content .image-with-icons-wrapper div[class^=col-] {
     position: relative;
@@ -18541,6 +18546,9 @@ section.team-members .team-member-item .team-member-details .position {
     line-height: 150%;
     font-size: 16px;
   }
+}
+section.team-members .team-members-wrapper .col-6 {
+  padding-bottom: var(--bs-gutter-x);
 }
 
 section.general-cta {
@@ -19746,6 +19754,9 @@ section.electrical-gems-main .posts-grid .row {
     width: 100%;
   }
 }
+section.electrical-gems-main .posts-grid .row .col-12.col-lg-6 .post-grid-item-wrapper > a {
+  height: 100%;
+}
 @media (max-width: 9999px) {
   section.electrical-gems-main .posts-grid .row .col-12.col-lg-6 .post-grid-item-wrapper > a {
     width: 55%;
@@ -19760,6 +19771,9 @@ section.electrical-gems-main .posts-grid .row {
   section.electrical-gems-main .posts-grid .row .col-12.col-lg-6 .post-grid-item-wrapper > a {
     width: 50%;
   }
+}
+section.electrical-gems-main .posts-grid .row .col-12.col-lg-6 .post-grid-item-wrapper > a img {
+  height: 100%;
 }
 @media (max-width: 9999px) {
   section.electrical-gems-main .posts-grid .row .col-12.col-lg-6 .post-grid-item-wrapper > a img {
@@ -19875,6 +19889,7 @@ section.electrical-gems-main .posts-grid .row > div[class^=col-].post-grid-first
 section.electrical-gems-main .posts-grid .row > div[class^=col-] .post-grid-item-wrapper {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 section.electrical-gems-main .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details {
   padding-left: 35px;
@@ -23813,27 +23828,11 @@ section#find-a-branch #branch-results .branch-result-list-detailed .branch-detai
 }
 @media (max-width: 9999px) {
   .custom-map {
-    height: 85vh;
-  }
-}
-@media (max-width: 1480px) {
-  .custom-map {
-    height: 83vh;
-  }
-}
-@media (max-width: 1399px) {
-  .custom-map {
-    height: 85vh;
-  }
-}
-@media (max-width: 1280px) {
-  .custom-map {
-    height: 83vh;
+    height: calc(100vh - 185px);
   }
 }
 @media (max-width: 1200px) {
   .custom-map {
-    height: 745px;
     min-height: 1px;
   }
 }
