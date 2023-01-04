@@ -20,13 +20,13 @@ $hasfilter = false;
 if( isset( $_POST['keyword'] ) && !is_numeric( $_POST['keyword'] ) ){
     // $args['s'] = $_POST['keyword'];
 
-    $args['meta_query'] = array(
-        array(
-            'key' => 'address',
-            'value' => $_POST['keyword'],
-            'compare' => 'LIKE'
-        )
-    );
+    // $args['meta_query'] = array(
+    //     array(
+    //         'key' => 'address',
+    //         'value' => $_POST['keyword'],
+    //         'compare' => 'LIKE'
+    //     )
+    // );
 
     $hasfilter = true;
 }
@@ -79,7 +79,9 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
                         <div class="row">
                             <div class="col-12 col-md-8 col-lg-7">
                                 <div class="branch-field-wrapper pos-relative">
-                                    <input name="keyword" type="text" placeholder="Enter postcode or suburb" <?php echo isset( $_POST['keyword'] ) && $_POST['keyword'] ? 'value="'. $_POST['keyword'] .'"': ''; ?>/>
+                                    <input autocomplete="on" id="searchTextField" name="keyword" type="text" placeholder="Enter postcode or suburb" <?php echo isset( $_POST['keyword'] ) && $_POST['keyword'] ? 'value="'. $_POST['keyword'] .'"': ''; ?>/>
+                                    <input type="hidden" id="cityLat" name="cityLat" />
+                                    <input type="hidden" id="cityLng" name="cityLng" />  
                                     <span id="branch-finder-toggle"><?php get_template_part('icons/search-icon'); ?></span>
                                 </div>
                             </div>
