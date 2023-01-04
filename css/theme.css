@@ -12929,6 +12929,12 @@ figure.woocommerce-product-gallery__wrapper {
 #gemcell-customization #post-single-newsletter .container .heading {
   line-height: 130%;
   margin-bottom: 20px;
+  font-size: 36px !important;
+}
+@media (max-width: 767px) {
+  #gemcell-customization #post-single-newsletter .container .heading {
+    font-size: 28px !important;
+  }
 }
 #gemcell-customization #post-single-newsletter .main-footer-newsletter-wrapper form {
   margin-bottom: 0;
@@ -17146,9 +17152,14 @@ section.posts-list {
     font-size: 42px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   section.posts-list .heading {
     font-size: 36px;
+  }
+}
+@media (max-width: 767px) {
+  section.posts-list .heading {
+    font-size: 28px;
   }
 }
 @media (max-width: 9999px) {
@@ -17198,6 +17209,7 @@ section.posts-list .posts-list-items .post-list-item-meta span:not(.post-list-it
   line-height: 170%;
   text-decoration: none;
   color: #263238;
+  font-weight: 700;
 }
 @media (max-width: 9999px) {
   section.posts-list .posts-list-items .post-list-item-meta span:not(.post-list-item-date) a {
@@ -17890,20 +17902,30 @@ section.page-title .breadcrumbs span {
   background-color: #F8F8F8;
 }
 .breadcrumbs a {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 170%;
   text-decoration: none;
   color: #58595B;
+}
+@media (max-width: 767px) {
+  .breadcrumbs a {
+    font-size: 14px;
+  }
 }
 .breadcrumbs svg {
   margin: 0 20px;
 }
 .breadcrumbs span {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 170%;
   color: #58595B;
   font-family: "CenturyGothicBold";
   text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .breadcrumbs span {
+    font-size: 14px;
+  }
 }
 
 section.simple-text {
@@ -20100,6 +20122,11 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
     font-size: 14px !important;
   }
 }
+@media (max-width: 767px) {
+  #post-single .container .post-single-wrapper .post-single-content-wrapper .post-single-content-meta span {
+    font-size: 12px !important;
+  }
+}
 #post-single .container .post-single-wrapper .post-single-content-wrapper .post-single-content-meta span:not(.post-slider-item-date) {
   color: #263238;
   font-size: 16px;
@@ -20176,7 +20203,7 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
   font-size: 24px;
   line-height: 130%;
   letter-spacing: -0.02em;
-  font-weight: 600;
+  font-weight: 700;
   margin-right: 10px;
 }
 @media (max-width: 9999px) {
@@ -20190,7 +20217,7 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
   }
 }
 #post-single .post-single-comments-section .post-single-comments .post-single-comment-details span.post-single-comment-date {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 110%;
   letter-spacing: -0.02em;

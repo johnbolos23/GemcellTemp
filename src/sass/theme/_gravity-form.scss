@@ -119,6 +119,10 @@
             .heading{
                 line-height: 130%;
                 margin-bottom: 20px;
+                font-size: 36px !important;
+                @media (max-width: $mobile ) {
+                    font-size: 28px !important;
+                }
             }
         }
         .main-footer-newsletter-wrapper{
