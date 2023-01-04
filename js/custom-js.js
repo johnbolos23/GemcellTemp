@@ -466,6 +466,19 @@
 					
 			});
 		}
+
+		var branchesWrapper = $('.branch-results-items.sort-results');
+
+		if( branchesWrapper.length !== 0 ){
+			branchesWrapper.each(function(){
+				$(this).find('.branch-results-item-wrapper').sort(function(a, b){
+					return +a.dataset.distancefromuser - +b.dataset.distancefromuser; 
+				}).appendTo( $(this) );
+			});
+			
+			$('.num-results').text( ( $('.branch-results-item-wrapper').length / 2) + ' Results');
+		}
+		
 	});
 
 

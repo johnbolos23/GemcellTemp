@@ -76,7 +76,7 @@
                                                 <div class="post-list-item-meta">
                                                     <span>
                                                 <?php foreach( $categories as $category ) {
-                                                    $output .= '<a>' . esc_html( $category->name ) . '</a>' . ', ';
+                                                    $output .= '<a>' . esc_html( $category->name ) . '</a>' . ' ';
                                                     // output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . esc_html( $category->name ) . '</a>' . ', ';
                                                 }
                                                 echo trim( $output, ', ' ); ?>

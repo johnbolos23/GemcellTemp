@@ -36,6 +36,9 @@
      * @param   object The map instance.
      * @return  object The marker instance.
      */
+
+    var previousWindow = false;
+    
     function initMarker( $marker, map ) {
     
         // Get position from marker.
@@ -65,8 +68,17 @@
                 content: $marker.html()
             });
     
+            
+
             // Show info window when marker is clicked.
             google.maps.event.addListener(marker, 'click', function() {
+
+                if( previousWindow ){
+                    previousWindow.close();
+                }
+
+                previousWindow = infowindow;
+
                 infowindow.open( map, marker );
             });
         }
@@ -110,5 +122,24 @@
             var map = initMap( $(this) );
         });
     });
+
+    function initialize() {
+        var input = document.getElementById('searchTextField');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+
+        google.maps.event.addListener(autocomplete, 'place_changed', function () {
+            var place = autocomplete.getPlace();
+            document.getElementById('cityLat').value = place.geometry.location.lat();
+            document.getElementById('cityLng').value = place.geometry.location.lng();
+            //alert("This function is working!");
+            //alert(place.name);
+           // alert(place.address_components[0].long_name);
+
+           $('#customBranchSearch').submit();
+
+        });
+    }
+      
+    google.maps.event.addDomListener(window, 'load', initialize);
     
 })(jQuery);

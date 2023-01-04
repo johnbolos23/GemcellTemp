@@ -1,20 +1,29 @@
 <?php
 $json = json_decode($args['json'], true);
+$hasFilter = false;
 
-if( $json['loc'] ){
-	$currentUserLatLong = explode(',', $json['loc']);
+if( isset( $_POST['cityLat'] ) && isset( $_POST['cityLng'] ) ){
+    $hasFilter = true;
+
+    $currentUserLatLong[] = $_POST['cityLat'];
+    $currentUserLatLong[] = $_POST['cityLng'];
 }else{
-    $country  = $json['country'];
-    $region   = $json['region'];
-    $city     = $json['city'];
-
-    $addressString = $city . ','. $region . ','. $country;
-
-	$currentUserAddress = getGeoCode($addressString);
-	
-	$currentUserLatLong[] = $currentUserAddress['lat'];
-	$currentUserLatLong[] = $currentUserAddress['lng'];
+    if( $json['loc'] ){
+        $currentUserLatLong = explode(',', $json['loc']);
+    }else{
+        $country  = $json['country'];
+        $region   = $json['region'];
+        $city     = $json['city'];
+    
+        $addressString = $city . ','. $region . ','. $country;
+    
+        $currentUserAddress = getGeoCode($addressString);
+        
+        $currentUserLatLong[] = $currentUserAddress['lat'];
+        $currentUserLatLong[] = $currentUserAddress['lng'];
+    }
 }
+
 
 
 $Branchlatitude = get_field('address')['lat'];
@@ -28,9 +37,13 @@ if( $currentUserLatLong && ( $Branchlatitude != 'null' && $Branchlongtitude != '
 }
 
 $distance = number_format((float)$distance, 2, '.', '');
+
+if( $distance > 100 && $hasFilter ){
+    return false;
+}
 ?>
 
-<div class="branch-results-item-wrapper" data-branch-id="<?php echo get_the_ID(); ?>">
+<div class="branch-results-item-wrapper" data-distancefromuser="<?php echo $distance; ?>" data-branch-id="<?php echo get_the_ID(); ?>">
     <div class="d-flex align-items-center">
         <div class="branch-item-image">
             <img src="<?php echo get_field('logo') ? get_field('logo') : get_field('logo', get_field('gemcell_member_id') );?>" />
