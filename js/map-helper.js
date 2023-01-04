@@ -36,6 +36,9 @@
      * @param   object The map instance.
      * @return  object The marker instance.
      */
+
+    var previousWindow = false;
+    
     function initMarker( $marker, map ) {
     
         // Get position from marker.
@@ -65,8 +68,17 @@
                 content: $marker.html()
             });
     
+            
+
             // Show info window when marker is clicked.
             google.maps.event.addListener(marker, 'click', function() {
+
+                if( previousWindow ){
+                    previousWindow.close();
+                }
+
+                previousWindow = infowindow;
+
                 infowindow.open( map, marker );
             });
         }
@@ -122,6 +134,8 @@
             //alert("This function is working!");
             //alert(place.name);
            // alert(place.address_components[0].long_name);
+
+           $('#customBranchSearch').submit();
 
         });
     }

@@ -34,6 +34,10 @@ if( $currentUserLatLong && ( $Branchlatitude != 'null' && $Branchlongtitude != '
 }
 
 $distance = number_format((float)$distance, 2, '.', '');
+
+if( $distance > 100 ){
+    return false;
+}
 ?>
 
 <div class="branch-results-item-wrapper" data-distancefromuser="<?php echo $distance; ?>" data-branch-id="<?php echo get_the_ID(); ?>">

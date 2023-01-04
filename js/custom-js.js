@@ -473,6 +473,8 @@
 			branchesWrapper.find('.branch-results-item-wrapper').sort(function(a, b){
 				return +a.dataset.distancefromuser - +b.dataset.distancefromuser; 
 			}).appendTo( branchesWrapper );
+
+			$('.num-results').text( $('.branch-results-item-wrapper').length + ' Results');
 		}
 		
 	});
