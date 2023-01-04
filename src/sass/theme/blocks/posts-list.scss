@@ -45,8 +45,11 @@ section.posts-list {
         // @media (max-width: $tablet) {
         //     font-size: 36px;
         // }
-        @media (max-width: $mobile) {
+        @media (max-width: $tablet) {
             font-size: 36px;
+        }
+        @media (max-width: $mobile) {
+            font-size: 28px;
         }
     }
     .main-button{
@@ -92,6 +95,7 @@ section.posts-list {
                         line-height: 170%;
                         text-decoration: none;
                         color: #263238;
+                        font-weight: 700;
 
                         @media (max-width: $smallLaptop){
                             font-size: 14px;

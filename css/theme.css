@@ -12929,6 +12929,12 @@ figure.woocommerce-product-gallery__wrapper {
 #gemcell-customization #post-single-newsletter .container .heading {
   line-height: 130%;
   margin-bottom: 20px;
+  font-size: 36px !important;
+}
+@media (max-width: 767px) {
+  #gemcell-customization #post-single-newsletter .container .heading {
+    font-size: 28px !important;
+  }
 }
 #gemcell-customization #post-single-newsletter .main-footer-newsletter-wrapper form {
   margin-bottom: 0;
@@ -16693,19 +16699,20 @@ html {
   vertical-align: bottom;
   width: 50px;
 }
-@media (max-width: 1399px) {
+@media (max-width: 1480px) {
   .section-banner .scroll-down .scroll-down-icon svg {
     width: 40px;
+    padding-top: 7px;
   }
 }
 .section-banner .scroll-down .scroll-down-content {
   display: inline-block;
   color: white;
-  padding-left: 20px;
+  padding-left: 15px;
 }
-@media (max-width: 1399px) {
+@media (max-width: 1480px) {
   .section-banner .scroll-down .scroll-down-content {
-    padding-left: 15px;
+    padding-left: 10px;
   }
 }
 .section-banner .scroll-down .scroll-down-content span.scroll-down-text {
@@ -16713,9 +16720,9 @@ html {
   font-weight: 700;
   line-height: 150%;
 }
-@media (max-width: 1399px) {
+@media (max-width: 1480px) {
   .section-banner .scroll-down .scroll-down-content span.scroll-down-text {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 .section-banner .scroll-down .scroll-down-content span.discover-more {
@@ -16724,6 +16731,11 @@ html {
   font-weight: 400;
   opacity: 0.67;
   line-height: 140%;
+}
+@media (max-width: 1480px) {
+  .section-banner .scroll-down .scroll-down-content span.discover-more {
+    font-size: 14px;
+  }
 }
 .section-banner .banner-content-wrapper {
   height: 100%;
@@ -16813,7 +16825,7 @@ html {
   }
 }
 .section-banner .banner-content-wrapper .heading {
-  margin-bottom: 47px;
+  margin-bottom: 30px;
   font-family: "CenturyGothic";
   font-weight: 700;
 }
@@ -16875,7 +16887,7 @@ html {
 }
 .section-banner .banner-content-wrapper .banner-link-list {
   border-top: 1px solid #FFFFFF99;
-  margin-top: 46px;
+  margin-top: 30px;
 }
 @media (max-width: 767px) {
   .section-banner .banner-content-wrapper .banner-link-list {
@@ -17146,9 +17158,14 @@ section.posts-list {
     font-size: 42px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1200px) {
   section.posts-list .heading {
     font-size: 36px;
+  }
+}
+@media (max-width: 767px) {
+  section.posts-list .heading {
+    font-size: 28px;
   }
 }
 @media (max-width: 9999px) {
@@ -17198,6 +17215,7 @@ section.posts-list .posts-list-items .post-list-item-meta span:not(.post-list-it
   line-height: 170%;
   text-decoration: none;
   color: #263238;
+  font-weight: 700;
 }
 @media (max-width: 9999px) {
   section.posts-list .posts-list-items .post-list-item-meta span:not(.post-list-item-date) a {
@@ -17884,26 +17902,41 @@ section.page-title .breadcrumbs span {
     font-size: 16px;
   }
 }
+@media (max-width: 767px) {
+  section.page-title .breadcrumbs span {
+    font-size: 14px;
+  }
+}
 
 .breadcrumbs {
   padding: 15px 0;
   background-color: #F8F8F8;
 }
 .breadcrumbs a {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 170%;
   text-decoration: none;
   color: #58595B;
+}
+@media (max-width: 767px) {
+  .breadcrumbs a {
+    font-size: 14px;
+  }
 }
 .breadcrumbs svg {
   margin: 0 20px;
 }
 .breadcrumbs span {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 170%;
   color: #58595B;
   font-family: "CenturyGothicBold";
   text-transform: capitalize;
+}
+@media (max-width: 767px) {
+  .breadcrumbs span {
+    font-size: 14px;
+  }
 }
 
 section.simple-text {
@@ -20100,6 +20133,11 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
     font-size: 14px !important;
   }
 }
+@media (max-width: 767px) {
+  #post-single .container .post-single-wrapper .post-single-content-wrapper .post-single-content-meta span {
+    font-size: 12px !important;
+  }
+}
 #post-single .container .post-single-wrapper .post-single-content-wrapper .post-single-content-meta span:not(.post-slider-item-date) {
   color: #263238;
   font-size: 16px;
@@ -20176,7 +20214,7 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
   font-size: 24px;
   line-height: 130%;
   letter-spacing: -0.02em;
-  font-weight: 600;
+  font-weight: 700;
   margin-right: 10px;
 }
 @media (max-width: 9999px) {
@@ -20190,7 +20228,7 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
   }
 }
 #post-single .post-single-comments-section .post-single-comments .post-single-comment-details span.post-single-comment-date {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 16px;
   line-height: 110%;
   letter-spacing: -0.02em;
@@ -20214,11 +20252,33 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
 #post-single .post-single-comments-section #respond .logged-in-as {
   display: none;
 }
+#post-single .post-single-comments-section #respond form#commentform p.form-submit input#submit {
+  background-color: #263238;
+  min-width: 175px;
+  line-height: 60px;
+  font-size: 16px;
+  border-radius: 0px;
+}
+@media (max-width: 767px) {
+  #post-single .post-single-comments-section #respond form#commentform p.form-submit input#submit {
+    font-size: 14px;
+    width: 100%;
+    line-height: 52px;
+  }
+}
 
 #post-single-newsletter {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+#post-single-newsletter .container.text-center .wysiwyg-content p {
+  font-size: 18px;
+}
+@media (max-width: 1200px) {
+  #post-single-newsletter .container.text-center .wysiwyg-content p {
+    font-size: 16px;
+  }
 }
 
 #post-single-related {
@@ -21338,6 +21398,11 @@ section.image-with-text .image-with-text-inner .row .col-6.col-b {
     font-size: 14px;
   }
 }
+@media (max-width: 767px) {
+  section.image-with-text .image-with-text-inner .row .col-6.col-b .subheading span {
+    font-size: 12px;
+  }
+}
 section.image-with-text .image-with-text-inner .row .col-6.col-b .heading {
   width: 100%;
   max-width: 14em;
@@ -21657,7 +21722,17 @@ section.image-with-text .image-with-text-inner .row .col-6.col-b .wysiwyg-conten
 .members-list-inner .col-12 {
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 0px;
+  padding: 30px 0px 80px 0px;
+}
+@media (max-width: 1200px) {
+  .members-list-inner .col-12 {
+    padding: 20px 0px 70px 0px;
+  }
+}
+@media (max-width: 767px) {
+  .members-list-inner .col-12 {
+    padding: 15px 0px 60px 0px;
+  }
 }
 .members-list-inner .col-12 .members-item {
   width: 20%;
@@ -21797,13 +21872,25 @@ section.image-with-text .image-with-text-inner .row .col-6.col-b .wysiwyg-conten
 }
 
 .state-row h2.heading, .state-row .heading.h2 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+@media (max-width: 767px) {
+  .state-row h2.heading, .state-row .heading.h2 {
+    font-size: 28px;
+  }
 }
 .state-row .state-col ul {
   padding-left: 0;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  margin: 0px 0px 60px -8px;
+}
+@media (max-width: 1200px) {
+  .state-row .state-col ul {
+    margin: 0px 0px 70px -8px;
+  }
 }
 .state-row .state-col ul li {
   width: 33.33%;
@@ -22266,7 +22353,17 @@ section.competitions-summary .posts-list-upper-custom aside.ja-filter-dropdwn-fo
 }
 
 section.archived-gems {
-  padding-top: 130px;
+  padding-top: 110px;
+}
+@media (max-width: 1200px) {
+  section.archived-gems {
+    padding-top: 90px;
+  }
+}
+@media (max-width: 767px) {
+  section.archived-gems {
+    padding-top: 70px;
+  }
 }
 section.archived-gems .container {
   max-width: 1560px;
@@ -24626,28 +24723,60 @@ section.state-header img {
 }
 
 section.gemcell-branches {
-  padding-top: 82px;
+  padding-top: 70px;
   padding-bottom: 85px;
 }
+@media (max-width: 767px) {
+  section.gemcell-branches {
+    padding-top: 60px;
+  }
+}
 section.gemcell-branches .state-heading.heading {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #263238;
+  font-size: 36px;
+}
+@media (max-width: 767px) {
+  section.gemcell-branches .state-heading.heading {
+    font-size: 28px;
+  }
 }
 section.gemcell-branches .state-heading.heading span {
   color: #90989B;
   background: unset;
   -webkit-text-fill-color: unset;
 }
-section.gemcell-branches .gemcell-member-details {
-  background-color: #F8F8F8;
-  padding: 17px 29px 19px 13px;
+@media (max-width: 1200px) {
+  section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 {
+    margin-bottom: 80px;
+  }
 }
-section.gemcell-branches .gemcell-member-details .gemcell-member-image {
+@media (max-width: 1200px) {
+  section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 {
+    margin-bottom: 20px;
+  }
+}
+section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details {
+  background-color: #F8F8F8;
+  width: 100%;
+  padding: 15px;
+}
+section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details .gemcell-member-image {
   background: white;
   text-align: center;
   margin-bottom: 20px;
+  padding: 16px;
 }
-section.gemcell-branches .gemcell-member-details .gemcell-member-detail h4, section.gemcell-branches .gemcell-member-details .gemcell-member-detail .h4 {
+section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details .gemcell-member-image img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 155px;
+  display: block;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details .gemcell-member-detail h4, section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details .gemcell-member-detail .h4 {
   color: #263238;
   font-weight: 700;
   font-size: 24px;
@@ -24655,7 +24784,7 @@ section.gemcell-branches .gemcell-member-details .gemcell-member-detail h4, sect
   letter-spacing: -0.02em;
   margin-bottom: 6px;
 }
-section.gemcell-branches .gemcell-member-details .gemcell-member-detail a {
+section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details .gemcell-member-detail a {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -24663,7 +24792,7 @@ section.gemcell-branches .gemcell-member-details .gemcell-member-detail a {
   color: #0796BF;
   text-decoration: none;
 }
-section.gemcell-branches #custom-map-render .custom-map {
+section.gemcell-branches .row .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-4.col-xxl-4 #custom-map-render .custom-map {
   min-height: 400px;
 }
 

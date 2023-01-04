@@ -1,7 +1,11 @@
 .state-row{
 
     h2.heading {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        font-size: 36px;
+        @media (max-width: $mobile){
+            font-size: 28px;
+        }
     }
 
     .state-col ul {
@@ -9,7 +13,10 @@
         list-style-type: none;
         display: flex;
         flex-wrap: wrap;
-
+        margin: 0px 0px 60px -8px;
+        @media (max-width: $tablet){
+            margin: 0px 0px 70px -8px;
+        }
         li {
             width: 33.33%;
             text-align: center;
