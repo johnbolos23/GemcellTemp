@@ -120,6 +120,9 @@ section.page-title{
             @media ( max-width: $smallLaptop){
                 font-size: 16px;
             }
+            @media ( max-width: $mobile){
+                font-size: 14px;
+            }
         }
     }
 }

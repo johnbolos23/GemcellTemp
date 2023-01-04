@@ -57,14 +57,13 @@ $theQuery2 = new WP_Query( $args2 );
 <section class="gemcell-branches">
 	<div class="container">
 		<h2 class="heading state-heading"><?php echo get_queried_object()->name; ?> <span>(<?php echo $totalBranches; ?>)</span></h2>
-
 		<div class="row">
-			<div class="col-12 col-lg-8">
+			<div class="col-12 col-md-12 col-lg-12 col-xl-8 col-xxl-8">
 				<?php if( $theQuery2->have_posts() ) : ?>
 				<div class="branches-wrapper">
 					<div class="row">
 						<?php while( $theQuery2->have_posts() ) : $theQuery2->the_post(); ?>
-						<div class="col-12 col-lg-6">
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6">
 							<div class="gemcell-member-details">
 								<div class="gemcell-member-image">
 									<img src="<?php echo get_field('logo'); ?>" />
@@ -80,7 +79,7 @@ $theQuery2 = new WP_Query( $args2 );
 				</div>
 				<?php endif; ?>
 			</div>
-			<div class="col-12 col-lg-4">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4 col-xxl-4">
 				<div id="custom-map-render">
 					<?php if( $theQuery->have_posts() ) : ?>
 					<div class="custom-map" data-zoom="16">
