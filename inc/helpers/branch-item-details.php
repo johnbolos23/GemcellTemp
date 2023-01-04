@@ -3,9 +3,10 @@ $json = json_decode($args['json'], true);
 $country  = $json['country'];
 $region   = $json['region'];
 $city     = $json['city'];
-
+$hasFilter = false;
 
 if( isset( $_POST['cityLat'] ) && isset( $_POST['cityLng'] ) ){
+    $hasFilter = true;
     $currentUserLatLong[] = $_POST['cityLat'];
     $currentUserLatLong[] = $_POST['cityLng'];
 }else{
@@ -37,7 +38,7 @@ if( $currentUserLatLong && ( $Branchlatitude != 'null' && $Branchlongtitude != '
 
 $distance = number_format((float)$distance, 2, '.', '');
 
-if( $distance > 100 ){
+if( $distance > 100 && $hasFilter ){
     return false;
 }
 

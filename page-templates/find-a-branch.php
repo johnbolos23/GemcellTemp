@@ -199,7 +199,7 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
 
                         $distance = number_format((float)$distance, 2, '.', '');
 
-                        if( $distance > 100 ){
+                        if( $distance > 100 && $hasfilter ){
                             continue;
                         }
 
