@@ -8,13 +8,18 @@ section.state-header{
 }
 
 section.gemcell-branches{
-    padding-top: 82px;
+    padding-top: 70px;
     padding-bottom: 85px;
-
+    @media (max-width: $mobile){
+        padding-top: 60px;
+    }
     .state-heading.heading{
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         color: #263238;
-        
+        font-size: 36px;
+        @media (max-width: $mobile){
+            font-size: 28px;
+        }
         span {
             color: #90989B;
             background: unset;
@@ -22,39 +27,67 @@ section.gemcell-branches{
         }
     }
 
-    .gemcell-member-details {
-        background-color: #F8F8F8;
-        padding: 17px 29px 19px 13px;
-
-        .gemcell-member-image {
-            background: white;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .gemcell-member-detail{
-            h4 {
-                color: #263238;
-                font-weight: 700;
-                font-size: 24px;
-                line-height: 110%;
-                letter-spacing: -0.02em;
-                margin-bottom: 6px;
+    .row {
+        .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 {
+            @media (max-width: $tablet){
+                margin-bottom: 80px;
             }
-            a {
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 170%;
-                color: #0796BF;
-                text-decoration: none;
+            .branches-wrapper {
+                .row {
+                    .col-12.col-sm-12.col-md-6.col-lg-6 {
+                        @media (max-width: $tablet) {
+                            margin-bottom: 20px;
+                        }
+                        .gemcell-member-details {
+                            background-color: #F8F8F8;
+                            // padding: 17px 29px 19px 13px;
+                            width: 100%;
+                            padding: 15px;
+                    
+                            .gemcell-member-image {
+                                background: white;
+                                text-align: center;
+                                margin-bottom: 20px;
+                                padding: 16px;
+                                img {
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                    width: 100%;
+                                    height: 155px;
+                                    display: block;
+                                    object-fit: contain;
+                                }
+                            }
+                    
+                            .gemcell-member-detail{
+                                h4 {
+                                    color: #263238;
+                                    font-weight: 700;
+                                    font-size: 24px;
+                                    line-height: 110%;
+                                    letter-spacing: -0.02em;
+                                    margin-bottom: 6px;
+                                }
+                                a {
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 18px;
+                                    line-height: 170%;
+                                    color: #0796BF;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
-    }
-
-    #custom-map-render{
-        .custom-map{
-            min-height: 400px;
+        .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-4.col-xxl-4 {
+            #custom-map-render{
+                .custom-map{
+                    min-height: 400px;
+                }
+            }
         }
     }
 }

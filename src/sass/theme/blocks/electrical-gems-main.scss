@@ -890,6 +890,16 @@ section.electrical-gems-main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    .container.text-center {
+        .wysiwyg-content {
+            p {
+                font-size: 18px;
+                @media (max-width: $tablet) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
 }
 
 #post-single-related{

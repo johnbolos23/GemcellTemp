@@ -20257,6 +20257,14 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
   background-repeat: no-repeat;
   background-position: center;
 }
+#post-single-newsletter .container.text-center .wysiwyg-content p {
+  font-size: 18px;
+}
+@media (max-width: 1200px) {
+  #post-single-newsletter .container.text-center .wysiwyg-content p {
+    font-size: 16px;
+  }
+}
 
 #post-single-related {
   max-width: 1538px;
@@ -21375,6 +21383,11 @@ section.image-with-text .image-with-text-inner .row .col-6.col-b {
     font-size: 14px;
   }
 }
+@media (max-width: 767px) {
+  section.image-with-text .image-with-text-inner .row .col-6.col-b .subheading span {
+    font-size: 12px;
+  }
+}
 section.image-with-text .image-with-text-inner .row .col-6.col-b .heading {
   width: 100%;
   max-width: 14em;
@@ -21694,7 +21707,17 @@ section.image-with-text .image-with-text-inner .row .col-6.col-b .wysiwyg-conten
 .members-list-inner .col-12 {
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 0px;
+  padding: 30px 0px 80px 0px;
+}
+@media (max-width: 1200px) {
+  .members-list-inner .col-12 {
+    padding: 20px 0px 70px 0px;
+  }
+}
+@media (max-width: 767px) {
+  .members-list-inner .col-12 {
+    padding: 15px 0px 60px 0px;
+  }
 }
 .members-list-inner .col-12 .members-item {
   width: 20%;
@@ -21834,13 +21857,25 @@ section.image-with-text .image-with-text-inner .row .col-6.col-b .wysiwyg-conten
 }
 
 .state-row h2.heading, .state-row .heading.h2 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+@media (max-width: 767px) {
+  .state-row h2.heading, .state-row .heading.h2 {
+    font-size: 28px;
+  }
 }
 .state-row .state-col ul {
   padding-left: 0;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  margin: 0px 0px 60px -8px;
+}
+@media (max-width: 1200px) {
+  .state-row .state-col ul {
+    margin: 0px 0px 70px -8px;
+  }
 }
 .state-row .state-col ul li {
   width: 33.33%;
@@ -24689,28 +24724,60 @@ section.state-header img {
 }
 
 section.gemcell-branches {
-  padding-top: 82px;
+  padding-top: 70px;
   padding-bottom: 85px;
 }
+@media (max-width: 767px) {
+  section.gemcell-branches {
+    padding-top: 60px;
+  }
+}
 section.gemcell-branches .state-heading.heading {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #263238;
+  font-size: 36px;
+}
+@media (max-width: 767px) {
+  section.gemcell-branches .state-heading.heading {
+    font-size: 28px;
+  }
 }
 section.gemcell-branches .state-heading.heading span {
   color: #90989B;
   background: unset;
   -webkit-text-fill-color: unset;
 }
-section.gemcell-branches .gemcell-member-details {
-  background-color: #F8F8F8;
-  padding: 17px 29px 19px 13px;
+@media (max-width: 1200px) {
+  section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 {
+    margin-bottom: 80px;
+  }
 }
-section.gemcell-branches .gemcell-member-details .gemcell-member-image {
+@media (max-width: 1200px) {
+  section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 {
+    margin-bottom: 20px;
+  }
+}
+section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details {
+  background-color: #F8F8F8;
+  width: 100%;
+  padding: 15px;
+}
+section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details .gemcell-member-image {
   background: white;
   text-align: center;
   margin-bottom: 20px;
+  padding: 16px;
 }
-section.gemcell-branches .gemcell-member-details .gemcell-member-detail h4, section.gemcell-branches .gemcell-member-details .gemcell-member-detail .h4 {
+section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details .gemcell-member-image img {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 155px;
+  display: block;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details .gemcell-member-detail h4, section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details .gemcell-member-detail .h4 {
   color: #263238;
   font-weight: 700;
   font-size: 24px;
@@ -24718,7 +24785,7 @@ section.gemcell-branches .gemcell-member-details .gemcell-member-detail h4, sect
   letter-spacing: -0.02em;
   margin-bottom: 6px;
 }
-section.gemcell-branches .gemcell-member-details .gemcell-member-detail a {
+section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details .gemcell-member-detail a {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -24726,7 +24793,7 @@ section.gemcell-branches .gemcell-member-details .gemcell-member-detail a {
   color: #0796BF;
   text-decoration: none;
 }
-section.gemcell-branches #custom-map-render .custom-map {
+section.gemcell-branches .row .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-4.col-xxl-4 #custom-map-render .custom-map {
   min-height: 400px;
 }
 
