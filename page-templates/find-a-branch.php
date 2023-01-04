@@ -84,8 +84,8 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
                             <div class="col-12 col-md-8 col-lg-7">
                                 <div class="branch-field-wrapper pos-relative">
                                     <input autocomplete="on" id="searchTextField" name="keyword" type="text" placeholder="Enter postcode or suburb" <?php echo isset( $_POST['keyword'] ) && $_POST['keyword'] ? 'value="'. $_POST['keyword'] .'"': ''; ?>/>
-                                    <input type="hidden" id="cityLat" name="cityLat" />
-                                    <input type="hidden" id="cityLng" name="cityLng" />  
+                                    <input type="hidden" id="cityLat" name="cityLat" value="<?php echo isset($_POST['cityLat']) ? $_POST['cityLat'] : ''; ?>"/>
+                                    <input type="hidden" id="cityLng" name="cityLng" value="<?php echo isset($_POST['cityLng']) ? $_POST['cityLng'] : ''; ?>"/> 
                                     <span id="branch-finder-toggle"><?php get_template_part('icons/search-icon'); ?></span>
                                 </div>
                             </div>
@@ -224,7 +224,7 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
                         <span class="heading"><?php echo $selectedState; ?> States</span>
                         <span class="num-results"><?php echo !$hasfilter ? $theQuery->found_posts : '0'; ?> Results</span>
                     </div>
-                    <div class="branch-results-items">
+                    <div class="branch-results-items <?php echo isset( $_POST['keyword'] ) ? 'sort-results' : ''; ?>">
                         <?php 
                         if( $theQuery->have_posts() ) {
                             while( $theQuery->have_posts() ) { 
