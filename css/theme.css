@@ -23932,19 +23932,29 @@ section#single-members .member-list-col .member-list-slider .members-item .name 
   font-family: "Century Gothic";
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   color: #263238;
   margin-bottom: 0;
   margin-top: 1em;
 }
+@media (max-width: 767px) {
+  section#single-members .member-list-col .member-list-slider .members-item .name {
+    font-size: 18px;
+  }
+}
 section#single-members .member-list-col .member-list-slider .members-item p.position {
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 170%;
   text-align: center;
   color: #263238;
+}
+@media (max-width: 767px) {
+  section#single-members .member-list-col .member-list-slider .members-item p.position {
+    font-size: 14px;
+  }
 }
 section#single-members .member-list-col .member-list-slider .owl-dots .owl-dot span {
   border-radius: 0;
@@ -23961,7 +23971,7 @@ section#single-members .member-list-col .member-list-slider .owl-dots .owl-dot.a
 }
 section#single-members .single-members-image {
   padding: 15px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   background: #F8F8F8;
 }
 @media (max-width: 1200px) {
@@ -24018,6 +24028,11 @@ section#single-members .single-members-image h4 b, section#single-members .singl
     font-size: 16px;
   }
 }
+@media (max-width: 767px) {
+  section#single-members .single-members-image h4 b, section#single-members .single-members-image .h4 b {
+    font-size: 14px;
+  }
+}
 section#single-members .single-members-image p.m-0 {
   font-style: normal;
   font-weight: 400;
@@ -24033,9 +24048,14 @@ section#single-members .single-members-image p.m-0 {
     padding-top: 4px;
   }
 }
+@media (max-width: 767px) {
+  section#single-members .single-members-image p.m-0 {
+    font-size: 14px;
+  }
+}
 section#single-members .single-members-image .member-website, section#single-members .single-members-image .member-phone, section#single-members .single-members-image .member-email, section#single-members .single-members-image .member-website {
   display: flex;
-  padding: 0px 20px;
+  padding: 0px 20px 20px 20px;
   align-items: flex-start;
 }
 section#single-members .single-members-image .member-website h4, section#single-members .single-members-image .member-website .h4, section#single-members .single-members-image .member-phone h4, section#single-members .single-members-image .member-phone .h4, section#single-members .single-members-image .member-email h4, section#single-members .single-members-image .member-email .h4, section#single-members .single-members-image .member-website h4 {
@@ -24073,6 +24093,12 @@ section#single-members .single-members-details {
 }
 section#single-members .single-members-details .heading {
   margin-bottom: 30px;
+  font-size: 36px;
+}
+@media (max-width: 767px) {
+  section#single-members .single-members-details .heading {
+    font-size: 28px;
+  }
 }
 section#single-members .member-map-col {
   padding-left: 40px;
@@ -24087,10 +24113,15 @@ section#single-members .member-map-col {
 section#single-members .member-map-col h3.members-col-title, section#single-members .member-map-col .members-col-title.h3 {
   font-family: "Century Gothic";
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #263238;
+}
+@media (max-width: 1200px) {
+  section#single-members .member-map-col h3.members-col-title, section#single-members .member-map-col .members-col-title.h3 {
+    font-size: 24px;
+  }
 }
 section#single-members .member-branches-col {
   padding-left: 40px;
@@ -24103,11 +24134,16 @@ section#single-members .member-branches-col {
 section#single-members .member-branches-col h3.members-col-title, section#single-members .member-branches-col .members-col-title.h3 {
   font-family: "Century Gothic";
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 120%;
   /* or 43px */
   letter-spacing: -0.02em;
   color: #263238;
+}
+@media (max-width: 1200px) {
+  section#single-members .member-branches-col h3.members-col-title, section#single-members .member-branches-col .members-col-title.h3 {
+    font-size: 24px;
+  }
 }
 section#single-members .member-branches-col ul.tab-nav {
   display: flex;
@@ -24360,7 +24396,7 @@ section#single-members #custom-map-render .custom-map {
 }
 .member-branches-tabs-wrapper .member-branches-tabs .member-tab {
   font-style: normal;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 170%;
   color: #263238;
   opacity: 0.4;
@@ -24368,6 +24404,11 @@ section#single-members #custom-map-render .custom-map {
   position: relative;
   cursor: pointer;
   padding: 6px 0;
+}
+@media (max-width: 767px) {
+  .member-branches-tabs-wrapper .member-branches-tabs .member-tab {
+    font-size: 18px;
+  }
 }
 .member-branches-tabs-wrapper .member-branches-tabs .member-tab.active, .member-branches-tabs-wrapper .member-branches-tabs .member-tab:hover {
   opacity: 1;
@@ -24410,6 +24451,12 @@ section#single-members #custom-map-render .custom-map {
 .member-branches-tabs-wrapper .member-branches-content .member-branch-content ul li a {
   color: #000;
   text-decoration: none;
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  .member-branches-tabs-wrapper .member-branches-content .member-branch-content ul li a {
+    font-size: 14px;
+  }
 }
 
 .custom-map .heading {
@@ -24779,7 +24826,7 @@ section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .br
 section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details .gemcell-member-detail h4, section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details .gemcell-member-detail .h4 {
   color: #263238;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 110%;
   letter-spacing: -0.02em;
   margin-bottom: 6px;
@@ -24787,13 +24834,14 @@ section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .br
 section.gemcell-branches .row .col-12.col-md-12.col-lg-12.col-xl-8.col-xxl-8 .branches-wrapper .row .col-12.col-sm-12.col-md-6.col-lg-6 .gemcell-member-details .gemcell-member-detail a {
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 170%;
   color: #0796BF;
   text-decoration: none;
 }
 section.gemcell-branches .row .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-4.col-xxl-4 #custom-map-render .custom-map {
-  min-height: 400px;
+  min-height: 400px !important;
+  height: 400px !important;
 }
 
 /*# sourceMappingURL=theme.css.map */
