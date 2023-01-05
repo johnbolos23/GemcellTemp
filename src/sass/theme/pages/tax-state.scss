@@ -63,7 +63,7 @@ section.gemcell-branches{
                                 h4 {
                                     color: #263238;
                                     font-weight: 700;
-                                    font-size: 24px;
+                                    font-size: 20px;
                                     line-height: 110%;
                                     letter-spacing: -0.02em;
                                     margin-bottom: 6px;
@@ -71,7 +71,7 @@ section.gemcell-branches{
                                 a {
                                     font-style: normal;
                                     font-weight: 400;
-                                    font-size: 18px;
+                                    font-size: 16px;
                                     line-height: 170%;
                                     color: #0796BF;
                                     text-decoration: none;
@@ -85,7 +85,8 @@ section.gemcell-branches{
         .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-4.col-xxl-4 {
             #custom-map-render{
                 .custom-map{
-                    min-height: 400px;
+                    min-height: 400px !important;
+                    height: 400px !important;
                 }
             }
         }

@@ -106,7 +106,7 @@ $mainMemberID = get_the_ID();
                 
                 
                 <div class="member-map-col">
-                    <h3 class="members-col-title">Maps</h3>
+                    <h3 class="members-col-title">Map</h3>
                     <div id="custom-map-render">
                         <?php 
                         $args = array(

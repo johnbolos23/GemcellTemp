@@ -56,7 +56,7 @@ $theQuery2 = new WP_Query( $args2 );
 
 <section class="gemcell-branches">
 	<div class="container">
-		<h2 class="heading state-heading"><?php echo get_queried_object()->name; ?> <span>(<?php echo $totalBranches; ?>)</span></h2>
+		<h2 class="heading state-heading"><?php echo get_queried_object()->name; ?> <span>(<?php echo $totalBranches; ?> Branches)</span></h2>
 		<div class="row">
 			<div class="col-12 col-md-12 col-lg-12 col-xl-8 col-xxl-8">
 				<?php if( $theQuery2->have_posts() ) : ?>
