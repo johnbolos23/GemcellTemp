@@ -23369,6 +23369,86 @@ body.fb3d-modal-shadow:before {
   }
 }
 
+.call-out-text .heading {
+  font-size: 36px;
+  color: #263238;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  margin: 40px 0px 40px 0px;
+  border-left: 25px solid #0493B8;
+  padding: 0px 0px 0px 65px;
+}
+
+.suggested-articles .heading {
+  font-size: 18px;
+  color: #263238;
+  line-height: 170%;
+  font-weight: 400;
+  font-family: "CenturyGothic";
+}
+.suggested-articles .suggested-articles-wrapper {
+  position: relative;
+  padding-top: 7px;
+}
+.suggested-articles .suggested-articles-wrapper .per-suggested-articles {
+  display: inline-block;
+  background-color: #0493B8;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 170%;
+  font-weight: 400;
+}
+
+.information-content .first-paragraph p {
+  font-size: 24px;
+  color: #263238;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  font-family: "CenturyGothicBold";
+}
+.information-content .second-paragraph p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 170%;
+  color: #263238;
+}
+
+.image-ad .ads {
+  padding: 20px 0px 40px 0px;
+}
+.image-ad .ads img {
+  width: 100%;
+}
+
+.cta-box .row {
+  background-color: #F8F8F8;
+  padding: 26px;
+}
+.cta-box .row .col-xl-7.content {
+  font-size: 24px;
+  font-weight: 600;
+  color: #263238;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  font-family: "CenturyGothicBold";
+  padding-left: 25px;
+}
+.cta-box .row .col-xl-5.cta-button {
+  text-align: right;
+}
+.cta-box .row .col-xl-5.cta-button a.btn, .cta-box .row .col-xl-5.cta-button .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message .cta-box .row .col-xl-5.cta-button a.button, .cta-box .row .col-xl-5.cta-button .woocommerce-info a.button, .woocommerce-info .cta-box .row .col-xl-5.cta-button a.button {
+  background-color: #263238;
+  color: white;
+  font-size: 18px;
+  line-height: 60px;
+  min-width: 175px;
+  margin-right: 30px;
+}
+
 section#single-suppliers {
   padding-top: 90px;
   padding-bottom: 210px;
