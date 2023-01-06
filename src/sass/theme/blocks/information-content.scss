@@ -1,10 +1,33 @@
 .information-content {
+    margin-top: 44px;
+    margin-bottom: 30px;
     .first-paragraph {
         color: $textColor;
         letter-spacing: -0.02em;
 
         b, strong{
             font-family: 'CenturyGothicBold';
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 170%;
+        }
+
+        h2 {
+            font-size: 36px;
+            line-height: 120%;
+        } 
+        h3{
+            font-size: 28px;
+            line-height: 120%;
+            margin-bottom: 30px;
+        }
+        h4{
+            margin-bottom: 40px;
+            font-size: 24px;
+            line-height: 120%;
         }
     }
 }
