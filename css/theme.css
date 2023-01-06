@@ -23402,19 +23402,12 @@ body.fb3d-modal-shadow:before {
   font-weight: 400;
 }
 
-.information-content .first-paragraph p {
-  font-size: 24px;
+.information-content .first-paragraph {
   color: #263238;
-  font-weight: 600;
-  line-height: 120%;
   letter-spacing: -0.02em;
-  font-family: "CenturyGothicBold";
 }
-.information-content .second-paragraph p {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 170%;
-  color: #263238;
+.information-content .first-paragraph b, .information-content .first-paragraph strong {
+  font-family: "CenturyGothicBold";
 }
 
 .image-ad .ads {
