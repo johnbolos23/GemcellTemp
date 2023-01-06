@@ -23375,7 +23375,6 @@ body.fb3d-modal-shadow:before {
   font-weight: 600;
   line-height: 120%;
   letter-spacing: -0.02em;
-  margin: 40px 0px 40px 0px;
   border-left: 25px solid #0493B8;
   padding: 0px 0px 0px 65px;
 }
@@ -23440,6 +23439,9 @@ body.fb3d-modal-shadow:before {
   width: 100%;
 }
 
+.cta-box {
+  margin-top: 60px;
+}
 .cta-box .row {
   background-color: #F8F8F8;
   padding: 26px;
