@@ -35,7 +35,26 @@ get_template_part('inc/flexible-blocks/breadcrumbs'); ?>
                         <div class="post-single-title">
                             <h2 class="heading"><?php the_title(); ?></h2>
                         </div>
-                        <div class="wysiwyg-content"><?php the_content(); ?></div>
+                        <div class="">
+                            <?php
+                            
+                            if( have_rows('flexible_content') ){
+                                
+                                while( have_rows('flexible_content') ) : the_row();
+
+                                    get_template_part( 'inc/post-blocks/' . get_row_layout() );
+
+                                endwhile;
+                                
+                            }else{
+                                echo '<div class="wysiwyg-content">';
+                                    echo get_the_content();
+                                echo '</div>';
+                            }
+
+                            ?>
+                        </div>
+                        <!-- <div class="wysiwyg-content"><?php the_content(); ?></div> -->
 
                         <?php if( comments_open() ) : ?>
                         <div class="post-single-comments-section">
@@ -74,8 +93,6 @@ get_template_part('inc/flexible-blocks/breadcrumbs'); ?>
 		</div>
 	</div>
 </section>
-
-
 
 <?php get_template_part('inc/post-related'); ?>
 
