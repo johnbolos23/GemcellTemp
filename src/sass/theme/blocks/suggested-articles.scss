@@ -1,0 +1,23 @@
+.suggested-articles {
+    .heading {
+        font-size: 18px;
+        color: #263238;
+        line-height: 170%;
+        font-weight: 400;
+        font-family: 'CenturyGothic';
+    }
+    .suggested-articles-wrapper {
+        position: relative;
+        padding-top: 7px;
+        .per-suggested-articles {
+            display: inline-block;
+            background-color: #0493B8;
+            color: white;
+            padding: 5px 10px 5px 10px;
+            border-radius: 4px;
+            font-size: 18px;
+            line-height: 170%;
+            font-weight: 400;
+        }
+    }
+}
