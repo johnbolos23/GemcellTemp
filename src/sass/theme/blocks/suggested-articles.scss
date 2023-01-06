@@ -9,6 +9,10 @@
     .suggested-articles-wrapper {
         position: relative;
         padding-top: 7px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 13px;
+        
         .per-suggested-articles {
             display: inline-block;
             background-color: #0493B8;
