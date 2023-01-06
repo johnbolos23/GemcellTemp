@@ -23402,6 +23402,10 @@ body.fb3d-modal-shadow:before {
   font-weight: 400;
 }
 
+.information-content {
+  margin-top: 44px;
+  margin-bottom: 30px;
+}
 .information-content .first-paragraph {
   color: #263238;
   letter-spacing: -0.02em;
@@ -23409,9 +23413,28 @@ body.fb3d-modal-shadow:before {
 .information-content .first-paragraph b, .information-content .first-paragraph strong {
   font-family: "CenturyGothicBold";
 }
+.information-content .first-paragraph p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 170%;
+}
+.information-content .first-paragraph h2, .information-content .first-paragraph .h2 {
+  font-size: 36px;
+  line-height: 120%;
+}
+.information-content .first-paragraph h3, .information-content .first-paragraph .h3 {
+  font-size: 28px;
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+.information-content .first-paragraph h4, .information-content .first-paragraph .h4 {
+  margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 120%;
+}
 
 .image-ad .ads {
-  padding: 20px 0px 40px 0px;
+  padding: 20px 0px 0px 0px;
 }
 .image-ad .ads img {
   width: 100%;
