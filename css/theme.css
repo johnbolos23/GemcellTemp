@@ -23389,6 +23389,9 @@ body.fb3d-modal-shadow:before {
 .suggested-articles .suggested-articles-wrapper {
   position: relative;
   padding-top: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
 }
 .suggested-articles .suggested-articles-wrapper .per-suggested-articles {
   display: inline-block;
@@ -23460,11 +23463,15 @@ body.fb3d-modal-shadow:before {
 }
 .cta-box .row .col-xl-5.cta-button a.btn, .cta-box .row .col-xl-5.cta-button .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message .cta-box .row .col-xl-5.cta-button a.button, .cta-box .row .col-xl-5.cta-button .woocommerce-info a.button, .woocommerce-info .cta-box .row .col-xl-5.cta-button a.button {
   background-color: #263238;
-  color: white;
+  color: #fff;
   font-size: 18px;
-  line-height: 60px;
+  line-height: 70px;
   min-width: 175px;
   margin-right: 30px;
+  font-family: "CenturyGothicBold";
+  font-weight: 600;
+  padding: 0;
+  border-radius: 0;
 }
 
 section#single-suppliers {
