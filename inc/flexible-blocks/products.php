@@ -11,33 +11,34 @@
                 <h4 class="subheading "><?php echo get_sub_field('subheading'); ?></h4>
             </div>
             <?php endif; ?>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6">
                 <h2 class="heading"><?php echo get_sub_field('heading'); ?></h2>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6">
                 <div class="wysiwyg-content"><?php echo get_sub_field('content'); ?></div>
             </div>
-        </div>
+        
 
-        <?php if( get_sub_field('products') ) : ?>
-            <div class="our-products-wrapper">
-                <div class="d-flex flex-wrap">
-                    <?php foreach( get_sub_field('products') as $ourproduct ) : ?>
-                    <div class="our-product-item">
-                        <div class="our-product-item-wrapper">
-                            <a href="<?php echo $ourproduct['link']; ?>">
-                                <div class="our-product-item-image">
-                                    <img src="<?php echo $ourproduct['icon']; ?>" />
-                                </div>
-                                <div class="our-product-item-name">
-                                    <h3 class="heading"><?php echo $ourproduct['name']; ?></h3>
-                                </div>
-                            </a>
+            <?php if( get_sub_field('products') ) : ?>
+                <div class="our-products-wrapper">
+                    <div class="d-flex flex-wrap">
+                        <?php foreach( get_sub_field('products') as $ourproduct ) : ?>
+                        <div class="our-product-item">
+                            <div class="our-product-item-wrapper">
+                                <a href="<?php echo $ourproduct['link']; ?>">
+                                    <div class="our-product-item-image">
+                                        <img src="<?php echo $ourproduct['icon']; ?>" />
+                                    </div>
+                                    <div class="our-product-item-name">
+                                        <h3 class="heading"><?php echo $ourproduct['name']; ?></h3>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
+                        <?php endforeach; ?>
                     </div>
-                    <?php endforeach; ?>
                 </div>
-            </div>
-        <?php endif; ?>
+            <?php endif; ?>
+        </div>
     </div>
 </section>
