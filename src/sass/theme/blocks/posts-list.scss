@@ -31,12 +31,14 @@ section.posts-list {
             }
         }
         .posts-list-items {
-            margin-top: 50px;
+            margin-top: 60px;
+            margin-bottom: 60px;
             @media (max-width: $tablet) {
                 margin-top: 55px;
             }
             @media (max-width: $mobile) {
                 margin-top: 25px;
+                margin: 25px 0px 0px 0px;
             }
     
             .post-list-item-image{
