@@ -17172,7 +17172,8 @@ section.posts-list .container .col-12.col-md-6 .heading {
   }
 }
 section.posts-list .container .posts-list-items {
-  margin-top: 50px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 @media (max-width: 1200px) {
   section.posts-list .container .posts-list-items {
@@ -17182,6 +17183,7 @@ section.posts-list .container .posts-list-items {
 @media (max-width: 767px) {
   section.posts-list .container .posts-list-items {
     margin-top: 25px;
+    margin: 25px 0px 0px 0px;
   }
 }
 section.posts-list .container .posts-list-items .post-list-item-image img {
@@ -18933,6 +18935,11 @@ section.electrical-gems .container {
     margin-bottom: unset;
   }
 }
+@media (max-width: 767px) {
+  section.electrical-gems .posts-grid {
+    margin-bottom: 10px;
+  }
+}
 @media (max-width: 1200px) {
   section.electrical-gems .posts-slider {
     padding: 0 27px;
@@ -19219,6 +19226,11 @@ section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrap
   line-height: 130%;
   margin: 18px 0 22px;
 }
+@media (max-width: 767px) {
+  section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details .heading {
+    margin: 10px 0 5px;
+  }
+}
 section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details a {
   text-decoration: none;
   color: #263238;
@@ -19234,6 +19246,7 @@ section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrap
 @media (max-width: 767px) {
   section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details a.post-grid-readmore {
     font-size: 14px;
+    margin: 20px 0px 15px 0px;
   }
 }
 section.electrical-gems .posts-grid .row > div[class^=col-] .post-grid-item-wrapper .post-grid-item-details a.post-grid-readmore svg {
@@ -20651,12 +20664,12 @@ section.our-products .container .row .our-products-wrapper .our-product-item .ou
   height: 100%;
 }
 section.our-products .container .row .our-products-wrapper .our-product-item .our-product-item-wrapper .our-product-item-name .heading {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 130%;
 }
 @media (max-width: 767px) {
   section.our-products .container .row .our-products-wrapper .our-product-item .our-product-item-wrapper .our-product-item-name .heading {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 section.our-products .container .row .our-products-wrapper .our-product-item .our-product-item-wrapper a {
