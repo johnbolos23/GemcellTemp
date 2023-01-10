@@ -23498,7 +23498,6 @@ body.fb3d-modal-shadow:before {
   font-weight: 600;
   line-height: 120%;
   letter-spacing: -0.02em;
-  margin: 40px 0px 40px 0px;
   border-left: 25px solid #0493B8;
   padding: 0px 0px 0px 65px;
 }
@@ -23518,6 +23517,9 @@ body.fb3d-modal-shadow:before {
 .suggested-articles .suggested-articles-wrapper {
   position: relative;
   padding-top: 7px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
 }
 .suggested-articles .suggested-articles-wrapper .per-suggested-articles {
   display: inline-block;
@@ -23530,28 +23532,47 @@ body.fb3d-modal-shadow:before {
   font-weight: 400;
 }
 
-.information-content .first-paragraph p {
-  font-size: 24px;
+.information-content {
+  margin-top: 44px;
+  margin-bottom: 30px;
+}
+.information-content .first-paragraph {
   color: #263238;
-  font-weight: 600;
-  line-height: 120%;
   letter-spacing: -0.02em;
+}
+.information-content .first-paragraph b, .information-content .first-paragraph strong {
   font-family: "CenturyGothicBold";
 }
-.information-content .second-paragraph p {
+.information-content .first-paragraph p {
+  margin-bottom: 30px;
   font-size: 18px;
-  font-weight: 400;
   line-height: 170%;
-  color: #263238;
+}
+.information-content .first-paragraph h2, .information-content .first-paragraph .h2 {
+  font-size: 36px;
+  line-height: 120%;
+}
+.information-content .first-paragraph h3, .information-content .first-paragraph .h3 {
+  font-size: 28px;
+  line-height: 120%;
+  margin-bottom: 30px;
+}
+.information-content .first-paragraph h4, .information-content .first-paragraph .h4 {
+  margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 120%;
 }
 
 .image-ad .ads {
-  padding: 20px 0px 40px 0px;
+  padding: 20px 0px 0px 0px;
 }
 .image-ad .ads img {
   width: 100%;
 }
 
+.cta-box {
+  margin-top: 60px;
+}
 .cta-box .row {
   background-color: #F8F8F8;
   padding: 26px;
@@ -23570,11 +23591,15 @@ body.fb3d-modal-shadow:before {
 }
 .cta-box .row .col-xl-5.cta-button a.btn, .cta-box .row .col-xl-5.cta-button .woocommerce-notices-wrapper .woocommerce-message a.button, .woocommerce-notices-wrapper .woocommerce-message .cta-box .row .col-xl-5.cta-button a.button, .cta-box .row .col-xl-5.cta-button .woocommerce-info a.button, .woocommerce-info .cta-box .row .col-xl-5.cta-button a.button {
   background-color: #263238;
-  color: white;
+  color: #fff;
   font-size: 18px;
-  line-height: 60px;
+  line-height: 70px;
   min-width: 175px;
   margin-right: 30px;
+  font-family: "CenturyGothicBold";
+  font-weight: 600;
+  padding: 0;
+  border-radius: 0;
 }
 
 section#single-suppliers {

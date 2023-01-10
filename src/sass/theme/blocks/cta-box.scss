@@ -1,4 +1,6 @@
 .cta-box {
+    margin-top: 60px;
+
     .row {
         background-color:#F8F8F8;
         padding: 26px;
@@ -20,11 +22,15 @@
                 a {
                     &.btn {
                         background-color: $textColor;
-                        color: white;
-                        font-size: 18px;
-                        line-height: 60px;
-                        min-width: 175px;
-                        margin-right: 30px;
+                            color: #fff;
+                            font-size: 18px;
+                            line-height: 70px;
+                            min-width: 175px;
+                            margin-right: 30px;
+                            font-family: 'CenturyGothicBold';
+                            font-weight: 600;
+                            padding: 0;
+                            border-radius: 0;
                     }
                 }
             }
