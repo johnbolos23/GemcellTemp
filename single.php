@@ -76,7 +76,7 @@ get_template_part('inc/flexible-blocks/breadcrumbs'); ?>
                                     <?php endforeach; ?>
                                 </div>
                             <?php endif; ?>
-                            <h3 class="heading">Write a Comment</h3>
+                            <h3 class="second-heading">Write a Comment</h3>
                             <?php comment_form(); ?>
                         </div>
                         <?php endif; ?>

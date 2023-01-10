@@ -1,37 +1,45 @@
 section.testimonial-section{
-    padding: 50px 0;
-
+    padding: 0px 0px 50px 0px;
     @media (max-width: $mobile){
         padding-bottom: 0;
     }
-
     .testimonial-slider .slick-dots {
         bottom: 40px;
         width: auto;
         left: 727px;
-
         @media (max-width: $bigScreen){
             &{
                 left: 50%;
             }
         }
-
         @media (max-width: $tablet){
             &{
-                bottom: 0;
+                bottom: 5%;
                 left: 45%;
             }
         }
-
         @media (max-width: $mobile){
             &{
-                bottom: -30px;
                 transform: unset;
-                bottom: 55%;
+                bottom: 62%;
                 left: 0;
             }
         }
-
+        @media (max-width: 414px){
+            &{
+                bottom: 52%;
+            }
+        }
+        @media (max-width: 414px){
+            &{
+                bottom: 48%;
+            }
+        }
+        @media (max-width: 360){
+            &{
+                bottom: 46%;
+            }
+        }
         button {
             width: 9px;
             height: 9px;
@@ -40,7 +48,6 @@ section.testimonial-section{
             margin: 0;
             display: inline-block;
             padding: 0;
-
             &:before {
                 display: none;
             }

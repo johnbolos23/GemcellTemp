@@ -1,26 +1,33 @@
 section.testimonials-v2 {
-    padding-top: 50px;
+    padding-top: 160px;
     padding-bottom: 150px;
-
     .testimonials-content {
         margin-top: 75px;
-    
+        @media (max-width: $mobile) {
+            margin-top: 40px;
+        }
         .testimonials-slider{
             button {
                 &.slick-prev {
                     &.slick-arrow {
                         top: -100px;
-                        right: 5%;
+                        right: 6%;
                         left: unset;
                         width: auto;
                         height: auto;
-
-                        @media (max-width: $mobile){
-                            left: 0;
-                            top: unset !important;
-                            bottom: -25%;
+                        @media (max-width: $tablet) {
+                            right: 8%;
                         }
-
+                        @media (max-width: 820px) {
+                            right: 10%;
+                        }
+                        @media (max-width: $mobile) {
+                            // left: 0%;
+                            // top: unset !important;
+                            top: 115%;
+                            bottom: -25%;
+                            right: unset;
+                        }
                         &:before {
                             color: #263238 !important;
                             display: none !important
@@ -33,13 +40,18 @@ section.testimonials-v2 {
                         right: 0%;
                         width: auto;
                         height: auto;
-
                         @media (max-width: $mobile){
-                            left: 10%;
-                            top: unset !important;
+                            left: -58%;
+                            // top: unset !important;
+                            top: 115%;
                             bottom: -25%;
                         }
-
+                        @media (max-width: 414px){
+                            left: -45%;
+                        }
+                        @media (max-width: 375px){
+                            left: -40%;
+                        }
                         &:before {
                             color: #263238 !important;
                             display: none !important;
