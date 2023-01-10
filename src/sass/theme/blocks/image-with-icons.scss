@@ -24,12 +24,15 @@ section.image-with-icons{
             img {
                 height: 70px;
                 object-fit: contain;
+                @media ( max-width: $mobile){
+                    height: 60px;
+                }
             }
 
             div[class^="col-"] {
                 @media ( max-width: $mobile){
                     position: relative;
-                    padding-left: 140px !important;
+                    padding-left: 150px !important;
                 }
                 img {
                     @media ( max-width: $mobile){
