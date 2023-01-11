@@ -26,6 +26,27 @@ get_template_part('inc/style-helper', null, array('target' => '#page-title-'. ge
 ?>
 
 <section class="page-title" id="page-title-<?php echo get_row_index(); ?>">
+<style>
+    <?php if( get_sub_field('image_tablet') ) : ?>
+    @media ( max-width: 1200px ){
+        #page-title-<?php echo get_row_index(); ?> .image-heading-container{
+            background-image: url(<?php echo get_sub_field('image_tablet'); ?>);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    <?php endif; ?>
+
+    <?php if( get_sub_field('image_mobile') ) : ?>
+    @media ( max-width: 767px ){
+        #page-title-<?php echo get_row_index(); ?> .image-heading-container{
+            background-image: url(<?php echo get_sub_field('image_mobile'); ?>);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    <?php endif; ?>
+</style>
     <?php if( get_sub_field('use_image_as_heading') && get_sub_field('image_heading') ) : ?>
     <div class="image-heading-container">
         <div class="container">
