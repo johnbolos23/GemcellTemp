@@ -27,16 +27,6 @@ get_template_part('inc/style-helper', null, array('target' => '#page-title-'. ge
 
 <section class="page-title" id="page-title-<?php echo get_row_index(); ?>">
 <style>
-    <?php if( get_sub_field('image_laptops') ) : ?>
-    @media ( max-width: 1280px ){
-        #page-title-<?php echo get_row_index(); ?> .image-heading-container{
-            background-image: url(<?php echo get_sub_field('image_laptops'); ?>);
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-    }
-    <?php endif; ?>
-
     <?php if( get_sub_field('image_tablet') ) : ?>
     @media ( max-width: 1200px ){
         #page-title-<?php echo get_row_index(); ?> .image-heading-container{

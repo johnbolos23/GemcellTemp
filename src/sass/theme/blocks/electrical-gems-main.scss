@@ -873,7 +873,6 @@ section.electrical-gems-main {
                 }
             }
         }
-
         #respond{
             .comment-reply-title,
             .logged-in-as {
@@ -899,8 +898,6 @@ section.electrical-gems-main {
     }
     
 }
-
-
 #post-single-newsletter{
     background-size: cover;
     background-repeat: no-repeat;
@@ -916,11 +913,12 @@ section.electrical-gems-main {
         }
     }
 }
-
 #post-single-related{
     max-width: 1538px;
-    margin: auto;
-
+    // margin: auto;
+    @media (max-width: $mobile){
+        margin-top: 70px;
+    }
     .slick-track{
         .col-12{
             @media (max-width: $tablet){
@@ -933,30 +931,21 @@ section.electrical-gems-main {
         }
     }
 }
-
-
-
 .posts-grid.post-featured.grid-main .post-grid-item-wrapper {
     grid-template-columns: 100% !important;
 }
-
 .posts-grid.post-featured.grid-main .post-grid-item-wrapper .post-grid-item-details {
     padding: 20px 0px !important;
 }
-
 .posts-grid.post-featured.grid-main .post-grid-item-wrapper .post-grid-item-details .wysiwyg-content {
     display: none;
 }
-
 .posts-grid.post-featured.grid-main .post-grid-item-wrapper .post-grid-item-details a.post-grid-readmore {
     display: none !important;
 }
-
-
 .pagination-col-custom {
     text-align: center;
 }
-
 .pagination-col-custom .page-numbers {
     padding: 20px;
     color: black;
@@ -964,19 +953,15 @@ section.electrical-gems-main {
     font-family: 'Century Gothic';
     font-size: 18px;
 }
-
 .pagination-col-custom .page-numbers.current {
     color: #0796BF;
     font-weight: 600;
 }
-
-
 .pagination-col-custom .next.page-numbers {
     border: 1px solid #b3b3b3;
     border-radius: 100px;
     padding: 18px 23px !important;
 }
-
 .pagination-col-custom .prev.page-numbers {
     border: 1px solid #b3b3b3;
     border-radius: 100px;

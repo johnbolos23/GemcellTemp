@@ -10,10 +10,16 @@ section.posts-list {
             }
         }
         .col-12.col-md-6 {
-            .heading {
-                font-size: 36px;
+            .subheading {
+                font-size: 14px;
                 @media (max-width: $mobile) {
-                    font-size: 28px;
+                    font-size: 12px;
+                }
+            }
+            .heading {
+                font-size: 42px;
+                @media (max-width: $mobile) {
+                    font-size: 36px;
                 }
             }
         }
@@ -295,7 +301,6 @@ section.posts-list {
     
                 &.post-list-slider.hasArrows{
                     padding-bottom: 100px;
-    
                     .slick-arrow {
                         @media (max-width: $mobile){
                             top: unset;
@@ -334,9 +339,9 @@ section.posts-list {
             .main-button {
                 @media (max-width: $mobile){
                     font-size: 14px;
-                    padding: 10px 20px;
+                    padding: 10px;
+                    text-align: center;
                 }
-
             }
         }
     }
@@ -349,6 +354,52 @@ body.page-id-25 {
         
         .container{
             max-width: 1537px;
+        }
+    }
+    
+}
+
+body {
+    &.page-id-25 {
+        section {
+            &#posts-list-4 {
+                .posts-list-items {
+                    &.post-list-slider.hasArrows {
+                        @media (max-width: $mobile){
+                            padding-bottom: 40px !important;
+                        }
+                    }
+                }
+                .d-block.d-md-none.text-left {
+                    @media (max-width: $mobile){
+                        margin-bottom: 70px;
+                    }
+                }
+            }
+        }
+    }
+    &.page-id-15 {
+        section {
+            &#posts-list-6 {
+                .posts-list-items {
+                    &.post-list-slider.hasArrows {
+                        @media (max-width: $mobile){
+                            padding-bottom: 80px !important;
+                        }
+                        .slick-arrow.slick-prev {
+                            @media (max-width: $mobile){
+                                left: 25px;
+                            }
+                            
+                        }
+                        .slick-next .slick-arrow {
+                            @media (max-width: $mobile){
+                                left: 75px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
