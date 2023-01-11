@@ -798,7 +798,18 @@ section.electrical-gems-main {
             }
 
         }
-
+        h3.second-heading {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 130%;
+            letter-spacing: -0.02em;
+            color: #263238;
+            font-family: 'CenturyGothicBold';
+            margin-top: 50px;
+            @media (max-width: $mobile){
+                font-size: 20px;
+            }
+        }
         .post-single-comments {
             margin-top: 40px;
             margin-bottom: 50px;
@@ -873,13 +884,13 @@ section.electrical-gems-main {
                     input#submit {
                         background-color: #263238;
                         min-width: 175px;
-                        line-height: 60px;
+                        line-height: 45px;
                         font-size: 16px;
                         border-radius: 0px;
-                        @media (max-width: $mobile){
+                        @media (max-width: $mobile) {
                             font-size: 14px;
                             width: 100%;
-                            line-height: 52px;
+                            // line-height: 45px;
                         }
                     }
                 }

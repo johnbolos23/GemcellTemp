@@ -283,7 +283,7 @@ section#single-members{
             line-height: 120%;
             letter-spacing: -.02em;
             color: #263238;
-            @media (max-width: $tablet){
+            @media (max-width: $mobile){
                 font-size: 24px;
             }
         }
@@ -310,7 +310,7 @@ section#single-members{
         /* or 43px */
             letter-spacing: -0.02em;
             color: #263238;
-            @media (max-width: $tablet) {
+            @media (max-width: $mobile) {
                 font-size: 24px;
             }
         }
@@ -463,6 +463,11 @@ section#single-members{
                 padding: 0;
                 z-index: 9;
                 top: 260px;
+                @media (max-width: $mobile){ 
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                }
             }
 
             .slick-next:before { 
@@ -474,7 +479,7 @@ section#single-members{
             }
 
             .slick-arrow.slick-prev {
-                left: 40px;
+                left: 15px;
                 margin: 0;
                 position: absolute;
                 top: 50%;
@@ -483,7 +488,7 @@ section#single-members{
             }
 
             .slick-arrow.slick-next {
-                right: 40px;
+                right: 15px;
                 margin: 0;
                 position: absolute;
                 top: 50%;
