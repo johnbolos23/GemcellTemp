@@ -366,9 +366,9 @@ section.archived-gems {
                         color: #263238;
                         font-size: 18px;
                         @media (max-width: $mobile){
-                          width: 50px;
-                          height: 50px;
-                          line-height: 48px;
+                          width: 45px;
+                          height: 45px;
+                          line-height: 42px;
                         }
 
                         &:not(.next):not(.prev){
