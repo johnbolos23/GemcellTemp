@@ -101,12 +101,12 @@ if( get_field('copyright_text', 'option') ){
 	<div class="<?php echo $mainClass; ?>-bottom">
 		<div class="container">
 			<div class="row">
-				<div class="col-12 col-lg-6 text-center text-lg-left">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-6 text-lg-left">
 					<?php if( get_field('created_by', 'option') ) : ?>
 						<p><?php echo get_field('created_by', 'option'); ?></p>
 					<?php endif; ?>
 				</div>
-				<div class="col-12 col-lg-6 text-right">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-6 text-right">
 					<?php if( get_field('enable_back_to_top','option') ) : ?>
 					<a href="" class="back-to-top">Back to Top <?php get_template_part('icons/back-to-top'); ?></a>
 					<?php endif; ?>

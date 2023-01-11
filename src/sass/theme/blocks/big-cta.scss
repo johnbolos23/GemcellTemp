@@ -1,8 +1,6 @@
 section.big-cta{
     padding: 50px 0;
-
     .heading {
-
         br{
             @media (max-width: $mobile){
                 &{
@@ -11,33 +9,32 @@ section.big-cta{
             } 
         }
     }
-
     .subheading{
         margin-bottom: 18px;
     }
-
     .big-cta-wrapper{
         padding-top: 100px;
         max-height: 740px;
         height: 100vh;
-
+        h2.heading {
+            font-size: 36px;
+            @media (max-width: $mobile){
+                font-size: 28px;
+            }
+        }
         .big-cta-buttons {
             margin-top: 38px;
-
             @media (max-width: $mobile){
                 &{
                     flex-direction: column;
                 }
-            }
-            
-
+            }          
             .main-button {
                 min-width: 285px;
                 text-align: left;
                 display: flex;
                 align-items: center;
                 margin: 0 12px;
-
                 @media (max-width: $mobile){
                     &{
                         margin-bottom:18px;

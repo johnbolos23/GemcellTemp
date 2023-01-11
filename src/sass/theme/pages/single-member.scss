@@ -501,17 +501,19 @@ section#single-members{
         
         
     }
-    
-
-
     .members-info-blocks {
-        margin-top: 40px;
+        margin-top: 90px;
         margin-left: -18px;
         margin-right: -18px;
         @media (max-width: $tablet){
             &{
-               
-                padding:10px;
+                margin-top: 20px;
+                padding: 15px;
+            }
+        }
+        @media (max-width: $mobile){
+            &{
+                margin-top: 10px;
             }
         }
         > div[class^="col-"] {
@@ -724,7 +726,6 @@ section#single-members{
         }
     }
 }
-
 .custom-map{
     .heading {
         font-size: 20px;

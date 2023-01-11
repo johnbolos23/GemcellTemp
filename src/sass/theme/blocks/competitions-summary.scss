@@ -117,7 +117,6 @@ section.competitions-summary{
             line-height: 170%;
             color: #0796bf;
         }
-
         .post-list-item-wrapper {
             position: relative;
             transition: all .5s ease;
@@ -126,7 +125,6 @@ section.competitions-summary{
             @media (max-width: $tablet){
                 margin-bottom: 40px;
             }
-
             .post-list-item-image-title {
                 position: relative;
                 padding-top: 250px;
@@ -258,17 +256,14 @@ section.competitions-summary{
                     background: #263238;
                 }
             }
+            h3.heading {
+                margin-top: 20px !important;
+            }
         }
-        
-
-        
     }
-
-    
     .custom-pagination {
         display: flex;
         justify-content: center;
-
         .page-numbers {
             padding: 10px 30px;
             font-family: 'Century Gothic';
