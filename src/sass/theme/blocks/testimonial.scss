@@ -4,17 +4,12 @@ section.testimonial-section{
         padding-bottom: 0;
     }
     .testimonial-slider .slick-dots {
-        bottom: 40px;
+        bottom: 50px;
         width: auto;
         left: 727px;
-        @media (max-width: $bigScreen){
-            &{
-                left: 44%;
-            }
-        }
         @media (max-width: $tablet){
             &{
-                bottom: 5%;
+                bottom: 2%;
                 left: 43.8%;
             }
         }
@@ -30,18 +25,24 @@ section.testimonial-section{
         @media (max-width: $mobile){
             &{
                 transform: unset;
-                bottom: 55%;
+                // bottom: 55%;
                 left: -12px;
+                bottom: 90vw;
             }
         }
-        @media (max-width: 414px){
+        @media (max-width: 390px){
             &{
-                bottom: 48%;
+                bottom: 95vw;
             }
         }
-        @media (max-width: 360){
+        @media (max-width: 375px){
             &{
-                bottom: 46%;
+                bottom: 100vw;
+            }
+        }
+        @media (max-width: 360px){
+            &{
+                bottom: 105vw;
             }
         }
         button {

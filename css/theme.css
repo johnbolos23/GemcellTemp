@@ -16571,7 +16571,12 @@ footer.main-footer .main-footer-bottom .container {
   }
 }
 footer.main-footer .main-footer-bottom .container .text-lg-left {
-  text-align: center;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  footer.main-footer .main-footer-bottom .container .text-lg-left {
+    text-align: center;
+  }
 }
 footer.main-footer .main-footer-bottom .container .back-to-top {
   font-size: 20px;
@@ -17487,19 +17492,36 @@ body.page-id-25 section.posts-list .container {
     margin-bottom: 70px;
   }
 }
-@media (max-width: 767px) {
-  body.page-id-15 section#posts-list-6 .posts-list-items.post-list-slider.hasArrows {
-    padding-bottom: 80px !important;
+
+body.page-id-15 section#posts-list-6 .posts-list-items.has-overlap div#post-list-slider-6 {
+  padding-bottom: 85px;
+}
+@media (max-width: 1280px) {
+  body.page-id-15 section#posts-list-6 .posts-list-items.has-overlap div#post-list-slider-6 button.slick-prev.slick-arrow {
+    left: 10px;
   }
 }
 @media (max-width: 767px) {
-  body.page-id-15 section#posts-list-6 .posts-list-items.post-list-slider.hasArrows .slick-arrow.slick-prev {
+  body.page-id-15 section#posts-list-6 .posts-list-items.has-overlap div#post-list-slider-6 button.slick-prev.slick-arrow {
     left: 25px;
   }
 }
+@media (max-width: 1280px) {
+  body.page-id-15 section#posts-list-6 .posts-list-items.has-overlap div#post-list-slider-6 button.slick-next.slick-arrow {
+    right: 10px !important;
+  }
+}
 @media (max-width: 767px) {
-  body.page-id-15 section#posts-list-6 .posts-list-items.post-list-slider.hasArrows .slick-next .slick-arrow {
+  body.page-id-15 section#posts-list-6 .posts-list-items.has-overlap div#post-list-slider-6 button.slick-next.slick-arrow {
     left: 75px;
+  }
+}
+body.page-id-15 section#posts-list-6 .container .col-12.col-md-6 h4.subheading, body.page-id-15 section#posts-list-6 .container .col-12.col-md-6 .subheading.h4 {
+  font-size: 14px;
+}
+@media (max-width: 767px) {
+  body.page-id-15 section#posts-list-6 .container .col-12.col-md-6 h4.subheading, body.page-id-15 section#posts-list-6 .container .col-12.col-md-6 .subheading.h4 {
+    font-size: 12px;
   }
 }
 
@@ -17536,6 +17558,14 @@ section.client-logos .col-12.col-lg-4 .client-logo-content h2.heading, section.c
 @media (max-width: 767px) {
   section.client-logos .col-12.col-lg-4 .client-logo-content h2.heading, section.client-logos .col-12.col-lg-4 .client-logo-content .heading.h2 {
     font-size: 28px;
+  }
+}
+section.client-logos .col-12.col-lg-4 .client-logo-content .wysiwyg-content p {
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  section.client-logos .col-12.col-lg-4 .client-logo-content .wysiwyg-content p {
+    font-size: 14px;
   }
 }
 @media (max-width: 9999px) {
@@ -17634,18 +17664,13 @@ section.testimonial-section {
   }
 }
 section.testimonial-section .testimonial-slider .slick-dots {
-  bottom: 40px;
+  bottom: 50px;
   width: auto;
   left: 727px;
 }
-@media (max-width: 9999px) {
-  section.testimonial-section .testimonial-slider .slick-dots {
-    left: 44%;
-  }
-}
 @media (max-width: 1200px) {
   section.testimonial-section .testimonial-slider .slick-dots {
-    bottom: 5%;
+    bottom: 2%;
     left: 43.8%;
   }
 }
@@ -17667,18 +17692,23 @@ section.testimonial-section .testimonial-slider .slick-dots {
 @media (max-width: 767px) {
   section.testimonial-section .testimonial-slider .slick-dots {
     transform: unset;
-    bottom: 55%;
     left: -12px;
+    bottom: 90vw;
   }
 }
-@media (max-width: 414px) {
+@media (max-width: 390px) {
   section.testimonial-section .testimonial-slider .slick-dots {
-    bottom: 48%;
+    bottom: 95vw;
   }
 }
-@media (max-width: 360) {
+@media (max-width: 375px) {
   section.testimonial-section .testimonial-slider .slick-dots {
-    bottom: 46%;
+    bottom: 100vw;
+  }
+}
+@media (max-width: 360px) {
+  section.testimonial-section .testimonial-slider .slick-dots {
+    bottom: 105vw;
   }
 }
 section.testimonial-section .testimonial-slider .slick-dots button {
@@ -17891,6 +17921,26 @@ section.page-title h1.heading, section.page-title .heading.h1 {
 }
 section.page-title .page-title-image-heading {
   padding: 60px 0;
+}
+@media (max-width: 912px) {
+  section.page-title .page-title-image-heading {
+    padding: 45px 0;
+  }
+}
+@media (max-width: 912px) and (max-width: 767px) {
+  section.page-title .page-title-image-heading {
+    padding: 60px 0px 100px 0px;
+  }
+}
+@media (max-width: 912px) {
+  section.page-title .page-title-image-heading img {
+    max-width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  section.page-title .page-title-image-heading img {
+    max-width: 80%;
+  }
 }
 section.page-title .page-title-wrapper {
   padding-left: calc((100vw - 1350px) / 2 + 40px);
@@ -20442,6 +20492,18 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
   #post-single-newsletter .container.text-center .wysiwyg-content p {
     font-size: 16px;
   }
+}
+#post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div#gform_wrapper_1 form#gform_1 .gform_footer.top_label {
+  height: unset !important;
+}
+#post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div#gform_wrapper_1 form#gform_1 .gform_footer.top_label input#gform_submit_button_1 {
+  height: 60px;
+}
+#post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div#gform_wrapper_1 form#gform_1 .gform_body.gform-body div#gform_fields_1 div#field_1_1 .ginput_container.ginput_container_email {
+  height: unset !important;
+}
+#post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div#gform_wrapper_1 form#gform_1 .gform_body.gform-body div#gform_fields_1 div#field_1_1 .ginput_container.ginput_container_email input#input_1_1 {
+  height: 60px !important;
 }
 
 #post-single-related {

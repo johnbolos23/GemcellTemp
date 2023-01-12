@@ -497,20 +497,20 @@ footer.main-footer {
             }
         }
     }
-
     .main-footer-bottom{
         background: white;
-
         .container{
             padding-top: 25px;
             padding-bottom: 25px;
-
             @media ( max-width: $smallLaptop ){
                 padding-top: 20px;
                 padding-bottom: 20px;
             }
             .text-lg-left {
-                text-align: center;
+                text-align: left;
+                @media ( max-width: $mobile){
+                    text-align: center;
+                }
             }
             .back-to-top {
                 font-size: 20px;
@@ -521,11 +521,9 @@ footer.main-footer {
                 display: flex;
                 align-items: center;
                 justify-content: end;
-
                 @media ( max-width: $smallLaptop ){
                     font-size: 18px;
                 }
-
                 @media ( max-width: $mobile ){
                     font-size: 16px;
                     justify-content: center;
