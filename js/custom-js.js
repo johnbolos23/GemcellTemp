@@ -87,6 +87,20 @@
 				slidesToShow: 1,
 				dots: true,
 				arrows: false,
+				responsive: [
+					{
+						breakpoint: 9999,
+						settings: {
+							adaptiveHeight: false
+						},
+					},
+					{
+						breakpoint: 767,
+						settings: {
+							adaptiveHeight: true
+						},
+					},
+				],
 			});
 		}
 
