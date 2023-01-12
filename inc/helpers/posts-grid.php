@@ -39,7 +39,9 @@ if( $args['theQuery']->have_posts() ) : ?>
                                 }
                                 
                             ?>
-                            <div class="wysiwyg-content"><?php echo $theContent; ?></div>
+<!--                             <div class="wysiwyg-content"><?php echo $theContent; ?></div> -->
+							<div class="wysiwyg-content"><?php echo get_the_terms( get_the_ID(), 'category' ); ?></div>
+							
 
                             <a class="post-grid-readmore" href="<?php echo get_the_permalink(); ?>">Read More <?php get_template_part('icons/arrow-up'); ?></a>
                             <?php endif; ?>
