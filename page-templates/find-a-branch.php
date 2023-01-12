@@ -16,24 +16,21 @@ $args = array(
 );
 
 $hasfilter = false;
+$stateFIlter = false;
 
-if( isset( $_POST['keyword'] ) && !is_numeric( $_POST['keyword'] ) ){
-    // $args['s'] = $_POST['keyword'];
+if( ( isset( $_POST['cityLat'] ) && $_POST['cityLat'] != '' ) && ( isset( $_POST['cityLng'] ) && $_POST['cityLng'] != '' ) ){
+	$hasfilter = true;
 
-    // $args['meta_query'] = array(
-    //     array(
-    //         'key' => 'address',
-    //         'value' => $_POST['keyword'],
-    //         'compare' => 'LIKE'
-    //     )
-    // );
-
-    $hasfilter = true;
-
-    $args['posts_per_page'] = -1;
+	$args['posts_per_page'] = -1;
 }
 
-if( isset( $_POST['state'] ) && ( $_POST['state'] && $_POST['state'] != 'all' ) ){
+if( isset( $_GET['branch-detail'] ) ) {
+    $args['post__in'] = array( $_GET['branch-detail'] );
+
+    $hasfilter = true;
+}
+
+if( isset( $_POST['state'] ) && ( $_POST['state'] != '' && $_POST['state'] != 'all' ) ){
     $args['tax_query'] = array(
         array(
 			'taxonomy' => 'gemcell_states',
@@ -44,16 +41,12 @@ if( isset( $_POST['state'] ) && ( $_POST['state'] && $_POST['state'] != 'all' ) 
 
     $args['posts_per_page'] = -1;
 
-    $hasfilter = true;
+	$stateFIlter = $hasfilter ? false : true;
 }
 
 $selectedState = 'All';
 
-if( isset( $_GET['branch-detail'] ) ) {
-    $args['post__in'] = array( $_GET['branch-detail'] );
 
-    $hasfilter = true;
-}
 
 $theQuery = new WP_Query( $args );
 
@@ -63,6 +56,18 @@ if( !$hasfilter ){
         'post_status' => 'publish',
         'posts_per_page' => -1
     );
+	
+	if( isset( $_POST['state'] ) && ( $_POST['state'] && $_POST['state'] != 'all' ) ){
+		$args2['tax_query'] = array(
+			array(
+				'taxonomy' => 'gemcell_states',
+				'field'    => 'term_id',
+				'terms'    => $_POST['state'],
+			),
+		);
+
+		$stateFIlter = $hasfilter ? false : true;
+	}
 
     $mapPinsQuery = new WP_Query( $args2 );
 }
@@ -155,6 +160,7 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
         <div class="col-12 col-md-12 col-lg-12 col-xl-7 col-xxl-7 p-0" >
             <div id="custom-map-render">
                 <?php 
+				
                 $tempQuery = $hasfilter ?  $theQuery : $mapPinsQuery;
 
                 $json = json_decode( $json, true);
@@ -171,7 +177,7 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
                         $longtitude = get_field('address')['lng'];
                         $address = get_field('address')['address'];
 
-                        if( isset( $_POST['cityLat'] ) && isset( $_POST['cityLng'] ) ){
+                        if( ( isset( $_POST['cityLat'] ) && $_POST['cityLat'] != '' ) && ( isset( $_POST['cityLng'] ) && $_POST['cityLng'] != '' ) ){
                             $currentUserLatLong[] = $_POST['cityLat'];
                             $currentUserLatLong[] = $_POST['cityLng'];
                         }else{
@@ -199,9 +205,12 @@ $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
 
                         $distance = number_format((float)$distance, 2, '.', '');
 
-                        if( $distance > 100 && $hasfilter ){
-                            continue;
-                        }
+						if( !$stateFIlter ){
+							if( $distance > 100 && $hasfilter ){
+								continue;
+							}
+						}
+                        
 
                         ?>
                         

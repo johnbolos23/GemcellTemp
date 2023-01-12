@@ -5,7 +5,7 @@ $region   = $json['region'];
 $city     = $json['city'];
 $hasFilter = false;
 
-if( isset( $_POST['cityLat'] ) && isset( $_POST['cityLng'] ) ){
+if( ( isset( $_POST['cityLat'] ) && $_POST['cityLat'] != '' ) && ( isset( $_POST['cityLng'] ) && $_POST['cityLng'] != '' ) ){
     $hasFilter = true;
     $currentUserLatLong[] = $_POST['cityLat'];
     $currentUserLatLong[] = $_POST['cityLng'];
