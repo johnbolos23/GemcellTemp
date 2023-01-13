@@ -37,7 +37,7 @@ if( get_field('copyright_text', 'option') ){
 						<?php if( $newsletterGroup['newsletter_message'] ) : ?>
 						<p><?php echo $newsletterGroup['newsletter_message']; ?></p>
 						<?php endif; ?>
-
+						<?php gravity_form( get_field('newsletter_footer','option') );?>
 						<?php 
 							if( $newsletterGroup['form'] ){
 								gravity_form( $newsletterGroup['form'] );

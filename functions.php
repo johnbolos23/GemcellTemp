@@ -259,3 +259,8 @@ function getDistanceBetweenCoordinates($lat1, $lon1, $lat2, $lon2, $unit) {
 
     return $init_array;
 });
+
+add_filter('comment_post_redirect', 'redirect_after_comment');
+function redirect_after_comment($location){
+    return $_SERVER["HTTP_REFERER"];
+}

@@ -31,6 +31,14 @@ section.client-logos{
                     font-size: 28px;
                 }
             }
+            .wysiwyg-content {
+                p {
+                    font-size: 16px;
+                    @media (max-width: $mobile){
+                        font-size: 14px;
+                    }
+                }
+            }
         }
     } 
     .col-12.col-lg-8 {

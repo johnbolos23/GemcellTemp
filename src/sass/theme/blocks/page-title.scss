@@ -14,6 +14,20 @@ section.page-title{
 
     .page-title-image-heading {
         padding: 60px 0;
+        @media (max-width: 912px){
+            padding: 45px 0;
+            @media (max-width: $mobile){
+                padding: 60px 0px 100px 0px;
+            }
+        }
+        img {
+            @media (max-width: 912px){
+                max-width: 80%;
+            }
+            @media (max-width: $mobile){
+                max-width: 80%;
+            }
+        }
     }
 
     .page-title-wrapper {
