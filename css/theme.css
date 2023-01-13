@@ -20512,25 +20512,25 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
     font-size: 16px;
   }
 }
-#post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div#gform_wrapper_1 form#gform_1 .gform_footer.top_label {
+#post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div.gform_wrapper form .gform_footer.top_label {
   height: 0%;
 }
-#post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div#gform_wrapper_1 form#gform_1 .gform_footer.top_label input#gform_submit_button_1 {
+#post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div.gform_wrapper form .gform_footer.top_label input#gform_submit_button_1 {
   height: 60px;
 }
 @media (max-width: 767px) {
-  #post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div#gform_wrapper_1 form#gform_1 .gform_footer.top_label input#gform_submit_button_1 {
+  #post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div.gform_wrapper form .gform_footer.top_label input#gform_submit_button_1 {
     height: 0% !important;
   }
 }
-#post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div#gform_wrapper_1 form#gform_1 .gform_body.gform-body div#gform_fields_1 div#field_1_1 .ginput_container.ginput_container_email {
+#post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div.gform_wrapper form .gform_body.gform-body div.gform_fields div.gfield .ginput_container.ginput_container_email {
   height: unset !important;
 }
-#post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div#gform_wrapper_1 form#gform_1 .gform_body.gform-body div#gform_fields_1 div#field_1_1 .ginput_container.ginput_container_email input#input_1_1 {
+#post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div.gform_wrapper form .gform_body.gform-body div.gform_fields div.gfield .ginput_container.ginput_container_email input#input_1_1 {
   height: 60px !important;
 }
 @media (max-width: 767px) {
-  #post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div#gform_wrapper_1 form#gform_1 .gform_body.gform-body div#gform_fields_1 div#field_1_1 .ginput_container.ginput_container_email input#input_1_1 {
+  #post-single-newsletter .container.text-center .main-footer-newsletter-wrapper div.gform_wrapper form .gform_body.gform-body div.gform_fields div.gfield .ginput_container.ginput_container_email input#input_1_1 {
     height: 0% !important;
   }
 }
@@ -20595,45 +20595,45 @@ section.electrical-gems-main .posts-grid.post-featured .row > div[class^=col-] .
   padding: 18px 23px !important;
 }
 
-body:not(.logged-in).postid-371 section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform {
+body:not(.logged-in) section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
-body:not(.logged-in).postid-371 section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform > * {
+body:not(.logged-in) section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform > * {
   flex: 0 0 100%;
 }
-body:not(.logged-in).postid-371 section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .comment-notes {
+body:not(.logged-in) section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .comment-notes {
   order: 1;
 }
-body:not(.logged-in).postid-371 section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .comment-form-comment {
+body:not(.logged-in) section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .comment-form-comment {
   order: 6;
 }
-body:not(.logged-in).postid-371 section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .mb-3.comment-form-author {
+body:not(.logged-in) section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .mb-3.comment-form-author {
   order: 3;
   flex: 0 0 calc(50% - 6px);
 }
 @media (max-width: 767px) {
-  body:not(.logged-in).postid-371 section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .mb-3.comment-form-author {
+  body:not(.logged-in) section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .mb-3.comment-form-author {
     flex: auto;
   }
 }
-body:not(.logged-in).postid-371 section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .mb-3.comment-form-email {
+body:not(.logged-in) section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .mb-3.comment-form-email {
   flex: 0 0 calc(50% - 6px);
   order: 4;
 }
 @media (max-width: 767px) {
-  body:not(.logged-in).postid-371 section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .mb-3.comment-form-email {
+  body:not(.logged-in) section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .mb-3.comment-form-email {
     flex: auto;
   }
 }
-body:not(.logged-in).postid-371 section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .mb-3.comment-form-url {
+body:not(.logged-in) section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .mb-3.comment-form-url {
   order: 5;
 }
-body:not(.logged-in).postid-371 section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .comment-form-cookies-consent {
+body:not(.logged-in) section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform .comment-form-cookies-consent {
   order: 6;
 }
-body:not(.logged-in).postid-371 section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform > .form-submit {
+body:not(.logged-in) section#post-single .container .post-single-content-wrapper .post-single-comments-section #respond #commentform > .form-submit {
   order: 7;
 }
 

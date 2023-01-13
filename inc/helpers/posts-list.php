@@ -36,6 +36,7 @@
                         slidesToScroll: 1,
                         prevArrow: '<button class="slick-prev slick-arrow"><svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.97703 1.13161L1.4594 5.64924M1.4594 5.64924L5.97719 10.1669M1.4594 5.64924L13.8337 5.64844" stroke="#263238" stroke-width="2"/></svg></button>',
                         nextArrow: '<button class="slick-next slick-arrow"><svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.76369 1.13161L13.2813 5.64924M13.2813 5.64924L8.76353 10.1669M13.2813 5.64924L0.906982 5.64844" stroke="#263238" stroke-width="2"/></svg></button>',
+                        adaptiveHeight: true
                     }
                 }
             ]
