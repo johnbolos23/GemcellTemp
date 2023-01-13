@@ -8,5 +8,14 @@
         // margin: 40px 0px 40px 0px;
         border-left: 25px solid #0493B8;
         padding: 0px 0px 0px 65px;
+        @media (max-width: $tablet){
+            padding: 0px 0px 0px 40px;
+        }
+        @media (max-width: 912px){
+            padding: 0px 0px 0px 30px;
+        }
+        @media (max-width: $mobile){
+            font-size: 28px;
+        }
     }
 }

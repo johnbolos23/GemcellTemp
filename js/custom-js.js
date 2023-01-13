@@ -263,7 +263,7 @@
 			}
 		});
 
-		$("#commentform .form-submit input").val("Submit");
+		// $("#commentform .form-submit input").val("Submit");
 
 
 		$(window).ready(function(){
