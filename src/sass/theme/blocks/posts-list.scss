@@ -378,23 +378,38 @@ body {
             }
         }
     }
+}
+body {
     &.page-id-15 {
         section {
             &#posts-list-6 {
-                .posts-list-items {
-                    &.post-list-slider.hasArrows {
-                        @media (max-width: $mobile){
-                            padding-bottom: 80px !important;
-                        }
-                        .slick-arrow.slick-prev {
+                .posts-list-items.has-overlap {
+                    div#post-list-slider-6 {
+                        padding-bottom: 85px;
+                        button.slick-prev.slick-arrow {
+                            @media (max-width: 1280px){
+                                left: 10px;
+                            }
                             @media (max-width: $mobile){
                                 left: 25px;
-                            }
-                            
+                            }   
                         }
-                        .slick-next .slick-arrow {
+                        button.slick-next.slick-arrow {
+                            @media (max-width: 1280px){
+                                right: 10px !important;
+                            }
                             @media (max-width: $mobile){
                                 left: 75px;
+                            } 
+                        }
+                    }
+                }
+                .container {
+                    .col-12.col-md-6 {
+                        h4.subheading {
+                            font-size: 14px;
+                            @media (max-width: $mobile){
+                                font-size: 12px;
                             }
                         }
                     }
