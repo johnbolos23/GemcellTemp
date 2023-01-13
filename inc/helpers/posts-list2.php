@@ -27,7 +27,8 @@ if( $args['theQuery']->have_posts() ) : ?>
                                     $theContent  = substr($theContent, 0, $pos[40]) . '...';
                                 }
                             ?>
-                            <div class="wysiwyg-content"><?php echo $theContent; ?></div>
+<!--                             <div class="wysiwyg-content"><?php echo $theContent; ?></div> -->
+							<div class="wysiwyg-content s"><?php echo get_field('excerpt'); ?></div>
 
                             <a class="post-grid-readmore" href="<?php echo get_the_permalink(); ?>">Read More <?php get_template_part('icons/arrow-up'); ?></a>
                         </div>

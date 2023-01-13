@@ -217,8 +217,8 @@ function getDistanceBetweenCoordinates($lat1, $lon1, $lat2, $lon2, $unit) {
     if( $lat1 == 'null' || $lon1 == 'null' ){
         return false;
     }
-    $theta = $lon1 - $lon2;
-    $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+    $theta = floatval($lon1) - floatval($lon2);
+    $dist = sin(deg2rad( floatval($lat1) )) * sin(deg2rad( floatval($lat2) )) +  cos(deg2rad( floatval($lat1) )) * cos(deg2rad( floatval($lat2) )) * cos(deg2rad( floatval($theta) ));
     $dist = acos($dist);
     $dist = rad2deg($dist);
     $miles = $dist * 60 * 1.1515;
@@ -259,3 +259,8 @@ function getDistanceBetweenCoordinates($lat1, $lon1, $lat2, $lon2, $unit) {
 
     return $init_array;
 });
+
+add_filter('comment_post_redirect', 'redirect_after_comment');
+function redirect_after_comment($location){
+    return $_SERVER["HTTP_REFERER"];
+}

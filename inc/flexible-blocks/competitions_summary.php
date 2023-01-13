@@ -40,7 +40,7 @@
 
                         $args = array(
                             'post_type'      => 'competition',
-                            'posts_per_page' => '6',
+                            'posts_per_page' => 7,
                             'publish_status' => 'published',
                             'order' => 'DESC',
                         );

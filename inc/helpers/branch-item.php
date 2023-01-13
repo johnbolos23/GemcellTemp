@@ -2,7 +2,7 @@
 $json = json_decode($args['json'], true);
 $hasFilter = false;
 
-if( isset( $_POST['cityLat'] ) && isset( $_POST['cityLng'] ) ){
+if( ( isset( $_POST['cityLat'] ) && $_POST['cityLat'] != '' ) && ( isset( $_POST['cityLng'] ) && $_POST['cityLng'] != '' ) ){
     $hasFilter = true;
 
     $currentUserLatLong[] = $_POST['cityLat'];
@@ -12,7 +12,7 @@ if( isset( $_POST['cityLat'] ) && isset( $_POST['cityLng'] ) ){
         $currentUserLatLong = explode(',', $json['loc']);
     }else{
         $country  = $json['country'];
-        $region   = $json['region'];
+        $region   = $json['region']; 
         $city     = $json['city'];
     
         $addressString = $city . ','. $region . ','. $country;
@@ -23,8 +23,6 @@ if( isset( $_POST['cityLat'] ) && isset( $_POST['cityLng'] ) ){
         $currentUserLatLong[] = $currentUserAddress['lng'];
     }
 }
-
-
 
 $Branchlatitude = get_field('address')['lat'];
 $Branchlongtitude = get_field('address')['lng'];
