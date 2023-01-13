@@ -912,8 +912,8 @@ section.electrical-gems-main {
             }
         }
         .main-footer-newsletter-wrapper {
-            div#gform_wrapper_1 {
-                form#gform_1 {
+            div.gform_wrapper {
+                form {
                     .gform_footer.top_label {
                         height: 0%;
                         input#gform_submit_button_1 {
@@ -924,8 +924,8 @@ section.electrical-gems-main {
                         }
                     }
                     .gform_body.gform-body {
-                        div#gform_fields_1 {
-                            div#field_1_1 {
+                        div.gform_fields {
+                            div.gfield {
                                 .ginput_container.ginput_container_email {
                                     height: unset !important;
                                     input#input_1_1 {
@@ -1000,7 +1000,6 @@ section.electrical-gems-main {
 
 body {
     &:not(.logged-in) {
-        &.postid-371 {
             section {
                 &#post-single {
                     .container {
@@ -1050,6 +1049,5 @@ body {
                     }
                 }
             }
-        }
     }
 }
