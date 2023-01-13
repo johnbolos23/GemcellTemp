@@ -497,6 +497,33 @@ footer.main-footer {
             }
         }
     }
+    .col-12.col-lg-8.col-xxl-6 {
+        .main-footer-newsletter-wrapper {
+            div#gform_wrapper_3 {
+                form#gform_3 {
+                    .gform_body.gform-body {
+                        div#gform_fields_3 {
+                            .ginput_container.ginput_container_email {
+                                height: 60px !important;
+                                @media (max-width: $mobile){
+                                    height: 0% !important;
+                                }
+                            }
+                        }
+                    }
+                    .gform_footer.top_label {
+                        height: 0% !important;
+                        input#gform_submit_button_3 {
+                            height: 60px !important;
+                            @media (max-width: $mobile){
+                                height: 0% !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }   
     .main-footer-bottom{
         background: white;
         .container{
@@ -536,6 +563,7 @@ footer.main-footer {
             }
         }
     }
+    
 }
 
 body.home {
