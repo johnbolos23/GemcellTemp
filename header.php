@@ -76,10 +76,17 @@ $headerClass = 'main-header';
 					</div>
 					<div class="col-6 col-lg-2 p-0 for-desktop">
 						<div class="<?php echo $headerClass; ?>-search-cta d-flex align-items-center justify-content-end">
-							<a><?php get_template_part('icons/search-icon'); ?></a>
+							<a class="search-bar" id="search-bar"><?php get_template_part('icons/search-icon'); ?></a>
 							<a href="<?php echo get_field('cta_button','option')['url']; ?>" class="main-button">
 								<span><?php echo get_field('cta_button','option')['title']; ?></span>
 							</a>
+							<div class="search-bar-wrapper">
+								<div class="contents">
+								<span><?php get_template_part('icons/search-bar-icon'); ?></span>                				            					
+           						<input type="text" class="search" placeholder="Search">
+								<span class="close"><?php get_template_part('icons/search-bar-close-icon'); ?></span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
