@@ -5,7 +5,7 @@
 		$(".search-bar").click(function(){
 		  $(".search-bar-wrapper").fadeIn("300");
 		})
-		$(".search-bar-wrapper,.close").click(function(){
+		$(".close").click(function(){
 		  $(".search-bar-wrapper").fadeOut("300");
 		})
 		$(".search-bar-contents").click(function(e){

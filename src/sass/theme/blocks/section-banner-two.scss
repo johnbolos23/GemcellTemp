@@ -5,7 +5,8 @@
         
         img {
             width: 100%;
-            height: 752px;
+            // height: 752px;
+            height: auto;
             object-fit: cover;
 
             @media (max-width: $tablet){
@@ -21,6 +22,9 @@
         position: absolute;
         bottom: 20px;
         left: 20px;
+        @media (max-width: $mobile) {
+            width: 50%;
+        }
     }
     .banner-content-wrapper {
         color: white;
@@ -30,40 +34,56 @@
         flex-wrap: wrap;
         height: 100%;
         justify-content: center;
-        padding: 10px 30px;
+        padding: 10px 90px;
         max-width: 35em;
         margin-left: auto;
         margin-right: auto;
 
         @media (max-width: $tablet){
             &{
-                padding: 70px 30px;
+                padding: 70px 20px;
             }
         }
 
 
         .subheading{
             @media (max-width: $bigScreen){
-                    &{
-                       font-size: 14px;
-                    }
+                &{
+                    font-size: 14px;
                 }
+            }
+            @media (max-width: $mobile){
+                &{
+                    font-size: 12px;
+                }
+            }
         }
     
         .heading{
-                @media (max-width: $bigScreen){
-                    &{
-                       font-size: 36px;
-                    }
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 36px;
+                    padding: 10px 0px 10px 0px;
                 }
+            }
+            @media (max-width: $mobile){
+                &{
+                    font-size: 28px;
+                }
+            }
         }
     
         .paragraph{
-                @media (max-width: $bigScreen){
-                    &{
-                       font-size: 18px;
-                    }
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 18px;
                 }
+            }
+            @media (max-width: $mobile){
+                &{
+                    font-size: 16px;
+                }
+            }
         }
         
         
@@ -74,13 +94,22 @@
         right: 0;
         top: 0;
     }
-    
     span.icon-bottom {
         position: absolute;
         bottom: 0;
         left: -12em;
-        /* transform: translateX(50%); */
         z-index: 2;
+        @media (max-width: $tablet){
+            display: none;
+        }
+    }
+    span.icon-bottom-for-tablet {
+        @media (max-width: $tablet){
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+            display: block;
+        }
     }
     .banner-image-wrapper {
         position: relative;
