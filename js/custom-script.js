@@ -157,6 +157,8 @@ $(document).ready(function () {
 		$(".embed-container iframe")[0].src += "&autoplay=1";
 		ev.preventDefault();
 	});
+	
+	$("section.step-by-step .step-by-step-wrapper .step-by-steps .step-item.step-item.step-3 .step-item-image").click();
 });
 
 

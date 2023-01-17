@@ -912,7 +912,7 @@ section.electrical-gems-main {
             }
         }
         .main-footer-newsletter-wrapper {
-            .gform_wrapper {
+            div.gform_wrapper {
                 form {
                     .gform_footer.top_label {
                         height: 0%;
@@ -1003,7 +1003,6 @@ section.electrical-gems-main {
 
 body {
     &:not(.logged-in) {
-        &.postid-371 {
             section {
                 &#post-single {
                     .container {
@@ -1053,6 +1052,5 @@ body {
                     }
                 }
             }
-        }
     }
 }
