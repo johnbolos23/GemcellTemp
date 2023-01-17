@@ -170,3 +170,23 @@ section.page-title{
         }
     }
 }
+
+body {
+    &.page-id-21 {
+        section {
+            &#banner-1 {
+                .col-12.col-lg-12.col-xl-7.p-0 {
+                    .page-title-image-heading {
+                        img {
+                            @media (max-width: $tablet) {
+                                max-width: 100%;
+                                object-fit: inherit;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

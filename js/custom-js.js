@@ -1,5 +1,30 @@
 (function ($) {
 
+	// Display and hide search bar
+	$(function(){
+		$(".search-bar").click(function(){
+		  $(".search-bar-wrapper").fadeIn("300");
+		})
+		$(".close").click(function(){
+		  $(".search-bar-wrapper").fadeOut("300");
+		})
+		$(".search-bar-contents").click(function(e){
+		  e.stopPropagation();
+		})
+	})
+
+
+	//Add background color of the search icon 
+	$(document).ready(function(){
+		$(".search-bar").click(function(){
+			$(".search-bar").css({'background-color':'#EAEAEA'});
+		});
+		$(".search-bar-wrapper,.close").click(function(){
+			$(".search-bar").css({'background-color':'#FFFFFF'});
+		});
+	});
+
+
 	$.fn.countTo = function (options) {
 		// merge the default plugin settings with the custom options
 		options = $.extend({}, $.fn.countTo.defaults, options || {});
@@ -91,7 +116,7 @@
 					{
 						breakpoint: 9999,
 						settings: {
-							adaptiveHeight: false
+							adaptiveHeight: true
 						},
 					},
 					{
@@ -494,6 +519,5 @@
 		}
 		
 	});
-
 
 })(jQuery);
