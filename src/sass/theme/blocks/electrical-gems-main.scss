@@ -916,7 +916,7 @@ section.electrical-gems-main {
                 form {
                     .gform_footer.top_label {
                         height: 0%;
-                        input#gform_submit_button_1 {
+                        .gform_button {
                             height: 60px;
                             @media (max-width: $mobile) {
                                 height: 0% !important;
@@ -924,14 +924,17 @@ section.electrical-gems-main {
                         }
                     }
                     .gform_body.gform-body {
-                        div.gform_fields {
-                            div.gfield {
+                        .gform_fields {
+                            .gfield {
                                 .ginput_container.ginput_container_email {
-                                    height: unset !important;
-                                    input#input_1_1 {
+                                    height: 60px !important;
+                                    @media (max-width: $mobile) {
+                                        height: 100% !important;
+                                    }
+                                    input {
                                         height: 60px !important;
                                         @media (max-width: $mobile) {
-                                            height: 0% !important;
+                                            height: 100% !important;
                                         }
                                     }
                                 }
