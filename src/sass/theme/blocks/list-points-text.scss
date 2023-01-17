@@ -10,9 +10,23 @@
         @media (max-width: $tablet){
             &{
                 width: 100%;
+                padding-bottom: 20px;
             }
         }
-        
+        @media (max-width: $mobile){
+            &{
+                padding-bottom: 10px;
+            }
+        }
+        .heading {
+            font-size: 42px;
+            @media (max-width: $tablet){
+                font-size: 36px;
+            }
+            @media (max-width: $mobile){
+                font-size: 28px;
+            }
+        }
     }
     
     .col-6.col-b {
@@ -37,18 +51,40 @@
         }
     }
 
-    .wysiwyg-content li{
-        @media (max-width: $bigScreen){
-            &{
-                font-size: 16px;
+    .wysiwyg-content {
+        p {
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 18px !important;
+                }
+            }
+            @media (max-width: $tablet){
+                &{
+                    font-size: 16px !important;
+                }
+            }
+            @media (max-width: $mobile){
+                &{
+                    font-size: 14px !important;
+                }
             }
         }
-
-        @media (max-width: $mobile){
-            &{
-                font-size: 14px;
+        li {
+            @media (max-width: $bigScreen){
+                &{
+                    font-size: 18px !important;
+                }
+            }
+            @media (max-width: $tablet){
+                &{
+                    font-size: 16px !important;
+                }
+            }
+            @media (max-width: $mobile){
+                &{
+                    font-size: 14px !important;
+                }
             }
         }
-
     }
 }

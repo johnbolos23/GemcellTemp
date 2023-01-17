@@ -259,6 +259,10 @@ body *{
                 margin: 0 -15px;
             }
 
+            @media ( max-width: 1280px ){
+                margin: 0px 10px 0px -25px;
+            }
+
             @media ( max-width: $tablet ){
                 flex-direction: column;
                 padding: 100px 30px;
@@ -269,6 +273,9 @@ body *{
     
                 @media ( max-width: $bigScreen ){
                     padding: 0 15px;
+                }
+                @media ( max-width: 1280px ){
+                    padding: 0 12px;
                 }
             }
     
@@ -604,33 +611,60 @@ body.home {
 
 .search-bar-wrapper {
     display: none;
-    width: 32%;
+    width: 30%;
     position: absolute;
-    top: 120%;
-    left: 70%;
-    transform: translate(-50%, -50%);
+    top: 85%;
+    right: 20.5%;
+    @media ( max-width: 1480px) {
+        right: 19.5%;
+        width: 35%;
+    }
+    @media ( max-width: 1440px) {
+        right: 18.9%;
+    }
+    @media ( max-width: 1399px) {
+        right: 18%;
+    }
+    @media ( max-width: 1366px) {
+        right: 17.1%;
+    }
+    @media ( max-width: 1280px) {
+        right: 17.7%;
+    }
     .contents {
         width: 100%;
         position: relative;
         display: flex;
         span {
             position: absolute;
-            top: 30%;
+            top: 33%;
             left: 20px;
         }
         .search {
-            width: 60%;
+            min-width: 80%;
             border: 2px solid #E4E4E4;
-            padding: 18px 15px 15px 53px;
+            padding: 23px 15px 14px 53px;
             outline: none;
             color: #263238;
             font-size: 18px;
             line-height: 170%;
             font-weight: 400;
+            @media ( max-width: $bigScreen) {
+                min-width: 40.5%;
+            }
+            @media ( max-width: 1920px) {
+                min-width: 80%;
+            }
+            @media ( max-width: 1480px) {
+                min-width: 100%;
+            }
         }
         .close {
             position: absolute;
-            left: 53% !important;
+            left: 72% !important;
+            @media ( max-width: 1480px) {
+                left: 90% !important;
+            }
         }
     }
 }

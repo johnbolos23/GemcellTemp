@@ -63,7 +63,7 @@ ob_end_clean();
         </div>
     </div>
     <div class="row m-0">
-        <div class="col-12 col-lg-7 p-0">
+        <div class="col-12 col-lg-12 col-xl-7 p-0">
            <div class="banner-image-wrapper">
                 <div class="page-title-image-heading">
                         <img src="<?php echo get_sub_field('background_image'); ?>" />
@@ -71,7 +71,7 @@ ob_end_clean();
                 <img src="<?php echo get_sub_field('overlay_image_banner'); ?>" class="overlay-img-banner" />
            </div> 
         </div>
-        <div class="col-12 col-lg-5 p-0 content-col-custom">
+        <div class="col-12 col-lg-12 col-xl-5 p-0 content-col-custom">
             <span class="icon-top"><?php get_template_part('icons/banner-two-icon-top'); ?></span>
             <div class="banner-content-wrapper">
                 <h5 class="subheading"><?php echo get_sub_field('subheading_text'); ?></h5>
@@ -79,6 +79,7 @@ ob_end_clean();
                 <p class="paragraph"><?php echo get_sub_field('paragraph'); ?></p>
             </div>
             <span class="icon-bottom"><?php get_template_part('icons/banner-two-icon-bottom'); ?></span>
+            <span class="icon-bottom-for-tablet"><?php get_template_part('icons/banner-two-icon-bottom-for-tablet'); ?></span>
         </div>
     </div>
 
