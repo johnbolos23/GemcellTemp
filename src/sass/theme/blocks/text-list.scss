@@ -1,5 +1,6 @@
 .text-list-inner {
-
+    padding-top: 70px;
+    padding-bottom: 70px;
     .row {
         padding: 0px 25px !important;
 
@@ -13,17 +14,33 @@
                     grid-template-columns: 100%;
                 }
             }
-
+            h4.heading {
+                @media (max-width: $mobile){
+                    font-size: 36px;
+                }
+            }
+            .col-a {
+                padding-right: 55px;
+                @media (max-width: $tablet){
+                    padding-right: initial;  
+                }
+            }
             .col-b{
                 @media (max-width: $tablet){
                     &{
-                        margin-top:15px;
+                        margin-top: 15px;
+                    }
+                }
+                .wysiwyg-content {
+                    p {
+                        font-size: 18px;
+                        @media (max-width: $mobile){
+                            font-size: 16px;
+                        }
                     }
                 }
             }
         }
-        
-
     }
 
     .col-list-inner {
@@ -44,9 +61,15 @@
                     width: 100%;
                 }
             }
+
+            @media (max-width: $mobile){
+                &{
+                    padding: 10px 10px 15px 0px;
+                }
+            }
     
             > img {
-                margin-right: 2em;
+                margin-right: 45px;
                 width: 75px;
                 height: 75px;
                 object-fit: contain;
@@ -55,6 +78,7 @@
                     &{
                         width: 50px;
                         height: 50px;
+                        margin-right: 35px;
                     }
                 }
             }
@@ -62,7 +86,7 @@
             .step-col-inner-content span {
                 font-family: 'Century Gothic';
                 font-weight: 600;
-                font-size: 28px;
+                font-size: 24px;
                 line-height: 130%;
             /* or 36px */
                 letter-spacing: -0.02em;
@@ -75,10 +99,13 @@
                     }
                 }
             }
-    
             
             .step-col-inner-content .wysiwyg-content {
                 margin-top: 5px;
+                font-size: 16px;
+                @media (max-width: $mobile){
+                    font-size: 14px;
+                }
             }
     
     

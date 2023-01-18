@@ -1,6 +1,11 @@
 .list-points-text-inner {
-    padding: 75px 10px;
-
+    padding: 75px 10px 50px 10px;
+    @media (max-width: $tablet){
+        padding: 75px 10px 30px 10px;
+    }
+    @media (max-width: $mobile){
+        padding: 75px 10px 10px 10px;
+    }
     .col-6.col-a {
         @media (max-width: $bigScreen){
             &{

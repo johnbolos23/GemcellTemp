@@ -4,18 +4,18 @@ section.general-cta.cta-two {
     > svg {
         bottom: unset !important;
         top: 0 !important;
-        transform: translatey(-47.5%);
+        transform: translatey(-48.5%);
 
         @media (max-width: $tablet){
             &{
-                transform: translatey(-48.1%);
+                transform: translatey(-48.2%);
                 width: 11em;
             }
         }
 
         @media (max-width: $mobile){
             &{
-                transform: translatey(-48.3%);
+                transform: translatey(-48.7%);
                 width: 8em;
             }
         }
@@ -69,7 +69,15 @@ section.general-cta.cta-two {
                 &{
                     display: none;
                 }
-            } 
+            }
+            
+            .wysiwyg-content {
+                p {
+                    @media (max-width: $mobile){
+                        font-size: 16px;
+                    }
+                }
+            }
             
         }
 
@@ -100,6 +108,12 @@ section.general-cta.cta-two {
             @media (max-width: $bigScreen){
                 &{
                     font-size: 16px;
+                }
+            } 
+
+            @media (max-width: $tablet){
+                &{
+                    margin-top: 20px;
                 }
             } 
 
