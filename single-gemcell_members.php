@@ -22,9 +22,7 @@ $mainMemberID = get_the_ID();
         </div>
     <div class="col-12 col-lg-7 p-0">
         <div class="page-title-image pos-relative">
-            <img src="
-            <?php echo get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : ( get_field('other_images') ? get_field('other_images')[0] : get_stylesheet_directory_uri() . '/images/Active-banner-1.jpg' ); ?>
-            ">
+            <img src="<?php echo get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() : ( get_field('other_images') ? get_field('other_images')[0] : get_field('default_banner_image','option') ); ?>">
         </div>
     </div>
 </div>
@@ -89,7 +87,7 @@ $mainMemberID = get_the_ID();
                         <?php if( get_field('website') ) : ?>
                         <div class="member-website">
                             <h4 class="m-0"><b>Website:</b></h4>
-                            <p class="m-0"><a style="text-decoration: none; color: inherit;" href="<?php echo get_field('website'); ?>" target="_blank"><?php echo get_field('website'); ?></a></p>
+                            <p class="m-0"><a style="text-decoration: none; color: inherit; text-transform: lowercase;" href="<?php echo get_field('website'); ?>" target="_blank"><?php echo get_field('website'); ?></a></p>
                         </div>
                         <?php endif; ?>
                     </div>
