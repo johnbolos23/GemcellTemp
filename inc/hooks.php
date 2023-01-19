@@ -226,3 +226,46 @@ function getGemcellMembersAPI(){
 		}
 	}
 }
+
+
+
+add_filter('acf/load_value/name=flexible_content', 'add_starting_repeater', 10, 3);
+  function  add_starting_repeater($value, $post_id, $field) {
+    if ($value !== NULL) {
+      // $value will only be NULL on a new post
+      return $value;
+    }
+
+	if( !in_array( get_post_type( $post_id ), array('post') ) ){
+		return $value;
+	}
+
+    // add default layouts
+    $value = array(
+      array(
+        'acf_fc_layout' => 'information_content' 
+      ),
+      array(
+        'acf_fc_layout' => 'suggested_articles'
+      ),
+      array(
+        'acf_fc_layout' => 'information_content'
+      ),
+      array(
+        'acf_fc_layout' => 'call_out_text'
+      ),
+      array(
+        'acf_fc_layout' => 'information_content'
+      ),
+      array(
+        'acf_fc_layout' => 'call_out_text'
+      ),
+      array(
+        'acf_fc_layout' => 'information_content'
+      ),
+      array(
+        'acf_fc_layout' => 'cta_box'
+      )
+    );
+    return $value;
+  }
