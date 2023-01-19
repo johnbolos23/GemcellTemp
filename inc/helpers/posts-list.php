@@ -59,6 +59,14 @@ $args = array(
 
 if( get_sub_field('post_type') == 'post' && get_sub_field('category') ){
     $args['cat'] = get_sub_field('category');
+}else if( get_sub_field('post_type') == 'competition' && get_sub_field('competition_tax') ){
+    $args['tax_query'] = array(
+        array(
+            'taxonomy' => 'competition_tax',
+            'field' => 'term_id',
+            'terms' => get_sub_field('competition_tax')
+        )
+    );
 }
 
 $theQuery = new WP_Query( $args );

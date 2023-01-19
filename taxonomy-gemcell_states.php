@@ -3,7 +3,7 @@ get_header();
 
 $args = array(
 	'post_type' => 'member_branches',
-	'posts_per_page' => 30,
+	'posts_per_page' => -1,
 	'post_status' => 'publish',
 	'tax_query' => array(
 		array(
@@ -59,18 +59,18 @@ $theQuery2 = new WP_Query( $args2 );
 		<h2 class="heading state-heading"><?php echo get_queried_object()->name; ?> <span>(<?php echo $totalBranches; ?> Branches)</span></h2>
 		<div class="row">
 			<div class="col-12 col-md-12 col-lg-12 col-xl-8 col-xxl-8">
-				<?php if( $theQuery2->have_posts() ) : ?>
+				<?php if( $theQuery->have_posts() ) : ?>
 				<div class="branches-wrapper">
 					<div class="row">
-						<?php while( $theQuery2->have_posts() ) : $theQuery2->the_post(); ?>
-						<div class="col-12 col-sm-12 col-md-6 col-lg-6">
+						<?php while( $theQuery->have_posts() ) : $theQuery->the_post(); ?>
+						<div class="col-12 col-sm-12 col-md-6 col-lg-6 pb-4">
 							<div class="gemcell-member-details">
 								<div class="gemcell-member-image">
-									<img src="<?php echo get_field('logo'); ?>" />
+									<img src="<?php echo get_field('logo', get_field('gemcell_member_id')); ?>" />
 								</div>
 								<div class="gemcell-member-detail">
 									<h4 class="heading"><?php echo get_the_title(); ?></h4>
-									<a href="<?php echo get_the_permalink(); ?>">View member details</a>
+									<a href="<?php echo site_url(); ?>/find-a-branch/?branch-detail=<?php echo get_the_ID(); ?>">View member details</a>
 								</div>
 							</div>
 						</div>

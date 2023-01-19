@@ -134,6 +134,10 @@ section.posts-list {
                     .slick-list{
                         margin: 0 calc(var(--bs-gutter-x) * -.5);
                     }
+
+                    .post-list-item-image-title .post-list-item-title-wrapper {
+                        display: none;
+                    }
                 }
                 &.has-overlap{
                     margin: 0 calc( calc(calc(100vw - 1673px) / 2) * -1);
