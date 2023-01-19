@@ -357,7 +357,7 @@
 				wrapAround: true,
 				selectedAttraction: 0.015,
 				friction: 0.25,
-				rightToLeft: (n % 2 == 0) ? true:false
+				right: (n % 2 == 0) ? true:false
 			});
 			flickity.x = 0;
 
