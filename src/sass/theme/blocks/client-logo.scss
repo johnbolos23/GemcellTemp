@@ -59,9 +59,13 @@ section.client-logos{
     }
 
     .client-logo-content {
-        padding: 67px 80px 67px 60px;
+        padding: 67px 110px 67px 60px;
         clip-path: polygon(calc(100% - 100px) 0, 100% 100px, 100% 100%, 0 100%, 0 0);
-
+        @media (max-width: $tablet){
+            &{
+                padding: 67px 50px;
+            }
+        }
         @media (max-width: $mobile){
             &{
                 padding: 60px 45px 60px 45px;
