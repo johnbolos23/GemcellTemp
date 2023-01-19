@@ -162,3 +162,11 @@ $(document).ready(function () {
 });
 
 
+jQuery(document).ready(function($) {
+	var heights = [];
+	$('section.testimonials-v2 .testimonials-content .testimonials-slider .slick-list .testimonial-item .testimonial-item-wrapper').each(function(){
+		heights.push($(this).height()); 
+	});
+	var maxHeight = Math.max.apply(null, heights);
+	$('section.testimonials-v2 .testimonials-content .testimonials-slider .slick-list .testimonial-item .testimonial-item-wrapper').height(maxHeight);
+});
