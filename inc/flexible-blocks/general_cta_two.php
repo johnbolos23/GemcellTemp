@@ -19,7 +19,7 @@
 
     <div class="general-cta-wrapper">
         <div class="row">
-            <div class="col-5">
+            <div class="col-5 col-lg-5 col-xl-6">
                 <h2 class="heading">
                     <?php echo get_sub_field('heading'); ?>
                     <!-- Terms and Conditions -->
@@ -31,7 +31,7 @@
                         <?php echo get_sub_field('button')['title']; get_template_part('icons/arrow-up'); ?>
                 </a>
             </div>
-            <div class="col-6">
+            <div class="col-6 col-lg-6 col-xl-6">
                 <div class="general-cta-buttons-wrapper">
                     <div class="wysiwyg-content" style="color:white;">
                         <?php echo get_sub_field('paragraph'); ?>
