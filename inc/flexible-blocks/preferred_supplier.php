@@ -39,7 +39,7 @@
                         <?php while ($query->have_posts()) : $query->the_post();?>
                             <div class="suplier-item">
                                 <div class="supplier-item-inner">
-                                <a href="<?php echo get_post_permalink(); ?>">
+                                <a href="<?php echo get_field('website'); ?>" target="_blank">
                                     <div class="suplier-poster"><?php echo get_the_post_thumbnail(); ?></div>
                                     <h5><?php echo get_the_title(); ?></h5>
                                 </a>
