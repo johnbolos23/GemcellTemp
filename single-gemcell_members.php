@@ -89,7 +89,7 @@ $mainMemberID = get_the_ID();
                         <?php if( get_field('website') ) : ?>
                         <div class="member-website">
                             <h4 class="m-0"><b>Website:</b></h4>
-                            <p class="m-0"><?php echo get_field('website'); ?></p>
+                            <p class="m-0"><a style="text-decoration: none; color: inherit;" href="<?php echo get_field('website'); ?>" target="_blank"><?php echo get_field('website'); ?></a></p>
                         </div>
                         <?php endif; ?>
                     </div>

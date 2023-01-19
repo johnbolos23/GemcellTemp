@@ -20,7 +20,12 @@ function breadcrumbs($separator = ' &raquo; ', $home = 'Home')
     foreach ($path as $x => $crumb) {
         // Our "title" is the text that will be displayed (strip out .php and turn '_' into a space)
         $title = ucwords(str_replace(array('.php', '_', '%20'), array('', ' ', ' '), $crumb));
-        $title = str_replace('-', ' ', $title);
+        $title = ucwords( str_replace('-', ' ', $title) );
+
+        if( strtolower( $title ) == 'electricalgems' ){
+            $title = 'Electrical Gems';
+        }
+
         // If we are not on the last index, then display an <a> tag
         if ($x != $last) {
             if( $base . $crumbs . $crumb == site_url() ){
@@ -36,7 +41,13 @@ function breadcrumbs($separator = ' &raquo; ', $home = 'Home')
             if( is_tax() ){
                 $breadcrumbs[] = '<span>'.str_replace( '-', ' ', get_queried_object()->name ).'<span>';
             }else{
-                $breadcrumbs[] = '<span>'.str_replace( '-', ' ', get_the_title() ).'<span>';
+                $titleName = str_replace( '-', ' ', get_the_title() );
+
+                if( strtolower( $titleName ) == 'electricalgems' ){
+                    $titleName = 'Electrical Gems';
+                }
+
+                $breadcrumbs[] = '<span>'. ucwords( $titleName ) .'<span>';
             }
             
         }
