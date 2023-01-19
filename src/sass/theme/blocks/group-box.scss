@@ -124,18 +124,12 @@
             object-fit: cover;
             border: 2px solid #e4e4e4;
             border-bottom: 0;
-
-            @media (max-width: $bigScreen){
-                &{
-                    height: 265px;
-                    border: 2px solid #e4e4e4;
-                }
+            
+            @media (max-width: $mobile){
+                object-fit: contain;
             }
         }
     }
-    
-
-    
 }
 
 

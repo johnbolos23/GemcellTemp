@@ -1,12 +1,12 @@
 .suggested-articles {
     .heading {
-        font-size: 16px;
+        font-size: 16px !important;
         color: #263238;
         line-height: 170%;
         font-weight: 400;
         font-family: 'CenturyGothic';
         @media (max-width: $mobile){
-            font-size: 14px;
+            font-size: 14px !important;
         }
     }
     .suggested-articles-wrapper {
