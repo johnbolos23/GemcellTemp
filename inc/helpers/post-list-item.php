@@ -6,6 +6,7 @@
 <div class="col-12 col-lg-<?php echo 12 / $args['column']; ?>">
     <div class="post-list-item-wrapper <?php echo $args['post_type']; ?>-type">
         <div class="post-list-item-image-title">
+            <!--
             <?php if( $args['post_type'] == 'competition' ) : ?>
             <div class="post-list-item-title-wrapper style-<?php echo get_field('shade_style'); ?>">
                 <div class="post-list-item-title-inner-wrapper">
@@ -13,6 +14,7 @@
                 </div>
             </div>
             <?php endif; ?>
+            -->
             <div class="post-list-item-image">
                 <?php the_post_thumbnail(); ?>
             </div>
