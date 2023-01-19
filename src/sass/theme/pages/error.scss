@@ -1,0 +1,61 @@
+.container.error-container-col {
+    text-align: center;
+    margin-bottom: 8em;
+
+    h2.heading {
+        font-size: 56px;
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+    
+    
+    .dual-button-col {
+        margin-top: 3em;
+
+            
+        button {
+            padding: 18px;
+            font-size: 18px;
+            margin: 0px 15px;
+            max-width: 16em;
+            width: 100%;
+
+                
+            a {
+                text-decoration: none;
+                font-weight: 600;
+            }
+        }
+
+        button.white {
+            border: 1px solid black;
+            background: none;
+            
+            a {
+                color: black;
+            }
+        }
+        
+    
+        
+        button.blue {
+            border: 1px solid #0493B8;
+            background: #0493B8;
+    
+                
+            a {
+                color: white;
+            }
+        }
+    }
+
+
+    
+    p {
+        font-size: 18px;
+    }
+    
+
+
+}
+
