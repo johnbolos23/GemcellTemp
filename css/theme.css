@@ -17400,6 +17400,9 @@ section.posts-list .container .posts-list-items .post-list-slider .slick-track .
 section.posts-list .container .posts-list-items .post-list-slider:not(.has-overlap) .slick-list {
   margin: 0 calc(var(--bs-gutter-x) * -0.5);
 }
+section.posts-list .container .posts-list-items .post-list-slider:not(.has-overlap) .post-list-item-image-title .post-list-item-title-wrapper {
+  display: none;
+}
 section.posts-list .container .posts-list-items .post-list-slider.has-overlap {
   margin: 0 calc((100vw - 1673px) / 2 * -1);
 }
