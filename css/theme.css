@@ -21372,6 +21372,7 @@ section.our-products .container .row .our-products-wrapper > .d-flex.flex-wrap {
 @media (max-width: 9999px) {
   .group-box-inner .col-6 > img {
     height: 265px;
+    border: 2px solid #e4e4e4;
   }
 }
 
@@ -24600,7 +24601,7 @@ section#find-a-branch #branch-results .branch-result-list-details-toggle svg {
 }
 section#find-a-branch #branch-results .branch-result-list-detail-wrapper img {
   padding-top: 30px;
-  height: 130px;
+  height: 130px !important;
   width: 270px;
   -o-object-fit: cover;
   object-fit: cover;
